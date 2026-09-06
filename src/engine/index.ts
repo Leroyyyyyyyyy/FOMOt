@@ -51,10 +51,14 @@ const deleteAlert = db.prepare('DELETE FROM alerts WHERE ca = ? AND trigger_ts =
 const insertSnap = db.prepare(
   `INSERT OR REPLACE INTO holder_snapshots (ca, trigger_ts, stage, taken_ts, total_holders, fomo_holders, payload) VALUES (?,?,?,?,?,?,?)`,
 );
-/** 崩溃窗口取证：卡片发出去了、状态还没落库时，本地通知记录是唯一的证据。 */
+/**
+ * 崩溃窗口取证：卡片发出去了、状态还没落库时，本地通知记录是唯一的证据。
+ * 按**通知模式**过滤——禁发送模式下那条 send 记录只进了本地记录器，
+ * 它的 message_id 在 Telegram 那边根本不存在。
+ */
 const findSentMessage = db.prepare(
   `SELECT message_id FROM notification_log
-   WHERE ca=? AND trigger_ts=? AND op='send' AND ok=1 AND message_id IS NOT NULL
+   WHERE ca=? AND trigger_ts=? AND op='send' AND ok=1 AND message_id IS NOT NULL AND mode=?
    ORDER BY ts DESC LIMIT 1`,
 );
 
@@ -172,12 +176,12 @@ export class Engine {
    *   5. 复核已完成、只差 PnL 的（`pnl_state='pending'`）——在期限内接着补，
    *      过了期限就终结为 timeout，不再无限堆积。
    */
-  resumePending(): { resumed: number; orphanFiring: number; corrupt: number; pnlResumed: number } {
-    let corrupt = 0, orphanFiring = 0, resumed = 0, pnlResumed = 0;
+  resumePending(): { resumed: number; orphanFiring: number; corrupt: number; pnlResumed: number; modeSwitched: number } {
+    let corrupt = 0, orphanFiring = 0, resumed = 0, pnlResumed = 0, modeSwitched = 0;
 
     for (const row of db.prepare(
       `SELECT ca, trigger_ts, message_id FROM alerts WHERE status='firing'`).all() as any[]) {
-      const sent = findSentMessage.get(row.ca, row.trigger_ts) as { message_id: number } | undefined;
+      const sent = findSentMessage.get(row.ca, row.trigger_ts, this.notify.mode) as { message_id: number } | undefined;
       orphanFiring++;
       if (sent) {
         // 卡片确实发出去了，只是状态没来得及落库。保留记录并标成降级，等人来看。
@@ -191,11 +195,28 @@ export class Engine {
     }
 
     const rows = db.prepare(
-      `SELECT ca, trigger_ts, message_id, payload, recheck_due_ts, original_due_ts, attempts FROM alerts
+      `SELECT ca, trigger_ts, message_id, payload, recheck_due_ts, original_due_ts, attempts, notify_mode FROM alerts
        WHERE status='pending_recheck'`).all() as any[];
     for (const row of rows) {
       const key = alertKey(row.ca, row.trigger_ts);
       if (this.resumed.has(key)) continue;                    // 重复恢复：忽略
+      /**
+       * 通知模式变了就不能接着复核这一条。
+       *
+       * `message_id` 只在**发出它的那个出口**里有意义：禁发送模式的 id 是本地
+       * 自增造的（`localMessageId()`），拿它去调真实 Telegram 的 editMessageText
+       * 必然失败，然后重试 15 分钟、最后标降级——白白刷一堆错误。
+       * 反过来（telegram → off）也一样没意义。直接终结，说清原因。
+       */
+      if (row.notify_mode && row.notify_mode !== this.notify.mode) {
+        modeSwitched++;
+        abandonAlert.run(
+          `通知模式已从 ${row.notify_mode} 切换到 ${this.notify.mode}，旧 message_id 在新出口下无效`,
+          row.ca, row.trigger_ts);
+        log.warn({ ca: row.ca, 原模式: row.notify_mode, 现模式: this.notify.mode },
+          '通知模式已切换，该条复核任务终结为降级（不会拿旧 message_id 去改写）');
+        continue;
+      }
       if (row.payload === null) {
         corrupt++;
         abandonAlert.run('pending_recheck 但没有 payload，无法恢复', row.ca, row.trigger_ts);
@@ -223,8 +244,13 @@ export class Engine {
 
     // 复核已完成、只差 PnL 的：在期限内接着补，同一张卡原地改写。
     for (const row of db.prepare(
-      `SELECT ca, trigger_ts, payload, pnl_deadline_ts FROM alerts
+      `SELECT ca, trigger_ts, payload, pnl_deadline_ts, notify_mode FROM alerts
        WHERE status='completed' AND pnl_state='pending' AND payload IS NOT NULL`).all() as any[]) {
+      // 同理：模式变了就别再拿旧 message_id 去补卡了。
+      if (row.notify_mode && row.notify_mode !== this.notify.mode) {
+        setPnlState.run('timeout', row.ca, row.trigger_ts);
+        continue;
+      }
       if (!row.pnl_deadline_ts || Date.now() > row.pnl_deadline_ts) {
         setPnlState.run('timeout', row.ca, row.trigger_ts);
         continue;
@@ -238,7 +264,7 @@ export class Engine {
         setPnlState.run('timeout', row.ca, row.trigger_ts);
       }
     }
-    return { resumed, orphanFiring, corrupt, pnlResumed };
+    return { resumed, orphanFiring, corrupt, pnlResumed, modeSwitched };
   }
 
   sweep(): void {

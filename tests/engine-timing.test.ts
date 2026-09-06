@@ -412,3 +412,58 @@ test('改写失败时不留下「卡片没变、内存却当成已补上」的�
   assert.equal(state.recheck.e.top10PlatformPnl24h, before, '改写没成功就不能改内存里的状态');
   assert.equal(alertRow().pnl_state, 'pending', '也不能写成 ready');
 });
+
+// ── 切换通知模式 ─────────────────────────────────────────────────────
+// message_id 只在发出它的那个出口里有意义：禁发送模式的 id 是本地造的，
+// 拿去调真实 Telegram 的 editMessageText 必然失败，然后重试 15 分钟标降级。
+
+test('通知模式切换后，旧 message_id 的复核任务被终结而不是拿去改写', () => {
+  const fomo = new FakeFomo();
+  seedAlert('pending_recheck');
+  db.prepare('UPDATE alerts SET notify_mode=? WHERE ca=?').run('off', CA);
+  // 现在以 telegram 模式启动（不会真的发网络请求——这条根本不该走到发送）
+  const ac = new AbortController(); ac.abort();
+  const r = new Engine(fomo, ac.signal, new Notifier('telegram')).resumePending();
+  assert.equal(r.modeSwitched, 1);
+  assert.equal(r.resumed, 0, '绝不能接着跑这条复核');
+  assert.equal(alertRow().status, 'abandoned');
+  assert.match(alertRow().last_error, /通知模式已从 off 切换到 telegram/);
+  assert.equal(edits().n, 0);
+});
+
+test('通知模式一致时照常恢复', () => {
+  seedAlert('pending_recheck');
+  db.prepare('UPDATE alerts SET notify_mode=? WHERE ca=?').run('off', CA);
+  const ac = new AbortController(); ac.abort();
+  const r = new Engine(new FakeFomo(), ac.signal, off).resumePending();
+  assert.equal(r.modeSwitched, 0);
+  assert.equal(r.resumed, 1);
+});
+
+test('模式切换后，只差 PnL 的告警也不再补卡', async () => {
+  const fomo = new FakeFomo();
+  seedAlert('completed', { pnl_state: 'pending', pnl_deadline_ts: Date.now() + 600_000 });
+  db.prepare('UPDATE alerts SET notify_mode=? WHERE ca=?').run('off', CA);
+  const ac = new AbortController();
+  const r = new Engine(fomo, ac.signal, new Notifier('telegram')).resumePending();
+  assert.equal(r.pnlResumed, 0);
+  assert.equal(alertRow().pnl_state, 'timeout');
+  await new Promise(res => setTimeout(res, 50));
+  assert.equal(fomo.calls.length, 0, '不该再去取收益');
+  ac.abort();
+});
+
+test('禁发送模式下的 send 记录不会被当成 telegram 已发出', () => {
+  // 遗留 firing + 一条 off 模式的 send 记录；以 telegram 模式恢复时
+  // 不能把它当成「已经发到频道上了」
+  db.prepare(`INSERT INTO alerts (ca,trigger_ts,message_id,payload,status,recheck_due_ts,original_due_ts,attempts,collection_state,notify_mode)
+              VALUES (?,?,NULL,NULL,'firing',?,?,0,'pending','off')`).run(CA, TRIGGER, DUE, DUE);
+  db.prepare(`INSERT INTO notification_log (ts,mode,op,message_id,ca,trigger_ts,ok,detail)
+              VALUES (?,'off','send',999,?,?,1,'x')`).run(Date.now(), CA, TRIGGER);
+  const ac = new AbortController(); ac.abort();
+  const r = new Engine(new FakeFomo(), ac.signal, new Notifier('telegram')).resumePending();
+  assert.equal(r.orphanFiring, 1);
+  // 没有 telegram 模式的发送记录 → 判定为「从没发出去」，占位行删掉
+  assert.equal((db.prepare('SELECT COUNT(*) n FROM alerts WHERE ca=?').get(CA) as any).n, 0,
+    'off 模式的 send 记录不能证明 telegram 频道上有这张卡');
+});

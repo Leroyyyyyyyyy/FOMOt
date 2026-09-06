@@ -70,9 +70,9 @@ async function main(): Promise<void> {
   })();
   markStartupWindow(120_000);            // 前两分钟算「启动恢复」，指标分开统计
   const r = engine.resumePending();
-  if (r.resumed || r.orphanFiring || r.corrupt || r.pnlResumed) {
-    log.info({ 待复核: r.resumed, 遗留firing: r.orphanFiring, 损坏payload: r.corrupt, 待补收益: r.pnlResumed },
-      '启动恢复完成');
+  if (r.resumed || r.orphanFiring || r.corrupt || r.pnlResumed || r.modeSwitched) {
+    log.info({ 待复核: r.resumed, 遗留firing: r.orphanFiring, 损坏payload: r.corrupt,
+      待补收益: r.pnlResumed, 因切换通知模式终结: r.modeSwitched }, '启动恢复完成');
   }
 
   let lastBeat = 0, lastMaint = Date.now();

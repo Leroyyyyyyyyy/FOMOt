@@ -11,6 +11,7 @@
     "start": "tsx src/index.ts",
     "login": "tsx src/fomo/login.ts",
     "check-session": "tsx scripts/check-session.ts",
+    "check-telegram": "tsx scripts/check-telegram.ts",
     "discover": "tsx scripts/discover.ts",
     "status": "tsx scripts/status.ts",
     "diagnose": "tsx scripts/diagnose.ts",
