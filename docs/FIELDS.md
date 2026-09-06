@@ -233,16 +233,68 @@ pnl24h = totalPnL(实时全时段累计)  −  aggregatedSnapshotById(userId, �
 | 网络组合 | `4663←4663/1399811149` 47 笔、`4663←1399811149/4663` 20 笔、`8453←…` 10 笔、`56←…` 23 笔 |
 
 `recipient` 随兑换**方向**在这两个值之间切换，也就是「目标链上的收款方」。
-它可能是该用户在目标链上的交易账户，也可能是中继自己的归集地址——
-**只有一个用户的样本区分不了这两种解释**。而且：
 
-- 该地址在本地库里**从未**作为任何用户的 `evmAddress` / 榜单地址 / Top 持有人地址出现过；
-- 接口不给交易哈希，没法直接锚定到链上某一笔 Transfer。
+### 2026-09-06 判定结果：`recipient` **不能**用作本项目要的身份证据
 
-所以按 §3 的规则，它现在只能算**线索**，连候选都还不是，更不能升为 `confirmed`。
-判定办法很直接（`scripts/probe-recipient.ts`）：取多个用户的 swaps，比较各自的 `recipient` 集合——
-互不相交说明是用户专属账户，重合则说明是中继归集地址。这一步做完之前，
-`fomo_wallet_links` 里的 `confirmed` 计数保持 **0**。
+按 §3.5 原定的判据跑了 `scripts/probe-recipient.ts ogle cosby`（证据：`docs/evidence/recipient-probe.json`）：
+
+| 用户 | evmAddress | recipient（各 2 个：EVM + Solana）|
+|---|---|---|
+| ogle | `0x3a6962e0…1ebe9` | `0x39163eb2…e0628` / `7p2y6ux6…ydd6` |
+| cosby | `0xca3b0e0e…3f80` | `0xe6ab6ee7…c747` / `44ecvsvh…nezc` |
+
+**第一关过了**：`ogle ∩ cosby = 空`，两个用户的 recipient 集合互不相交
+→ 不是中继的归集地址，像是用户专属的收款账户。
+
+**第二关没过**：它不是持币的那个地址。三条独立观测：
+
+| 检查 | ogle/cosby 的 recipient | 金额匹配出的交易账户 |
+|---|---|---|
+| `eth_getCode` | **纯 EOA** | **7702 委托**到 `0xe6cae83b…555b` |
+| 8 小时内的 ERC20 Transfer | **收 0 / 发 0，0 个代币** | 收 0 / **发 22，8 个代币** |
+| 出现在 `/hodlers/top.evmAddress` | **0 次** | — |
+
+也就是说 recipient 是**另一条链**（Base 8453 / BSC 56 / Solana）上的收款地址，
+在 Robinhood Chain 上根本没有代币活动。**拿它对不上 `/hodlers/top` 里的持仓。**
+
+> 这一条的样本限制要说清楚：ogle 和 cosby 也可能只是最近 8 小时没在
+> Robinhood Chain 上交易过，而那个有 22 笔的交易账户属于**另一个**用户，
+> 所以这不是严格的对照实验。但 recipient 在整张 `fomo_token_holders` 表里
+> **一次都没出现过**，这条不受样本限制影响。
+
+### 更根本的一条：链上**没有**可用的密码学关联
+
+`eth_getCode` 的观测（5/5 个候选交易账户）：
+
+```
+候选交易账户  0xd874259110c6…  0xef0100e6cae83b…  ← 7702，委托到 0xe6cae83bde06e4c305530e199d7217f42808555b
+候选交易账户  0xf3a443d0a2c8…  0xef0100e6cae83b…  ← 同一个实现
+（5 个全部委托到同一个实现合约）
+FOMO evmAddress  0x000f527386…  (空，纯 EOA)
+```
+
+两个推论：
+
+1. **所有交易账户委托到同一个实现合约**，`getCode` 的区分度是零；
+2. EIP-7702 的委托由**账户自己的私钥**签名，授权人就是它自己。
+   交易账户与 `evmAddress` 是**两个不同的私钥**，链上不存在把它们绑在一起的签名。
+   而且该账户 ETH 余额为 0、nonce 为 1（只有那次授权），交易是被代付的，
+   连资金流溯源都没有。
+
+**结论：这个映射是 FOMO 后端的事实，不是链上的事实。**
+「接一个链上 Transfer 溯源器就能把 candidate 升成 confirmed」这个说法**不成立**，
+之前文档里那样写是错的。剩下的现实路径只有两条：
+
+- **另找一个直接声明交易账户的接口**（`evidence_type='api_declared'` 就是为它留的）——
+  目前没找到，`recipient` 已被上面的观测排除；
+- **多币重复匹配的统计证据**：同一 `(userId, address)` 在 N 个**不同代币**上被独立
+  金额匹配命中，碰撞概率随 N 迅速下降。这是**统计证据不是证明**，要不要认它可以升
+  `confirmed` 是个口径决定。当前实现还做不了这个判断——`recordAmountCandidates` 的
+  `ON CONFLICT DO UPDATE` 会**覆盖** `token_ca`，历史没留下（实测 1448 条候选全部
+  只记得 1 个币），要做得先改成逐币观测记录。
+
+在这两条之一落地之前，`fomo_wallet_links` 的 `confirmed` 保持 **0**，
+卡片上的盈利榜交集继续写「已确认至少 N 人」。
 
 ## 4. 仍待确认
 
