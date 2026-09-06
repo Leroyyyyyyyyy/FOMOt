@@ -14,10 +14,8 @@ const token = process.env.TELEGRAM_BOT_TOKEN ?? '';
 const chatId = process.env.TELEGRAM_CHAT_ID ?? '';
 const bad = (m: string) => { console.error(`❌ ${m}`); process.exitCode = 1; };
 
-if (!token || !chatId) {
-  bad(`凭据不全：TELEGRAM_BOT_TOKEN=${token ? '已配置' : '空'}  TELEGRAM_CHAT_ID=${chatId ? '已配置' : '空'}`);
-  console.error('   在 .env 里填好这两项再跑。找 @BotFather 建 bot 拿 token；');
-  console.error('   频道用 @channelname，或把 bot 拉进频道后用 -100 开头的数字 id。');
+if (!token) {
+  bad('TELEGRAM_BOT_TOKEN 是空的。找 @BotFather 建 bot 拿 token，填进 .env 再跑。');
   process.exit(1);
 }
 
@@ -34,6 +32,33 @@ async function api<T>(method: string, params: Record<string, unknown> = {}): Pro
 try {
   const me = await api<{ id: number; username: string; can_join_groups?: boolean }>('getMe');
   console.log(`✅ token 有效  bot = @${me.username} (id ${me.id})`);
+
+  /**
+   * chat_id 还没填时，帮忙把 bot 能看到的频道/群列出来。
+   * 私有频道拿不到 @username，只能用 -100 开头的数字 id——它就在这里。
+   * 前提：bot 已经是频道管理员，且频道里**发过至少一条消息**（getUpdates 才有内容）。
+   */
+  if (!chatId) {
+    bad('TELEGRAM_CHAT_ID 是空的。');
+    const ups = await api<any[]>('getUpdates', { limit: 100, allowed_updates: ['channel_post', 'message', 'my_chat_member'] });
+    const seen = new Map<number, { title: string; type: string; username?: string }>();
+    for (const u of ups) {
+      const c = u.channel_post?.chat ?? u.message?.chat ?? u.my_chat_member?.chat;
+      if (c?.id) seen.set(c.id, { title: c.title ?? c.username ?? String(c.id), type: c.type, username: c.username });
+    }
+    if (seen.size) {
+      console.error('\n   bot 目前能看到这些会话，把想用的那个填进 .env：');
+      for (const [id, c] of seen) {
+        console.error(`     ${c.username ? `@${c.username}` : id}   ${c.title}  (type=${c.type}${c.username ? `, 数字 id ${id}` : ''})`);
+      }
+    } else {
+      console.error('\n   getUpdates 里还没有任何会话。请确认：');
+      console.error('     1) bot 已被拉进频道并设为管理员；');
+      console.error('     2) 频道里发过至少一条消息（哪怕是你自己发的），否则 Telegram 不会给出 update。');
+      console.error('   公开频道也可以直接填 @频道用户名，不用查数字 id。');
+    }
+    process.exit(1);
+  }
 
   const chat = await api<{ id: number; type: string; title?: string; username?: string }>('getChat', { chat_id: chatId });
   console.log(`✅ 频道可达  ${chat.title ?? chat.username ?? chat.id} · type=${chat.type} · id=${chat.id}`);
