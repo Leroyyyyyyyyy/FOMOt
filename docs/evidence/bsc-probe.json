@@ -1,0 +1,39 @@
+{
+  "at": 1788681478030,
+  "paths": [
+    [
+      "/static/exception-autocapture.js",
+      2
+    ],
+    [
+      "/static/web-vitals.js",
+      2
+    ],
+    [
+      "/array/phc_rzkHrRhgRWmmIfUX34qLhjQw2Gga14elSY6ishYeSE5/config.js",
+      2
+    ],
+    [
+      "/static/dead-clicks-autocapture.js",
+      2
+    ],
+    [
+      "/static/surveys.js",
+      2
+    ],
+    [
+      "/flags/",
+      2
+    ],
+    [
+      "/e/",
+      1
+    ],
+    [
+      "/i/v0/e/",
+      5
+    ]
+  ],
+  "networkIds": [],
+  "samples": []
+}
