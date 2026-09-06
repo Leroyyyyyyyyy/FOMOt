@@ -1,0 +1,16 @@
+
+> fomot@0.1.0 check-rules
+> tsx scripts/check-rules.ts
+
+filters 解析结果:
+  market_cap_usd             {"min":30000,"max":5000000}
+  volume_5m_usd              {"min":15000}
+  volume_1h_usd              {"min":50000}
+  holders_total              {"min":100}
+  fomo_holders               {"min":0}
+  fomo_holder_ratio          {"min":0}
+  fomo_leaderboard_holders   {"min":0}
+  skip_when_unavailable      true
+  fomo_gate_stage            "recheck"
+
+✅ 全部解析正常

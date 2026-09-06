@@ -1,0 +1,22 @@
+
+> fomot@0.1.0 backtest
+> tsx scripts/backtest-samples.ts
+
+MEME  🔔 会推送
+     ✅ 市值        $126.12K
+     ✅ 5m量       $22.36K
+     ✅ 1h量       $212.12K
+     ✅ 全链持币      178
+     ✅ Fomo人数    72
+     ✅ Fomo占比    40.4%
+     ✅ 榜单持有      2人
+
+HDR   🔔 会推送
+     ✅ 市值        $91.47K
+     ✅ 5m量       $71.04K
+     ✅ 1h量       $71.04K
+     ✅ 全链持币      167
+     ✅ Fomo人数    13
+     ✅ Fomo占比    7.8%
+     ✅ 榜单持有      0人
+

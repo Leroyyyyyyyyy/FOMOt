@@ -1,0 +1,104 @@
+{
+  "boardAt": 1788607132612,
+  "rows": [
+    {
+      "id": "36adb85a-c0fd-5fa8-916d-8fdc32fe4237",
+      "name": "Unipcs",
+      "kind": "盈利榜",
+      "latestSid": 1788606000,
+      "prevSid": 1788519600,
+      "latestPnl": 19033616.364882,
+      "prevPnl": 16053435.471547,
+      "delta": 2980180.8933349997,
+      "lbPnl24h": 3321889.630043557
+    },
+    {
+      "id": "679a7cbb-1635-5415-896a-9e8151b74686",
+      "name": "ogle",
+      "kind": "盈利榜",
+      "latestSid": 1788606000,
+      "prevSid": 1788519600,
+      "latestPnl": 5547103.136149,
+      "prevPnl": 3699932.020396,
+      "delta": 1847171.1157530006,
+      "lbPnl24h": 1912919.929968292
+    },
+    {
+      "id": "77e707d5-3e83-55f8-8ddd-acc0b893010c",
+      "name": "Avast",
+      "kind": "盈利榜",
+      "latestSid": 1788606000,
+      "prevSid": 1788519600,
+      "latestPnl": 5412715.323727,
+      "prevPnl": 4132055.106999,
+      "delta": 1280660.2167279995,
+      "lbPnl24h": 1389055.3764632381
+    },
+    {
+      "id": "c3baeeef-4615-5c88-9956-dc090b709ca2",
+      "name": "Fartman Sacks",
+      "kind": "未上榜",
+      "latestSid": 1788606000,
+      "prevSid": 1788519600,
+      "latestPnl": 520614.126402,
+      "prevPnl": 618704.389162,
+      "delta": -98090.26276000001,
+      "lbPnl24h": null
+    },
+    {
+      "id": "cd5078a7-d413-56be-981e-a36ac7dadcf4",
+      "name": "BNBULL",
+      "kind": "未上榜",
+      "latestSid": 1788606000,
+      "prevSid": 1788519600,
+      "latestPnl": 420047.246697,
+      "prevPnl": 424254.026175,
+      "delta": -4206.779478000011,
+      "lbPnl24h": null
+    },
+    {
+      "id": "2c8a0636-bd6d-5c9d-93c8-d16fe0c330ca",
+      "name": "Yaoza",
+      "kind": "未上榜",
+      "latestSid": 1788606000,
+      "prevSid": 1788519600,
+      "latestPnl": 174800.257427,
+      "prevPnl": 102677.613752,
+      "delta": 72122.643675,
+      "lbPnl24h": null
+    },
+    {
+      "id": "8beca50f-ac71-58ee-be9f-57fcd028c0c9",
+      "name": "fiji",
+      "kind": "未上榜",
+      "latestSid": 1788606000,
+      "prevSid": 1788519600,
+      "latestPnl": 183015.1759,
+      "prevPnl": 129576.674395,
+      "delta": 53438.50150500001,
+      "lbPnl24h": null
+    },
+    {
+      "id": "4308cca8-51af-52c2-9c7a-ca5dfe548fd2",
+      "name": "Isidore",
+      "kind": "未上榜",
+      "latestSid": 1788606000,
+      "prevSid": 1788519600,
+      "latestPnl": 352081.576945,
+      "prevPnl": 293644.654972,
+      "delta": 58436.92197299999,
+      "lbPnl24h": null
+    },
+    {
+      "id": "717f6954-64f1-5745-a61e-2a820adb87b9",
+      "name": "TheOldNite",
+      "kind": "未上榜",
+      "latestSid": 1788606000,
+      "prevSid": 1788519600,
+      "latestPnl": 675454.419652,
+      "prevPnl": 598801.174741,
+      "delta": 76653.2449109999,
+      "lbPnl24h": null
+    }
+  ]
+}

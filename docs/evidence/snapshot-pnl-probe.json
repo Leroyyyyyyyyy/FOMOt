@@ -1,0 +1,124 @@
+{
+  "at": 1788606954938,
+  "snapshotId": 1788519600,
+  "targets": [
+    {
+      "id": "36adb85a-c0fd-5fa8-916d-8fdc32fe4237",
+      "name": "Unipcs",
+      "source": "榜单",
+      "ref": 3286321.608489061
+    },
+    {
+      "id": "679a7cbb-1635-5415-896a-9e8151b74686",
+      "name": "ogle",
+      "source": "榜单",
+      "ref": 1947362.0902448343
+    },
+    {
+      "id": "77e707d5-3e83-55f8-8ddd-acc0b893010c",
+      "name": "Avast",
+      "source": "榜单",
+      "ref": 1329674.7318189545
+    },
+    {
+      "id": "c3baeeef-4615-5c88-9956-dc090b709ca2",
+      "name": "Fartman Sacks",
+      "source": "未上榜",
+      "ref": 329072.67
+    },
+    {
+      "id": "cd5078a7-d413-56be-981e-a36ac7dadcf4",
+      "name": "BNBULL",
+      "source": "未上榜",
+      "ref": 225461.38
+    },
+    {
+      "id": "2c8a0636-bd6d-5c9d-93c8-d16fe0c330ca",
+      "name": "Yaoza",
+      "source": "未上榜",
+      "ref": 175536.86
+    }
+  ],
+  "captured": [
+    {
+      "userId": "73668ec4-9ce5-5ea7-880d-17f0dbb1891a",
+      "snapshotId": "1788519600",
+      "status": 200,
+      "body": {
+        "snapshotId": 1788519600,
+        "pnl": -9.085862,
+        "equity": 0
+      }
+    },
+    {
+      "userId": "73668ec4-9ce5-5ea7-880d-17f0dbb1891a",
+      "snapshotId": "1788519600",
+      "status": 200,
+      "body": {
+        "snapshotId": 1788519600,
+        "pnl": -9.085862,
+        "equity": 0
+      }
+    },
+    {
+      "userId": "36adb85a-c0fd-5fa8-916d-8fdc32fe4237",
+      "snapshotId": "1788519600",
+      "status": 200,
+      "body": {
+        "snapshotId": 1788519600,
+        "pnl": 16053435.471547,
+        "equity": 19681081.308492
+      }
+    },
+    {
+      "userId": "679a7cbb-1635-5415-896a-9e8151b74686",
+      "snapshotId": "1788519600",
+      "status": 200,
+      "body": {
+        "snapshotId": 1788519600,
+        "pnl": 3699932.020396,
+        "equity": 7489097.408921
+      }
+    },
+    {
+      "userId": "77e707d5-3e83-55f8-8ddd-acc0b893010c",
+      "snapshotId": "1788519600",
+      "status": 200,
+      "body": {
+        "snapshotId": 1788519600,
+        "pnl": 4132055.106999,
+        "equity": 5661392.836089
+      }
+    },
+    {
+      "userId": "c3baeeef-4615-5c88-9956-dc090b709ca2",
+      "snapshotId": "1788519600",
+      "status": 200,
+      "body": {
+        "snapshotId": 1788519600,
+        "pnl": 618704.389162,
+        "equity": 3338232.990477
+      }
+    },
+    {
+      "userId": "cd5078a7-d413-56be-981e-a36ac7dadcf4",
+      "snapshotId": "1788519600",
+      "status": 200,
+      "body": {
+        "snapshotId": 1788519600,
+        "pnl": 424254.026175,
+        "equity": 611984.666557
+      }
+    },
+    {
+      "userId": "2c8a0636-bd6d-5c9d-93c8-d16fe0c330ca",
+      "snapshotId": "1788519600",
+      "status": 200,
+      "body": {
+        "snapshotId": 1788519600,
+        "pnl": 102677.613752,
+        "equity": 301760.592797
+      }
+    }
+  ]
+}

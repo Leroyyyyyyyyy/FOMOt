@@ -1,0 +1,19 @@
+
+> fomot@0.1.0 test
+> tsx --test tests/*.test.ts
+
+✔ Top10 identification and PnL do not depend on the positive leaderboard (0.457209ms)
+✔ Top10 uses FOMO ranked holders when primary addresses differ from chain trading accounts (0.0745ms)
+✔ leaderboard holders are matched against the full chain balance map (0.082334ms)
+✔ leaderboard holders use learned FOMO trading wallets beyond the token Top50 (0.063667ms)
+✔ partial Top10 PnL coverage is shown as unavailable instead of a misleading partial sum (0.058292ms)
+✔ adaptive log scanning recognizes provider and transport size errors (0.349667ms)
+✔ a block number ending in 32000 is not mistaken for an RPC log limit (0.040209ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 123.573875

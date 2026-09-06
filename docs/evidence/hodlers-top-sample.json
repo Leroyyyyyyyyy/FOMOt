@@ -1,0 +1,3069 @@
+{
+  "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+  "networkId": 4663,
+  "topHolders": [
+    {
+      "user": {
+        "id": "679a7cbb-1635-5415-896a-9e8151b74686",
+        "address": "HvdahwUMiFStRDFkNi2VQVjkY6tvsi5FZ3bnBH5LSK7d",
+        "evmAddress": "0x3a6962e0a77a66a14c558bee1fe3880bfe51ebe9",
+        "createdAt": "2026-07-06T19:16:25.904Z",
+        "displayName": "ogle",
+        "userHandle": "ogle",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/7291f37a00d6cb9c9d713bf0b4308353_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "@cryptogle on x //\nadvisor to World Liberty Fi and America.fun //\ncrypto since 2012",
+        "following": 3,
+        "followers": 60845,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 196,
+        "numTrades": 363,
+        "totalVolume": 341520.455496,
+        "private": false,
+        "thumbhash": "2WQGTwrFaZdfZIh4h3mIRpeHd0B3+IoI",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": {
+          "id": "11e5d07c-6f1d-4aa7-8a0d-aacf1c5f2033",
+          "name": "Nobi Ventures",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/6a0773e599021b7f8a604458026c6214.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "LvgVBwC4uId5h3h/dWaId4iIhmQIuIkP"
+        }
+      },
+      "tradeId": "f9bdd186-0a7c-4728-8a0e-6977c6045a66",
+      "humanAmount": 10958112.32,
+      "sumSwapOpen": 12917246.2,
+      "price": 0.847643264882,
+      "value": 9288570.1,
+      "pnl": 5635436.57,
+      "unrealizedPnl": 7570986.97,
+      "realizedPnl": -1935550.4,
+      "costBasis": 3722296.61,
+      "averageEntryPrice": 0.156741,
+      "comment": {
+        "id": "5252ef6d-2cf1-42f0-82b4-21f5036feb71",
+        "userId": "679a7cbb-1635-5415-896a-9e8151b74686",
+        "tradeId": "f9bdd186-0a7c-4728-8a0e-6977c6045a66",
+        "comment": "rumors of binance or coinbase listing for $pons - unconfirmed, but some interesting things were seen on-chain and shared on X",
+        "createdAt": "2026-09-05T08:26:28.828Z",
+        "parentId": null,
+        "numLikes": 66,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "rumors of binance or coinbase listing for $pons - unconfirmed, but some interesting things were seen on-chain and shared on X",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 61
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 18,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 624091,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "36adb85a-c0fd-5fa8-916d-8fdc32fe4237",
+        "address": "FJDy9FDRy6bwGEUKuAC98bUtN8MkpE2pT7Dj7HE3Z7Q1",
+        "evmAddress": "0x2ac082e252143c89c6e3bcb972e49855f9f6711c",
+        "createdAt": "2026-05-18T12:45:58.832Z",
+        "displayName": "Unipcs",
+        "userHandle": "unipcs",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/685a72bf4e0ab7095593e7618caa5c8e_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "\"If the Lord will, we shall live, and do this, or that.\" - James 4:15",
+        "following": 34,
+        "followers": 521757,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 424,
+        "numTrades": 2862,
+        "totalVolume": 2962707.537587,
+        "private": false,
+        "thumbhash": "VzkKPwIEWoh7hXiLd5l3t3eGaHB3BoQE",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": {
+          "id": "715a68a6-657e-4424-8c65-68ad3af899b1",
+          "name": "Fantom Troupe",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/4d5de9da1d1b7ee43ce86588ce29119a.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "phgWJwJoh4iPd4Z0hmhneIh4l/xoB3sC"
+        }
+      },
+      "tradeId": "0fada5e1-0cb2-4a59-a6a3-0f13fda4ada2",
+      "humanAmount": 10957901.42,
+      "sumSwapOpen": 10957269.68,
+      "price": 0.847643264882,
+      "value": 9288391.33,
+      "pnl": 9220680.62,
+      "unrealizedPnl": 9220680.62,
+      "realizedPnl": 0,
+      "costBasis": 67710.71,
+      "averageEntryPrice": 0.00617917,
+      "comment": {
+        "id": "236c867f-7268-449f-bd0f-2040628dc60e",
+        "userId": "36adb85a-c0fd-5fa8-916d-8fdc32fe4237",
+        "tradeId": "0fada5e1-0cb2-4a59-a6a3-0f13fda4ada2",
+        "comment": "Robinhood szn",
+        "createdAt": "2026-08-30T15:04:50.309Z",
+        "parentId": null,
+        "numLikes": 1228,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "Robinhood szn",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 1214
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 27,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 569076,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "35a98e8f-d962-5256-9b39-89624b524e57",
+        "address": "5zVedvk9ffJKwaoueQWKEAAAa1nutXKhaqmFxzwmvVkW",
+        "evmAddress": "0xa9f7da8979d0ed6aaf3181354a522ac53e69a682",
+        "createdAt": "2025-10-06T03:35:36.994Z",
+        "displayName": "AJC",
+        "userHandle": "AvgJoesCrypto",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/be589800533de1c866a58c639a35e9db_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "Follow me on X: @AvgJoesCrypto",
+        "following": 150,
+        "followers": 109812,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 1866,
+        "numTrades": 997,
+        "totalVolume": 2066636.799456,
+        "private": false,
+        "thumbhash": "IggGHwTomHZ/c4mLiDWniIeJmVAHZpoA",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "3c1b1607-95fa-41ae-9a0a-e44d99857ed7",
+      "humanAmount": 4373671.74,
+      "sumSwapOpen": 6105186.79,
+      "price": 0.847643264882,
+      "value": 3707313.39,
+      "pnl": 4322903.27,
+      "unrealizedPnl": 3687406.02,
+      "realizedPnl": 635497.25,
+      "costBasis": 27822.84,
+      "averageEntryPrice": 0.00455164,
+      "comment": {
+        "id": "274a9b7b-286d-49b2-8e2f-5d083d7da693",
+        "userId": "35a98e8f-d962-5256-9b39-89624b524e57",
+        "tradeId": "3c1b1607-95fa-41ae-9a0a-e44d99857ed7",
+        "comment": "PONS fundamentals are great.\n\nMaintaining top launchpad spot on Robinhood Chain and is trading at 1.8x price-to-buybacks. \n\nPUMP trades at 14x price-to-buybacks:\n\nhttps://x.com/avgjoescrypto/status/2091181282965270707?s=46",
+        "createdAt": "2026-08-22T15:16:41.579Z",
+        "parentId": null,
+        "numLikes": 494,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "PONS fundamentals are great.\n\nMaintaining top launchpad spot on Robinhood Chain and is trading at 1.8x price-to-buybacks. \n\nPUMP trades at 14x price-to-buybacks:\n\nhttps://x.com/avgjoescrypto/status/2091181282965270707?s=46",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 492
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 11,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 370641,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "2f62a25e-b162-51c8-bdbb-f70365dbf34e",
+        "address": "Hr9UxGTUn3XfVasLKdbZdPtEvnPpDpCxtgQDbaAceP7R",
+        "evmAddress": "0xca3b0e0e978c808d311ee6a11e9c195d49f53f80",
+        "createdAt": "2026-07-09T19:03:42.003Z",
+        "displayName": "cosby",
+        "userHandle": "cosby",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 0,
+        "followers": 26152,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 487,
+        "numTrades": 327,
+        "totalVolume": 1808586.203741,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "65dcd93b-d6e7-4b5c-950a-ed1bd51c031a",
+      "humanAmount": 4276506.72,
+      "sumSwapOpen": 6782481.74,
+      "price": 0.847643264882,
+      "value": 3624952.12,
+      "pnl": 3454508.3,
+      "unrealizedPnl": 3405617.52,
+      "realizedPnl": 48890.78,
+      "costBasis": 347863.15,
+      "averageEntryPrice": 0.0512883,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 439942,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "b129064a-55dc-5a5f-a5fc-68cc42dfbee5",
+        "address": "CCJse5dhueP8GxJEfHQuGHue5bb9ECGY5FbJ9VgzxiRv",
+        "evmAddress": "0xc067a81d2992f45ed7dfe62d1e8feee1c4c02ad3",
+        "createdAt": "2026-01-31T10:15:55.146Z",
+        "displayName": "RugDalio✨",
+        "userHandle": "RugDalio",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/e8a161a40dca258ac0caeae61fee7587_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "shoot for the stars mfer",
+        "following": 26,
+        "followers": 19127,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 298,
+        "numTrades": 346,
+        "totalVolume": 502522.35227,
+        "private": false,
+        "thumbhash": "KakNHwoIZohimYiUeWiHl4eHaL/qB3QE",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": {
+          "id": "c704bb33-3b70-4b1b-b6ec-be53030cd4b9",
+          "name": "The Light",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/e5eebb3c3ecefb13fdf59b3de055c7c3.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "iygKF4IHmFeHdoqEh1mHl5eGdHB4B4YH"
+        }
+      },
+      "tradeId": "8df7977a-3d00-4c6f-adf4-de42dc05f0dd",
+      "humanAmount": 3528330.96,
+      "sumSwapOpen": 92904.22,
+      "price": 0.847643264882,
+      "value": 2990765.98,
+      "pnl": 2925554.41,
+      "unrealizedPnl": 2832516.08,
+      "realizedPnl": 93038.34,
+      "costBasis": 166079.72,
+      "averageEntryPrice": 0.0448512,
+      "comment": {
+        "id": "1c405e25-7e41-45ab-ab05-c84d936d4523",
+        "userId": "b129064a-55dc-5a5f-a5fc-68cc42dfbee5",
+        "tradeId": "8df7977a-3d00-4c6f-adf4-de42dc05f0dd",
+        "comment": "simply put: think of pons as an L1. anything can be built on top of it. want to solve for the way coins are launched? build it. \n\npons just so happens to be an L1 with immense mindshare and incentives aligned with holders \n\nthis is the trade of the cycle in number go up and quite possibly a change to make the space better \n\npons world order ✊",
+        "createdAt": "2026-09-03T23:11:36.891Z",
+        "parentId": null,
+        "numLikes": 45,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "simply put: think of pons as an L1. anything can be built on top of it. want to solve for the way coins are launched? build it. \n\npons just so happens to be an L1 with immense mindshare and incentives aligned with holders \n\nthis is the trade of the cycle in number go up and quite possibly a change t…",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 45
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 5,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 240944,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "4c88563b-770a-5abe-810a-bd6be308fe16",
+        "address": "3uXZjuSPvdRQrsTPmQW5XzoZUh44e5Xo6QiLKk2TYKYg",
+        "evmAddress": "0xb92799874a2e5f217de3e13ad071beb60b8eab66",
+        "createdAt": "2026-02-21T05:31:51.934Z",
+        "displayName": "lordarbiter",
+        "userHandle": "lordarbiter",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/a05df5cc494e6563658eabbd932fc2a6_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "Let's F-ing Win.",
+        "following": 80,
+        "followers": 16824,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 456,
+        "numTrades": 397,
+        "totalVolume": 1045724.34275,
+        "private": false,
+        "thumbhash": "IMoKDwg/VVZEpod2iGeHdmiICPRokJ0H",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "d93da3fd-c15c-466e-aac9-bbbed042025f",
+      "humanAmount": 3390181.48,
+      "sumSwapOpen": 4125551.14,
+      "price": 0.847643264882,
+      "value": 2873664.5,
+      "pnl": 2846020.29,
+      "unrealizedPnl": 2787507.65,
+      "realizedPnl": 58512.63,
+      "costBasis": 104845.27,
+      "averageEntryPrice": 0.0254136,
+      "comment": {
+        "id": "315b1b86-e9c3-47fd-9b8e-0764168d7a67",
+        "userId": "4c88563b-770a-5abe-810a-bd6be308fe16",
+        "tradeId": "d93da3fd-c15c-466e-aac9-bbbed042025f",
+        "comment": "$1B before EoW",
+        "createdAt": "2026-09-05T08:41:07.409Z",
+        "parentId": null,
+        "numLikes": 1,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "$1B before EoW",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 1
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 12,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 134521,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "ab12eb3f-c4fa-516c-a6d5-e476abbe0160",
+        "address": "6u9QjxLnGV4JGVQt7bATiwFUH25mVkLBGeNShGYL3yQr",
+        "evmAddress": "0xcc4268894f8c76e6f376b03021e77770cfbae8a8",
+        "createdAt": "2025-09-07T20:27:26.795Z",
+        "displayName": "nobi",
+        "userHandle": "0xnobi",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/8d6aa32ee883fb1cb379bd74716b77ae_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "ubi caritas",
+        "following": 63,
+        "followers": 42649,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 2818,
+        "numTrades": 933,
+        "totalVolume": 1062387.931342,
+        "private": false,
+        "thumbhash": "j/cNFwLHl5aKeYePd3d5uGeFeFQHVnYA",
+        "coverPhotoLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/a7515bb69e74ea9968ee82343cc5b7c2.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "coverPhotoThumbhash": "XBgGEoRXoG1Fh4d2D4rHkFY=",
+        "twitter": null,
+        "clan": {
+          "id": "11e5d07c-6f1d-4aa7-8a0d-aacf1c5f2033",
+          "name": "Nobi Ventures",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/6a0773e599021b7f8a604458026c6214.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "LvgVBwC4uId5h3h/dWaId4iIhmQIuIkP"
+        }
+      },
+      "tradeId": "29f9875d-0cc4-4964-bdca-87e642c2ddf6",
+      "humanAmount": 3100175.33,
+      "sumSwapOpen": 18993245.27,
+      "price": 0.847643264882,
+      "value": 2627842.74,
+      "pnl": 2687625.97,
+      "unrealizedPnl": 2627483.64,
+      "realizedPnl": 60142.33,
+      "costBasis": 2200,
+      "averageEntryPrice": 0.000115831,
+      "comment": {
+        "id": "0f31d5fc-5ee3-4a28-a602-0553ffc91313",
+        "userId": "ab12eb3f-c4fa-516c-a6d5-e476abbe0160",
+        "tradeId": "29f9875d-0cc4-4964-bdca-87e642c2ddf6",
+        "comment": "let's win",
+        "createdAt": "2026-08-25T01:33:15.992Z",
+        "parentId": null,
+        "numLikes": 220,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "let's win",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 220
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 35,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 167692,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "18e1a823-87d9-5e6b-ba0f-5ef81e734660",
+        "address": "7FyMjkQbTxuFMHL7xTLRLfJM1i2HpvZxqrQFK7EHuj5W",
+        "evmAddress": "0xbf8a981c058658573ccb1a810c3f1fefb07995c8",
+        "createdAt": "2026-08-13T01:24:43.640Z",
+        "displayName": "230",
+        "userHandle": "Chubbi230",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/c635eec1447e91ce4f5d084f6df3b1c4_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "Don't copytrade me, professional roundtripper. \nFollow me on X at @chubbi230",
+        "following": 45,
+        "followers": 20072,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 101,
+        "numTrades": 87,
+        "totalVolume": 116277.20078,
+        "private": false,
+        "thumbhash": "bygKFwLYdpeHaIhfhpeHeXl4afWYSZ8M",
+        "coverPhotoLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/2f16efd3add5c2c61e8d30fd492ded05.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "coverPhotoThumbhash": "ZkcKSoYIhUV4iIiHCYfGYFk=",
+        "twitter": null,
+        "clan": {
+          "id": "2903d220-2087-4c67-b72a-300863517ab7",
+          "name": "chubbicorns",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/d6c1fe6d6738241bd8fcbd2b690ce85c.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "XhgOFwIHmIeShnh4iTeWV4h4d4BYBoMF"
+        }
+      },
+      "tradeId": "80f2f0e3-a29e-4353-b74c-b27f0f38c2e6",
+      "humanAmount": 2500000,
+      "sumSwapOpen": 12317.84,
+      "price": 0.847643264882,
+      "value": 2119108.16,
+      "pnl": 2912959.97,
+      "unrealizedPnl": 1518167.22,
+      "realizedPnl": 1394792.76,
+      "costBasis": 1689254.04,
+      "averageEntryPrice": 0.240376,
+      "comment": {
+        "id": "1c399252-76ca-4601-8744-07845f3697af",
+        "userId": "18e1a823-87d9-5e6b-ba0f-5ef81e734660",
+        "tradeId": "80f2f0e3-a29e-4353-b74c-b27f0f38c2e6",
+        "comment": "Second day now Pons revenue flipped PUmp's, alarm bells should be ringing.\n\nPump does 50% revenue buybacks with token unlocks higher than its current buyback rate.\n\nPons does 80% revenue buybacks with no token unlocks.\n\nPons is trading at 3x cheaper than Pump's current floating marketcap.",
+        "createdAt": "2026-09-05T02:23:32.320Z",
+        "parentId": null,
+        "numLikes": 13,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "Second day now Pons revenue flipped PUmp's, alarm bells should be ringing.\n\nPump does 50% revenue buybacks with token unlocks higher than its current buyback rate.\n\nPons does 80% revenue buybacks with no token unlocks.\n\nPons is trading at 3x cheaper than Pump's current floating marketcap.",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 13
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 13,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 276635,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "56cffcab-bea4-59ca-a6bc-71ab8464eb5e",
+        "address": "5dxRJTztD97SgdqhKXBE84nvTMvBhdkXceHd3ToDmcYe",
+        "evmAddress": "0xf04ecd1bf2b2ec3a7553ffb269de60cb0545803e",
+        "createdAt": "2026-08-31T17:56:31.169Z",
+        "displayName": "memeking888",
+        "userHandle": "memeking888",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/8a6f85e2ea6dd533ea7ecb8ec359947d_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "just buy buy buy",
+        "following": 21,
+        "followers": 672,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 88,
+        "numTrades": 25,
+        "totalVolume": 5351190.671824,
+        "private": false,
+        "thumbhash": "WxgOJwSYhoafaZebd3h3iHZ4SAJYN3AE",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "0110edb7-3537-4195-b9b2-8fde9576fad8",
+      "humanAmount": 1889142.28,
+      "sumSwapOpen": 2006591.36,
+      "price": 0.847643264882,
+      "value": 1601318.73,
+      "pnl": 623016.89,
+      "unrealizedPnl": 638759.32,
+      "realizedPnl": -15742.42,
+      "costBasis": 1022402.3,
+      "averageEntryPrice": 0.509522,
+      "comment": {
+        "id": "112d1f36-1981-4e41-b233-02adfa9db770",
+        "userId": "56cffcab-bea4-59ca-a6bc-71ab8464eb5e",
+        "tradeId": "0110edb7-3537-4195-b9b2-8fde9576fad8",
+        "comment": "pons will 50b",
+        "createdAt": "2026-09-03T23:21:21.699Z",
+        "parentId": null,
+        "numLikes": 26,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "pons will 50b",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 26
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 0,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 68341,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "5ac9cf73-970f-54a1-9f54-fd9ae554b279",
+        "address": "9MPLfcfwfaqhRZC8cUDBQCUV6iexxMvMgJxxihJtHK3D",
+        "evmAddress": "0xe083a76279ea76494ccc944f8cafb6e095f9b644",
+        "createdAt": "2025-10-21T19:14:29.217Z",
+        "displayName": "Carl Wheezor",
+        "userHandle": "carlwheezor",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/7c13121ed4329e88d9b4d71b81c192e9_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "Elite Money Losing and RoundTripping expert \n\ngood finds, turrible execution",
+        "following": 42,
+        "followers": 12876,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 5923,
+        "numTrades": 1672,
+        "totalVolume": 2297054.758619,
+        "private": false,
+        "thumbhash": "mPkJLwg3iohghYd2eli5eGmFeACXdX8G",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": {
+          "id": "11e5d07c-6f1d-4aa7-8a0d-aacf1c5f2033",
+          "name": "Nobi Ventures",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/6a0773e599021b7f8a604458026c6214.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "LvgVBwC4uId5h3h/dWaId4iIhmQIuIkP"
+        }
+      },
+      "tradeId": "3b68c595-56cd-4b76-9baf-3e6d99e4e40e",
+      "humanAmount": 1837502.15,
+      "sumSwapOpen": 2031120.49,
+      "price": 0.847643264882,
+      "value": 1557546.32,
+      "pnl": 1556182.54,
+      "unrealizedPnl": 1555417.48,
+      "realizedPnl": 765.059,
+      "costBasis": 2353.16,
+      "averageEntryPrice": 0.00115856,
+      "comment": {
+        "id": "f63d369b-e126-45bf-9b4d-19c692823658",
+        "userId": "5ac9cf73-970f-54a1-9f54-fd9ae554b279",
+        "tradeId": "3b68c595-56cd-4b76-9baf-3e6d99e4e40e",
+        "comment": "https://x.com/onchainlurkin/status/2076804581837693113?s",
+        "createdAt": "2026-07-13T23:04:33.058Z",
+        "parentId": null,
+        "numLikes": 75,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "https://x.com/onchainlurkin/status/2076804581837693113?s",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 75
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 0,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 247900,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "dcbfc181-b3d0-5735-be1c-135bc49749ff",
+        "address": "8J8FCJ1C8PEVKHByfvHFNuiwFbT5y2U6cDpMa8erPLtv",
+        "evmAddress": "0x32d2e2f8b2e0afa0d847287abca45a9010db3d7e",
+        "createdAt": "2026-07-21T04:51:24.382Z",
+        "displayName": "Kohi",
+        "userHandle": "ventikohi",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/0837f5845f234561d6d19afa65f66a0b_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "Oh Heavenly Father, bear witness as I show you the strength of your creation",
+        "following": 63,
+        "followers": 5917,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 211,
+        "numTrades": 160,
+        "totalVolume": 769150.672018,
+        "private": false,
+        "thumbhash": "DlgKJwxXZ1mJiHeAh4dnl3h3dkQIposA",
+        "coverPhotoLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/2934f7d2695f338c747a25e6b4bead81.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "coverPhotoThumbhash": "CjcGEoQCtmiZeTepv3BUgBg=",
+        "twitter": null,
+        "clan": {
+          "id": "75cefc60-e6f6-4189-8073-18e7cb37db5d",
+          "name": "Dabal",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/4e06a6f1dfd20a96b96ee5e38c7e012a.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "BggKDwJYZ2eIh3dwimmHx1iJhnUIaIcA"
+        }
+      },
+      "tradeId": "96f5c85a-2a89-4599-993d-d68ed6f60f73",
+      "humanAmount": 1722730.9,
+      "sumSwapOpen": 712606.88,
+      "price": 0.847643264882,
+      "value": 1460261.25,
+      "pnl": 1313961.57,
+      "unrealizedPnl": 1297026.69,
+      "realizedPnl": 16934.88,
+      "costBasis": 224616.57,
+      "averageEntryPrice": 0.0947534,
+      "comment": {
+        "id": "38d2cdbd-19e0-434e-9092-97ba08ac9970",
+        "userId": "dcbfc181-b3d0-5735-be1c-135bc49749ff",
+        "tradeId": "96f5c85a-2a89-4599-993d-d68ed6f60f73",
+        "comment": "Love these dumps, a lot of continual distribution from large holders to new holders.\n\nDips will be less violent, as PONS continues on its road to a bil.",
+        "createdAt": "2026-09-04T23:54:42.654Z",
+        "parentId": null,
+        "numLikes": 9,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "Love these dumps, a lot of continual distribution from large holders to new holders.\n\nDips will be less violent, as PONS continues on its road to a bil.",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 9
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 16,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 506507,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "87f77c24-44e0-5696-baaf-dfe732083954",
+        "address": "82j78BopqvD2P7soaQgzcRZYh1BWmAVZmXCevM5SWhYi",
+        "evmAddress": "0x0eaac7ffafafba5e9b1cc5d5b6b2a4a9c47b5e8e",
+        "createdAt": "2025-04-30T00:39:39.018Z",
+        "displayName": "kyle",
+        "userHandle": "kyle",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/7d5d73ffb806613a8181e32434794d86_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "follow me on twitter: x.com/kyle. i sell.",
+        "following": 100,
+        "followers": 32752,
+        "activated": true,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 1165,
+        "numTrades": 765,
+        "totalVolume": 1456186.008151,
+        "private": false,
+        "thumbhash": "RygGFwYGnJeRZlpWekW6V5d7dgKIKIAJ",
+        "coverPhotoLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/8f77a221d5416d98c0c98f8b6619b3c9.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "coverPhotoThumbhash": "zwcSIoiKiIhwd9d3nX/36mc=",
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "b71f943a-ccb8-4369-867d-d57fa3143a76",
+      "humanAmount": 1582279.03,
+      "sumSwapOpen": 0,
+      "price": 0.847643264882,
+      "value": 1341208.17,
+      "pnl": 1303951.64,
+      "unrealizedPnl": 1281321.8,
+      "realizedPnl": 22629.84,
+      "costBasis": 63045.78,
+      "averageEntryPrice": 0.0378482,
+      "comment": {
+        "id": "b3d31290-e2f7-4f01-a9c4-b2953b356790",
+        "userId": "87f77c24-44e0-5696-baaf-dfe732083954",
+        "tradeId": "b71f943a-ccb8-4369-867d-d57fa3143a76",
+        "comment": "added to binance alpha: https://x.com/binancewallet/status/2095319553282822436",
+        "createdAt": "2026-09-03T01:35:29.828Z",
+        "parentId": null,
+        "numLikes": 24,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "added to binance alpha: https://x.com/binancewallet/status/2095319553282822436",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 24
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 3,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 433252,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "0b01ca3f-54bc-5ef9-a66e-d54c7c3dd8d2",
+        "address": "78s489nBHjqiD5cAGANqWpJGAo3SuXUZh7wNLrnaEcni",
+        "evmAddress": "0xe1090b6bebc49684c66dfeaa4abc7e80f85a5478",
+        "createdAt": "2025-10-27T23:08:57.648Z",
+        "displayName": "Michael Milliardi",
+        "userHandle": "Milliardi",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/ac8aff3dc8176be66431c296d5e1425a_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "Billions. Founder of Rugsfun (memecoin trading with 100x better odds 🥂)\nI like longterm holds, rest are a gamble. Would suggest not copytrading.",
+        "following": 20,
+        "followers": 1470,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 103,
+        "numTrades": 74,
+        "totalVolume": 857015.60523,
+        "private": false,
+        "thumbhash": "GykKDwLnlomfdYV5d4h3iXh3aJ0JhoQA",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "c5ec63f5-503a-471d-9c59-f1af0061a09b",
+      "humanAmount": 1534551.55,
+      "sumSwapOpen": 1534385.59,
+      "price": 0.847643264882,
+      "value": 1300752.28,
+      "pnl": 1107240.8,
+      "unrealizedPnl": 1107240.8,
+      "realizedPnl": 0,
+      "costBasis": 193511.48,
+      "averageEntryPrice": 0.126103,
+      "comment": {
+        "id": "9f7056e1-c167-450b-ad63-0468ef019dfc",
+        "userId": "0b01ca3f-54bc-5ef9-a66e-d54c7c3dd8d2",
+        "tradeId": "c5ec63f5-503a-471d-9c59-f1af0061a09b",
+        "comment": "PONS bull case: actual fees when including post-bond lp sweeps is significantly higher than most are referencing. Revenue & dex volume is also quickly approaching Pump’s (valued > 10x higher), while Robinhood is showing early signs of being able to eclipse Solana this cycle. And Pump itself is undervalued by industry standards to begin with. Pair this with expected macro liquidity inflows into 2027 and topblasting rn doesn’t look so scary.\n\nBear case: other than black swans, this would be Pump adding RH support. Would almost certainly cause a large shortterm selloff. However, Pump playing catchup on a chain with a different culture and backing than Solana’s would not be as simple as deploying capital. Pump’s team historically is reactionary and plays it safe when it comes to making big changes (such as moving away from Raydium, or pivoting from streams -> socialfi, or doing their intended airdrop), so I think this is part of why theyre also historically undervalued. Pons is shipping way faster.\n\nPons is primed for a RH listing (esp after Hyperliquid) & potential backing from Vlad himself. It is unlikely that Pump would secure anything with Robinhood first given their conflicts of interest with Solana. On top of that, aesthetically and culturally, they just have more aura right now too.\n\nTLDR: buy my bags. Pons has firstmover advantage and we are in the early innings of a crypto bull.",
+        "createdAt": "2026-08-31T08:45:06.112Z",
+        "parentId": null,
+        "numLikes": 28,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "PONS bull case: actual fees when including post-bond lp sweeps is significantly higher than most are referencing. Revenue & dex volume is also quickly approaching Pump’s (valued > 10x higher), while Robinhood is showing early signs of being able to eclipse Solana this cycle. And Pump itself is under…",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 28
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 5,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 46652,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "ae2439cf-04e5-5e3f-a018-ed20f29e7807",
+        "address": "66GgzbpzFdgnRc1uC3joTme7JbuQtDZLckhkAxbaqyDd",
+        "evmAddress": "0x94958ea71cda84f14f257a5857ccf8fcec2d2055",
+        "createdAt": "2026-06-23T03:31:25.574Z",
+        "displayName": "kingofgotham",
+        "userHandle": "kingofgotham",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/17d5db06cb36c1ed992ffa315d2b1a18_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "",
+        "following": 18,
+        "followers": 4123,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 81,
+        "numTrades": 92,
+        "totalVolume": 480395.582822,
+        "private": false,
+        "thumbhash": "3OcNBIDIt2Z/doWYhocGkXQQaA==",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "7e427bc1-70f1-49ba-8fe7-b422b866caa1",
+      "humanAmount": 1522126.08,
+      "sumSwapOpen": 1879168,
+      "price": 0.847643264882,
+      "value": 1290219.92,
+      "pnl": 1405689.18,
+      "unrealizedPnl": 1278936.62,
+      "realizedPnl": 126752.55,
+      "costBasis": 13930,
+      "averageEntryPrice": 0.00741286,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 256507,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "38667581-5c1b-5713-8ec5-d10e5cdfaab8",
+        "address": "AdSDob8MXurxQ8WnJHjSKVZeuYwK3k4E5LtuBWjoWD6P",
+        "evmAddress": "0x1f36be14921689020c0d98049b49c4f036d1e09c",
+        "createdAt": "2026-07-08T00:38:28.337Z",
+        "displayName": "EllioTrades",
+        "userHandle": "elliotrades",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/e5f174ce965a43dd01ad5b488b1a7665_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "DO NOT SEND ME COINS!! Do not copy trade. I use the sell button. I love you.",
+        "following": 30,
+        "followers": 5965,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 103,
+        "numTrades": 67,
+        "totalVolume": 752468.658363,
+        "private": false,
+        "thumbhash": "6LYJLwqHGVaMdImAhFeXiFiHhUBGB2UF",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "926fe55d-739b-4ebb-ba1a-e6e9a2711e45",
+      "humanAmount": 1376052.15,
+      "sumSwapOpen": 1376052.15,
+      "price": 0.847643264882,
+      "value": 1166401.34,
+      "pnl": 950788.63,
+      "unrealizedPnl": 950788.63,
+      "realizedPnl": 0,
+      "costBasis": 215612.71,
+      "averageEntryPrice": 0.156689,
+      "comment": {
+        "id": "d3f2eb80-6ac5-4c2d-8d33-84d845fa318a",
+        "userId": "38667581-5c1b-5713-8ec5-d10e5cdfaab8",
+        "tradeId": "926fe55d-739b-4ebb-ba1a-e6e9a2711e45",
+        "comment": "PONS officially listed on RH exchange, the PvE begins\n\n(still praying for a fakout dip to add more)",
+        "createdAt": "2026-09-02T22:47:16.189Z",
+        "parentId": null,
+        "numLikes": 31,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "PONS officially listed on RH exchange, the PvE begins\n\n(still praying for a fakout dip to add more)",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 31
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 1,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 235857,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "e8a13767-5e2b-57a1-8be7-90f0b0d67bb2",
+        "address": "ZjnSYcVYau8hEfoCQJiyUkx3e6H5X7qgLKNn93Lf2v3",
+        "evmAddress": "0x5869ac66b8b8b7a495938865b9a74a345b3455cf",
+        "createdAt": "2026-01-28T20:01:27.283Z",
+        "displayName": "Jols",
+        "userHandle": "Jols",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 44,
+        "followers": 1552,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 591,
+        "numTrades": 193,
+        "totalVolume": 479776.362421,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "9467f335-229c-48b7-a80f-0afedd3c68ec",
+      "humanAmount": 1357595.11,
+      "sumSwapOpen": 1365366.33,
+      "price": 0.847643264882,
+      "value": 1150756.35,
+      "pnl": 1040846.79,
+      "unrealizedPnl": 1040483.37,
+      "realizedPnl": 363.415,
+      "costBasis": 110904.21,
+      "averageEntryPrice": 0.0812267,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 33690,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "fc3ea5c0-afc4-553c-a295-f838907dc581",
+        "address": "EYveLtK4M3PsNnzH6zAGQgLnCGb2CqFqkKnEoNtRirDX",
+        "evmAddress": "0xf89e668fdcbf7ff8822abdd2826d4214d598887b",
+        "createdAt": "2025-12-08T17:22:08.034Z",
+        "displayName": "Vee",
+        "userHandle": "theveeman",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/c55c219493a52e510a79faf51ce1d251_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "",
+        "following": 84,
+        "followers": 129440,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 1540,
+        "numTrades": 2027,
+        "totalVolume": 3073579.23105,
+        "private": false,
+        "thumbhash": "afYFT4T2aHmOdHd1iLloZ5d4iGBnCHUH",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": {
+          "id": "75cefc60-e6f6-4189-8073-18e7cb37db5d",
+          "name": "Dabal",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/4e06a6f1dfd20a96b96ee5e38c7e012a.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "BggKDwJYZ2eIh3dwimmHx1iJhnUIaIcA"
+        }
+      },
+      "tradeId": "605f0cc1-301a-4285-ac03-2e3364d2932b",
+      "humanAmount": 1299115.74,
+      "sumSwapOpen": 0,
+      "price": 0.847643264882,
+      "value": 1101186.71,
+      "pnl": 962634.59,
+      "unrealizedPnl": 1043683.35,
+      "realizedPnl": -81048.76,
+      "costBasis": 270128.04,
+      "averageEntryPrice": 0.0442635,
+      "comment": {
+        "id": "37c5bc91-6629-48fc-a8db-a78b5aaef1cd",
+        "userId": "fc3ea5c0-afc4-553c-a295-f838907dc581",
+        "tradeId": "605f0cc1-301a-4285-ac03-2e3364d2932b",
+        "comment": "Few weird sidebag selling. still think 1b soon but timing is key",
+        "createdAt": "2026-09-05T01:06:27.580Z",
+        "parentId": null,
+        "numLikes": 5,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "Few weird sidebag selling. still think 1b soon but timing is key",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 5
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 4,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 68574,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "eae924d1-d7b9-55cc-8fb8-a995461ec527",
+        "address": "9tmpze3mmPcxDR1CLmDD2x5R4RhRtFKHfSw44QNPGQNv",
+        "evmAddress": "0x0679726da632647994aa2585b06d5013a8c88e64",
+        "createdAt": "2026-08-13T18:32:58.800Z",
+        "displayName": "Pumponomics",
+        "userHandle": "ThePumponomics",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/b0ef9741e3bf1132354b4db7676e870d_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": null,
+        "following": 15,
+        "followers": 1500,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 54,
+        "numTrades": 35,
+        "totalVolume": 1068921.855663,
+        "private": false,
+        "thumbhash": "z/MJVwL4l3d8hYeJdqhoiHeHdTBYB4MF",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "185013e3-5e00-4fc2-bed0-b87ef31e145d",
+      "humanAmount": 1272319.05,
+      "sumSwapOpen": 1272319.05,
+      "price": 0.847643264882,
+      "value": 1078472.67,
+      "pnl": 629031.42,
+      "unrealizedPnl": 629031.42,
+      "realizedPnl": 0,
+      "costBasis": 449441.25,
+      "averageEntryPrice": 0.353246,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 50492,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "5a59dea5-d0fc-57ec-a617-6413105fe466",
+        "address": "HRRY7gF9usLJbwbKQdx2iu2CAcRXTMEsm4SCMMvWKCeJ",
+        "evmAddress": "0x13f575577149e1942abccb1b7e08c4fe576657c9",
+        "createdAt": "2025-10-02T23:30:40.730Z",
+        "displayName": "samisa",
+        "userHandle": "Samisa_btc",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/92f2fa8f235d8eff97b4098cd34ad8c9_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "run it",
+        "following": 49,
+        "followers": 27845,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 2145,
+        "numTrades": 1160,
+        "totalVolume": 613650.768673,
+        "private": false,
+        "thumbhash": "TggGFwSjpkSJlJaAh3iIqHaliBkIR4UA",
+        "coverPhotoLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/935fe2251b2945ac86555f48a0dcbe3e.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "coverPhotoThumbhash": "x/cFAoAF1zZqeEe3raDoC4o=",
+        "twitter": null,
+        "clan": {
+          "id": "11e5d07c-6f1d-4aa7-8a0d-aacf1c5f2033",
+          "name": "Nobi Ventures",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/6a0773e599021b7f8a604458026c6214.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "LvgVBwC4uId5h3h/dWaId4iIhmQIuIkP"
+        }
+      },
+      "tradeId": "3386923d-8051-4aec-a884-e07251f266d8",
+      "humanAmount": 1176210.28,
+      "sumSwapOpen": 10511274.65,
+      "price": 0.847643264882,
+      "value": 997006.72,
+      "pnl": 1544984.96,
+      "unrealizedPnl": 995665.89,
+      "realizedPnl": 549319.07,
+      "costBasis": 11982.39,
+      "averageEntryPrice": 0.00113996,
+      "comment": {
+        "id": "24a923aa-dafc-4519-886a-38c32bdf5f59",
+        "userId": "5a59dea5-d0fc-57ec-a617-6413105fe466",
+        "tradeId": "3386923d-8051-4aec-a884-e07251f266d8",
+        "comment": "let's win",
+        "createdAt": "2026-07-15T20:59:26.841Z",
+        "parentId": null,
+        "numLikes": 371,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "let's win",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 371
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 0,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 163395,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "c3baeeef-4615-5c88-9956-dc090b709ca2",
+        "address": "36cPJFmhyv4MbtK3svZn3T1QrzcBncZJnV5srd6RZCQ2",
+        "evmAddress": "0xcd3c53e837649aa0247a99413713e3986de66b00",
+        "createdAt": "2025-08-28T18:28:43.591Z",
+        "displayName": "Fartman Sacks",
+        "userHandle": "FartmanSacks",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/8e4f2608783a0bcd52d3a4cf0566eadd_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "accredited investor. tendiman. round tripping genny wealth in cryptographic markets since ‘17.",
+        "following": 41,
+        "followers": 40759,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 415,
+        "numTrades": 757,
+        "totalVolume": 1628106.783015,
+        "private": false,
+        "thumbhash": "KLYBDwBJZneKh3dgmziXp2l8mKQISYoA",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "ecec8e76-a825-49b6-a829-90efea0e0339",
+      "humanAmount": 1025913.98,
+      "sumSwapOpen": 0,
+      "price": 0.847643264882,
+      "value": 869609.07,
+      "pnl": 338793.2,
+      "unrealizedPnl": 318277.69,
+      "realizedPnl": 20515.51,
+      "costBasis": 611619.76,
+      "averageEntryPrice": 0.537405,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 248013,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "a313b95b-9030-5e9f-9f9a-a35ac19fb93d",
+        "address": "B7MoREUL5Q6o7a7aRB18RxRZBbs43WNEe5TyZhAQWyhs",
+        "evmAddress": "0x442da4e9d664a33067e43c68ca6245ee4ce11d29",
+        "createdAt": "2026-06-25T18:11:09.852Z",
+        "displayName": "paidinfullintel",
+        "userHandle": "paidinfullintel",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/1ee6c329e0397bdf5b4c22f91f96752b_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "working onchain",
+        "following": 62,
+        "followers": 2191,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 857,
+        "numTrades": 429,
+        "totalVolume": 1701491.763696,
+        "private": false,
+        "thumbhash": "yfcJBwAJdoeqRqeIZnh1OpZ2Vn+35JsP",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "5c773fa0-0297-49e1-a322-946d56e20fc4",
+      "humanAmount": 1022607.97,
+      "sumSwapOpen": 1022601.08,
+      "price": 0.847643264882,
+      "value": 866806.76,
+      "pnl": 805582.72,
+      "unrealizedPnl": 805582.72,
+      "realizedPnl": 0,
+      "costBasis": 61224.03,
+      "averageEntryPrice": 0.0598704,
+      "comment": {
+        "id": "c325c77a-d07c-4e87-9d19-87ee63c27298",
+        "userId": "a313b95b-9030-5e9f-9f9a-a35ac19fb93d",
+        "tradeId": "5c773fa0-0297-49e1-a322-946d56e20fc4",
+        "comment": "Real recognize Real  \n\nhttps://x.com/ponsdotfamily/status/2095624093944979950",
+        "createdAt": "2026-09-03T21:45:40.702Z",
+        "parentId": null,
+        "numLikes": 12,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "Real recognize Real  \n\nhttps://x.com/ponsdotfamily/status/2095624093944979950",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 12
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 0,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 145393,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "8908601f-40d0-5665-846c-c0ebb6ac6938",
+        "address": "qRszS4CCxxPaTmbFekSc4dMYYhWNpRtG2cLeRGUF5fm",
+        "evmAddress": "0x6b6215349ba897d4666166e0d395228a122c1c48",
+        "createdAt": "2026-07-23T21:45:38.966Z",
+        "displayName": "ethersole",
+        "userHandle": "ethersole",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/751359fe93f9ce3161eb65460615d138_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "risk is the downpayment on success.\nlearn to believe again.",
+        "following": 11,
+        "followers": 2681,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 227,
+        "numTrades": 59,
+        "totalVolume": 1877796.831086,
+        "private": false,
+        "thumbhash": "2hgGDwCVnLopiHyWnMIt9VWnBoQlEFYC",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "3c3091a9-99f2-48c5-b721-47d82667ea77",
+      "humanAmount": 1000183.39,
+      "sumSwapOpen": 1000183.39,
+      "price": 0.847643264882,
+      "value": 847798.72,
+      "pnl": 426370.54,
+      "unrealizedPnl": 426370.54,
+      "realizedPnl": 0,
+      "costBasis": 421428.18,
+      "averageEntryPrice": 0.421351,
+      "comment": {
+        "id": "6fba23a4-8fb0-43ca-afed-f144fb5de4e8",
+        "userId": "8908601f-40d0-5665-846c-c0ebb6ac6938",
+        "tradeId": "3c3091a9-99f2-48c5-b721-47d82667ea77",
+        "comment": "comfy in PONS.",
+        "createdAt": "2026-09-05T00:36:06.504Z",
+        "parentId": null,
+        "numLikes": 3,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "comfy in PONS.",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 3
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 6,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 51110,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "fff31563-6cca-500c-ad25-5252e5c313c0",
+        "address": "6DWD8yjQoSabVSrShsZAAm4ercfsfxQgc4G6N6nxz1CH",
+        "evmAddress": "0x247d54c9ac1a5e10b65f5fda0d9a786704d0a18e",
+        "createdAt": "2026-01-17T00:35:19.633Z",
+        "displayName": "sockz",
+        "userHandle": "sockzt",
+        "profilePictureLink": null,
+        "description": "alexa play mambo no. 5",
+        "following": 54,
+        "followers": 1727,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 183,
+        "numTrades": 96,
+        "totalVolume": 172141.17766,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "d7278902-cd53-4826-84fb-d4b1115806c2",
+      "humanAmount": 937753.15,
+      "sumSwapOpen": 1278125.12,
+      "price": 0.847643264882,
+      "value": 794880.14,
+      "pnl": 828795.29,
+      "unrealizedPnl": 794137.72,
+      "realizedPnl": 34657.57,
+      "costBasis": 1011.9,
+      "averageEntryPrice": 0.000791703,
+      "comment": {
+        "id": "ba18573a-da65-450d-9fcd-1735e761c065",
+        "userId": "fff31563-6cca-500c-ad25-5252e5c313c0",
+        "tradeId": "d7278902-cd53-4826-84fb-d4b1115806c2",
+        "comment": "weeeeeeeee",
+        "createdAt": "2026-08-25T19:10:51.663Z",
+        "parentId": null,
+        "numLikes": 49,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "weeeeeeeee",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 49
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 3,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 174293,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "c3406c1a-9ce5-5327-81b8-8c93aa48c303",
+        "address": "CKL1uia6woCMdDiET6WvsbmhfL4ryzFbZbBnAP6rA8Hm",
+        "evmAddress": "0x2f83fe4c8318f0ab827171d5b88dd3995d9d6632",
+        "createdAt": "2026-07-31T17:08:34.916Z",
+        "displayName": "Joon",
+        "userHandle": "pianches",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/3074f8c42c8abb809c60ac79d483271e_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": null,
+        "following": 8,
+        "followers": 3859,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 295,
+        "numTrades": 268,
+        "totalVolume": 1935804.635327,
+        "private": false,
+        "thumbhash": "sBgKJwSKh4hvhod+eEeIeId2eHcIZ4cA",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "e5989172-a03d-42a3-9dfa-e0d1132711f9",
+      "humanAmount": 930161.73,
+      "sumSwapOpen": 1538390.86,
+      "price": 0.847643264882,
+      "value": 788445.33,
+      "pnl": 862215.38,
+      "unrealizedPnl": 718303.63,
+      "realizedPnl": 143911.74,
+      "costBasis": 116007.07,
+      "averageEntryPrice": 0.0754081,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 307225,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "30363fdb-12e2-5b3f-ae64-29aa2818094c",
+        "address": "5gnvQgqwsXT6LfReD62z7pRhmY6FWR13RgMno6VApJQM",
+        "evmAddress": "0x8daa5526f5f77418641dc29f4b3c007e4099f3ab",
+        "createdAt": "2026-03-11T06:56:45.765Z",
+        "displayName": "Ser Albert",
+        "userHandle": "seralberttrades",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/c802ad1a9d9bd56a92b25975db03071b_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "no, this time it’s not different.\nfull trade thesis in my channel: @seralberttrades",
+        "following": 136,
+        "followers": 11225,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 2641,
+        "numTrades": 735,
+        "totalVolume": 5684884.523735,
+        "private": false,
+        "thumbhash": "4jgKHwSHVZXfZleZpnmHlnh4GAx30HAH",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": {
+          "id": "11e5d07c-6f1d-4aa7-8a0d-aacf1c5f2033",
+          "name": "Nobi Ventures",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/6a0773e599021b7f8a604458026c6214.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "LvgVBwC4uId5h3h/dWaId4iIhmQIuIkP"
+        }
+      },
+      "tradeId": "11d3f1b8-d34a-46cd-be88-327131689706",
+      "humanAmount": 834167.37,
+      "sumSwapOpen": 9169538.04,
+      "price": 0.847643264882,
+      "value": 707076.35,
+      "pnl": 949126.63,
+      "unrealizedPnl": 678002.71,
+      "realizedPnl": 271123.92,
+      "costBasis": 369184.47,
+      "averageEntryPrice": 0.0348534,
+      "comment": {
+        "id": "82146d0c-0c0f-4d20-a424-baa70f07b82a",
+        "userId": "30363fdb-12e2-5b3f-ae64-29aa2818094c",
+        "tradeId": "11d3f1b8-d34a-46cd-be88-327131689706",
+        "comment": "1B next",
+        "createdAt": "2026-09-02T13:55:01.899Z",
+        "parentId": null,
+        "numLikes": 11,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "1B next",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 11
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 4,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 70597,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "c9f3447c-a14d-59aa-8b70-41a5e667c060",
+        "address": "E7Eeet2sCb7164ivTMAWW82RwPVGwLT2JD9HaZTPbgen",
+        "evmAddress": "0x1d8672c70d28c9c5491f8ac611a2e103e13462bf",
+        "createdAt": "2026-08-26T14:36:24.846Z",
+        "displayName": "ToxicCrudeSkink",
+        "userHandle": "vladsbutler",
+        "profilePictureLink": null,
+        "description": "ZEC PONS barbell",
+        "following": 13,
+        "followers": 263,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 43,
+        "numTrades": 19,
+        "totalVolume": 319440.078311,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "3a0f9475-5aec-4577-83e1-3b7c9becab2d",
+      "humanAmount": 829889.27,
+      "sumSwapOpen": 888952.39,
+      "price": 0.847643264882,
+      "value": 703450.05,
+      "pnl": 492120.3,
+      "unrealizedPnl": 482948.06,
+      "realizedPnl": 9172.24,
+      "costBasis": 236195.09,
+      "averageEntryPrice": 0.2657,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 49756,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "8a18e49d-60d4-5406-83f7-be2248137f28",
+        "address": "3o9cbAvK6youkwVD8tvNRCSPcF45CSEtUdXLiM2c3sxU",
+        "evmAddress": "0xdd78323e68c7c959adb6e6f3f1e91e3b4b317989",
+        "createdAt": "2026-07-14T16:36:16.209Z",
+        "displayName": "LowRivalRat",
+        "userHandle": "LowRivalRat",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 50,
+        "followers": 1138,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 363,
+        "numTrades": 64,
+        "totalVolume": 712093.589497,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "d199a08f-11c8-4f98-9785-19b74d9be66e",
+      "humanAmount": 811348.4,
+      "sumSwapOpen": 3112021.07,
+      "price": 0.847643264882,
+      "value": 687734.01,
+      "pnl": 752582.63,
+      "unrealizedPnl": 664392.58,
+      "realizedPnl": 88190.05,
+      "costBasis": 89528.78,
+      "averageEntryPrice": 0.0287687,
+      "comment": {
+        "id": "a837312e-37f3-475e-ae83-e6a612d6a938",
+        "userId": "8a18e49d-60d4-5406-83f7-be2248137f28",
+        "tradeId": "d199a08f-11c8-4f98-9785-19b74d9be66e",
+        "comment": "Uniswap just purchased some PONS for longterm, wont be surprised if PONS will hit 1B+ this/ next week, keep in mind other big exchanges also still need to buy their baggs. \n\nStill early\n\n$PONS WORLD ORDER\n\n🗣️Thank you JESUS✝️",
+        "createdAt": "2026-09-04T06:19:11.901Z",
+        "parentId": null,
+        "numLikes": 6,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "Uniswap just purchased some PONS for longterm, wont be surprised if PONS will hit 1B+ this/ next week, keep in mind other big exchanges also still need to buy their baggs. \n\nStill early\n\n$PONS WORLD ORDER\n\n🗣️Thank you JESUS✝️",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 6
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 9,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 117994,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "3df0ebf7-6f03-5388-9a41-f47d4183770e",
+        "address": "5WTSR9vyiqTTEqMq4vmu56P1AA267QZd4gVTzVY4qMM9",
+        "evmAddress": "0x7f145f569fca10b80b7af84a6e4ba625f60cf8a1",
+        "createdAt": "2026-01-28T06:27:27.899Z",
+        "displayName": "Tsuki",
+        "userHandle": "Tsukikage",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/327bea4dcfc10479ebfe6f4d387243c8_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "New beginnings",
+        "following": 17,
+        "followers": 8686,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 1532,
+        "numTrades": 471,
+        "totalVolume": 2042674.439529,
+        "private": false,
+        "thumbhash": "YtYFDwILAEp4pYVwmFl5V5aFtqBHCnkF",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": {
+          "id": "11e5d07c-6f1d-4aa7-8a0d-aacf1c5f2033",
+          "name": "Nobi Ventures",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/6a0773e599021b7f8a604458026c6214.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "LvgVBwC4uId5h3h/dWaId4iIhmQIuIkP"
+        }
+      },
+      "tradeId": "f4d24acd-4ce1-4773-bd4e-fcd605a9cee6",
+      "humanAmount": 773208.97,
+      "sumSwapOpen": 5104524.98,
+      "price": 0.847643264882,
+      "value": 655405.38,
+      "pnl": 689860.25,
+      "unrealizedPnl": 644818.51,
+      "realizedPnl": 45041.74,
+      "costBasis": 69892.46,
+      "averageEntryPrice": 0.0136921,
+      "comment": {
+        "id": "bf0dacd9-2cdd-4bc7-ad62-262c5e3731d7",
+        "userId": "3df0ebf7-6f03-5388-9a41-f47d4183770e",
+        "tradeId": "f4d24acd-4ce1-4773-bd4e-fcd605a9cee6",
+        "comment": "Time after time after time, pons PA recovers from other launchpads trying to vamp them.. will this time be different? Nah.. the people's launchpad will win again.",
+        "createdAt": "2026-07-27T21:12:33.198Z",
+        "parentId": null,
+        "numLikes": 23,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "Time after time after time, pons PA recovers from other launchpads trying to vamp them.. will this time be different? Nah.. the people's launchpad will win again.",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 23
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 0,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 230901,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "17e7a11f-9e74-5ecc-8282-6a3ca3053383",
+        "address": "4oXND2XVxWK5GmAP28V1u46aFfnrbMoSXCqGY8uHhLio",
+        "evmAddress": "0xcd97d538164468928a9f16e29baa83c3d1ef4360",
+        "createdAt": "2026-08-29T11:38:25.847Z",
+        "displayName": "derekz",
+        "userHandle": "derek518",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 19,
+        "followers": 1123,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 237,
+        "numTrades": 61,
+        "totalVolume": 2145226.757522,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "584cf791-248b-4308-9f32-8b61727cc8d8",
+      "humanAmount": 756043.65,
+      "sumSwapOpen": 1215729.74,
+      "price": 0.847643264882,
+      "value": 640855.31,
+      "pnl": 503574.18,
+      "unrealizedPnl": 470309.42,
+      "realizedPnl": 33264.76,
+      "costBasis": 274240.4,
+      "averageEntryPrice": 0.225577,
+      "comment": {
+        "id": "6e1fcfdb-c7bf-4297-a696-fd66df24c31d",
+        "userId": "17e7a11f-9e74-5ecc-8282-6a3ca3053383",
+        "tradeId": "584cf791-248b-4308-9f32-8b61727cc8d8",
+        "comment": "1b first",
+        "createdAt": "2026-08-31T08:58:47.584Z",
+        "parentId": null,
+        "numLikes": 14,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "1b first",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 14
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 0,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 243149,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "4479ba58-263b-5044-b04a-ef0a2ec6092c",
+        "address": "8Z4rvLrDW41RSYL2eHtZt1UZggtA9a9V2guD5m91pSs6",
+        "evmAddress": "0x9f748602df516c7fde29bc6973ffc2b867ce0fc9",
+        "createdAt": "2026-08-24T21:32:13.131Z",
+        "displayName": "vancute1112",
+        "userHandle": "vancute1112",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/f7a2fcb5ae5c03711fbdf86bd8b4fcda_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "God willing\nwhere there is a Will, there is a Way.",
+        "following": 9,
+        "followers": 1174,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 377,
+        "numTrades": 112,
+        "totalVolume": 629840.672361,
+        "private": false,
+        "thumbhash": "3sYFNAae9ocodZKHuHd3gHYHiA==",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "542b9d14-24f9-4a0e-ae81-a0527d4ef0ca",
+      "humanAmount": 717789.63,
+      "sumSwapOpen": 717789.13,
+      "price": 0.847643264882,
+      "value": 608429.55,
+      "pnl": 531169.21,
+      "unrealizedPnl": 531169.21,
+      "realizedPnl": 0,
+      "costBasis": 77260.33,
+      "averageEntryPrice": 0.107636,
+      "comment": {
+        "id": "86e91238-f03a-4c81-93bc-bf2427da37ac",
+        "userId": "4479ba58-263b-5044-b04a-ef0a2ec6092c",
+        "tradeId": "542b9d14-24f9-4a0e-ae81-a0527d4ef0ca",
+        "comment": "top blasting - these buys will look obvious at 10B",
+        "createdAt": "2026-09-05T08:57:57.795Z",
+        "parentId": null,
+        "numLikes": 3,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "top blasting - these buys will look obvious at 10B",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 3
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 2,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 127154,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "70ebaeb0-bb91-5907-90c1-14effbb08326",
+        "address": "4yiRPDmxPCKokpaefurfCE5fJwbxy6Qmacu36KE3EoNe",
+        "evmAddress": "0xea2a16128793441670c8404b135ff1b6efd76266",
+        "createdAt": "2026-08-09T20:33:27.837Z",
+        "displayName": "Monty Lifschitz",
+        "userHandle": "montylifschitz",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/e6edc35be0513989966b8cba51092445_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "AKA. Gherken Griffin",
+        "following": 1,
+        "followers": 165,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 252,
+        "numTrades": 110,
+        "totalVolume": 368075.822535,
+        "private": false,
+        "thumbhash": "YAgKDwSFRXZveImcaXpYqZmXeUAHB3UG",
+        "coverPhotoLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/bf574b8091aba9da80ecc8569d98d6ed.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "coverPhotoThumbhash": "lggKCoJ4mId5d/d4xYxwr5g=",
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "ad4fe5af-0bb8-4fbb-ba7b-75b211eda39f",
+      "humanAmount": 634464.79,
+      "sumSwapOpen": 635250.91,
+      "price": 0.847643264882,
+      "value": 537799.81,
+      "pnl": 287661.3,
+      "unrealizedPnl": 287322.43,
+      "realizedPnl": 338.861,
+      "costBasis": 250787.72,
+      "averageEntryPrice": 0.394786,
+      "comment": {
+        "id": "d5a01185-2e03-48f9-8c48-d6339dcc4a40",
+        "userId": "70ebaeb0-bb91-5907-90c1-14effbb08326",
+        "tradeId": "ad4fe5af-0bb8-4fbb-ba7b-75b211eda39f",
+        "comment": "Rumours about T1 listings are starting to go around...",
+        "createdAt": "2026-09-05T10:15:19.676Z",
+        "parentId": null,
+        "numLikes": 2,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "Rumours about T1 listings are starting to go around...",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 2
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 9,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 87871,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "36f7bf6c-9831-5d9d-a518-eed02148175d",
+        "address": "9x5V9na7ob5eh7iMXULLsJguqnFeLCFKnegbkdrUhKwb",
+        "evmAddress": "0x87708f015ebc25689e80a28bf66048379bcfb8a3",
+        "createdAt": "2026-08-24T10:46:14.662Z",
+        "displayName": "QuickZippyFlea",
+        "userHandle": "QuickZippyFlea",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 28,
+        "followers": 184,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 127,
+        "numTrades": 48,
+        "totalVolume": 1145492.552229,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "82da1c37-cc66-4c1a-af91-bdc79adec8c0",
+      "humanAmount": 616822.4,
+      "sumSwapOpen": 687917.45,
+      "price": 0.847643264882,
+      "value": 522845.35,
+      "pnl": 365514.85,
+      "unrealizedPnl": 358048.14,
+      "realizedPnl": 7466.71,
+      "costBasis": 183793.54,
+      "averageEntryPrice": 0.267171,
+      "comment": {
+        "id": "64e362c9-4789-4904-9a27-262159f3fa33",
+        "userId": "36f7bf6c-9831-5d9d-a518-eed02148175d",
+        "tradeId": "82da1c37-cc66-4c1a-af91-bdc79adec8c0",
+        "comment": "PONS flipped pump in buy back volumes this week. And will flip pump in terms of protocol revenue today. \n\nStill 3.5x to PUMPs market cap and c.8x on an FDV basis.",
+        "createdAt": "2026-09-04T10:41:50.935Z",
+        "parentId": null,
+        "numLikes": 4,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "PONS flipped pump in buy back volumes this week. And will flip pump in terms of protocol revenue today. \n\nStill 3.5x to PUMPs market cap and c.8x on an FDV basis.",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 4
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 0,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 54308,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "d422977c-cbfe-5b80-a469-e8e645d50ce3",
+        "address": "CSjdVzQbTdEPoj77fVo2N2G1u9vVxpLhBAzXnQRTfK95",
+        "evmAddress": "0x1fedff56ac8a357c3f73ba5d400629a632297526",
+        "createdAt": "2026-08-23T14:43:29.706Z",
+        "displayName": "大宇",
+        "userHandle": "BTCdayu",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/c67f989dd146ef293598a9288489015f_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": null,
+        "following": 87,
+        "followers": 7080,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 197,
+        "numTrades": 82,
+        "totalVolume": 2733412.742329,
+        "private": false,
+        "thumbhash": "G0oGDwSedYqwoHuKVVfGepZy94h6j40F",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "225518bc-1caa-485d-8140-65dcd75c1d37",
+      "humanAmount": 607660.65,
+      "sumSwapOpen": 1758834.38,
+      "price": 0.847643264882,
+      "value": 515079.45,
+      "pnl": 447092.09,
+      "unrealizedPnl": 353740.33,
+      "realizedPnl": 93351.77,
+      "costBasis": 466985.65,
+      "averageEntryPrice": 0.265509,
+      "comment": {
+        "id": "5ed6d2f8-1f31-4db8-acb8-a58a49af4e72",
+        "userId": "d422977c-cbfe-5b80-a469-e8e645d50ce3",
+        "tradeId": "225518bc-1caa-485d-8140-65dcd75c1d37",
+        "comment": "回归牛市第一战，一句左手PONS，右手右来。\n感觉是比上轮更好的开局。",
+        "createdAt": "2026-09-05T08:54:28.250Z",
+        "parentId": null,
+        "numLikes": 5,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "回归牛市第一战，一句左手PONS，右手右来。\n感觉是比上轮更好的开局。",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 5
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 7,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 97976,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "b7a7322f-32a5-5687-8308-c17612e39f47",
+        "address": "Cr68LBBLHPFAWuNfyfFV7Adi1NVVNEfuXtwTriwTCmqR",
+        "evmAddress": "0xc2539ceb341912aa7956ffc6e73fee0afee6632d",
+        "createdAt": "2025-09-07T12:48:07.656Z",
+        "displayName": "Reverie",
+        "userHandle": "0x_Reverie",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/254cc1b60ca4d9a22b03251da3d4c08d_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "follow me on X: 0x_Reverie",
+        "following": 16,
+        "followers": 211,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 18,
+        "numTrades": 10,
+        "totalVolume": 179400.261597,
+        "private": false,
+        "thumbhash": "2wcGHwJ5uAZuYZeTeyi1aIh4iQpF9WQD",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "8b395a96-4f9e-4e47-a84b-bb678d5e7aa3",
+      "humanAmount": 580001,
+      "sumSwapOpen": 627928.53,
+      "price": 0.847643264882,
+      "value": 491633.94,
+      "pnl": 414760.96,
+      "unrealizedPnl": 402173.85,
+      "realizedPnl": 12587.11,
+      "costBasis": 96852.49,
+      "averageEntryPrice": 0.154241,
+      "comment": {
+        "id": "7837bab2-3c88-460e-84ac-43fb8e73bacf",
+        "userId": "b7a7322f-32a5-5687-8308-c17612e39f47",
+        "tradeId": "8b395a96-4f9e-4e47-a84b-bb678d5e7aa3",
+        "comment": "as i've repeatedly said, $1 is inevitable\n\njust another 50% there and we see how high this really goes",
+        "createdAt": "2026-09-03T19:03:18.644Z",
+        "parentId": null,
+        "numLikes": 11,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "as i've repeatedly said, $1 is inevitable\n\njust another 50% there and we see how high this really goes",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 11
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 6,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 37970,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "d31a41f5-be7b-5ab0-b360-9d704d0d925c",
+        "address": "9WmpuDhN4v9gvSfoqz21eipchKhTS6uYxnT8QA8ZD6Yx",
+        "evmAddress": "0x2bb6ae5c9b268676cc454023317485e7a04342b4",
+        "createdAt": "2026-01-16T15:23:35.541Z",
+        "displayName": "Moishale",
+        "userHandle": "moishale",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 11,
+        "followers": 452,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 102,
+        "numTrades": 26,
+        "totalVolume": 105030.235436,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "bc4f98ac-48f8-4352-b39a-5ac1a8ea4837",
+      "humanAmount": 558954.39,
+      "sumSwapOpen": 43128.26,
+      "price": 0.847643264882,
+      "value": 473793.93,
+      "pnl": 545040.19,
+      "unrealizedPnl": 463174.83,
+      "realizedPnl": 81865.36,
+      "costBasis": 19465.76,
+      "averageEntryPrice": 0.0189981,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 1456459,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "cd702ec1-d0b2-56f4-bae9-c8c9b14f45a4",
+        "address": "2bBDsgCN8YtvNCC5kKy1WUYWNrcZxnbBAwpWrVCC1nNh",
+        "evmAddress": "0xb2d0f24d0e84c0af6c1260f4395b208dd19caa2a",
+        "createdAt": "2026-08-29T13:10:26.427Z",
+        "displayName": "yl",
+        "userHandle": "yuanli",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/1585195b5b4875daf39fb8f9259f55cf_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "好东西买入—等待，龙头买入—重仓。=赚钱，(～￣▽￣)～",
+        "following": 4,
+        "followers": 170,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 1078,
+        "numTrades": 237,
+        "totalVolume": 1506923.62252,
+        "private": false,
+        "thumbhash": "6QgSHwJYZ3eAhnh3iVmXd4eHl9MHV48D",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "7774d9b3-1227-414c-a7fc-94d88f6dd9ef",
+      "humanAmount": 556649.16,
+      "sumSwapOpen": 610553.42,
+      "price": 0.847643264882,
+      "value": 471839.91,
+      "pnl": 130322.59,
+      "unrealizedPnl": 129314.48,
+      "realizedPnl": 1008.11,
+      "costBasis": 375694.59,
+      "averageEntryPrice": 0.615335,
+      "comment": {
+        "id": "dc50614b-1b80-45cb-84df-40085f4b2e7c",
+        "userId": "cd702ec1-d0b2-56f4-bae9-c8c9b14f45a4",
+        "tradeId": "7774d9b3-1227-414c-a7fc-94d88f6dd9ef",
+        "comment": "只有龙头值得重仓",
+        "createdAt": "2026-09-04T01:27:13.773Z",
+        "parentId": null,
+        "numLikes": 8,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "只有龙头值得重仓",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 8
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 1,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 12905,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "58b9fbd1-9889-576e-9c9f-52e6c32a7b34",
+        "address": "HD8NbGPsRrVV2mcRcXc7EQN1J7mgix1dox55W165jW54",
+        "evmAddress": "0xe5dcabcd2b65ca10e1636cb420220f9cfaa82274",
+        "createdAt": "2026-08-25T03:21:19.394Z",
+        "displayName": "LittleWhaleDive",
+        "userHandle": "LittleWhaleDive",
+        "profilePictureLink": null,
+        "description": "",
+        "following": 5,
+        "followers": 123,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 175,
+        "numTrades": 51,
+        "totalVolume": 137544.044952,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "cc3a4846-235a-4c64-8eea-1d5b1739b282",
+      "humanAmount": 504576.38,
+      "sumSwapOpen": 575416.55,
+      "price": 0.847643264882,
+      "value": 427700.77,
+      "pnl": 377567.65,
+      "unrealizedPnl": 370111.45,
+      "realizedPnl": 7456.21,
+      "costBasis": 65674.6,
+      "averageEntryPrice": 0.114134,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 42676,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "eab99539-f20f-54ee-8e39-3fb82560e4c4",
+        "address": "BRtqSsDF3szdTR8LawL58HDYC1uSHeji8EX9jhSYucho",
+        "evmAddress": "0xad67a0c9af9a8ba780ed92e281063e6f96cdfae6",
+        "createdAt": "2026-08-25T10:01:43.226Z",
+        "displayName": "GWB",
+        "userHandle": "gwbush",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/1f0037f665378c7514633cea45752cf5_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "Not the official account of George W Bush",
+        "following": 7,
+        "followers": 76,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 400,
+        "numTrades": 120,
+        "totalVolume": 419428.352287,
+        "private": false,
+        "thumbhash": "XigKDwJhVoiveIhxmMhoaJiG95ALDacA",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "934b303d-f760-4d35-a95d-75474b006cf9",
+      "humanAmount": 484228.52,
+      "sumSwapOpen": 52436.62,
+      "price": 0.847643264882,
+      "value": 410453.04,
+      "pnl": 157698.25,
+      "unrealizedPnl": 158557.89,
+      "realizedPnl": -859.641,
+      "costBasis": 256551.74,
+      "averageEntryPrice": 0.520199,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 116384,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "cd5078a7-d413-56be-981e-a36ac7dadcf4",
+        "address": "EtBi3EHeY52p7gFJXxsUMbfDw9qAwvH6LBXfRMigDfPZ",
+        "evmAddress": "0x91700dc510e844b86a2c7272a38fda7b1c6a6f2e",
+        "createdAt": "2026-07-30T12:02:18.288Z",
+        "displayName": "BNBULL",
+        "userHandle": "_bnbull_",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/f2acd3da6a1485794758be9cb6325fe2_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "操他妈梭哈，我是来翻身的，生死有命，富贵在天",
+        "following": 21,
+        "followers": 1325,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 390,
+        "numTrades": 177,
+        "totalVolume": 1501233.051326,
+        "private": false,
+        "thumbhash": "VqkOJxAIeJh1e4eBiclniIh5dvppyI8H",
+        "coverPhotoLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/3104c838cfc48d88fdecc4b0c86151c8.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "coverPhotoThumbhash": "3FgKIo48JISbdvZI+IeKf6g=",
+        "twitter": null,
+        "clan": {
+          "id": "732470ab-4da2-49c4-8d69-0bf537b6814e",
+          "name": "Jade Street",
+          "iconLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/8d028bcd6888e3db1a878f2979eb03bf.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+          "iconThumbhash": "yucFDwIpV2WseGegekiGWIVlqLEKGqsA"
+        }
+      },
+      "tradeId": "1fd3a0e0-657e-40ae-a599-f57f59d8ce41",
+      "humanAmount": 456603.58,
+      "sumSwapOpen": 512922.72,
+      "price": 0.847643264882,
+      "value": 387036.95,
+      "pnl": 229787.69,
+      "unrealizedPnl": 229364.75,
+      "realizedPnl": 422.941,
+      "costBasis": 177139.63,
+      "averageEntryPrice": 0.345316,
+      "comment": {
+        "id": "ce54e57c-8e84-4ddd-9e54-0e7646e1f7cd",
+        "userId": "cd5078a7-d413-56be-981e-a36ac7dadcf4",
+        "tradeId": "1fd3a0e0-657e-40ae-a599-f57f59d8ce41",
+        "comment": "出一些货，留好子弹准备对看好的标的重仓抄底",
+        "createdAt": "2026-09-02T10:36:54.586Z",
+        "parentId": null,
+        "numLikes": 2,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "出一些货，留好子弹准备对看好的标的重仓抄底",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 2
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 0,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 114735,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "2c8a0636-bd6d-5c9d-93c8-d16fe0c330ca",
+        "address": "FKWDFChhPa8Geg9krQUR8M9wv7EjkwUaaCfmjNA945Y9",
+        "evmAddress": "0xb79cb8e00780ae36c366292f1f9d81c238a7b8b3",
+        "createdAt": "2026-08-30T18:15:26.390Z",
+        "displayName": "Yaoza",
+        "userHandle": "yaoza",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 2,
+        "followers": 23,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 14,
+        "numTrades": 7,
+        "totalVolume": 501593.82289300003,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "ea741167-b001-409e-a66e-d4db6e220f3e",
+      "humanAmount": 434587.94,
+      "sumSwapOpen": 783680.1,
+      "price": 0.847643264882,
+      "value": 368375.54,
+      "pnl": 179654.58,
+      "unrealizedPnl": 204659.54,
+      "realizedPnl": -25004.96,
+      "costBasis": 295224.41,
+      "averageEntryPrice": 0.376715,
+      "comment": {
+        "id": "59ccec08-a6b0-4d0f-9d1a-16298f9d54c8",
+        "userId": "2c8a0636-bd6d-5c9d-93c8-d16fe0c330ca",
+        "tradeId": "ea741167-b001-409e-a66e-d4db6e220f3e",
+        "comment": "pump my pons",
+        "createdAt": "2026-09-05T03:13:05.743Z",
+        "parentId": null,
+        "numLikes": 1,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "pump my pons",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 1
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 0,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": null,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "8beca50f-ac71-58ee-be9f-57fcd028c0c9",
+        "address": "8x5nTdxoq9TNkQGiaVhdaRMFx13rNP4AxDAzWC8QHAun",
+        "evmAddress": "0x1e9020c500a5edeb11fee04b9a97c53e007b545a",
+        "createdAt": "2026-01-15T18:29:20.120Z",
+        "displayName": "fiji",
+        "userHandle": "fijionrocks",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/8ed2a8d4db1d3c91ed224df932d8e9cc_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "murda on the beat so its not nice",
+        "following": 90,
+        "followers": 1748,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 679,
+        "numTrades": 250,
+        "totalVolume": 1819448.640318,
+        "private": false,
+        "thumbhash": "onUFFwiRuOl+ZoeAi3qHiHeFiWUIXZAF",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "cafb90d3-a9f9-46be-9c1c-5bb4b7366ae2",
+      "humanAmount": 423213.41,
+      "sumSwapOpen": 0,
+      "price": 0.847643264882,
+      "value": 358734,
+      "pnl": 398281.04,
+      "unrealizedPnl": 343157.36,
+      "realizedPnl": 55123.68,
+      "costBasis": 24206.4,
+      "averageEntryPrice": 0.0368056,
+      "comment": {
+        "id": "a1bdfb72-08d6-4c57-879d-b7a0cfb7bf5f",
+        "userId": "8beca50f-ac71-58ee-be9f-57fcd028c0c9",
+        "tradeId": "cafb90d3-a9f9-46be-9c1c-5bb4b7366ae2",
+        "comment": "nvm dollar is too easy make it 1.69 United States dollars",
+        "createdAt": "2026-09-05T09:44:51.492Z",
+        "parentId": null,
+        "numLikes": 2,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "nvm dollar is too easy make it 1.69 United States dollars",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 2
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 1,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 86361,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "eae85084-d35e-59f0-ab95-c10145c05c37",
+        "address": "5thFtgc8Rja2WBQuxBzs354DWn4LGHEMR9qerUcqbFpT",
+        "evmAddress": "0x8a6661c69802637c0e1d358dc5c9866628b3e921",
+        "createdAt": "2026-08-08T15:21:04.807Z",
+        "displayName": "marius",
+        "userHandle": "marius69",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 10,
+        "followers": 1036,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 164,
+        "numTrades": 95,
+        "totalVolume": 655029.465806,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "4e4f7cca-5540-4602-853b-3133336de8f7",
+      "humanAmount": 421239.55,
+      "sumSwapOpen": 585554.28,
+      "price": 0.847643264882,
+      "value": 357060.86,
+      "pnl": 369296.32,
+      "unrealizedPnl": 340413.08,
+      "realizedPnl": 28883.24,
+      "costBasis": 23141.66,
+      "averageEntryPrice": 0.039521,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 183379,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "4308cca8-51af-52c2-9c7a-ca5dfe548fd2",
+        "address": "7FenG6cDzBL9SfzCnD1mz1ZpgbREPspUHcEWebvcmzfu",
+        "evmAddress": "0xecfb1abc1c632767504dc512d94fb25c2923e470",
+        "createdAt": "2026-08-09T15:16:12.705Z",
+        "displayName": "Isidore",
+        "userHandle": "isidoreducass",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/c414ff685503bccab8c8e0a302a4e66b_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": null,
+        "following": 13,
+        "followers": 268,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 42,
+        "numTrades": 23,
+        "totalVolume": 420033.616181,
+        "private": false,
+        "thumbhash": "HwgGBwCE04x3qYqQmtiXl3h5BwAAAAAA",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "8ca732f3-4a57-49cf-8f09-002be01d0ddf",
+      "humanAmount": 403757.04,
+      "sumSwapOpen": 403757.04,
+      "price": 0.847643264882,
+      "value": 342241.93,
+      "pnl": 258817.97,
+      "unrealizedPnl": 258817.97,
+      "realizedPnl": 0,
+      "costBasis": 83423.96,
+      "averageEntryPrice": 0.206619,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 661669,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "717f6954-64f1-5745-a61e-2a820adb87b9",
+        "address": "BG48K43bva3cTBLxQxKXGMaiEk2aEWeqFDVkyBTMhS37",
+        "evmAddress": "0x5a5e401751e2d73bf4c2872a93dcaa14fdbefe36",
+        "createdAt": "2026-07-09T19:50:45.540Z",
+        "displayName": "TheOldNite",
+        "userHandle": "TheOldNite",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/3d3471eddaef17aa9273a24744c8cf27_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "",
+        "following": 69,
+        "followers": 1172,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 142,
+        "numTrades": 76,
+        "totalVolume": 705883.165534,
+        "private": false,
+        "thumbhash": "U+kFFwRuxnt4cox0iUX4OrZ3mX+ZBmsH",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "44a2b884-1e1b-4912-b611-3e7961be58cb",
+      "humanAmount": 394909.65,
+      "sumSwapOpen": 1591671.14,
+      "price": 0.847643264882,
+      "value": 334742.5,
+      "pnl": 653164.7,
+      "unrealizedPnl": 329580.44,
+      "realizedPnl": 323584.26,
+      "costBasis": 25670.38,
+      "averageEntryPrice": 0.0130716,
+      "comment": {
+        "id": "3de7fa19-23c8-44c5-9f03-8ad4a9a99de6",
+        "userId": "717f6954-64f1-5745-a61e-2a820adb87b9",
+        "tradeId": "44a2b884-1e1b-4912-b611-3e7961be58cb",
+        "comment": "My bet is on the peoples launchpad",
+        "createdAt": "2026-08-07T17:37:04.357Z",
+        "parentId": null,
+        "numLikes": 20,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "My bet is on the peoples launchpad",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 20
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 2,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 160835,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "995aa2f1-46fd-5ff7-a871-5da40415c38b",
+        "address": "GryfMcNgcb7cGSKsatPpEspFVVLoEXr7FeompEskbZai",
+        "evmAddress": "0x6a0bf7fbe01c140d715fda7d7c89fd0de7c2670c",
+        "createdAt": "2026-07-09T22:39:53.061Z",
+        "displayName": "will7777",
+        "userHandle": "will7777",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 12,
+        "followers": 75,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 905,
+        "numTrades": 186,
+        "totalVolume": 223464.229885,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "f2ca2632-53e9-41c2-9366-2862a6bb6bf0",
+      "humanAmount": 394793.01,
+      "sumSwapOpen": 985434.56,
+      "price": 0.847643264882,
+      "value": 334643.63,
+      "pnl": 344610.84,
+      "unrealizedPnl": 321530.21,
+      "realizedPnl": 23080.63,
+      "costBasis": 32732.33,
+      "averageEntryPrice": 0.0332159,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 155660,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "90edbd02-04e4-559e-9dc2-5752202ed461",
+        "address": "C4prM7Zec6zQ8aKCtdKMm1ZK7NMkc6LpL52cugTKe275",
+        "evmAddress": "0x4528747e70eb721a0e852fe913353d3401d4e846",
+        "createdAt": "2025-05-23T20:10:27.958Z",
+        "displayName": "🍋",
+        "userHandle": "lemonades",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 19,
+        "followers": 338,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 140,
+        "numTrades": 60,
+        "totalVolume": 1074901.565372,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "7cfdd648-cedf-499a-b0d5-f50fdca64848",
+      "humanAmount": 380459.27,
+      "sumSwapOpen": 551103.83,
+      "price": 0.847643264882,
+      "value": 322493.74,
+      "pnl": 211426.33,
+      "unrealizedPnl": 162808.35,
+      "realizedPnl": 48617.98,
+      "costBasis": 231307.89,
+      "averageEntryPrice": 0.419717,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 102384,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "fbfc4eef-d091-5df2-b384-995f95754c81",
+        "address": "DKf4zm4JABZo1Bj48JeVxaYGeSdsux4EVMnRXLthNV5a",
+        "evmAddress": "0x6862bd0b21bc8836deec3d5b814f8aa03168478a",
+        "createdAt": "2026-02-10T22:29:30.503Z",
+        "displayName": "Stoic Man",
+        "userHandle": "stoicman15",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/87396dde3a8870fd937d5b72fa864da5_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "",
+        "following": 11,
+        "followers": 277,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 233,
+        "numTrades": 148,
+        "totalVolume": 74447.358156,
+        "private": false,
+        "thumbhash": "HwgSBwD4uIl5dXd+d4WHiHiGCAAAAAAA",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "94d06742-01dc-4acf-a575-9514018a5f14",
+      "humanAmount": 379743.96,
+      "sumSwapOpen": 820997.98,
+      "price": 0.847643264882,
+      "value": 321887.41,
+      "pnl": 360677.73,
+      "unrealizedPnl": 320938.86,
+      "realizedPnl": 39738.88,
+      "costBasis": 2050.84,
+      "averageEntryPrice": 0.00249788,
+      "comment": {
+        "id": "5ce233a8-1736-4925-ad30-58a09241052b",
+        "userId": "fbfc4eef-d091-5df2-b384-995f95754c81",
+        "tradeId": "94d06742-01dc-4acf-a575-9514018a5f14",
+        "comment": "adding more. pons is the way",
+        "createdAt": "2026-07-23T00:52:54.043Z",
+        "parentId": null,
+        "numLikes": 29,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "adding more. pons is the way",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 29
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 0,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 262773,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "8f52d912-10e6-5fdd-b85b-5bccf6b7a810",
+        "address": "7skPqCLNf83RH3HxULqsnZjPwShmS5oUKNtq1iCK2S1L",
+        "evmAddress": "0x6f4dc4eb9c02ebc0f7b9a861461837656b1cbac8",
+        "createdAt": "2026-08-25T05:49:57.820Z",
+        "displayName": "SOLCRUSHING",
+        "userHandle": "SOLCRUSHING",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 3,
+        "followers": 25,
+        "activated": false,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 17,
+        "numTrades": 24,
+        "totalVolume": 492827.16202399996,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "e56863fb-e515-4b96-ba47-d08a7bbac5e6",
+      "humanAmount": 379251.51,
+      "sumSwapOpen": 379251.51,
+      "price": 0.847643264882,
+      "value": 321469.98,
+      "pnl": 97659.19,
+      "unrealizedPnl": 97659.19,
+      "realizedPnl": 0,
+      "costBasis": 223810.8,
+      "averageEntryPrice": 0.590138,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": null,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "3fbba3df-b4fc-5ece-be85-165d9b853542",
+        "address": "7qSqneowZhjZdctftbr8jXzp7SgFcf6KsX1GK8tnikQg",
+        "evmAddress": "0x0767edd38a6a596416b87560eb762711adb3dea5",
+        "createdAt": "2026-07-15T05:51:05.148Z",
+        "displayName": "PriorTastyBee",
+        "userHandle": "PriorTastyBee",
+        "profilePictureLink": null,
+        "description": null,
+        "following": 2,
+        "followers": 48,
+        "activated": false,
+        "verified": false,
+        "isReferred": true,
+        "isRestricted": false,
+        "swapCount": 36,
+        "numTrades": 18,
+        "totalVolume": 50101.90383,
+        "private": false,
+        "thumbhash": null,
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "04e8434b-d911-4d5d-8a13-2bbb0afa0346",
+      "humanAmount": 372572.64,
+      "sumSwapOpen": 372572.64,
+      "price": 0.847643264882,
+      "value": 315808.69,
+      "pnl": 300454.16,
+      "unrealizedPnl": 300454.16,
+      "realizedPnl": 0,
+      "costBasis": 15354.53,
+      "averageEntryPrice": 0.0412122,
+      "comment": null,
+      "showComment": true,
+      "averageHoldTimeSeconds": 335989,
+      "isDev": false
+    },
+    {
+      "user": {
+        "id": "94ee3b0b-b674-5812-a76c-13fb90773752",
+        "address": "CmfXNRf2XgejxVLzq6Wfn5PqFtQrbmhg9jLJLzWCCL53",
+        "evmAddress": "0xa4b50bc0d604b8dd980851a842c120aae5a408a3",
+        "createdAt": "2025-04-10T23:34:39.301Z",
+        "displayName": "Jxck",
+        "userHandle": "jxck_eth",
+        "profilePictureLink": "https://prod-fomo-profile-pics.s3.amazonaws.com/3d6dda1c2ffc9a16fd1cc1375fbf653b_small.jpg?k=248Zz71y3489wWfPI9IYJeJ5A",
+        "description": "@realizedpnl",
+        "following": 89,
+        "followers": 2242,
+        "activated": true,
+        "verified": false,
+        "isReferred": false,
+        "isRestricted": false,
+        "swapCount": 1740,
+        "numTrades": 297,
+        "totalVolume": 5531851.41709,
+        "private": false,
+        "thumbhash": "VhgKDwKgh3tleHaQiVdGuXl2SAldI5AK",
+        "coverPhotoLink": null,
+        "coverPhotoThumbhash": null,
+        "twitter": null,
+        "clan": null
+      },
+      "tradeId": "6a291334-a1c1-401a-8e1a-e83b421a5a07",
+      "humanAmount": 357649.45,
+      "sumSwapOpen": 514637.02,
+      "price": 0.847643264882,
+      "value": 303159.15,
+      "pnl": 159457.65,
+      "unrealizedPnl": 118301.88,
+      "realizedPnl": 41155.78,
+      "costBasis": 316920.81,
+      "averageEntryPrice": 0.516867,
+      "comment": {
+        "id": "7718ac83-0afc-470a-932a-5efa65f094b4",
+        "userId": "94ee3b0b-b674-5812-a76c-13fb90773752",
+        "tradeId": "6a291334-a1c1-401a-8e1a-e83b421a5a07",
+        "comment": "https://x.com/that1618guy/status/2095328190055240137?s=20",
+        "createdAt": "2026-09-03T11:41:59.534Z",
+        "parentId": null,
+        "numLikes": 5,
+        "tokenAddress": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+        "networkId": 4663,
+        "shortCommentSegments": [
+          {
+            "text": "https://x.com/that1618guy/status/2095328190055240137?s=20",
+            "link": null,
+            "provider": null
+          }
+        ],
+        "reactions": {
+          "counts": {
+            "likeCount": 5
+          },
+          "reactions": {
+            "like": false
+          }
+        },
+        "olderThesis": 1,
+        "newerThesis": 0
+      },
+      "numReplies": 0,
+      "showComment": true,
+      "averageHoldTimeSeconds": 173953,
+      "isDev": false
+    }
+  ],
+  "totalHolders": 26741
+}

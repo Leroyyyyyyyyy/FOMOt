@@ -1,0 +1,585 @@
+{
+  "at": 1788606627772,
+  "users": [
+    "ogle",
+    "cosby"
+  ],
+  "seen": [
+    {
+      "user": "",
+      "path": "/static/exception-autocapture.js",
+      "status": 200,
+      "bytes": 13655
+    },
+    {
+      "user": "",
+      "path": "/static/web-vitals.js",
+      "status": 200,
+      "bytes": 9923
+    },
+    {
+      "user": "",
+      "path": "/array/phc_rzkHrRhgRWmmIfUX34qLhjQw2Gga14elSY6ishYeSE5/config.js",
+      "status": 200,
+      "bytes": 809
+    },
+    {
+      "user": "",
+      "path": "/static/dead-clicks-autocapture.js",
+      "status": 200,
+      "bytes": 18300
+    },
+    {
+      "user": "",
+      "path": "/static/surveys.js",
+      "status": 200,
+      "bytes": 102477
+    },
+    {
+      "user": "",
+      "path": "/flags/",
+      "status": 200,
+      "bytes": 1791
+    },
+    {
+      "user": "",
+      "path": "/e/",
+      "status": 200,
+      "bytes": 15
+    },
+    {
+      "user": "",
+      "path": "/config",
+      "status": 200,
+      "bytes": 5636
+    },
+    {
+      "user": "",
+      "path": "/v2/users",
+      "status": 200,
+      "bytes": 840
+    },
+    {
+      "user": "",
+      "path": "/",
+      "status": 202,
+      "bytes": 53
+    },
+    {
+      "user": "",
+      "path": "/proxy/trendingTokens",
+      "status": 200,
+      "bytes": 51050
+    },
+    {
+      "user": "",
+      "path": "/v2/userTokens/aggregatedSnapshotById",
+      "status": 200,
+      "bytes": 147
+    },
+    {
+      "user": "",
+      "path": "/watchlist",
+      "status": 200,
+      "bytes": 368
+    },
+    {
+      "user": "",
+      "path": "/proxy/cryptoTokens",
+      "status": 200,
+      "bytes": 73598
+    },
+    {
+      "user": "",
+      "path": "/proxy/mostHeld",
+      "status": 200,
+      "bytes": 28821
+    },
+    {
+      "user": "",
+      "path": "/v2/leaderboard/24h",
+      "status": 200,
+      "bytes": 265108
+    },
+    {
+      "user": "",
+      "path": "/proxy/verifiedTokens",
+      "status": 200,
+      "bytes": 475131
+    },
+    {
+      "user": "",
+      "path": "/v2/leaderboard/30d",
+      "status": 200,
+      "bytes": 269304
+    },
+    {
+      "user": "",
+      "path": "/v2/leaderboard/7d",
+      "status": 200,
+      "bytes": 266645
+    },
+    {
+      "user": "",
+      "path": "/v2/leaderboard",
+      "status": 200,
+      "bytes": 182300
+    },
+    {
+      "user": "",
+      "path": "/proxy/filterTokens",
+      "status": 200,
+      "bytes": 4116
+    },
+    {
+      "user": "",
+      "path": "/feed/token",
+      "status": 200,
+      "bytes": 46867
+    },
+    {
+      "user": "",
+      "path": "/proxy/tokenDetails",
+      "status": 200,
+      "bytes": 655
+    },
+    {
+      "user": "",
+      "path": "/hodlers/devs",
+      "status": 200,
+      "bytes": 2353
+    },
+    {
+      "user": "",
+      "path": "/proxy/tokenWarnings",
+      "status": 200,
+      "bytes": 145
+    },
+    {
+      "user": "",
+      "path": "/trades",
+      "status": 200,
+      "bytes": 162
+    },
+    {
+      "user": "",
+      "path": "/hodlers/top",
+      "status": 200,
+      "bytes": 79071
+    },
+    {
+      "user": "",
+      "path": "/tokenAllowList/detailed",
+      "status": 200,
+      "bytes": 163045
+    },
+    {
+      "user": "",
+      "path": "/feed/token/thesis",
+      "status": 200,
+      "bytes": 126683
+    },
+    {
+      "user": "",
+      "path": "/v2/users/73668ec4-9ce5-5ea7-880d-17f0dbb1891a/balances",
+      "status": 200,
+      "bytes": 6944
+    },
+    {
+      "user": "",
+      "path": "/v2/users/73668ec4-9ce5-5ea7-880d-17f0dbb1891a/swaps",
+      "status": 200,
+      "bytes": 107
+    },
+    {
+      "user": "",
+      "path": "/hodlers/friends",
+      "status": 200,
+      "bytes": 38466
+    },
+    {
+      "user": "",
+      "path": "/feed/token/sortedThesis",
+      "status": 200,
+      "bytes": 66420
+    },
+    {
+      "user": "",
+      "path": "/i/v0/e/",
+      "status": 200,
+      "bytes": 15
+    },
+    {
+      "user": "ogle",
+      "path": "/static/web-vitals.js",
+      "status": 200,
+      "bytes": 9923
+    },
+    {
+      "user": "ogle",
+      "path": "/static/exception-autocapture.js",
+      "status": 200,
+      "bytes": 13655
+    },
+    {
+      "user": "ogle",
+      "path": "/static/dead-clicks-autocapture.js",
+      "status": 200,
+      "bytes": 18300
+    },
+    {
+      "user": "ogle",
+      "path": "/array/phc_rzkHrRhgRWmmIfUX34qLhjQw2Gga14elSY6ishYeSE5/config.js",
+      "status": 200,
+      "bytes": 809
+    },
+    {
+      "user": "ogle",
+      "path": "/static/surveys.js",
+      "status": 200,
+      "bytes": 102477
+    },
+    {
+      "user": "ogle",
+      "path": "/flags/",
+      "status": 200,
+      "bytes": 1791
+    },
+    {
+      "user": "ogle",
+      "path": "/i/v0/e/",
+      "status": 200,
+      "bytes": 15
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/users",
+      "status": 200,
+      "bytes": 840
+    },
+    {
+      "user": "ogle",
+      "path": "/config",
+      "status": 200,
+      "bytes": 5636
+    },
+    {
+      "user": "ogle",
+      "path": "/",
+      "status": 202,
+      "bytes": 53
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/userTokens/aggregatedSnapshotById",
+      "status": 200,
+      "bytes": 165
+    },
+    {
+      "user": "ogle",
+      "path": "/proxy/filterTokens",
+      "status": 200,
+      "bytes": 2165
+    },
+    {
+      "user": "ogle",
+      "path": "/watchlist",
+      "status": 200,
+      "bytes": 368
+    },
+    {
+      "user": "ogle",
+      "path": "/proxy/cryptoTokens",
+      "status": 200,
+      "bytes": 73416
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/users/userHandle/ogle",
+      "status": 200,
+      "bytes": 3566
+    },
+    {
+      "user": "ogle",
+      "path": "/proxy/mostHeld",
+      "status": 200,
+      "bytes": 28822
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/leaderboard/7d",
+      "status": 200,
+      "bytes": 266645
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/leaderboard",
+      "status": 200,
+      "bytes": 182292
+    },
+    {
+      "user": "ogle",
+      "path": "/proxy/verifiedTokens",
+      "status": 200,
+      "bytes": 475043
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/leaderboard/24h",
+      "status": 200,
+      "bytes": 265072
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/leaderboard/30d",
+      "status": 200,
+      "bytes": 269262
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/users/current/followingIds",
+      "status": 200,
+      "bytes": 686
+    },
+    {
+      "user": "ogle",
+      "path": "/tokenAllowList/detailed",
+      "status": 200,
+      "bytes": 163045
+    },
+    {
+      "user": "ogle",
+      "path": "/transfers/v2/supportedTokens",
+      "status": 200,
+      "bytes": 35343
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/users/679a7cbb-1635-5415-896a-9e8151b74686/swaps",
+      "status": 200,
+      "bytes": 65748
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/transfers/with/679a7cbb-1635-5415-896a-9e8151b74686",
+      "status": 200,
+      "bytes": 115
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/users/73668ec4-9ce5-5ea7-880d-17f0dbb1891a/balances",
+      "status": 200,
+      "bytes": 6944
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/userTokens/aggregatedSnapshot",
+      "status": 200,
+      "bytes": 2133
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/users/679a7cbb-1635-5415-896a-9e8151b74686/spotlight",
+      "status": 200,
+      "bytes": 11257
+    },
+    {
+      "user": "ogle",
+      "path": "/v2/users/679a7cbb-1635-5415-896a-9e8151b74686/balances",
+      "status": 200,
+      "bytes": 118794
+    },
+    {
+      "user": "ogle",
+      "path": "/hodlers/friends",
+      "status": 200,
+      "bytes": 38461
+    },
+    {
+      "user": "cosby",
+      "path": "/static/web-vitals.js",
+      "status": 200,
+      "bytes": 9923
+    },
+    {
+      "user": "cosby",
+      "path": "/static/exception-autocapture.js",
+      "status": 200,
+      "bytes": 13655
+    },
+    {
+      "user": "cosby",
+      "path": "/static/dead-clicks-autocapture.js",
+      "status": 200,
+      "bytes": 18300
+    },
+    {
+      "user": "cosby",
+      "path": "/array/phc_rzkHrRhgRWmmIfUX34qLhjQw2Gga14elSY6ishYeSE5/config.js",
+      "status": 200,
+      "bytes": 809
+    },
+    {
+      "user": "cosby",
+      "path": "/static/surveys.js",
+      "status": 200,
+      "bytes": 102477
+    },
+    {
+      "user": "cosby",
+      "path": "/flags/",
+      "status": 200,
+      "bytes": 1791
+    },
+    {
+      "user": "cosby",
+      "path": "/i/v0/e/",
+      "status": 200,
+      "bytes": 15
+    },
+    {
+      "user": "cosby",
+      "path": "/config",
+      "status": 200,
+      "bytes": 5636
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/users",
+      "status": 200,
+      "bytes": 840
+    },
+    {
+      "user": "cosby",
+      "path": "/",
+      "status": 202,
+      "bytes": 53
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/userTokens/aggregatedSnapshotById",
+      "status": 200,
+      "bytes": 165
+    },
+    {
+      "user": "cosby",
+      "path": "/proxy/filterTokens",
+      "status": 200,
+      "bytes": 2223
+    },
+    {
+      "user": "cosby",
+      "path": "/watchlist",
+      "status": 200,
+      "bytes": 368
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/users/userHandle/cosby",
+      "status": 200,
+      "bytes": 2230
+    },
+    {
+      "user": "cosby",
+      "path": "/proxy/cryptoTokens",
+      "status": 200,
+      "bytes": 73590
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/leaderboard/30d",
+      "status": 200,
+      "bytes": 269262
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/leaderboard/24h",
+      "status": 200,
+      "bytes": 265357
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/leaderboard/7d",
+      "status": 200,
+      "bytes": 266645
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/leaderboard",
+      "status": 200,
+      "bytes": 182301
+    },
+    {
+      "user": "cosby",
+      "path": "/proxy/mostHeld",
+      "status": 200,
+      "bytes": 28821
+    },
+    {
+      "user": "cosby",
+      "path": "/proxy/verifiedTokens",
+      "status": 200,
+      "bytes": 475352
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/users/73668ec4-9ce5-5ea7-880d-17f0dbb1891a/balances",
+      "status": 200,
+      "bytes": 6944
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/users/current/followingIds",
+      "status": 200,
+      "bytes": 686
+    },
+    {
+      "user": "cosby",
+      "path": "/transfers/v2/supportedTokens",
+      "status": 200,
+      "bytes": 35343
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/users/2f62a25e-b162-51c8-bdbb-f70365dbf34e/balances",
+      "status": 200,
+      "bytes": 47480
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/transfers/with/2f62a25e-b162-51c8-bdbb-f70365dbf34e",
+      "status": 200,
+      "bytes": 115
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/users/2f62a25e-b162-51c8-bdbb-f70365dbf34e/swaps",
+      "status": 200,
+      "bytes": 65886
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/userTokens/aggregatedSnapshot",
+      "status": 200,
+      "bytes": 3060
+    },
+    {
+      "user": "cosby",
+      "path": "/tokenAllowList/detailed",
+      "status": 200,
+      "bytes": 163045
+    },
+    {
+      "user": "cosby",
+      "path": "/v2/users/2f62a25e-b162-51c8-bdbb-f70365dbf34e/spotlight",
+      "status": 200,
+      "bytes": 5344
+    },
+    {
+      "user": "cosby",
+      "path": "/hodlers/friends",
+      "status": 200,
+      "bytes": 38460
+    }
+  ]
+}

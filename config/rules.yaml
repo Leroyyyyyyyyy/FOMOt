@@ -1,0 +1,63 @@
+# ── 触发规则 ───────────────────────────────────────────────
+# 原版截图里两条不同的币「首次触发」时间戳完全相同（04:56:44.727），
+# 说明它不是逐事件流式触发，而是按节拍扫描候选池、同一 tick 共用时间戳。
+# 这里照抄这个模型。
+
+scan:
+  interval_ms: 1000          # 扫描节拍
+  snapshot_delay_ms: 800     # 「持币初值（+0.8s）」
+  recheck_delay_ms: 301000   # 「持币复核（+5m1s）」
+
+universe:
+  # 候选池**完全来自链上**：最近 5 分钟有成交的代币（activeTokens），
+  # 成交来自 PoolManager 的 Swap 日志。FOMO 不贡献任何候选——
+  # 它只在候选已经确定之后，为那个 ca 补社交数据。
+  # （旧注释写的「∪ FOMO 榜单/热门」不成立，代码里没有这条路径。）
+  max_age_minutes: 180       # 池子建立超过这么久就不再当新币看
+  min_age_seconds: 20        # 太新的先放一放，等价格和持币人稳定
+
+filters:
+  market_cap_usd:
+    min: 30000
+    max: 5000000
+  volume_5m_usd:
+    min: 15000
+  volume_1h_usd:
+    min: 50000
+  holders_total:             # 全链持币人数
+    min: 100
+  # ↓ 以下三项依赖 FOMO 抓取，未登录时自动跳过（见 filters.skip_when_unavailable）
+  #
+  # 全部设为 0 = 不拿 FOMO 数据当门，只在卡片上展示。这是按原版反推的结果。
+  #
+  # 依据是原版截图里的两条样本：
+  #   MEME  Fomo 72 (40.4%) · 榜单 2 人   → 推了
+  #   HDR   Fomo 13  (7.8%) · 榜单 0 人   → 也推了
+  # HDR 这条是关键证据：它三项都很低（榜单甚至是 0）却照推不误，
+  # 说明原版这三条的阈值必然 ≤13 / ≤7.8% / =0，而榜单那条根本不是门。
+  #
+  # 两个样本只能给出「原版不严于此」的下界，给不出它的真实阈值。
+  # 所以取 0——任何非零值都有可能比原版更严，而更严正是要避免的。
+  # 想收紧的话，「仍能放过两条样本」的最紧设置是 13 / 0.078 / 0。
+  fomo_holders:
+    min: 0
+  fomo_holder_ratio:         # Fomo 持币人 / 全链持币人
+    min: 0
+  fomo_leaderboard_holders:  # 24H 盈利榜上有几个人在持仓
+    min: 0
+
+  skip_when_unavailable: true
+
+  # FOMO 那几条门在哪个阶段判。
+  # 必须是 recheck：FOMO 自己的持币索引对新币有延迟，+0.8s 那一刻数据往往还没到位。
+  # 拿本项目记录的 holder_snapshots 回测过：初值 33/188=17.6% 会被拒，
+  # 而同一个币两分钟后的复核是 100/231=43.3%，轻松通过。七次触发里四次是这样误杀的。
+  # 在 recheck 判定，不过关就把已发出的消息撤回。
+  fomo_gate_stage: recheck  # FOMO 数据拿不到时，只用链上条件判定
+
+dedup:
+  cooldown_minutes: 360      # 同一个币 6 小时内不重复推送
+
+render:
+  timezone: Asia/Hong_Kong
+  locale: zh

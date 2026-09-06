@@ -1,0 +1,34 @@
+# 联调用规则：阈值放宽、复核缩短到 25 秒，用来验证整条链路能跑通。
+# 生产请用 config/rules.yaml。
+scan:
+  interval_ms: 1000
+  snapshot_delay_ms: 800
+  recheck_delay_ms: 120000   # 联调用：2 分钟复核（给 FOMO 索引留出追赶时间）
+
+universe:
+  max_age_minutes: 180
+  min_age_seconds: 20
+
+filters:
+  market_cap_usd: { min: 50000, max: 500000000 }
+  volume_5m_usd:  { min: 3000 }
+  volume_1h_usd:  { min: 3000 }
+  holders_total:  { min: 50 }
+  fomo_holders:             { min: 0 }
+  fomo_holder_ratio:        { min: 0 }
+  fomo_leaderboard_holders: { min: 0 }
+  skip_when_unavailable: true
+
+  # FOMO 那几条门在哪个阶段判。
+  # 必须是 recheck：FOMO 自己的持币索引对新币有延迟，+0.8s 那一刻数据往往还没到位。
+  # 拿本项目记录的 holder_snapshots 回测过：初值 33/188=17.6% 会被拒，
+  # 而同一个币两分钟后的复核是 100/231=43.3%，轻松通过。七次触发里四次是这样误杀的。
+  # 在 recheck 判定，不过关就把已发出的消息撤回。
+  fomo_gate_stage: recheck
+
+dedup:
+  cooldown_minutes: 5
+
+render:
+  timezone: Asia/Hong_Kong
+  locale: zh
