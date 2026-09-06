@@ -557,41 +557,96 @@ export class Engine {
     const key = alertKey(state.m.ca, state.triggerTs);
     if (!state.recheck || !this.canFetchPnl(state.recheck.e.top10Members)) return;
     void (async () => {
-      for (let attempt = 1; attempt <= PNL_FOLLOWUP_MAX_ATTEMPTS; attempt++) {
-        if (this.signal?.aborted || this.pnlCancelled.has(key) || Date.now() > deadlineTs) break;
-        const batch = await this.runPnl(key, state.recheck!.e.top10Members, Date.now(), 'followup');
-        if (batch && await this.applyPnl(state, batch)) return;
-        if (attempt < PNL_FOLLOWUP_MAX_ATTEMPTS) {
-          try { await sleep(PNL_FOLLOWUP_RETRY_MS, this.signal); } catch { return; }
+      try {
+        for (let attempt = 1; attempt <= PNL_FOLLOWUP_MAX_ATTEMPTS; attempt++) {
+          if (this.settleFollowUp(state, key, deadlineTs)) return;
+
+          let batch: PnlBatch | null = null;
+          try {
+            batch = await this.runPnl(key, state.recheck!.e.top10Members, Date.now(), 'followup');
+          } catch (err) {
+            log.warn({ ca: state.m.ca, err: String(err).slice(0, 160) }, '补取全平台收益失败，按重试处理');
+          }
+          /**
+           * 取数可能花上百秒。回来之后**必须重新**检查中止、撤回和截止时间——
+           * 只在取数前检查是不够的：等待期间告警可能已经被撤回，或者已经超期，
+           * 那就绝不能再去改那张卡。
+           */
+          if (this.settleFollowUp(state, key, deadlineTs)) return;
+
+          if (batch) {
+            try {
+              if (await this.applyPnl(state, batch, deadlineTs)) return;
+            } catch (err) {
+              // 改写失败不是「这条任务完了」，是「这一次没成」——交给下一次尝试或期限终结。
+              log.warn({ ca: state.m.ca, err: String(err).slice(0, 160) }, '补入全平台收益时改写卡片失败');
+            }
+          }
+          if (attempt < PNL_FOLLOWUP_MAX_ATTEMPTS) {
+            try { await sleep(PNL_FOLLOWUP_RETRY_MS, this.signal); } catch { return; }
+          }
         }
+        if (this.signal?.aborted || this.pnlCancelled.has(key)) return;
+        setPnlState.run('timeout', state.m.ca, state.triggerTs);
+        log.info({ ca: state.m.ca }, '全平台收益补取超期，卡片保持 n/a');
+      } catch (err) {
+        /**
+         * 兜底。这是个 `void` 掉的异步任务，抛出去就是**未处理的 Promise rejection**，
+         * 在 Node 里会直接结束整个监控进程。任何异常都必须在这里落地成一条记录 + 一个终态。
+         */
+        log.error({ ca: state.m.ca, err: String(err).slice(0, 200) }, 'PnL 补卡任务异常退出，终结为 timeout');
+        try { setPnlState.run('timeout', state.m.ca, state.triggerTs); } catch { /* 尽力而为 */ }
       }
-      if (this.signal?.aborted) return;
-      setPnlState.run('timeout', state.m.ca, state.triggerTs);
-      log.info({ ca: state.m.ca }, '全平台收益补取超期，卡片保持 n/a');
     })();
   }
 
+  /**
+   * 补卡任务该不该就此停下。三种停法各有各的善后：
+   *  - 收到退出信号：**不动数据库**，保持 `pending`，下次启动接着补；
+   *  - 告警已撤回/失效：什么都不用做，行都没了；
+   *  - 过了截止时间：终结为 `timeout`，卡片保持 n/a，不再重试也不再堆积。
+   */
+  private settleFollowUp(state: StoredAlert, key: string, deadlineTs: number): boolean {
+    if (this.signal?.aborted) return true;
+    if (this.pnlCancelled.has(key)) return true;
+    if (Date.now() > deadlineTs) {
+      setPnlState.run('timeout', state.m.ca, state.triggerTs);
+      log.info({ ca: state.m.ca }, '全平台收益补取超期，卡片保持 n/a');
+      return true;
+    }
+    return false;
+  }
+
   /** 返回 true = 这条告警的 PnL 已经终结（补上了，或不该再补）。 */
-  private async applyPnl(state: StoredAlert, batch: PnlBatch): Promise<boolean> {
+  private async applyPnl(state: StoredAlert, batch: PnlBatch, deadlineTs = Infinity): Promise<boolean> {
     const { m, triggerTs } = state;
     if (!state.recheck) return true;
+    const key = alertKey(m.ca, triggerTs);
+    // 自己也守一道：这个函数可能在一次上百秒的取数之后才被调用。
+    if (this.signal?.aborted || this.pnlCancelled.has(key) || Date.now() > deadlineTs) return true;
+
     const row = readAlert.get(m.ca, triggerTs) as { status: string; message_id: number | null; pnl_state: string } | undefined;
     // 已撤回（行没了）、已降级、或消息换了 id：迟到的结果一律不得再更新。
     if (!row || row.status !== 'completed' || row.message_id !== state.messageId) {
-      this.cancelPnl(alertKey(m.ca, triggerTs));
+      this.cancelPnl(key);
       return true;
     }
 
     const merged = withPlatformPnl(state.recheck.e, batch.records);
     if (merged.top10PlatformPnl24h === null) return false;     // 还是不齐，交给下一次尝试
 
-    // 只换 PnL：持币初值/复核的人数、采集时间、偏移、市值来源时间全部原样保留。
-    state.recheck = { ...state.recheck, e: merged };
+    /**
+     * 只换 PnL：持币初值/复核的人数、采集时间、偏移、市值来源时间全部原样保留。
+     * 先在**副本**上算，改写真的成功了才落回 `state`——否则 edit 抛异常会留下
+     * 一个「卡片没变、内存里却当成已补上」的半截状态。
+     */
+    const next: StoredAlert = { ...state, recheck: { ...state.recheck, e: merged } };
     if (state.messageId !== null) {
-      const ok = await this.notify.edit(state.messageId, renderCard(this.buildCard(state, 'ready')),
+      const ok = await this.notify.edit(state.messageId, renderCard(this.buildCard(next, 'ready')),
         renderButtons(m.ca), { ca: m.ca, triggerTs });
       if (!ok) return false;
     }
+    state.recheck = next.recheck;
     setPnlDone.run('ready', JSON.stringify(state), m.ca, triggerTs);
     recordMetric('card_update_lateness_ms', Date.now() - state.originalDueTs, `${m.ca} pnl`);
     recordMetric('pnl_followup_lateness_ms', Date.now() - state.originalDueTs, m.ca);

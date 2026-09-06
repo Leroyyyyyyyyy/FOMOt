@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   aggregatePnl, anchorWindow, bestAnchor, deriveRecord, isDayWindow, normalizeSeries,
-  targetWindow, usableAnchor, DAY_MS, HOUR_MS, type PnlRecord, type PnlWindow,
+  strictNum, targetWindow, usableAnchor, DAY_MS, HOUR_MS, type PnlRecord, type PnlWindow,
 } from '../src/engine/pnl.js';
 
 const END = Math.floor(1_760_000_000_000 / HOUR_MS) * HOUR_MS;   // 某个整点
@@ -66,6 +66,63 @@ test('重复但数值相同只算一次，不算冲突', () => {
   const n = normalizeSeries(raw);
   assert.equal(n.conflict, false);
   assert.equal(n.points.filter(p => p.snapshotId === END / 1000).length, 1);
+});
+
+// ── 空值绝不当成 0 ───────────────────────────────────────────────────
+// 回归：以前用 Number(v)，而 Number(null)/Number('')/Number('  ')/Number([])
+// 全是 0、Number(true) 是 1，都能通过 isFinite 检查。于是「起点 pnl 是 null」
+// 会被当成「起点收益 0」，凭空算出一个 24H 收益。
+
+test('strictNum：空值、布尔、数组、对象一律是缺失，不是 0', () => {
+  assert.equal(strictNum(0), 0, '真正的 0 要保留');
+  assert.equal(strictNum(-12.5), -12.5);
+  assert.equal(strictNum('42'), 42, '数字字符串可以');
+  assert.equal(strictNum(' -3.5 '), -3.5);
+  for (const v of [null, undefined, '', '   ', true, false, [], {}, 'abc', NaN, Infinity]) {
+    assert.equal(strictNum(v as unknown), null, `${JSON.stringify(v)} 必须判成缺失`);
+  }
+});
+
+test('端点 pnl 是 null 时判缺失，不会算出收益', () => {
+  // 这是复现用例：起点 null、终点 100 —— 旧代码会返回 ok:true, value:100
+  const raw = [
+    { snapshotId: W.startTs / 1000, pnl: null },
+    { snapshotId: W.endTs / 1000, pnl: 100 },
+  ];
+  const r = deriveRecord('u1', raw, W, 1);
+  assert.equal(r.ok, false, 'null 起点不能当成 0 起点');
+  assert.equal(!r.ok && r.reason, 'no_start_point');
+});
+
+test('空字符串 / 布尔 / 数组的 pnl 都被剔除，不参与任何计算', () => {
+  for (const bad of ['', '   ', true, [] as unknown]) {
+    const n = normalizeSeries([{ snapshotId: END / 1000, pnl: bad }]);
+    assert.equal(n.points.length, 0, `pnl=${JSON.stringify(bad)} 不该产生数据点`);
+    assert.equal(n.dropped, 1);
+  }
+});
+
+test('snapshotId 是 null 时不会退化成 snapshotId 0', () => {
+  const n = normalizeSeries([{ snapshotId: null, pnl: 5 }]);
+  assert.equal(n.points.length, 0, 'null 的整点不能变成 1970 年那个整点');
+  assert.equal(n.dropped, 1);
+});
+
+test('十人里有一人端点是空值：合计判缺失，不是把他算成 0', () => {
+  const ids = Array.from({ length: 10 }, (_, i) => `u${i}`);
+  const records = new Map<string, PnlRecord>();
+  ids.forEach((id, i) => {
+    const raw = [
+      { snapshotId: W.startTs / 1000, pnl: i === 4 ? '' : 0 },   // 第五个人起点是空字符串
+      { snapshotId: W.endTs / 1000, pnl: 100 },
+    ];
+    const r = deriveRecord(id, raw, W, END + 60_000);
+    if (r.ok) records.set(id, r.record);
+  });
+  assert.equal(records.size, 9, '空值那个人拿不到记录');
+  const agg = aggregatePnl(ids, records, END + 60_000);
+  assert.equal(agg.total, null, '缺一个人就不给合计，绝不把他当成 +100');
+  assert.equal(agg.covered, 9);
 });
 
 test('非有限数值被剔除；影响到端点就报缺失，绝不当成 0', () => {

@@ -303,3 +303,112 @@ test('旧版扁平 payload 也能恢复，且偏移按原值还原', () => {
   assert.equal(r.corrupt, 0);
   void e;
 });
+
+// ── 补卡任务的截止时间 / 中止 / 异常 ─────────────────────────────────
+// 回归：这三条以前只在**取数之前**检查一次。一次取数可能上百秒，回来之后
+// 告警可能已经撤回、已经超期；而 notify.edit 抛异常会变成未处理的
+// Promise rejection，在 Node 里直接结束整个监控进程。
+
+/** 等到条件成立或超时，避免靠固定 sleep 猜时序 */
+async function until(cond: () => boolean, ms = 2_000): Promise<boolean> {
+  const t0 = Date.now();
+  while (Date.now() - t0 < ms) {
+    if (cond()) return true;
+    await new Promise(r => setTimeout(r, 10));
+  }
+  return cond();
+}
+
+test('取数期间超过截止时间：回来后不再改卡，终结为 timeout', async () => {
+  const fomo = new FakeFomo();
+  let release!: () => void;
+  fomo.gate = new Promise<void>(r => { release = r; });
+  const e = new Engine(fomo, new AbortController().signal, off);
+  seedAlert('completed', { pnl_state: 'pending', pnl_deadline_ts: Date.now() + 10_000 });
+
+  // 截止时间设在「取数还没回来」的那一刻之前
+  const deadline = Date.now() + 60;
+  (e as any).startPnlFollowUp(storedState(), deadline);
+  await new Promise(r => setTimeout(r, 120));      // 越过截止时间，此时取数仍挂着
+  release();                                        // 取数现在才返回
+  await until(() => alertRow().pnl_state === 'timeout');
+
+  assert.equal(edits().n, 0, '超期之后拿到的结果不得再改写卡片');
+  assert.equal(alertRow().pnl_state, 'timeout');
+});
+
+test('取数期间告警被撤回：回来后不改卡，也不写 timeout', async () => {
+  const fomo = new FakeFomo();
+  let release!: () => void;
+  fomo.gate = new Promise<void>(r => { release = r; });
+  const e = new Engine(fomo, new AbortController().signal, off);
+  seedAlert('completed', { pnl_state: 'pending', pnl_deadline_ts: Date.now() + 600_000 });
+
+  (e as any).startPnlFollowUp(storedState(), Date.now() + 600_000);
+  await new Promise(r => setTimeout(r, 30));
+  // 取数还挂着的时候，这条告警被复核门撤回了
+  (e as any).cancelPnl(`${CA}|${TRIGGER}`);
+  db.prepare('DELETE FROM alerts WHERE ca=?').run(CA);
+  release();
+  await new Promise(r => setTimeout(r, 150));
+
+  assert.equal(edits().n, 0, '不能去改一条已经撤回的卡片');
+});
+
+test('取数期间收到退出信号：不改卡，且保持 pending 供重启恢复', async () => {
+  const fomo = new FakeFomo();
+  let release!: () => void;
+  fomo.gate = new Promise<void>(r => { release = r; });
+  const ac = new AbortController();
+  const e = new Engine(fomo, ac.signal, off);
+  seedAlert('completed', { pnl_state: 'pending', pnl_deadline_ts: Date.now() + 600_000 });
+
+  (e as any).startPnlFollowUp(storedState(), Date.now() + 600_000);
+  await new Promise(r => setTimeout(r, 30));
+  ac.abort();                                       // 取数还挂着的时候退出
+  release();
+  await new Promise(r => setTimeout(r, 150));
+
+  assert.equal(edits().n, 0);
+  assert.equal(alertRow().pnl_state, 'pending', '中止不写终态，留给下次启动接着补');
+});
+
+test('notify.edit 抛异常不会变成未处理 rejection，任务正常终结', async () => {
+  const unhandled: unknown[] = [];
+  const onUnhandled = (err: unknown) => unhandled.push(err);
+  process.on('unhandledRejection', onUnhandled);
+  try {
+    const fomo = new FakeFomo();
+    const boom = new Notifier('off');
+    (boom as any).edit = async () => { throw new Error('改写炸了'); };
+    const e = new Engine(fomo, new AbortController().signal, boom);
+    seedAlert('completed', { pnl_state: 'pending', pnl_deadline_ts: Date.now() + 600_000 });
+
+    (e as any).startPnlFollowUp(storedState(), Date.now() + 600_000);
+    // 两次尝试之间有 45s 退避，这里只验证第一次异常被接住、没有炸出去
+    await new Promise(r => setTimeout(r, 200));
+    await new Promise(r => setImmediate(r));
+
+    assert.deepEqual(unhandled, [], `edit 抛异常不得逃逸成未处理 rejection：${unhandled.map(String)}`);
+    assert.equal(alertRow().status, 'completed', '告警本身不受影响');
+  } finally {
+    process.removeListener('unhandledRejection', onUnhandled);
+  }
+});
+
+test('改写失败时不留下「卡片没变、内存却当成已补上」的半截状态', async () => {
+  const fomo = new FakeFomo();
+  const boom = new Notifier('off');
+  (boom as any).edit = async () => { throw new Error('改写炸了'); };
+  const e = new Engine(fomo, new AbortController().signal, boom);
+  seedAlert('completed', { pnl_state: 'pending', pnl_deadline_ts: Date.now() + 600_000 });
+  const state = storedState();
+  const before = state.recheck.e.top10PlatformPnl24h;
+
+  await assert.rejects(() => (e as any).applyPnl(state, {
+    window: fomo.result.window, records: tenRecords(),
+    members: state.recheck.e.top10Members, fetchedTs: Date.now(),
+  }), /改写炸了/);
+  assert.equal(state.recheck.e.top10PlatformPnl24h, before, '改写没成功就不能改内存里的状态');
+  assert.equal(alertRow().pnl_state, 'pending', '也不能写成 ready');
+});

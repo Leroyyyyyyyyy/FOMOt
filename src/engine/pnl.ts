@@ -99,10 +99,35 @@ export function targetWindow(atMs: number, basis: PnlBasis = 'snapshot'): PnlWin
 }
 
 /**
+ * 严格数值解析：**空值绝不当成 0**。
+ *
+ * 这是踩过的坑：以前直接用 `Number(v)`，而 `Number(null)`、`Number('')`、
+ * `Number('  ')`、`Number([])` 全是 **0**，`Number(true)` 是 **1**，
+ * 它们都能通过 `Number.isFinite` 检查。于是「起点 pnl 是 null」会被当成
+ * 「起点收益是 0」，凭空算出一个 24H 收益——正是「缺失不能当零」要禁止的事。
+ *
+ * 只接受：真正的有限 number，或**非空**的数字字符串（接口偶尔用字符串传数值）。
+ * 其余一律返回 null，由调用方计入 `dropped`。
+ */
+export function strictNum(v: unknown): number | null {
+  if (typeof v === 'number') return Number.isFinite(v) ? v : null;
+  if (typeof v === 'string') {
+    const t = v.trim();
+    if (t === '') return null;
+    const n = Number(t);
+    return Number.isFinite(n) ? n : null;
+  }
+  return null;                                   // null / undefined / boolean / 数组 / 对象
+}
+
+/**
  * 序列归一化：排序、去重、查冲突、剔除无效值。
  *
  * 重复但数值相同 → 去重放行；重复且数值不同 → `conflict`，整条序列不可用
  * （不知道哪个对的时候选一个，就是编数据）。
+ *
+ * 空值（null / '' / 布尔 / 数组）**不是 0**，一律剔除并计入 `dropped`；
+ * 被剔掉的点如果正好是窗口端点，`deriveRecord` 会如实返回缺失。
  */
 export function normalizeSeries(raw: unknown): { points: SeriesPoint[]; dropped: number; conflict: boolean } {
   if (!Array.isArray(raw)) return { points: [], dropped: 0, conflict: false };
@@ -110,9 +135,9 @@ export function normalizeSeries(raw: unknown): { points: SeriesPoint[]; dropped:
   let dropped = 0, conflict = false;
   for (const item of raw) {
     const o = item as Record<string, unknown> | null;
-    const id = typeof o?.['snapshotId'] === 'number' ? o['snapshotId'] : Number(o?.['snapshotId']);
-    const pnl = typeof o?.['pnl'] === 'number' ? o['pnl'] : Number(o?.['pnl']);
-    if (!Number.isFinite(id) || !Number.isInteger(id) || !Number.isFinite(pnl)) { dropped++; continue; }
+    const id = strictNum(o?.['snapshotId']);
+    const pnl = strictNum(o?.['pnl']);
+    if (id === null || pnl === null || !Number.isInteger(id)) { dropped++; continue; }
     const prev = byId.get(id);
     if (prev !== undefined) {
       if (prev !== pnl) conflict = true;
