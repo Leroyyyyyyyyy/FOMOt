@@ -79,6 +79,8 @@ CREATE TABLE IF NOT EXISTS alerts (
   status      TEXT NOT NULL DEFAULT 'completed',
   recheck_due_ts INTEGER,
   last_error  TEXT,
+  pnl_state   TEXT NOT NULL DEFAULT 'off',
+  pnl_deadline_ts INTEGER,
   PRIMARY KEY (ca, trigger_ts)
 );
 CREATE INDEX IF NOT EXISTS idx_alerts_ca ON alerts(ca, trigger_ts DESC);
@@ -235,6 +237,13 @@ ensureColumn('alerts', 'original_due_ts', 'original_due_ts INTEGER');     // 初
 ensureColumn('alerts', 'attempts', 'attempts INTEGER NOT NULL DEFAULT 0');
 ensureColumn('alerts', 'firing_ts', 'firing_ts INTEGER');                 // 识别异常退出遗留的 firing
 ensureColumn('alerts', 'notify_mode', 'notify_mode TEXT');                // 发这张卡时的通知模式
+/**
+ * 全平台 24H 收益是**复核之后**才补的，它有自己的生命周期，不能挤进 collection_state：
+ * off = 这条告警不需要补（关掉了 / 没有可取成员）；pending = 正在补，有截止时间；
+ * ready = 已补上并原地改写；timeout = 到期没补上，卡片保持 n/a。
+ */
+ensureColumn('alerts', 'pnl_state', "pnl_state TEXT NOT NULL DEFAULT 'off'");
+ensureColumn('alerts', 'pnl_deadline_ts', 'pnl_deadline_ts INTEGER');
 db.exec('UPDATE pool_state SET has_swap = 1 WHERE has_swap = 0 AND pool_id IN (SELECT DISTINCT pool_id FROM swaps)');
 
 /**

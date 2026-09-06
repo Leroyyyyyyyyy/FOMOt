@@ -70,8 +70,9 @@ async function main(): Promise<void> {
   })();
   markStartupWindow(120_000);            // 前两分钟算「启动恢复」，指标分开统计
   const r = engine.resumePending();
-  if (r.resumed || r.orphanFiring || r.corrupt) {
-    log.info({ 待复核: r.resumed, 遗留firing: r.orphanFiring, 损坏payload: r.corrupt }, '启动恢复完成');
+  if (r.resumed || r.orphanFiring || r.corrupt || r.pnlResumed) {
+    log.info({ 待复核: r.resumed, 遗留firing: r.orphanFiring, 损坏payload: r.corrupt, 待补收益: r.pnlResumed },
+      '启动恢复完成');
   }
 
   let lastBeat = 0, lastMaint = Date.now();
@@ -101,6 +102,11 @@ async function main(): Promise<void> {
         const unfinished = (db.prepare(
           "SELECT COUNT(*) n FROM alerts WHERE status IN ('firing','pending_recheck')").get() as any).n;
         recordMetric('unfinished_alerts', unfinished);
+        // 排队深度也要有数：长尾到底是排队还是采集慢，验收报告要能分开说。
+        const q = engine.queueDepth();
+        recordMetric('holder_queue_pending', q.holders.pending);
+        recordMetric('holder_active', q.holders.active);
+        recordMetric('pnl_tasks_active', q.pnlTasks);
         const n = (t: string) => (db.prepare(`SELECT COUNT(*) n FROM ${t}`).get() as any).n;
         log.info({
           候选: getHealth('universe_size')?.value,

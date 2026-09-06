@@ -11,7 +11,8 @@ const OUT = new URL('../docs/run/evidence/', import.meta.url).pathname;
 mkdirSync(OUT, { recursive: true });
 
 const alerts = db.prepare(`
-  SELECT a.ca, a.trigger_ts, a.status, a.collection_state, a.attempts, a.message_id, a.notify_mode, a.last_error
+  SELECT a.ca, a.trigger_ts, a.status, a.collection_state, a.attempts, a.message_id, a.notify_mode,
+         a.last_error, a.original_due_ts, a.pnl_state, a.pnl_deadline_ts, a.payload
   FROM alerts a WHERE a.trigger_ts >= ? ORDER BY a.trigger_ts DESC`).all(since) as any[];
 
 const samples = alerts.map(a => {
@@ -23,8 +24,28 @@ const samples = alerts.map(a => {
     FROM fomo_token_holders WHERE ca=? ORDER BY rank LIMIT 10`).all(a.ca) as any[];
   const notifs = db.prepare('SELECT ts, mode, op, message_id, ok, substr(detail,1,4000) detail FROM notification_log WHERE ca=? AND trigger_ts=? ORDER BY id')
     .all(a.ca, a.trigger_ts) as any[];
+  // 各阶段时间从 payload 里取：触发、原定到期、两个持币阶段完成时刻、各来源时间、
+  // 以及全平台收益的窗口起止与获取时间——任务四要求它们分别可追溯。
+  let stored: any = null;
+  try { stored = a.payload ? JSON.parse(a.payload) : null; } catch { stored = null; }
+  const stageTiming = (st: any) => st ? {
+    holdersDoneTs: st.holdersDoneTs,
+    offsetMs: st.holdersDoneTs - a.trigger_ts,
+    total: st.total,
+    times: st.times,
+  } : null;
+  const platformWindow = stored?.recheck?.e?.top10PlatformWindow ?? null;
+  const { payload: _drop, ...alertRow } = a;
   return {
-    alert: a,
+    alert: alertRow,
+    timing: {
+      triggerTs: a.trigger_ts,
+      originalDueTs: a.original_due_ts,
+      initial: stageTiming(stored?.initial),
+      recheck: stageTiming(stored?.recheck),
+      platformPnlWindow: platformWindow,
+      platformPnlFetchedTs: stored?.recheck?.e?.top10PlatformFetchedTs ?? null,
+    },
     token,
     stages: snaps.map(s => ({ ...s, payload: JSON.parse(s.payload ?? '{}') })),
     fomoSource: fomoStats,
@@ -36,10 +57,13 @@ const samples = alerts.map(a => {
       top10Profitable: top.every(t => t.pnl !== null) ? top.filter(t => t.pnl > 0).length : null,
       top10Count: top.length,
       identified: top.filter(t => t.user_id || t.handle || t.evm_address).length,
-      platformPnl24h: null,
+      platformPnl24h: stored?.recheck?.e?.top10PlatformPnl24h ?? null,
+      platformProfitable: stored?.recheck?.e?.top10PlatformProfitable24h ?? null,
+      platformCovered: stored?.recheck?.e?.top10PlatformCovered ?? 0,
+      platformReason: stored?.recheck?.e?.top10PlatformReason ?? null,
       platformNote: process.env.FOMO_PLATFORM_PNL === '0'
         ? '全平台 24H 收益已被 FOMO_PLATFORM_PNL=0 关闭，故为 n/a'
-        : '全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log',
+        : '全平台 24H 收益默认开启，在复核之外单独取；逐人序列的可追溯样例见 scripts/trace-pnl.ts',
     },
   };
 });

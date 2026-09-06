@@ -85,11 +85,13 @@ test('重试只改下次时间，不覆盖原定到期时间', () => {
   assert.ok(!/originalDueTs\s*=/.test(fn), 'originalDueTs 不能被重试改写');
 });
 
-test('全平台 24H 收益只在复核阶段取，不能拖垮初值的 +0.8s 预算', () => {
-  // 回归：实测开在初值路径上会把初值从 1.7s 拖到 1m11s（十次浏览器导航约 71 秒）。
-  // 原版截图里 Top10 那行标的是「（+5m1s）」，也说明它是复核阶段的产物。
+test('全平台 24H 收益完全不在持币采集路径上', () => {
+  // 回归：它曾经开在初值路径上，把初值从 1.7s 拖到 1m11s（十次浏览器导航约 71 秒）；
+  // 后来挪到复核里，又把复核从 +5m1s 拖到 +5m56s。现在它两条路径都不占——
+  // 预取在到期前跑，没就绪就先出卡再原地补。
   const src = readFileSync(new URL('../src/engine/index.ts', import.meta.url), 'utf8');
-  const enrich = src.slice(src.indexOf('private async enrich('), src.indexOf('private async buildCard'));
-  assert.match(enrich, /this\.fomo\.platformPnl24h && priority === 'recheck'/,
-    '取全平台收益必须带 priority === recheck 的条件');
+  const enrich = src.slice(src.indexOf('private async enrich('), src.indexOf('private sourceInfo'));
+  assert.ok(!/platformPnl24h/.test(enrich), 'enrich 里不得出现任何取全平台收益的调用');
+  const stage = src.slice(src.indexOf('private async collectStage'), src.indexOf('private recordAges'));
+  assert.ok(!/platformPnl24h/.test(stage), '持币采集阶段不得等待全平台收益');
 });

@@ -57,14 +57,33 @@ test('全平台 24H 收益默认开启，只能被显式 FOMO_PLATFORM_PNL=0 关
     '默认必须是开启（opt-out），不是 opt-in');
 });
 
-test('关闭时返回空 Map，卡片走 n/a，绝不用该币收益顶替', () => {
-  const fn = src.slice(src.indexOf('async platformPnl24h'), src.indexOf('isStopped()'));
-  assert.match(fn, /if \(!PLATFORM_PNL_ENABLED[^)]*\) return out/,
-    '关闭时必须直接返回空 Map（out），让 enrich 走覆盖率不足 -> n/a 的路径');
+const platformFn = () => src.slice(src.indexOf('async platformPnl24h'), src.indexOf('isStopped()'));
+
+test('关闭时返回空结果，卡片走 n/a，绝不用该币收益顶替', () => {
+  assert.match(platformFn(), /if \(!PLATFORM_PNL_ENABLED[^)]*\) return done\(null, 0\)/,
+    '关闭时必须直接返回空结果，让聚合走覆盖率不足 -> n/a 的路径');
 });
 
-test('序列不足 24 小时就不给值，不能拿更短的窗口冒充', () => {
-  const fn = src.slice(src.indexOf('async platformPnl24h'), src.indexOf('isStopped()'));
-  assert.match(fn, /if \(!prev\) continue/, '找不到 24h 前的点就跳过这个人');
-  assert.match(fn, /window: 'snapshot'/, '窗口口径要标成 snapshot，不能和榜单的 live 混着求和');
+test('缓存键必须带口径与目标窗口，只按 userId 缓存会跨整点混算', () => {
+  const key = src.slice(src.indexOf('private cacheKey'), src.indexOf('private pickCachedAnchor'));
+  assert.match(key, /\$\{userId\}\|\$\{w\.basis\}\|\$\{w\.startTs\}-\$\{w\.endTs\}/,
+    '缓存键要包含 userId + 口径 + 窗口起止');
+  assert.match(platformFn(), /pickCachedAnchor\(ids, preferredEndTs\)/,
+    '复用缓存前必须先确认它属于本次聚合可用的锚点窗口');
+});
+
+test('推导记录走统一的窗口校验，不在抓取处自己挑「最新点」', () => {
+  const fn = platformFn();
+  assert.match(fn, /deriveRecord\(id, raw, window, Date\.now\(\)\)/,
+    '必须按**给定窗口**推导，起止点由 pnl.ts 严格校验');
+  assert.ok(!/rows\[rows\.length - 1\]/.test(fn), '不能再取序列最后一个点当窗口右端');
+  assert.match(fn, /anchorWindow\(raw, preferredEndTs\)/, '窗口锚点只在第一次成功取数时定一次');
+});
+
+test('等待按 userId 匹配有效响应，不再盲等固定五秒', () => {
+  const fn = platformFn();
+  assert.ok(!/waitForTimeout\(5_?000\)/.test(fn), '固定五秒盲等必须去掉');
+  assert.match(fn, /waiters\.get\(id\)\?\.\(\)/, '响应到达时按 userId 唤醒对应的等待');
+  assert.match(fn, /PLATFORM_PNL_WAIT_MS/, '等待要有超时上限');
+  assert.match(fn, /waiters\.clear\(\)/, '收尾要清理监听与等待器，避免迟到响应算到下一位用户');
 });

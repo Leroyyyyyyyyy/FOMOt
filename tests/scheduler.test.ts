@@ -38,23 +38,37 @@ test('初值优先于复核和预热', async () => {
   assert.deepEqual(order, ['占位', 'initial', 'recheck', 'prewarm']);
 });
 
-test('后台任务只占一个槽，另一个槽留给实时初值', async () => {
-  const s = new HolderScheduler<any>(2);
-  const bg1 = defer<number>(), bg2 = defer<number>();
+test('每种任务各占各的槽：长预热堵不住复核', async () => {
+  // 这是 288 秒复核长尾的整改点：以前复核和预热共用一个「后台槽」，
+  // 一个已经开跑的全量预热（老币要从部署区块扫起，几分钟）能把复核堵到它跑完。
+  const s = new HolderScheduler<any>(3);
+  const slow = defer<number>(), rc = defer<number>();
   const started: string[] = [];
-  void s.schedule('recheck', () => { started.push('bg1'); return bg1.promise; });
-  void s.schedule('prewarm', () => { started.push('bg2'); return bg2.promise; });
+  void s.schedule('prewarm', () => { started.push('prewarm'); return slow.promise; });
   await tick();
-  assert.deepEqual(started, ['bg1'], '第二个后台任务不能占掉初值的槽');
+  void s.schedule('recheck', () => { started.push('recheck'); return rc.promise; });
+  await tick();
+  assert.deepEqual(started, ['prewarm', 'recheck'], '预热还在跑，复核照样能起来');
 
   const init = defer<number>();
   void s.schedule('initial', () => { started.push('init'); return init.promise; });
   await tick();
-  assert.deepEqual(started, ['bg1', 'init'], '初值能立刻拿到留给它的槽');
-  bg1.resolve(0); init.resolve(0);
+  assert.deepEqual(started, ['prewarm', 'recheck', 'init'], '初值还有自己的位置');
+  slow.resolve(0); rc.resolve(0); init.resolve(0);
+});
+
+test('同类任务受各自槽位上限约束，并发不会失控', async () => {
+  const s = new HolderScheduler<any>(3);
+  const gates = [defer<number>(), defer<number>()];
+  const started: string[] = [];
+  gates.forEach((g, i) => void s.schedule('prewarm', () => { started.push(`p${i}`); return g.promise; }));
+  await tick();
+  assert.deepEqual(started, ['p0'], '预热最多同时跑一个');
+  assert.equal(s.running, 1);
+  gates[0]!.resolve(0);
   await tick(); await tick();
-  assert.ok(started.includes('bg2'), '后台任务随后要能跑起来，不能永久饥饿');
-  bg2.resolve(0);
+  assert.deepEqual(started, ['p0', 'p1']);
+  gates[1]!.resolve(0);
 });
 
 test('持续的初值不会让后台任务永久饥饿', async () => {

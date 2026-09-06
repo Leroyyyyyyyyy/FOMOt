@@ -1,0 +1,277 @@
+{
+  "generatedAt": 1788670867088,
+  "window": {
+    "basis": "snapshot",
+    "startTs": 1788584400000,
+    "endTs": 1788670800000
+  },
+  "fetchedTs": 1788671261000,
+  "perUser": [
+    {
+      "userId": "u0",
+      "handle": "Unipcs",
+      "seriesPoints": 31,
+      "startPoint": {
+        "snapshotId": 1788584400,
+        "pnl": 16053435.47
+      },
+      "endPoint": {
+        "snapshotId": 1788670800,
+        "pnl": 16553435.47
+      },
+      "record": {
+        "userId": "u0",
+        "value": 500000,
+        "source": "aggregated_snapshot",
+        "basis": "snapshot",
+        "windowStartTs": 1788584400000,
+        "windowEndTs": 1788670800000,
+        "fetchedTs": 1788671261000
+      },
+      "miss": null
+    },
+    {
+      "userId": "u1",
+      "handle": "ogle",
+      "seriesPoints": 31,
+      "startPoint": {
+        "snapshotId": 1788584400,
+        "pnl": 4210000
+      },
+      "endPoint": {
+        "snapshotId": 1788670800,
+        "pnl": 4330000
+      },
+      "record": {
+        "userId": "u1",
+        "value": 120000,
+        "source": "aggregated_snapshot",
+        "basis": "snapshot",
+        "windowStartTs": 1788584400000,
+        "windowEndTs": 1788670800000,
+        "fetchedTs": 1788671261000
+      },
+      "miss": null
+    },
+    {
+      "userId": "u2",
+      "handle": "Binkieee",
+      "seriesPoints": 31,
+      "startPoint": {
+        "snapshotId": 1788584400,
+        "pnl": 902300
+      },
+      "endPoint": {
+        "snapshotId": 1788670800,
+        "pnl": 849940
+      },
+      "record": {
+        "userId": "u2",
+        "value": -52360,
+        "source": "aggregated_snapshot",
+        "basis": "snapshot",
+        "windowStartTs": 1788584400000,
+        "windowEndTs": 1788670800000,
+        "fetchedTs": 1788671261000
+      },
+      "miss": null
+    },
+    {
+      "userId": "u3",
+      "handle": "looc",
+      "seriesPoints": 31,
+      "startPoint": {
+        "snapshotId": 1788584400,
+        "pnl": 120000
+      },
+      "endPoint": {
+        "snapshotId": 1788670800,
+        "pnl": 120000
+      },
+      "record": {
+        "userId": "u3",
+        "value": 0,
+        "source": "aggregated_snapshot",
+        "basis": "snapshot",
+        "windowStartTs": 1788584400000,
+        "windowEndTs": 1788670800000,
+        "fetchedTs": 1788671261000
+      },
+      "miss": null
+    },
+    {
+      "userId": "u4",
+      "handle": "memeunc",
+      "seriesPoints": 31,
+      "startPoint": {
+        "snapshotId": 1788584400,
+        "pnl": 55000
+      },
+      "endPoint": {
+        "snapshotId": 1788670800,
+        "pnl": 85000
+      },
+      "record": {
+        "userId": "u4",
+        "value": 30000,
+        "source": "aggregated_snapshot",
+        "basis": "snapshot",
+        "windowStartTs": 1788584400000,
+        "windowEndTs": 1788670800000,
+        "fetchedTs": 1788671261000
+      },
+      "miss": null
+    },
+    {
+      "userId": "u5",
+      "handle": "Avast",
+      "seriesPoints": 31,
+      "startPoint": {
+        "snapshotId": 1788584400,
+        "pnl": 990
+      },
+      "endPoint": {
+        "snapshotId": 1788670800,
+        "pnl": 1000
+      },
+      "record": {
+        "userId": "u5",
+        "value": 10,
+        "source": "aggregated_snapshot",
+        "basis": "snapshot",
+        "windowStartTs": 1788584400000,
+        "windowEndTs": 1788670800000,
+        "fetchedTs": 1788671261000
+      },
+      "miss": null
+    },
+    {
+      "userId": "u6",
+      "handle": "Rowdy",
+      "seriesPoints": 31,
+      "startPoint": {
+        "snapshotId": 1788584400,
+        "pnl": 400
+      },
+      "endPoint": {
+        "snapshotId": 1788670800,
+        "pnl": 397
+      },
+      "record": {
+        "userId": "u6",
+        "value": -3,
+        "source": "aggregated_snapshot",
+        "basis": "snapshot",
+        "windowStartTs": 1788584400000,
+        "windowEndTs": 1788670800000,
+        "fetchedTs": 1788671261000
+      },
+      "miss": null
+    },
+    {
+      "userId": "u7",
+      "handle": "frank",
+      "seriesPoints": 31,
+      "startPoint": {
+        "snapshotId": 1788584400,
+        "pnl": 12000
+      },
+      "endPoint": {
+        "snapshotId": 1788670800,
+        "pnl": 19000
+      },
+      "record": {
+        "userId": "u7",
+        "value": 7000,
+        "source": "aggregated_snapshot",
+        "basis": "snapshot",
+        "windowStartTs": 1788584400000,
+        "windowEndTs": 1788670800000,
+        "fetchedTs": 1788671261000
+      },
+      "miss": null
+    },
+    {
+      "userId": "u8",
+      "handle": "cosby",
+      "seriesPoints": 31,
+      "startPoint": {
+        "snapshotId": 1788584400,
+        "pnl": 8500
+      },
+      "endPoint": {
+        "snapshotId": 1788670800,
+        "pnl": 11000
+      },
+      "record": {
+        "userId": "u8",
+        "value": 2500,
+        "source": "aggregated_snapshot",
+        "basis": "snapshot",
+        "windowStartTs": 1788584400000,
+        "windowEndTs": 1788670800000,
+        "fetchedTs": 1788671261000
+      },
+      "miss": null
+    },
+    {
+      "userId": "u9",
+      "handle": "Yaoza",
+      "seriesPoints": 24,
+      "startPoint": null,
+      "endPoint": {
+        "snapshotId": 1788670800,
+        "pnl": 301
+      },
+      "record": null,
+      "miss": "no_start_point"
+    }
+  ],
+  "misses": [
+    {
+      "userId": "u9",
+      "reason": "序列缺精确的 24 小时起点"
+    }
+  ],
+  "aggregateNineOfTen": {
+    "total": null,
+    "profitable": null,
+    "covered": 9,
+    "expected": 10,
+    "window": {
+      "basis": "snapshot",
+      "startTs": 1788584400000,
+      "endTs": 1788670800000
+    },
+    "fetchedTs": 1788671261000,
+    "reason": "缺 1 人的收益记录"
+  },
+  "aggregateComplete": {
+    "total": 607148,
+    "profitable": 7,
+    "covered": 10,
+    "expected": 10,
+    "window": {
+      "basis": "snapshot",
+      "startTs": 1788584400000,
+      "endTs": 1788670800000
+    },
+    "fetchedTs": 1788671261000,
+    "reason": null
+  },
+  "enriched": {
+    "top10TokenPnl": 5500,
+    "top10TokenProfitable": 10,
+    "top10PlatformPnl24h": 607148,
+    "top10PlatformProfitable24h": 7,
+    "top10PlatformCovered": 10,
+    "top10Count": 10,
+    "top10SetStatus": "ok",
+    "top10PlatformWindow": {
+      "basis": "snapshot",
+      "startTs": 1788584400000,
+      "endTs": 1788670800000
+    }
+  },
+  "renderedCard": "FOMO NOW\nA Meme Coin (MEME) · 🟢 Robinhood Chain · MC: 🟡 $126.12K\nCA: 0xabababababababababababababababababababab\n首次触发: 2026/09/06 13:01:58.200 HKT\n成交量: 5m $22.36K · 1h $212.12K\n持币初值（+0.8s）: 全链 178 · Fomo 72 (40.4%)\n持币复核（+5m1s）: 全链 491 · Fomo 336 (68.4%)\n\nFomo 24H盈利榜持有人: 未发现（身份识别不全，不代表没有）\nTop10持币账户（+5m1s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$5.50K · 盈利 10 人\n  全平台24H PnL: +$607.15K · 盈利 7 人 · 整点对齐口径（截至 09/06 13:00）\n\n健康: 🟢 实时源正常 · 持币覆盖 49/336 · Top10 10/10 · 浏览器→入库 64ms · 禁发送演练"
+}
