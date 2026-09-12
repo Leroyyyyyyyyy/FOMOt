@@ -61,10 +61,18 @@ export function compact(chainId: number, poolId: string, stream: Stream): void {
   } catch (err) { db.exec('ROLLBACK'); throw err; }
 }
 
+/**
+ * 某个池的覆盖区间。
+ *
+ * 包含 `pool_id='*'` 的**全链级**区间：post 的实时扫描是对 PoolManager 整体
+ * 做一次 getLogs，扫过那段区块就等于扫过了该范围内**所有**池——包括那段时间
+ * 里一笔成交都没有的池。这正是「扫描完整但没有成交 → synthetic 平线」
+ * 与「有缺口 → unknown」能被区分开的依据。
+ */
 export function intervals(chainId: number, poolId: string): Interval[] {
   const rows = db.prepare(
     `SELECT from_block, to_block, from_ts, to_ts, status FROM post_coverage
-     WHERE chain_id=? AND pool_id=? ORDER BY from_block`,
+     WHERE chain_id=? AND (pool_id=? OR pool_id='*') ORDER BY from_block`,
   ).all(chainId, poolId) as any[];
   return rows.map(r => ({ fromBlock: r.from_block, toBlock: r.to_block, fromTs: r.from_ts, toTs: r.to_ts, status: r.status }));
 }
