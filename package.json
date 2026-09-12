@@ -27,7 +27,10 @@
     "post:probe": "tsx scripts/post-probe.ts",
     "post:check-config": "tsx scripts/post-check-config.ts",
     "post:import": "tsx scripts/post-import.ts",
-    "post:dry-run": "STRATEGY_MODE=post_v1 NOTIFY_MODE=off tsx src/index.ts"
+    "post:dry-run": "STRATEGY_MODE=post_v1 NOTIFY_MODE=off tsx src/index.ts",
+    "post:explain": "tsx scripts/post-explain.ts",
+    "post:replay": "tsx scripts/post-replay.ts",
+    "post:report": "tsx scripts/post-report.ts"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
