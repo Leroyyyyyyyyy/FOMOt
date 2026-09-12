@@ -650,3 +650,59 @@ SQLite（批次中途失败整体回滚）、扫链（报价失败不越过未�
 3. 原版「持币覆盖 49/336」的分子定义。
 4. 原版三条 FOMO 阈值的真实值。两个样本只能给出「原版不严于此」的下界（≤13 / ≤7.8% / =0）。
 5. 钱包身份的链上溯源器**尚未接入**，所以 `confirmed` 映射为 0。存储和接口已就位。
+
+---
+
+## 9. 2026-09-12：post_v1 新策略实现
+
+`STRATEGY_MODE=post_v1` 是一条**与旧 legacy 路径完全并行**的新策略线。
+缺省仍是 `legacy`，旧行为不变，随时可回退。首版不实现双引擎共发同一频道——
+游标、维护与消息会互相干扰。
+
+- 实现依据：[docs/design/POST_STRATEGY_TG_IMPLEMENTATION.md](docs/design/POST_STRATEGY_TG_IMPLEMENTATION.md)
+- **当前进度与「还没做到的」**：[docs/run/POST_PROGRESS.md](docs/run/POST_PROGRESS.md)
+- 阶段 0 实测依赖核验：[docs/run/POST_DEPENDENCIES.md](docs/run/POST_DEPENDENCIES.md)
+
+### 9.1 与旧路径的关系
+
+| 方面 | legacy | post_v1 |
+|---|---|---|
+| 入口 | `npm start` | `STRATEGY_MODE=post_v1 npm start` |
+| 配置 | `config/rules.yaml` | `config/post-strategy.yaml`（独立校验，不互为前置） |
+| 数据表 | `pools`/`swaps`/`pool_state`/`alerts` … | `post_*` 一整套，**完全不读旧表** |
+| FOMO 浏览器 | 加载 | 不加载 |
+| holder / PnL 调度 | 有 | 无 |
+| 触发规则 | 持币数、FOMO 占比、盈利榜、5m 量价门… | 二段横盘 / 新币两次回拉 / 百万关口 / RSI + 叙事门 |
+| 通知 | 内存队列 Sender | 持久 outbox + 结构化发送结果 |
+
+选定的隔离方式是「post 自带一套表、只读自己的表」。原因是 `pruneSwaps` 其实是
+`pruneAll` 的别名、watcher 每 5 分钟也会调一次；只要 post 还读旧表，就永远存在
+某条清理路径漏加保护、把二段需要的历史删掉的风险。`tests/post-store.test.ts`
+直接调用旧 `pruneAll()` 断言 post 侧数据一根不少。
+
+### 9.2 三条不能破的口径（本轮最容易踩的坑）
+
+1. **`confirmedAt` 绝不回填成 `extremeTs`**。极值发生的时间和「我们真的知道它是极值」
+   的时间是两回事，混起来就是把事后看图伪装成实时策略。
+2. **空桶要区分「扫描完整但没成交」和「有缺口」**。前者可以补 synthetic 平线，
+   后者只能是 `unknown` 且价格为 `null`。曾经因为覆盖按成交时间记（而不是按扫过的区块
+   范围记）导致安静的分钟永远拿不到 complete 覆盖，全部退化成 unknown——已修复，
+   实跑验证四种状态都能正常出现。
+3. **`unknown` 不是 `pass`**。叙事缺资料、供应量缺时点快照、报价缺历史，一律 unknown
+   并阻止确认，不能当成「没问题」。
+
+### 9.3 关于「恰好一次」的诚实说明
+
+Telegram 的 `sendMessage` 没有本项目可依赖的客户端幂等键，所以端到端恰好一次
+**做不到也不承诺**。发送结果未知（超时/连接中断）时，新建主卡默认不自动重发，
+进人工核对清单——因此**可能漏通知**，`npm run post:report` 会把这个数量单列出来。
+已知 messageId 的 edit 可以安全重试。
+
+### 9.4 仍待确认（不要声称已完成）
+
+1. 二段没有任何实盘样本。通过的用例跑的是标注为 `synthetic` 的 fixture。
+2. 自动叙事 provider、DeBot adapter 均未接入（显式 `available=false` 的 stub）。
+3. `3–5M` 的口径歧义未做对照实验：默认 `fdv_proxy`，`off` 与 `volume_usd` 代码可用但没跑对照。
+4. 区块时间用的是「每 300 块测量锚点 + 锚点间插值 + 分钟边界补精确值」的近似，
+   不是逐块精确值。近似在数据里可见（K 线 `source=chain:anchored300`）。
+5. 本轮未发送过任何真实 Telegram 消息。

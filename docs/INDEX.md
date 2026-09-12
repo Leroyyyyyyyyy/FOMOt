@@ -1,15 +1,38 @@
 # 本轮整改交付物索引
 
-## 新策略实现设计
+## 新策略 post_v1
 
-- [帖子策略发现与 Telegram 推送实现文档](design/POST_STRATEGY_TG_IMPLEMENTATION.md)：二段横盘、新币两次回拉、百万关口、叙事与 RSI 提醒；包含现有框架改造点、数据契约、配置、通知恢复及验收要求。设计交付，尚未实现。
+| 交付物 | 位置 |
+|---|---|
+| 设计与验收契约 | [design/POST_STRATEGY_TG_IMPLEMENTATION.md](design/POST_STRATEGY_TG_IMPLEMENTATION.md) |
+| **当前实现进度（先看这个）** | [run/POST_PROGRESS.md](run/POST_PROGRESS.md) |
+| 阶段 0 依赖核验报告（实测） | [run/POST_DEPENDENCIES.md](run/POST_DEPENDENCIES.md) |
+| 实现代码 | `src/post/`、`src/notify/post-render.ts`、`src/notify/post-telegram.ts` |
+| 配置 | `config/post-strategy.yaml` |
+| 测试 | `tests/post-*.test.ts`（254 项） |
+| 回放 fixture（**合成**，非实测行情） | `docs/run/fixtures/second-leg-synthetic.json` |
+| 一次回放报告 | `run/evidence/post-replay-second-leg.json` |
+
+状态摘要：主链路（链上候选 → 可解释信号 → 可靠通知出口）已打通并在 `NOTIFY_MODE=off` 下跑通；
+**二段尚未实盘验收**（需要第一波 + 至少 48h 箱体，真实数据还在积累）；
+自动叙事 provider 与 DeBot adapter 未接入，均为显式 `available=false` 的 stub。
+详见 [run/POST_PROGRESS.md](run/POST_PROGRESS.md) 的「还没做到的」一节。
+
+```bash
+npm run post:check-config   # 配置校验 + configHash
+npm run post:probe          # 只读依赖探针
+npm run post:dry-run        # STRATEGY_MODE=post_v1 NOTIFY_MODE=off 实跑
+npm run post:explain -- --chain 4663 --ca 0x…
+npm run post:replay -- --fixture docs/run/fixtures/second-leg-synthetic.json --output /tmp/replay
+npm run post:report -- --hours 24
+```
 
 ## 既有整改交付物
 
 | 交付物 | 位置 |
 |---|---|
 | 1. 修改后的代码 | `src/` |
-| 1. 可重复运行的自动化测试 | `tests/`（109 项，`npm test`）|
+| 1. 可重复运行的自动化测试 | `tests/`（363 项，`npm test`：旧 109 + post_v1 254）|
 | 2. 数据字段口径与证据 | [FIELDS.md](FIELDS.md) |
 | 3. 数据库迁移、旧推断映射隔离与恢复说明 | [MIGRATION.md](MIGRATION.md) |
 | 4. 60 分钟验收报告 | [run/ACCEPTANCE.md](run/ACCEPTANCE.md) |
