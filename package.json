@@ -23,7 +23,8 @@
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
     "dry-run:relaxed": "NOTIFY_MODE=off RULES_FILE=config/rules.test.yaml tsx src/index.ts",
-    "report": "tsx scripts/run-report.ts"
+    "report": "tsx scripts/run-report.ts",
+    "post:probe": "tsx scripts/post-probe.ts"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
