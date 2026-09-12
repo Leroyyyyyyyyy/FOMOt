@@ -1,0 +1,1858 @@
+{
+  "at": 1788681595847,
+  "targets": [
+    {
+      "net": 56,
+      "name": "BSC",
+      "ca": "0xfe189e97832da1573e4e4ff034f4ffc3a15c7777"
+    },
+    {
+      "net": 8453,
+      "name": "Base",
+      "ca": "0xb2000000000000000000004c27f6523082f41d01"
+    },
+    {
+      "net": 4663,
+      "name": "Robinhood",
+      "ca": "0x39dbed3a2bd333467115de45665cc57f813c4571"
+    }
+  ],
+  "got": [
+    [
+      "56|0xfe189e97832da1573e4e4ff034f4ffc3a15c7777",
+      {
+        "status": 200,
+        "shapeOk": true,
+        "rows": [
+          {
+            "ca": "0xfe189e97832da1573e4e4ff034f4ffc3a15c7777",
+            "networkId": 56,
+            "fomoHolders": 24860,
+            "top": [
+              {
+                "rank": 1,
+                "user": {
+                  "userId": "36adb85a-c0fd-5fa8-916d-8fdc32fe4237",
+                  "handle": "Unipcs",
+                  "evmAddress": "0x2ac082e252143c89c6e3bcb972e49855f9f6711c",
+                  "followers": 549359
+                },
+                "amount": 24956945.15,
+                "pnl": 4222827.99,
+                "isDev": false
+              },
+              {
+                "rank": 2,
+                "user": {
+                  "userId": "77e707d5-3e83-55f8-8ddd-acc0b893010c",
+                  "handle": "Avast",
+                  "evmAddress": "0xa8413e9fc46db955855de9107135beae47f6c58e",
+                  "followers": 297680
+                },
+                "amount": 22567338.93,
+                "pnl": 4086017.51,
+                "isDev": false
+              },
+              {
+                "rank": 3,
+                "user": {
+                  "userId": "8c4dbc62-ee24-5426-acdb-abbad855cd91",
+                  "handle": "Frogman",
+                  "evmAddress": "0x3a90ed56e30df419339763ef717a15c1115f97b7",
+                  "followers": 58425
+                },
+                "amount": 11806060.64,
+                "pnl": 2065886.62,
+                "isDev": false
+              },
+              {
+                "rank": 4,
+                "user": {
+                  "userId": "bea10b9a-6cc5-51f2-9504-b7cb2d7e7a94",
+                  "handle": "Binkieee",
+                  "evmAddress": "0x0137c178aa38535e8893a7583d8778f87bf0df29",
+                  "followers": 154919
+                },
+                "amount": 9947926.47,
+                "pnl": 1924224.59,
+                "isDev": false
+              },
+              {
+                "rank": 5,
+                "user": {
+                  "userId": "6fb966e5-ae85-5909-a99e-2ffa041ace5b",
+                  "handle": "Iknowwhyy",
+                  "evmAddress": "0x0c2e76007ff54fc7a129e72de0f6ba9bfc29f9ac",
+                  "followers": 24999
+                },
+                "amount": 6727530.04,
+                "pnl": 1756473.31,
+                "isDev": false
+              },
+              {
+                "rank": 6,
+                "user": {
+                  "userId": "f47dc8da-7846-510f-9609-e4545b2ceb5b",
+                  "handle": "FullPinkYak",
+                  "evmAddress": "0x32911579a3de5d63e787d0028742e2606cdd02cf",
+                  "followers": 12961
+                },
+                "amount": 6363169.7,
+                "pnl": 977669.89,
+                "isDev": false
+              },
+              {
+                "rank": 7,
+                "user": {
+                  "userId": "a7883c43-7415-5448-809d-97f5982998e1",
+                  "handle": "SmokΞy",
+                  "evmAddress": "0x4d8e03a5571b4e00ee4406d8fda4a1ac5793f9b0",
+                  "followers": 37017
+                },
+                "amount": 6070969.55,
+                "pnl": 1259634.3,
+                "isDev": false
+              },
+              {
+                "rank": 8,
+                "user": {
+                  "userId": "1be56f64-3da9-5b0b-840e-dab3b0d5033c",
+                  "handle": "GeorgeDroid",
+                  "evmAddress": "0xf79a45df43c84c7f3527d2dc4f729d634999eb20",
+                  "followers": 3561
+                },
+                "amount": 5449764.16,
+                "pnl": 793906.85,
+                "isDev": false
+              },
+              {
+                "rank": 9,
+                "user": {
+                  "userId": "d7fd4c2a-5df5-5142-bee3-f9977ef94669",
+                  "handle": "NGOP",
+                  "evmAddress": "0xd8739034061c40108e2945092d287b6f85efd614",
+                  "followers": 7530
+                },
+                "amount": 5045347.99,
+                "pnl": 1038037.4,
+                "isDev": false
+              },
+              {
+                "rank": 10,
+                "user": {
+                  "userId": "d676a05f-0b3e-57d1-86dc-d6986927c6c8",
+                  "handle": "Aurelius",
+                  "evmAddress": "0x134cea2c8b270819320b73169d27bbf62f4d3ce2",
+                  "followers": 276463
+                },
+                "amount": 4658087.52,
+                "pnl": 2509719.14,
+                "isDev": false
+              },
+              {
+                "rank": 11,
+                "user": {
+                  "userId": "4784e554-f241-5391-8b98-49e63b1a28e8",
+                  "handle": "MIRRO🔶 BNB",
+                  "evmAddress": "0x40a686e467d27f90454760ba6520b593ce76596b",
+                  "followers": 7485
+                },
+                "amount": 4596306.78,
+                "pnl": 701107.6,
+                "isDev": false
+              },
+              {
+                "rank": 12,
+                "user": {
+                  "userId": "b96409a1-2ef1-561d-a10f-771d06ae96fc",
+                  "handle": "MoneyLord",
+                  "evmAddress": "0x287b54fb6b3e4fa8faa709c9a6eeb5da4708ee31",
+                  "followers": 22203
+                },
+                "amount": 4519309.92,
+                "pnl": 1047828.8,
+                "isDev": false
+              },
+              {
+                "rank": 13,
+                "user": {
+                  "userId": "713cabd6-db83-5b77-87fd-3309f7c1f036",
+                  "handle": "tiko",
+                  "evmAddress": "0x592818a0a96b968000c03cac9cc642d0e0e09a1f",
+                  "followers": 3320
+                },
+                "amount": 3474114.43,
+                "pnl": 727235.4,
+                "isDev": false
+              },
+              {
+                "rank": 14,
+                "user": {
+                  "userId": "c3406c1a-9ce5-5327-81b8-8c93aa48c303",
+                  "handle": "Joon",
+                  "evmAddress": "0x2f83fe4c8318f0ab827171d5b88dd3995d9d6632",
+                  "followers": 4831
+                },
+                "amount": 3031171.96,
+                "pnl": 473264.84,
+                "isDev": false
+              },
+              {
+                "rank": 15,
+                "user": {
+                  "userId": "325ca5a0-924c-5b5d-b779-dde919b595c4",
+                  "handle": "6🤷7",
+                  "evmAddress": "0x56fec71345447588c4131945982a6ae229cb19b1",
+                  "followers": 2632
+                },
+                "amount": 2735763.14,
+                "pnl": 614021.52,
+                "isDev": false
+              },
+              {
+                "rank": 16,
+                "user": {
+                  "userId": "57fc43ad-97c0-5966-ba77-3d0de4e17d09",
+                  "handle": "allincrypto 熬鹰资本 🇨🇳",
+                  "evmAddress": "0x5d2468364225f06dfe84e5c10662b9ca63a961f3",
+                  "followers": 6236
+                },
+                "amount": 2687427.15,
+                "pnl": 20520.88,
+                "isDev": false
+              },
+              {
+                "rank": 17,
+                "user": {
+                  "userId": "add5ed29-ffa4-5f3e-b709-9a3c80a1ac8f",
+                  "handle": "hendo",
+                  "evmAddress": "0x5b974635a526aa9ccf244bf44e2423812b225ca9",
+                  "followers": 282
+                },
+                "amount": 2634897.36,
+                "pnl": 375822.82,
+                "isDev": false
+              },
+              {
+                "rank": 18,
+                "user": {
+                  "userId": "2edb1479-4c84-55ef-9a2d-23e7231b5fad",
+                  "handle": "Gold",
+                  "evmAddress": "0x1ab7ae6d0123c0be467ef53f4e7568e6df1494d0",
+                  "followers": 727
+                },
+                "amount": 2171274.03,
+                "pnl": 344281.17,
+                "isDev": false
+              },
+              {
+                "rank": 19,
+                "user": {
+                  "userId": "c9a1dbde-01fe-5574-98da-42d61a99d9ab",
+                  "handle": "cissy",
+                  "evmAddress": "0x315df8e4529e4820c3a67acc04c5fc3a21652243",
+                  "followers": 1865
+                },
+                "amount": 2108989.92,
+                "pnl": 349058.86,
+                "isDev": false
+              },
+              {
+                "rank": 20,
+                "user": {
+                  "userId": "746ae3a0-cca3-5589-8921-3c129ad42609",
+                  "handle": "pink",
+                  "evmAddress": "0xbae02f6182fefbada53ba5739d31370c2d51cad1",
+                  "followers": 349
+                },
+                "amount": 2090038.83,
+                "pnl": 369123.16,
+                "isDev": false
+              },
+              {
+                "rank": 21,
+                "user": {
+                  "userId": "e5b3a269-010a-511c-913a-1036fd1840b5",
+                  "handle": "rasmr",
+                  "evmAddress": "0xc4db4c15b7a4005bb0bfc9d78d5688c6bf3a695b",
+                  "followers": 60546
+                },
+                "amount": 2011458.32,
+                "pnl": 798276.12,
+                "isDev": false
+              },
+              {
+                "rank": 22,
+                "user": {
+                  "userId": "7314aa03-a650-5a91-a67a-27644cbe3f75",
+                  "handle": "Miro7d",
+                  "evmAddress": "0xe4f2c64a14cccf6dd4ca1579c619882fc334a7b7",
+                  "followers": 91
+                },
+                "amount": 1692634.96,
+                "pnl": 156898.05,
+                "isDev": false
+              },
+              {
+                "rank": 23,
+                "user": {
+                  "userId": "17e7a11f-9e74-5ecc-8282-6a3ca3053383",
+                  "handle": "derekz",
+                  "evmAddress": "0xcd97d538164468928a9f16e29baa83c3d1ef4360",
+                  "followers": 1755
+                },
+                "amount": 1628925.77,
+                "pnl": 127828.19,
+                "isDev": false
+              },
+              {
+                "rank": 24,
+                "user": {
+                  "userId": "2f62a25e-b162-51c8-bdbb-f70365dbf34e",
+                  "handle": "cosby",
+                  "evmAddress": "0xca3b0e0e978c808d311ee6a11e9c195d49f53f80",
+                  "followers": 30204
+                },
+                "amount": 1421993.63,
+                "pnl": 106107.13,
+                "isDev": false
+              },
+              {
+                "rank": 25,
+                "user": {
+                  "userId": "afde44e7-acfb-5dba-a225-af88784fa991",
+                  "handle": "wawawewe",
+                  "evmAddress": "0x1b13c07fc0af3d6c6bd0d6b4e45310d610e797e4",
+                  "followers": 3411
+                },
+                "amount": 1350864.54,
+                "pnl": 238743.74,
+                "isDev": false
+              },
+              {
+                "rank": 26,
+                "user": {
+                  "userId": "db96debf-2019-534e-9f6e-e779f352eb18",
+                  "handle": "MousePad",
+                  "evmAddress": "0xd47e7330335e82fca78bbe1e964767d0e9aa4835",
+                  "followers": 590
+                },
+                "amount": 1269743.4,
+                "pnl": 256682.62,
+                "isDev": false
+              },
+              {
+                "rank": 27,
+                "user": {
+                  "userId": "aaf62edd-3f68-556e-ab7a-6431fb75433e",
+                  "handle": "CryptoCharming 🐟",
+                  "evmAddress": "0xb4f1e72a7e8633b2a7994ee7c6420c8c89267611",
+                  "followers": 555
+                },
+                "amount": 1210116.32,
+                "pnl": 433292.19,
+                "isDev": false
+              },
+              {
+                "rank": 28,
+                "user": {
+                  "userId": "8bc47708-012c-54c5-9d41-0449a956283b",
+                  "handle": "333",
+                  "evmAddress": "0x6ffb69786d10c4f1961f88ad930e0f8ccab9c1d2",
+                  "followers": 13300
+                },
+                "amount": 1168093.08,
+                "pnl": 395457.91,
+                "isDev": false
+              },
+              {
+                "rank": 29,
+                "user": {
+                  "userId": "7299cd08-fd41-5222-a5eb-1ab26c1e4c5a",
+                  "handle": "Chud Builds",
+                  "evmAddress": "0x62f300148aeaaed0f6f83999fa38eb98e786f77d",
+                  "followers": 640
+                },
+                "amount": 1152138.25,
+                "pnl": 235557.12,
+                "isDev": false
+              },
+              {
+                "rank": 30,
+                "user": {
+                  "userId": "6c324f0b-10dd-50b2-9c2c-30744ffd4892",
+                  "handle": "Siep",
+                  "evmAddress": "0x019a36a5ce7b5916aabb41f77c522b1601c3b4d7",
+                  "followers": 218
+                },
+                "amount": 1136965.69,
+                "pnl": 186999.05,
+                "isDev": false
+              },
+              {
+                "rank": 31,
+                "user": {
+                  "userId": "eae924d1-d7b9-55cc-8fb8-a995461ec527",
+                  "handle": "Pumponomics",
+                  "evmAddress": "0x0679726da632647994aa2585b06d5013a8c88e64",
+                  "followers": 2384
+                },
+                "amount": 1018997.26,
+                "pnl": 102232.91,
+                "isDev": false
+              },
+              {
+                "rank": 32,
+                "user": {
+                  "userId": "5cd457c1-e230-59bf-9cf1-67c7fb68b623",
+                  "handle": "Elf of Omaha",
+                  "evmAddress": "0xc86ae35d3fac7577336324bd8598cfa487e3f4e1",
+                  "followers": 261
+                },
+                "amount": 1009209.64,
+                "pnl": 142526.56,
+                "isDev": false
+              },
+              {
+                "rank": 33,
+                "user": {
+                  "userId": "38667581-5c1b-5713-8ec5-d10e5cdfaab8",
+                  "handle": "EllioTrades",
+                  "evmAddress": "0x1f36be14921689020c0d98049b49c4f036d1e09c",
+                  "followers": 7036
+                },
+                "amount": 993983.92,
+                "pnl": 157009.83,
+                "isDev": false
+              },
+              {
+                "rank": 34,
+                "user": {
+                  "userId": "94f1caa1-88ca-5cb7-8f88-57fd98ad1a24",
+                  "handle": "Nacho Trades",
+                  "evmAddress": "0x2a22f6106bca4f2b484dfbdf068e38fc123b0a92",
+                  "followers": 586
+                },
+                "amount": 992007.29,
+                "pnl": 153306.09,
+                "isDev": false
+              },
+              {
+                "rank": 35,
+                "user": {
+                  "userId": "d5021cd8-7d54-5b97-8e88-9f8fc74e7ba7",
+                  "handle": "workethic",
+                  "evmAddress": "0x7b952f9ccd10aec035429b502b007245c51ea43e",
+                  "followers": 8712
+                },
+                "amount": 912804.02,
+                "pnl": 147901.52,
+                "isDev": false
+              },
+              {
+                "rank": 36,
+                "user": {
+                  "userId": "0054a829-0bb3-54ea-8d29-e620bbba1da0",
+                  "handle": "unclegoggins",
+                  "evmAddress": "0x2f93c213c15fef8ee35977e40448857f2f288294",
+                  "followers": 90
+                },
+                "amount": 910427.57,
+                "pnl": 178243.04,
+                "isDev": false
+              },
+              {
+                "rank": 37,
+                "user": {
+                  "userId": "f5ab94ab-2302-5bab-8d61-7bb752c24ddf",
+                  "handle": "Minion",
+                  "evmAddress": "0x3593e824dc7d97c7cf30beaddb8eb2d28e87d575",
+                  "followers": 1951
+                },
+                "amount": 879977.83,
+                "pnl": 137303.13,
+                "isDev": false
+              },
+              {
+                "rank": 38,
+                "user": {
+                  "userId": "97600a00-9b58-52b1-a757-4a49795ee015",
+                  "handle": "Hamzeh Crypto",
+                  "evmAddress": "0xa63d7db42cc92b9ef89b5cf63c77e6dee9097082",
+                  "followers": 44
+                },
+                "amount": 849198.95,
+                "pnl": 138247.82,
+                "isDev": false
+              },
+              {
+                "rank": 39,
+                "user": {
+                  "userId": "214a7652-29f8-5004-8e67-a6c954cccb82",
+                  "handle": "hob66",
+                  "evmAddress": "0xf458044187981acf5b827c5325a02153ded38a8d",
+                  "followers": 189
+                },
+                "amount": 830379.65,
+                "pnl": 112781.51,
+                "isDev": false
+              },
+              {
+                "rank": 40,
+                "user": {
+                  "userId": "6876ae75-13fb-5071-9e56-45655e2b9e99",
+                  "handle": "gyros",
+                  "evmAddress": "0x66a7c42539b3462cd702e6908b5194a8ddf0fa8c",
+                  "followers": 258
+                },
+                "amount": 818291.35,
+                "pnl": 145687.19,
+                "isDev": false
+              },
+              {
+                "rank": 41,
+                "user": {
+                  "userId": "7f8f464b-af9d-5f77-93c7-47ea7ca71cd8",
+                  "handle": "北慕",
+                  "evmAddress": "0xa861f77f569349c90af2177190923d5870cfdab2",
+                  "followers": 7
+                },
+                "amount": 773703.47,
+                "pnl": -30437.15,
+                "isDev": false
+              },
+              {
+                "rank": 42,
+                "user": {
+                  "userId": "d5aa13a6-b34c-57e8-8923-dcaa49f6466b",
+                  "handle": "0xBohr",
+                  "evmAddress": "0x3ff1b96d9493712bfd63354ae985e01c89c1e30a",
+                  "followers": 256
+                },
+                "amount": 713249.65,
+                "pnl": 65391.81,
+                "isDev": false
+              },
+              {
+                "rank": 43,
+                "user": {
+                  "userId": "1a7a7a6d-ad5b-5a2d-ab38-5e630df0970b",
+                  "handle": "KeyFewPuma",
+                  "evmAddress": "0x45bd839248c2f1cbba095d2354fd3e79c1138891",
+                  "followers": 916
+                },
+                "amount": 693300.02,
+                "pnl": 57645.55,
+                "isDev": false
+              },
+              {
+                "rank": 44,
+                "user": {
+                  "userId": "1beda129-9a18-58f3-b0f6-f45afd9c2afa",
+                  "handle": "Deathy",
+                  "evmAddress": "0x9e7a0846a70205e61c3ffbf48eb2234874055df3",
+                  "followers": 735
+                },
+                "amount": 684644.87,
+                "pnl": 94004.04,
+                "isDev": false
+              },
+              {
+                "rank": 45,
+                "user": {
+                  "userId": "2d7b388d-7d53-5cbf-9e37-432ae4a49dad",
+                  "handle": "waldonian",
+                  "evmAddress": "0xf97b89c03b89c75b21bec996422107731148ce79",
+                  "followers": 39
+                },
+                "amount": 655092.52,
+                "pnl": 113660.11,
+                "isDev": false
+              },
+              {
+                "rank": 46,
+                "user": {
+                  "userId": "0add7c61-6a84-5ab1-bd2e-95ce923a46b9",
+                  "handle": "TheHappySwan",
+                  "evmAddress": "0x16326cdc6646f0e1d1932cf038865fd5c95d71dd",
+                  "followers": 1670
+                },
+                "amount": 638547.16,
+                "pnl": -7561.04,
+                "isDev": false
+              },
+              {
+                "rank": 47,
+                "user": {
+                  "userId": "19c730c6-b92c-52f5-8c60-42fb705a27e9",
+                  "handle": "ColinTrades",
+                  "evmAddress": "0xd910368d638b3baa232b6338adb325aca8886d3b",
+                  "followers": 624
+                },
+                "amount": 548320.22,
+                "pnl": 93880.35,
+                "isDev": false
+              },
+              {
+                "rank": 48,
+                "user": {
+                  "userId": "8f52d912-10e6-5fdd-b85b-5bccf6b7a810",
+                  "handle": "SOLCRUSHING",
+                  "evmAddress": "0x6f4dc4eb9c02ebc0f7b9a861461837656b1cbac8",
+                  "followers": 76
+                },
+                "amount": 545228.99,
+                "pnl": 43914.59,
+                "isDev": false
+              },
+              {
+                "rank": 49,
+                "user": {
+                  "userId": "64e6f5dc-84f0-58c8-b67b-40153ca09336",
+                  "handle": "Mephistopheles",
+                  "evmAddress": "0xb0cf55ef63c713cfd96886ef8be0663f46d7ff91",
+                  "followers": 41
+                },
+                "amount": 512181.2,
+                "pnl": 27104.29,
+                "isDev": false
+              },
+              {
+                "rank": 50,
+                "user": {
+                  "userId": "bda9a277-4b77-5ece-aa14-cfba6e11334a",
+                  "handle": "ColdWispySkink",
+                  "evmAddress": "0xe36b3790b35672154eea5dd51a9fc68cde3491f5",
+                  "followers": 686
+                },
+                "amount": 511210.02,
+                "pnl": 86907.06,
+                "isDev": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      "8453|0xb2000000000000000000004c27f6523082f41d01",
+      {
+        "status": 200,
+        "shapeOk": true,
+        "rows": [
+          {
+            "ca": "0xb2000000000000000000004c27f6523082f41d01",
+            "networkId": 8453,
+            "fomoHolders": 13253,
+            "top": [
+              {
+                "rank": 1,
+                "user": {
+                  "userId": "36adb85a-c0fd-5fa8-916d-8fdc32fe4237",
+                  "handle": "Unipcs",
+                  "evmAddress": "0x2ac082e252143c89c6e3bcb972e49855f9f6711c",
+                  "followers": 549359
+                },
+                "amount": 20421738.8,
+                "pnl": 870394.31,
+                "isDev": false
+              },
+              {
+                "rank": 2,
+                "user": {
+                  "userId": "b8e9aa2b-e6a2-57d8-8caa-18fa4f97c6a8",
+                  "handle": "lyxe",
+                  "evmAddress": "0x74ac29b314eb8d3b81b5e6e87e4cc0ce12e51fd2",
+                  "followers": 29007
+                },
+                "amount": 18088996.11,
+                "pnl": 995064.82,
+                "isDev": false
+              },
+              {
+                "rank": 3,
+                "user": {
+                  "userId": "888d8a2c-a25d-5543-86b2-1dbd03cf4479",
+                  "handle": "TheS◎Lstice",
+                  "evmAddress": "0xb3e029765eaa69123a5f0ad5294c746464b742ba",
+                  "followers": 115264
+                },
+                "amount": 10918765.58,
+                "pnl": 608063.38,
+                "isDev": false
+              },
+              {
+                "rank": 4,
+                "user": {
+                  "userId": "c3eac5cf-e699-5d5b-8593-a767ea739932",
+                  "handle": "bluntz",
+                  "evmAddress": "0x8f634d1a20c2f866954e4f6f24ba12d252f4f0df",
+                  "followers": 36883
+                },
+                "amount": 7912902.5,
+                "pnl": 56338.69,
+                "isDev": false
+              },
+              {
+                "rank": 5,
+                "user": {
+                  "userId": "f7bb979e-74e7-59ec-aafe-69a0c3846c69",
+                  "handle": "CTM",
+                  "evmAddress": "0xba2f34e815b73d664640d44d680fc464ecc8c0e6",
+                  "followers": 15244
+                },
+                "amount": 6263730.52,
+                "pnl": 428755.98,
+                "isDev": false
+              },
+              {
+                "rank": 6,
+                "user": {
+                  "userId": "d8e4ce39-7078-5ea5-97ac-81cbe6ddf83e",
+                  "handle": "Autumn",
+                  "evmAddress": "0xf0ec413a04dbd92c838e771c346d4affb58b7ccd",
+                  "followers": 369
+                },
+                "amount": 5110421.94,
+                "pnl": 96591.07,
+                "isDev": false
+              },
+              {
+                "rank": 7,
+                "user": {
+                  "userId": "049300c0-ac06-556a-90c4-e065a1a9841c",
+                  "handle": "bibi",
+                  "evmAddress": "0x936e4d404eaa7b9f7b4641685e5963ff96e9ed8b",
+                  "followers": 5567
+                },
+                "amount": 5003079.79,
+                "pnl": 409675.15,
+                "isDev": false
+              },
+              {
+                "rank": 8,
+                "user": {
+                  "userId": "d3ab44dd-7271-5e41-8670-605718231afc",
+                  "handle": "B3NSS",
+                  "evmAddress": "0x74de093f5050f99c618eb64a81bee2d7f4d6ab90",
+                  "followers": 386
+                },
+                "amount": 4909353.35,
+                "pnl": 285062.91,
+                "isDev": false
+              },
+              {
+                "rank": 9,
+                "user": {
+                  "userId": "54e61a65-7d31-52b2-82d4-98d20e6877be",
+                  "handle": "Viral",
+                  "evmAddress": "0xf09fd976e126af9445e6d3d8ef789dee167c437b",
+                  "followers": 707
+                },
+                "amount": 4664435.65,
+                "pnl": 287849.56,
+                "isDev": false
+              },
+              {
+                "rank": 10,
+                "user": {
+                  "userId": "f48fb524-b2c7-568f-9471-895777744b33",
+                  "handle": "A哥",
+                  "evmAddress": "0xa935e5cd66da0702175e3b2b2a1619b362d115ed",
+                  "followers": 12
+                },
+                "amount": 4541622.31,
+                "pnl": 56641.59,
+                "isDev": false
+              },
+              {
+                "rank": 11,
+                "user": {
+                  "userId": "2d5f78fd-5a03-55e4-8bf0-a85bf900be25",
+                  "handle": "tummster",
+                  "evmAddress": "0x95a6a01cdb271b2fc5ddc0fdbb4f3259106d7d13",
+                  "followers": 495
+                },
+                "amount": 4384014.15,
+                "pnl": 155823.65,
+                "isDev": false
+              },
+              {
+                "rank": 12,
+                "user": {
+                  "userId": "df52c5da-ac7c-5829-8e0a-1d8b653b1d67",
+                  "handle": "xh",
+                  "evmAddress": "0xbf7be2b5808a44e6c3322ff0b87685f4492c2921",
+                  "followers": 284
+                },
+                "amount": 4192513.48,
+                "pnl": 159604.33,
+                "isDev": false
+              },
+              {
+                "rank": 13,
+                "user": {
+                  "userId": "486ca834-1162-5bde-9157-c046c9fe3ce2",
+                  "handle": "Panceramic",
+                  "evmAddress": "0xa8d3bb8dac36a92692321637e72e38189ce54a8b",
+                  "followers": 2548
+                },
+                "amount": 4140163.18,
+                "pnl": 160816.31,
+                "isDev": false
+              },
+              {
+                "rank": 14,
+                "user": {
+                  "userId": "d767bbc0-a26a-5797-976c-5c764989bf63",
+                  "handle": "wrinkly",
+                  "evmAddress": "0x6d0d8ff39ccc0f03d1de93485719987d9f770a19",
+                  "followers": 465
+                },
+                "amount": 4119763.16,
+                "pnl": 84512.58,
+                "isDev": false
+              },
+              {
+                "rank": 15,
+                "user": {
+                  "userId": "cc96aa7d-9777-5013-8029-449c6456e4b0",
+                  "handle": "angery",
+                  "evmAddress": "0x22f3af1eca586b5f01fcc9e63f476ac953801c1e",
+                  "followers": 9882
+                },
+                "amount": 3988140.75,
+                "pnl": 511382.74,
+                "isDev": false
+              },
+              {
+                "rank": 16,
+                "user": {
+                  "userId": "cf88a774-56a7-55e2-bcb0-3a59a84e377e",
+                  "handle": "Straya Cowboy🦘",
+                  "evmAddress": "0x310efa2068128faa5b2139e894664459d2ffda6b",
+                  "followers": 1101
+                },
+                "amount": 3893566.43,
+                "pnl": 142691.5,
+                "isDev": false
+              },
+              {
+                "rank": 17,
+                "user": {
+                  "userId": "a3b6c93e-0028-5066-b8ce-3b78c0abd5d0",
+                  "handle": "Qwerky",
+                  "evmAddress": "0xc50d44309c55b5b4af2cd909dbf5b61886014a7f",
+                  "followers": 1269
+                },
+                "amount": 3857556.46,
+                "pnl": 148714.29,
+                "isDev": false
+              },
+              {
+                "rank": 18,
+                "user": {
+                  "userId": "ec55562a-1c2a-5955-95fa-025175e05738",
+                  "handle": "LA",
+                  "evmAddress": "0x950473b7238f99781235ae02fd3136958418b7a2",
+                  "followers": 280
+                },
+                "amount": 3847493.04,
+                "pnl": -5983.33,
+                "isDev": false
+              },
+              {
+                "rank": 19,
+                "user": {
+                  "userId": "eae924d1-d7b9-55cc-8fb8-a995461ec527",
+                  "handle": "Pumponomics",
+                  "evmAddress": "0x0679726da632647994aa2585b06d5013a8c88e64",
+                  "followers": 2385
+                },
+                "amount": 3268157.65,
+                "pnl": 55724.39,
+                "isDev": false
+              },
+              {
+                "rank": 20,
+                "user": {
+                  "userId": "c4b6f0a2-aef3-5644-a798-9a1a020328d6",
+                  "handle": "DONG 🐂",
+                  "evmAddress": "0x72f713f4b8bc6918b2cb39566c9eb8f76ad30923",
+                  "followers": 1626
+                },
+                "amount": 3185632.95,
+                "pnl": 122302.96,
+                "isDev": false
+              },
+              {
+                "rank": 21,
+                "user": {
+                  "userId": "9f972831-8f74-5df8-b64f-8f7967fa3427",
+                  "handle": "Ekonomeest",
+                  "evmAddress": "0x20d73e961b4caff77a671700afa4e138fdca51a6",
+                  "followers": 1911
+                },
+                "amount": 2886227.17,
+                "pnl": 156782.19,
+                "isDev": false
+              },
+              {
+                "rank": 22,
+                "user": {
+                  "userId": "8c4dbc62-ee24-5426-acdb-abbad855cd91",
+                  "handle": "Frogman",
+                  "evmAddress": "0x3a90ed56e30df419339763ef717a15c1115f97b7",
+                  "followers": 58425
+                },
+                "amount": 2839603.3,
+                "pnl": 157517.79,
+                "isDev": false
+              },
+              {
+                "rank": 23,
+                "user": {
+                  "userId": "19407d93-247d-5c66-bebd-5922efc6d54c",
+                  "handle": "dpump",
+                  "evmAddress": "0x86e2e8d6cf7cf9d061e913515ee350c503be7561",
+                  "followers": 84
+                },
+                "amount": 2733989.04,
+                "pnl": 58058.18,
+                "isDev": false
+              },
+              {
+                "rank": 24,
+                "user": {
+                  "userId": "3b4cafbe-d901-5b01-86be-05d201c316be",
+                  "handle": "TroubledNobleCapybara",
+                  "evmAddress": "0x40c429f69c0ed657ce18c3d9dba8ba448c7bf4be",
+                  "followers": 372
+                },
+                "amount": 2723947.51,
+                "pnl": 154501.31,
+                "isDev": false
+              },
+              {
+                "rank": 25,
+                "user": {
+                  "userId": "43010701-06cb-5558-97a5-2d34517b5198",
+                  "handle": "Roman",
+                  "evmAddress": "0x34bbde0523a4cd16a29ad51d21adc44162986d2d",
+                  "followers": 9668
+                },
+                "amount": 2426876.02,
+                "pnl": 249675.93,
+                "isDev": false
+              },
+              {
+                "rank": 26,
+                "user": {
+                  "userId": "516473b2-3c72-5c89-9d58-9dd52875604a",
+                  "handle": "kimthejong",
+                  "evmAddress": "0x9809dbcaf8f2451a5d3a685518fca1a8532066fd",
+                  "followers": 610
+                },
+                "amount": 2296745.5,
+                "pnl": 200635.59,
+                "isDev": false
+              },
+              {
+                "rank": 27,
+                "user": {
+                  "userId": "c3406c1a-9ce5-5327-81b8-8c93aa48c303",
+                  "handle": "Joon",
+                  "evmAddress": "0x2f83fe4c8318f0ab827171d5b88dd3995d9d6632",
+                  "followers": 4832
+                },
+                "amount": 2257887.13,
+                "pnl": 32551.86,
+                "isDev": false
+              },
+              {
+                "rank": 28,
+                "user": {
+                  "userId": "9f7903da-7847-5bfa-b942-3ec37903b84d",
+                  "handle": "bigbigwin",
+                  "evmAddress": "0x2b5379a3412888acf42c2eca85c781e121b37023",
+                  "followers": 37
+                },
+                "amount": 2159538.82,
+                "pnl": 94219.11,
+                "isDev": false
+              },
+              {
+                "rank": 29,
+                "user": {
+                  "userId": "25da6108-361d-5e1a-ba5e-a5431f0b0b68",
+                  "handle": "_oscar_",
+                  "evmAddress": "0xb7e6240f7a267546bf5fc0bbc1e1932d0a8d89c2",
+                  "followers": 62
+                },
+                "amount": 2099999.99,
+                "pnl": 89094.92,
+                "isDev": false
+              },
+              {
+                "rank": 30,
+                "user": {
+                  "userId": "a611148e-1952-5db8-8b08-7e7b960c74b4",
+                  "handle": "Blondie",
+                  "evmAddress": "0xb96246ce9469c0ef5ba684219f221061602d3fdc",
+                  "followers": 92
+                },
+                "amount": 2018749.91,
+                "pnl": 24512.6,
+                "isDev": false
+              },
+              {
+                "rank": 31,
+                "user": {
+                  "userId": "d22cc11a-116d-526e-be36-f18ed9c78dca",
+                  "handle": "Tom100B",
+                  "evmAddress": "0x76c12dfbe40feb324a4ba5e65050e03eb4c2e4bb",
+                  "followers": 51
+                },
+                "amount": 2000000,
+                "pnl": 106330.14,
+                "isDev": false
+              },
+              {
+                "rank": 32,
+                "user": {
+                  "userId": "1b649c90-2bd2-5343-b07d-476ade840afc",
+                  "handle": "antoniok1",
+                  "evmAddress": "0x8919d9ef86cbce655f907bc5e82df423ae2d801c",
+                  "followers": 176
+                },
+                "amount": 1962200.73,
+                "pnl": 71375.71,
+                "isDev": false
+              },
+              {
+                "rank": 33,
+                "user": {
+                  "userId": "2f494cf4-7ec5-566f-a290-155e61d5a200",
+                  "handle": "notcobie",
+                  "evmAddress": "0xc7a51fad10defde9bc1d185b5057321005f30ae7",
+                  "followers": 168
+                },
+                "amount": 1929449.42,
+                "pnl": 79143.1,
+                "isDev": false
+              },
+              {
+                "rank": 34,
+                "user": {
+                  "userId": "e0d2cf07-7194-56d5-b097-f33dc747a5b2",
+                  "handle": "MerePeachOx",
+                  "evmAddress": "0x33bb6f85f2da4ddd6db2c81d02b514a17ea43699",
+                  "followers": 11
+                },
+                "amount": 1888533.73,
+                "pnl": 20258.18,
+                "isDev": false
+              },
+              {
+                "rank": 35,
+                "user": {
+                  "userId": "cc412b7b-5e7f-52e2-9d38-8dec9f63b314",
+                  "handle": "Geppetto 🐂",
+                  "evmAddress": "0x3953c32054e134e9e654b475ac305f2121058d4e",
+                  "followers": 1249
+                },
+                "amount": 1616247.62,
+                "pnl": 70370.9,
+                "isDev": false
+              },
+              {
+                "rank": 36,
+                "user": {
+                  "userId": "697b61d3-c302-56db-91c3-6ed20b0a3e1a",
+                  "handle": "mongoose",
+                  "evmAddress": "0x79bff1ab8358cc611b7f8671718261ae3ab9d0f0",
+                  "followers": 1298
+                },
+                "amount": 1542456.46,
+                "pnl": 136535.98,
+                "isDev": false
+              },
+              {
+                "rank": 37,
+                "user": {
+                  "userId": "1498d441-939e-5493-87a8-b895b7486c25",
+                  "handle": "bobeddy",
+                  "evmAddress": "0x4b33c275b23939b7dbc9f68dca6396d6267b77d2",
+                  "followers": 8
+                },
+                "amount": 1351183.6,
+                "pnl": 46799.05,
+                "isDev": false
+              },
+              {
+                "rank": 38,
+                "user": {
+                  "userId": "d3246312-4471-5eb3-967c-27fba090760f",
+                  "handle": "keepeerr",
+                  "evmAddress": "0xc24b4fa9996c81546de6b3acde4685dc2fab5b08",
+                  "followers": 33
+                },
+                "amount": 1329796.84,
+                "pnl": 41625.93,
+                "isDev": false
+              },
+              {
+                "rank": 39,
+                "user": {
+                  "userId": "8b219002-e0b5-5e6c-8be5-400124a38bb9",
+                  "handle": "mynamejeff",
+                  "evmAddress": "0x5c4bafdac6e51a7108af33934089a0c2279024d6",
+                  "followers": 194
+                },
+                "amount": 1267789.66,
+                "pnl": 83703.67,
+                "isDev": false
+              },
+              {
+                "rank": 40,
+                "user": {
+                  "userId": "fc62b6e3-d84e-5ea6-8fbd-3ca25a2d72f4",
+                  "handle": "𝑺𝑯𝑰𝑭𝑻𝑰𝑹𝑳",
+                  "evmAddress": "0x80248c6f1a24bd82c29f118f5fd4ab6be0331e4b",
+                  "followers": 263
+                },
+                "amount": 1232727.85,
+                "pnl": 82041.95,
+                "isDev": false
+              },
+              {
+                "rank": 41,
+                "user": {
+                  "userId": "ec042959-cda9-5842-bdb9-15243c4a110b",
+                  "handle": "Ironman",
+                  "evmAddress": "0x9e36abc283ab3cf02fa4002f528d0ecc61d46bcc",
+                  "followers": 107
+                },
+                "amount": 1232370.42,
+                "pnl": 20643.57,
+                "isDev": false
+              },
+              {
+                "rank": 42,
+                "user": {
+                  "userId": "0aa2add8-3e72-546c-9120-9daac0bb6495",
+                  "handle": "limzero",
+                  "evmAddress": "0xd2208d6a555eb3784910d83847c86fcf8e7081ed",
+                  "followers": 46
+                },
+                "amount": 1228699.39,
+                "pnl": 36745.08,
+                "isDev": false
+              },
+              {
+                "rank": 43,
+                "user": {
+                  "userId": "7aed49d8-38b3-54e2-8163-baad3d3c7589",
+                  "handle": "Aiden666",
+                  "evmAddress": "0x718eaf98c2c7e553c9a86bfed38caa43cca9ff1a",
+                  "followers": 134
+                },
+                "amount": 1216526.1,
+                "pnl": 83473.85,
+                "isDev": false
+              },
+              {
+                "rank": 44,
+                "user": {
+                  "userId": "4a6549ac-c78d-590a-ac2e-132a6e1395d9",
+                  "handle": "Trvst",
+                  "evmAddress": "0x6f3b72c6780e70b56e31aa736f7c646ed446c1e1",
+                  "followers": 377
+                },
+                "amount": 1178955.54,
+                "pnl": 20943.44,
+                "isDev": false
+              },
+              {
+                "rank": 45,
+                "user": {
+                  "userId": "0e52fff1-7bd4-5802-98f0-f679e64c7fda",
+                  "handle": "ZippyRainyMacaw",
+                  "evmAddress": "0xc71ab6e1b71b9b13015f3e6dee41b6b1136450f7",
+                  "followers": 134
+                },
+                "amount": 1178872.93,
+                "pnl": 79558.43,
+                "isDev": false
+              },
+              {
+                "rank": 46,
+                "user": {
+                  "userId": "ae13df29-3e17-514f-82b7-925c03a298f4",
+                  "handle": "justdeeds",
+                  "evmAddress": "0xb508c432ed8c2694cca097e5d1206adfe291bfb7",
+                  "followers": 64
+                },
+                "amount": 1134140.93,
+                "pnl": 29133.65,
+                "isDev": false
+              },
+              {
+                "rank": 47,
+                "user": {
+                  "userId": "482c9f1b-88f3-51ea-97ce-91a27fb3bdd2",
+                  "handle": "Lunix",
+                  "evmAddress": "0x31d92d9ee71263bef3efc5374d0c28394dea30c8",
+                  "followers": 1785
+                },
+                "amount": 1118353.15,
+                "pnl": 118173.82,
+                "isDev": false
+              },
+              {
+                "rank": 48,
+                "user": {
+                  "userId": "214a7652-29f8-5004-8e67-a6c954cccb82",
+                  "handle": "hob66",
+                  "evmAddress": "0xf458044187981acf5b827c5325a02153ded38a8d",
+                  "followers": 189
+                },
+                "amount": 1099398.61,
+                "pnl": 23057.42,
+                "isDev": false
+              },
+              {
+                "rank": 49,
+                "user": {
+                  "userId": "02fb58aa-0d9e-5ef1-acce-25b713322db9",
+                  "handle": "NightSpark",
+                  "evmAddress": "0x4f30f2752c7ad854adbaf5ee7d1cc13d0189bdcc",
+                  "followers": 573
+                },
+                "amount": 1076946.23,
+                "pnl": 7660.59,
+                "isDev": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      "4663|0x39dbed3a2bd333467115de45665cc57f813c4571",
+      {
+        "status": 200,
+        "shapeOk": true,
+        "rows": [
+          {
+            "ca": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+            "networkId": 4663,
+            "fomoHolders": 28882,
+            "top": [
+              {
+                "rank": 1,
+                "user": {
+                  "userId": "679a7cbb-1635-5415-896a-9e8151b74686",
+                  "handle": "ogle",
+                  "evmAddress": "0x3a6962e0a77a66a14c558bee1fe3880bfe51ebe9",
+                  "followers": 85493
+                },
+                "amount": 10958126.04,
+                "pnl": 6489285.5,
+                "isDev": false
+              },
+              {
+                "rank": 2,
+                "user": {
+                  "userId": "36adb85a-c0fd-5fa8-916d-8fdc32fe4237",
+                  "handle": "Unipcs",
+                  "evmAddress": "0x2ac082e252143c89c6e3bcb972e49855f9f6711c",
+                  "followers": 549359
+                },
+                "amount": 10957901.42,
+                "pnl": 10074512.58,
+                "isDev": false
+              },
+              {
+                "rank": 3,
+                "user": {
+                  "userId": "2f62a25e-b162-51c8-bdbb-f70365dbf34e",
+                  "handle": "cosby",
+                  "evmAddress": "0xca3b0e0e978c808d311ee6a11e9c195d49f53f80",
+                  "followers": 30204
+                },
+                "amount": 4278497.38,
+                "pnl": 3787744.68,
+                "isDev": false
+              },
+              {
+                "rank": 4,
+                "user": {
+                  "userId": "35a98e8f-d962-5256-9b39-89624b524e57",
+                  "handle": "AJC",
+                  "evmAddress": "0xa9f7da8979d0ed6aaf3181354a522ac53e69a682",
+                  "followers": 120289
+                },
+                "amount": 4258142.84,
+                "pnl": 4663565.27,
+                "isDev": false
+              },
+              {
+                "rank": 5,
+                "user": {
+                  "userId": "b129064a-55dc-5a5f-a5fc-68cc42dfbee5",
+                  "handle": "RugDalio✨",
+                  "evmAddress": "0xc067a81d2992f45ed7dfe62d1e8feee1c4c02ad3",
+                  "followers": 22685
+                },
+                "amount": 3505476.17,
+                "pnl": 3199248.71,
+                "isDev": false
+              },
+              {
+                "rank": 6,
+                "user": {
+                  "userId": "4c88563b-770a-5abe-810a-bd6be308fe16",
+                  "handle": "lordarbiter",
+                  "evmAddress": "0xb92799874a2e5f217de3e13ad071beb60b8eab66",
+                  "followers": 19420
+                },
+                "amount": 3374175.79,
+                "pnl": 3110342.64,
+                "isDev": false
+              },
+              {
+                "rank": 7,
+                "user": {
+                  "userId": "ab12eb3f-c4fa-516c-a6d5-e476abbe0160",
+                  "handle": "nobi",
+                  "evmAddress": "0xcc4268894f8c76e6f376b03021e77770cfbae8a8",
+                  "followers": 46163
+                },
+                "amount": 3100179.07,
+                "pnl": 2929189.63,
+                "isDev": false
+              },
+              {
+                "rank": 8,
+                "user": {
+                  "userId": "18e1a823-87d9-5e6b-ba0f-5ef81e734660",
+                  "handle": "230",
+                  "evmAddress": "0xbf8a981c058658573ccb1a810c3f1fefb07995c8",
+                  "followers": 22465
+                },
+                "amount": 2500000,
+                "pnl": 3107758.21,
+                "isDev": false
+              },
+              {
+                "rank": 9,
+                "user": {
+                  "userId": "56cffcab-bea4-59ca-a6bc-71ab8464eb5e",
+                  "handle": "memeking888",
+                  "evmAddress": "0xf04ecd1bf2b2ec3a7553ffb269de60cb0545803e",
+                  "followers": 1025
+                },
+                "amount": 1889142.28,
+                "pnl": 770217.53,
+                "isDev": false
+              },
+              {
+                "rank": 10,
+                "user": {
+                  "userId": "5ac9cf73-970f-54a1-9f54-fd9ae554b279",
+                  "handle": "Carl Wheezor",
+                  "evmAddress": "0xe083a76279ea76494ccc944f8cafb6e095f9b644",
+                  "followers": 14367
+                },
+                "amount": 1837505.2,
+                "pnl": 1699359.31,
+                "isDev": false
+              },
+              {
+                "rank": 11,
+                "user": {
+                  "userId": "dcbfc181-b3d0-5735-be1c-135bc49749ff",
+                  "handle": "Kohi",
+                  "evmAddress": "0x32d2e2f8b2e0afa0d847287abca45a9010db3d7e",
+                  "followers": 6947
+                },
+                "amount": 1722766.39,
+                "pnl": 1448196.2,
+                "isDev": false
+              },
+              {
+                "rank": 12,
+                "user": {
+                  "userId": "87f77c24-44e0-5696-baaf-dfe732083954",
+                  "handle": "kyle",
+                  "evmAddress": "0x0eaac7ffafafba5e9b1cc5d5b6b2a4a9c47b5e8e",
+                  "followers": 34841
+                },
+                "amount": 1579514.46,
+                "pnl": 1427177.97,
+                "isDev": false
+              },
+              {
+                "rank": 13,
+                "user": {
+                  "userId": "ae2439cf-04e5-5e3f-a018-ed20f29e7807",
+                  "handle": "kingofgotham",
+                  "evmAddress": "0x94958ea71cda84f14f257a5857ccf8fcec2d2055",
+                  "followers": 4663
+                },
+                "amount": 1522126.08,
+                "pnl": 1524292.17,
+                "isDev": false
+              },
+              {
+                "rank": 14,
+                "user": {
+                  "userId": "38667581-5c1b-5713-8ec5-d10e5cdfaab8",
+                  "handle": "EllioTrades",
+                  "evmAddress": "0x1f36be14921689020c0d98049b49c4f036d1e09c",
+                  "followers": 7036
+                },
+                "amount": 1376052.15,
+                "pnl": 1058009.64,
+                "isDev": false
+              },
+              {
+                "rank": 15,
+                "user": {
+                  "userId": "e8a13767-5e2b-57a1-8be7-90f0b0d67bb2",
+                  "handle": "Jols",
+                  "evmAddress": "0x5869ac66b8b8b7a495938865b9a74a345b3455cf",
+                  "followers": 1710
+                },
+                "amount": 1366007.38,
+                "pnl": 1146476.11,
+                "isDev": false
+              },
+              {
+                "rank": 16,
+                "user": {
+                  "userId": "0b01ca3f-54bc-5ef9-a66e-d54c7c3dd8d2",
+                  "handle": "Michael Milliardi",
+                  "evmAddress": "0xe1090b6bebc49684c66dfeaa4abc7e80f85a5478",
+                  "followers": 1698
+                },
+                "amount": 1343942.39,
+                "pnl": 1219371.36,
+                "isDev": false
+              },
+              {
+                "rank": 17,
+                "user": {
+                  "userId": "fc3ea5c0-afc4-553c-a295-f838907dc581",
+                  "handle": "Vee",
+                  "evmAddress": "0xf89e668fdcbf7ff8822abdd2826d4214d598887b",
+                  "followers": 132710
+                },
+                "amount": 1299115.74,
+                "pnl": 1063860.78,
+                "isDev": false
+              },
+              {
+                "rank": 18,
+                "user": {
+                  "userId": "eae924d1-d7b9-55cc-8fb8-a995461ec527",
+                  "handle": "Pumponomics",
+                  "evmAddress": "0x0679726da632647994aa2585b06d5013a8c88e64",
+                  "followers": 2385
+                },
+                "amount": 1272319.05,
+                "pnl": 728169.63,
+                "isDev": false
+              },
+              {
+                "rank": 19,
+                "user": {
+                  "userId": "5a59dea5-d0fc-57ec-a617-6413105fe466",
+                  "handle": "samisa",
+                  "evmAddress": "0x13f575577149e1942abccb1b7e08c4fe576657c9",
+                  "followers": 28704
+                },
+                "amount": 1176210.28,
+                "pnl": 1636634.44,
+                "isDev": false
+              },
+              {
+                "rank": 20,
+                "user": {
+                  "userId": "a313b95b-9030-5e9f-9f9a-a35ac19fb93d",
+                  "handle": "paidinfullintel",
+                  "evmAddress": "0x442da4e9d664a33067e43c68ca6245ee4ce11d29",
+                  "followers": 2849
+                },
+                "amount": 1034216.07,
+                "pnl": 885062.19,
+                "isDev": false
+              },
+              {
+                "rank": 21,
+                "user": {
+                  "userId": "c3baeeef-4615-5c88-9956-dc090b709ca2",
+                  "handle": "Fartman Sacks",
+                  "evmAddress": "0xcd3c53e837649aa0247a99413713e3986de66b00",
+                  "followers": 41260
+                },
+                "amount": 1009121.93,
+                "pnl": 418122.35,
+                "isDev": false
+              },
+              {
+                "rank": 22,
+                "user": {
+                  "userId": "8908601f-40d0-5665-846c-c0ebb6ac6938",
+                  "handle": "ethersole",
+                  "evmAddress": "0x6b6215349ba897d4666166e0d395228a122c1c48",
+                  "followers": 3162
+                },
+                "amount": 1000183.39,
+                "pnl": 504304.12,
+                "isDev": false
+              },
+              {
+                "rank": 23,
+                "user": {
+                  "userId": "fff31563-6cca-500c-ad25-5252e5c313c0",
+                  "handle": "sockz",
+                  "evmAddress": "0x247d54c9ac1a5e10b65f5fda0d9a786704d0a18e",
+                  "followers": 2001
+                },
+                "amount": 937753.15,
+                "pnl": 901864.36,
+                "isDev": false
+              },
+              {
+                "rank": 24,
+                "user": {
+                  "userId": "c3406c1a-9ce5-5327-81b8-8c93aa48c303",
+                  "handle": "Joon",
+                  "evmAddress": "0x2f83fe4c8318f0ab827171d5b88dd3995d9d6632",
+                  "followers": 4832
+                },
+                "amount": 930161.73,
+                "pnl": 934692.92,
+                "isDev": false
+              },
+              {
+                "rank": 25,
+                "user": {
+                  "userId": "c9f3447c-a14d-59aa-8b70-41a5e667c060",
+                  "handle": "ToxicCrudeSkink",
+                  "evmAddress": "0x1d8672c70d28c9c5491f8ac611a2e103e13462bf",
+                  "followers": 363
+                },
+                "amount": 829889.27,
+                "pnl": 556784.68,
+                "isDev": false
+              },
+              {
+                "rank": 26,
+                "user": {
+                  "userId": "30363fdb-12e2-5b3f-ae64-29aa2818094c",
+                  "handle": "Ser Albert",
+                  "evmAddress": "0x8daa5526f5f77418641dc29f4b3c007e4099f3ab",
+                  "followers": 11895
+                },
+                "amount": 817854.56,
+                "pnl": 1013982,
+                "isDev": false
+              },
+              {
+                "rank": 27,
+                "user": {
+                  "userId": "8a18e49d-60d4-5406-83f7-be2248137f28",
+                  "handle": "LowRivalRat",
+                  "evmAddress": "0xdd78323e68c7c959adb6e6f3f1e91e3b4b317989",
+                  "followers": 1253
+                },
+                "amount": 811348.4,
+                "pnl": 815802.32,
+                "isDev": false
+              },
+              {
+                "rank": 28,
+                "user": {
+                  "userId": "3df0ebf7-6f03-5388-9a41-f47d4183770e",
+                  "handle": "Tsuki",
+                  "evmAddress": "0x7f145f569fca10b80b7af84a6e4ba625f60cf8a1",
+                  "followers": 9423
+                },
+                "amount": 757081.79,
+                "pnl": 750096.19,
+                "isDev": false
+              },
+              {
+                "rank": 29,
+                "user": {
+                  "userId": "17e7a11f-9e74-5ecc-8282-6a3ca3053383",
+                  "handle": "derekz",
+                  "evmAddress": "0xcd97d538164468928a9f16e29baa83c3d1ef4360",
+                  "followers": 1756
+                },
+                "amount": 756043.65,
+                "pnl": 562484.57,
+                "isDev": false
+              },
+              {
+                "rank": 30,
+                "user": {
+                  "userId": "4479ba58-263b-5044-b04a-ef0a2ec6092c",
+                  "handle": "vancute1112",
+                  "evmAddress": "0x9f748602df516c7fde29bc6973ffc2b867ce0fc9",
+                  "followers": 1250
+                },
+                "amount": 717789.63,
+                "pnl": 587098.88,
+                "isDev": false
+              },
+              {
+                "rank": 31,
+                "user": {
+                  "userId": "70ebaeb0-bb91-5907-90c1-14effbb08326",
+                  "handle": "Shlomoh",
+                  "evmAddress": "0xea2a16128793441670c8404b135ff1b6efd76266",
+                  "followers": 226
+                },
+                "amount": 633401.72,
+                "pnl": 337113.15,
+                "isDev": false
+              },
+              {
+                "rank": 32,
+                "user": {
+                  "userId": "36f7bf6c-9831-5d9d-a518-eed02148175d",
+                  "handle": "QuickZippyFlea",
+                  "evmAddress": "0x87708f015ebc25689e80a28bf66048379bcfb8a3",
+                  "followers": 223
+                },
+                "amount": 616822.4,
+                "pnl": 413577.22,
+                "isDev": false
+              },
+              {
+                "rank": 33,
+                "user": {
+                  "userId": "d422977c-cbfe-5b80-a469-e8e645d50ce3",
+                  "handle": "大宇",
+                  "evmAddress": "0x1fedff56ac8a357c3f73ba5d400629a632297526",
+                  "followers": 7732
+                },
+                "amount": 607660.65,
+                "pnl": 494440.58,
+                "isDev": false
+              },
+              {
+                "rank": 34,
+                "user": {
+                  "userId": "b7a7322f-32a5-5687-8308-c17612e39f47",
+                  "handle": "Reverie",
+                  "evmAddress": "0xc2539ceb341912aa7956ffc6e73fee0afee6632d",
+                  "followers": 268
+                },
+                "amount": 580001,
+                "pnl": 459954.23,
+                "isDev": false
+              },
+              {
+                "rank": 35,
+                "user": {
+                  "userId": "d31a41f5-be7b-5ab0-b360-9d704d0d925c",
+                  "handle": "Moishale",
+                  "evmAddress": "0x2bb6ae5c9b268676cc454023317485e7a04342b4",
+                  "followers": 504
+                },
+                "amount": 558954.39,
+                "pnl": 588593.52,
+                "isDev": false
+              },
+              {
+                "rank": 36,
+                "user": {
+                  "userId": "cd702ec1-d0b2-56f4-bae9-c8c9b14f45a4",
+                  "handle": "yl",
+                  "evmAddress": "0xb2d0f24d0e84c0af6c1260f4395b208dd19caa2a",
+                  "followers": 378
+                },
+                "amount": 548732.36,
+                "pnl": 172993.23,
+                "isDev": false
+              },
+              {
+                "rank": 37,
+                "user": {
+                  "userId": "58b9fbd1-9889-576e-9c9f-52e6c32a7b34",
+                  "handle": "LittleWhaleDive",
+                  "evmAddress": "0xe5dcabcd2b65ca10e1636cb420220f9cfaa82274",
+                  "followers": 149
+                },
+                "amount": 504576.38,
+                "pnl": 416883.89,
+                "isDev": false
+              },
+              {
+                "rank": 38,
+                "user": {
+                  "userId": "eab99539-f20f-54ee-8e39-3fb82560e4c4",
+                  "handle": "GWB",
+                  "evmAddress": "0xad67a0c9af9a8ba780ed92e281063e6f96cdfae6",
+                  "followers": 111
+                },
+                "amount": 483136.34,
+                "pnl": 195416.52,
+                "isDev": false
+              },
+              {
+                "rank": 39,
+                "user": {
+                  "userId": "cd5078a7-d413-56be-981e-a36ac7dadcf4",
+                  "handle": "BNBULL",
+                  "evmAddress": "0x91700dc510e844b86a2c7272a38fda7b1c6a6f2e",
+                  "followers": 1395
+                },
+                "amount": 477603.49,
+                "pnl": 264901.55,
+                "isDev": false
+              },
+              {
+                "rank": 40,
+                "user": {
+                  "userId": "2c8a0636-bd6d-5c9d-93c8-d16fe0c330ca",
+                  "handle": "Yaoza",
+                  "evmAddress": "0xb79cb8e00780ae36c366292f1f9d81c238a7b8b3",
+                  "followers": 34
+                },
+                "amount": 434587.94,
+                "pnl": 213517.37,
+                "isDev": false
+              },
+              {
+                "rank": 41,
+                "user": {
+                  "userId": "eae85084-d35e-59f0-ab95-c10145c05c37",
+                  "handle": "marius",
+                  "evmAddress": "0x8a6661c69802637c0e1d358dc5c9866628b3e921",
+                  "followers": 1118
+                },
+                "amount": 421239.55,
+                "pnl": 402119.01,
+                "isDev": false
+              },
+              {
+                "rank": 42,
+                "user": {
+                  "userId": "4308cca8-51af-52c2-9c7a-ca5dfe548fd2",
+                  "handle": "Isidore",
+                  "evmAddress": "0xecfb1abc1c632767504dc512d94fb25c2923e470",
+                  "followers": 275
+                },
+                "amount": 403757.04,
+                "pnl": 290278.44,
+                "isDev": false
+              },
+              {
+                "rank": 43,
+                "user": {
+                  "userId": "8beca50f-ac71-58ee-be9f-57fcd028c0c9",
+                  "handle": "fiji",
+                  "evmAddress": "0x1e9020c500a5edeb11fee04b9a97c53e007b545a",
+                  "followers": 1762
+                },
+                "amount": 399858.98,
+                "pnl": 431692.88,
+                "isDev": false
+              },
+              {
+                "rank": 44,
+                "user": {
+                  "userId": "717f6954-64f1-5745-a61e-2a820adb87b9",
+                  "handle": "TheOldNite",
+                  "evmAddress": "0x5a5e401751e2d73bf4c2872a93dcaa14fdbefe36",
+                  "followers": 1208
+                },
+                "amount": 394909.65,
+                "pnl": 683935.79,
+                "isDev": false
+              },
+              {
+                "rank": 45,
+                "user": {
+                  "userId": "995aa2f1-46fd-5ff7-a871-5da40415c38b",
+                  "handle": "will7777",
+                  "evmAddress": "0x6a0bf7fbe01c140d715fda7d7c89fd0de7c2670c",
+                  "followers": 87
+                },
+                "amount": 393660.2,
+                "pnl": 375321.95,
+                "isDev": false
+              },
+              {
+                "rank": 46,
+                "user": {
+                  "userId": "8f52d912-10e6-5fdd-b85b-5bccf6b7a810",
+                  "handle": "SOLCRUSHING",
+                  "evmAddress": "0x6f4dc4eb9c02ebc0f7b9a861461837656b1cbac8",
+                  "followers": 76
+                },
+                "amount": 379251.51,
+                "pnl": 127210.2,
+                "isDev": false
+              },
+              {
+                "rank": 47,
+                "user": {
+                  "userId": "3fbba3df-b4fc-5ece-be85-165d9b853542",
+                  "handle": "PriorTastyBee",
+                  "evmAddress": "0x0767edd38a6a596416b87560eb762711adb3dea5",
+                  "followers": 67
+                },
+                "amount": 372572.64,
+                "pnl": 329484.76,
+                "isDev": false
+              },
+              {
+                "rank": 48,
+                "user": {
+                  "userId": "94ee3b0b-b674-5812-a76c-13fb90773752",
+                  "handle": "Jxck",
+                  "evmAddress": "0xa4b50bc0d604b8dd980851a842c120aae5a408a3",
+                  "followers": 2268
+                },
+                "amount": 357649.45,
+                "pnl": 187325.45,
+                "isDev": false
+              },
+              {
+                "rank": 49,
+                "user": {
+                  "userId": "fbfc4eef-d091-5df2-b384-995f95754c81",
+                  "handle": "Stoic Man",
+                  "evmAddress": "0x6862bd0b21bc8836deec3d5b814f8aa03168478a",
+                  "followers": 328
+                },
+                "amount": 357283.88,
+                "pnl": 389488.78,
+                "isDev": false
+              },
+              {
+                "rank": 50,
+                "user": {
+                  "userId": "90edbd02-04e4-559e-9dc2-5752202ed461",
+                  "handle": "🍋",
+                  "evmAddress": "0x4528747e70eb721a0e852fe913353d3401d4e846",
+                  "followers": 358
+                },
+                "amount": 315297.96,
+                "pnl": 242675.35,
+                "isDev": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  ]
+}

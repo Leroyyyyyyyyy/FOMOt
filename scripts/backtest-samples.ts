@@ -1,7 +1,7 @@
 /** 拿原版截图里的两条样本回测当前规则——它们都是原版推过的，理应全部通过。 */
 import { rules } from '../src/config.js';
 import { chainRejection, initialRejection, recheckRejection, inRange } from '../src/engine/rules.js';
-import type { Enriched } from '../src/engine/enrich.js';
+import { emptyEnriched, type Enriched } from '../src/engine/enrich.js';
 
 const f = rules.filters;
 
@@ -13,12 +13,13 @@ const samples = [
 for (const s of samples) {
   const ratio = s.fomo / s.holders;
   const enriched: Enriched = {
+    ...emptyEnriched(),
     available: true, fomoHolders: s.fomo,
     leaders: Array.from({ length: s.board }, (_, i) => ({ rank: i + 1, handle: 'sample', balance: 1, followers: 1, pnl24h: 1 , identityConfirmed: true})),
     leaderboardAvailable: true,
     top10TokenPnl: 0, top10TokenPnlCovered: 10, top10TokenProfitable: 0,
     top10PlatformPnl24h: null, top10PlatformCovered: 0, top10PlatformWindow: null,
-    identified: 10, top10Count: 10, identityCoverage: 10,
+    identified: 10, top10Count: 10, top10SetStatus: 'ok', identityCoverage: 10,
     fomoTakenTs: Date.now(), boardTakenTs: Date.now(), aggregatedTs: Date.now(), ingestMs: 1,
   };
   const market = { marketCapUsd: s.mc, volume5m: s.v5m, volume1h: s.v1h };

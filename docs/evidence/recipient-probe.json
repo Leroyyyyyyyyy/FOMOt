@@ -1,0 +1,26 @@
+{
+  "at": 1788679003468,
+  "users": [
+    {
+      "id": "679a7cbb-1635-5415-896a-9e8151b74686",
+      "displayName": "ogle",
+      "evmAddress": "0x3a6962e0a77a66a14c558bee1fe3880bfe51ebe9",
+      "swapCount": 100,
+      "recipients": [
+        "0x39163eb2f8b7a50ba768e4f1e4fb2de3829e0628",
+        "7p2y6ux64rm6w5c4e2mxzbsrn7tvnnkvvyszp3taydd6"
+      ]
+    },
+    {
+      "id": "2f62a25e-b162-51c8-bdbb-f70365dbf34e",
+      "displayName": "cosby",
+      "evmAddress": "0xca3b0e0e978c808d311ee6a11e9c195d49f53f80",
+      "swapCount": 100,
+      "recipients": [
+        "0xe6ab6ee71e4e519a677d615dc69668201acbc747",
+        "44ecvsvh1vawhxptsfyf7vazmejxqs9uqxb5p7cunezc"
+      ]
+    }
+  ],
+  "overlap": false
+}

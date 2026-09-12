@@ -3,11 +3,14 @@ import { openContext, hasSession, FOMO_ORIGIN, isFomoApi } from './session.js';
 import { probeAuth } from './auth.js';
 import { parseLeaderboardResult, parseHodlersTopResult, ROBINHOOD_NETWORK_ID } from './api.js';
 import { harvest } from './extract.js';
-import { db, setHealth } from '../db.js';
+import { db, setHealth, recordMetric } from '../db.js';
 import { links } from '../config.js';
 import { log } from '../logger.js';
-import type { FomoProvider, FomoLeader, FomoTokenStats, FomoTopHolder } from './provider.js';
-import type { PlatformPnl } from '../engine/enrich.js';
+import type { FomoProvider, FomoLeader, FomoTokenStats, FomoTopHolder, PlatformPnlResult } from './provider.js';
+import {
+  anchorWindow, bestAnchor, deriveRecord, sameWindow,
+  type PnlMiss, type PnlRecord, type PnlWindow,
+} from '../engine/pnl.js';
 
 /**
  * 全平台 24H 收益**默认开启**。
@@ -20,7 +23,16 @@ import type { PlatformPnl } from '../engine/enrich.js';
  * 绝不用「该币累计收益」顶替（两者同一时刻能反号，见 docs/FIELDS.md §2.1）。
  */
 const PLATFORM_PNL_ENABLED = process.env.FOMO_PLATFORM_PNL !== '0';
-const DAY_SEC = 86_400;
+/**
+ * 等一个**具体用户**的 aggregatedSnapshot 响应的上限。
+ * 以前是每人盲等 5 秒：快的时候白等，慢的时候直接漏掉。现在等到有效响应就走。
+ */
+const PLATFORM_PNL_WAIT_MS = Number(process.env.FOMO_PLATFORM_PNL_WAIT_MS ?? 12_000);
+/** 一次 Top10 取数的总预算。超了就带着已拿到的部分返回，由聚合方判缺失。 */
+const PLATFORM_PNL_BUDGET_MS = Number(process.env.FOMO_PLATFORM_PNL_BUDGET_MS ?? 150_000);
+/** 收益记录缓存的存活时间。窗口是闭区间、值不会再变，TTL 只为控制内存。 */
+const PLATFORM_CACHE_TTL_MS = 30 * 60_000;
+const PLATFORM_CACHE_MAX = 2_000;
 /** 关键业务接口超过这么久没成功，就认为数据源已经不可用。 */
 const FOMO_STALE_MS = 10 * 60_000;
 /** 随便一个存在的档案页，只是用来让前端发出那个请求；userId 会被重写掉。 */
@@ -74,15 +86,28 @@ class BrowserFomo implements FomoProvider {
   private page!: Page;
   private ingestMs = 0;
   private navQueue: {
-    priority: number; seq: number; deadline: number;
+    priority: number; seq: number; deadline: number; enqueuedTs: number; kind: string;
     fn: () => Promise<unknown>; resolve: (v: unknown) => void; reject: (e: unknown) => void;
   }[] = [];
   private navRunning = false;
   private navSeq = 0;
+  /**
+   * PnL 取数**不占**共享导航队列。
+   *
+   * 它一批要跑十个人、最多约 150 秒；挂在同一条串行队列上，一个已经开跑的批次
+   * 就会把初值路径的 `tokenStats('alert')` 堵在后面（那条只有 25 秒排队预算，
+   * 到点就超时降级）。所以给它一把**独立的单槽锁**：页面总数仍有上限
+   * （共享页 1 + 复核临时页 1 + PnL 临时页 1），但两条路径互不阻塞。
+   */
+  private pnlLock: Promise<unknown> = Promise.resolve();
   private stopped = false;
   private authFailures = 0;
   private lastBusinessOkTs = 0;
-  private platformCache = new Map<string, { at: number; value: PlatformPnl }>();
+  /**
+   * 收益记录缓存。**键必须带口径和目标窗口**——只按 userId 缓存十分钟，
+   * 跨了整点就会把上一小时的窗口混进这一小时的合计里。
+   */
+  private platformCache = new Map<string, { at: number; record: PnlRecord }>();
   lastLeaderboardRefresh = 0;
   /**
    * 等某个接口的响应真正落库，而不是盲等固定秒数。
@@ -326,11 +351,17 @@ class BrowserFomo implements FomoProvider {
     setHealth('fomo_business_ok_ts', respTs);
   }
 
-  /** 单页导航调度：复核 > 告警 > 预热 > 榜单，并给告警任务明确排队截止时间。 */
+  /**
+   * 单页导航调度：复核 > 告警 > 预热 > 榜单，并给告警任务明确排队截止时间。
+   *
+   * 排队等待和任务执行**分开计量**：长尾到底是「排在别人后面」还是「自己跑得慢」，
+   * 只有这两个数分开了才说得清（这正是 288 秒复核那条一直定不了性的原因）。
+   */
   private nav<T>(kind: 'recheck' | 'alert' | 'prewarm' | 'background', deadlineMs: number, fn: () => Promise<T>): Promise<T> {
     const weight = { recheck: 0, alert: 1, prewarm: 2, background: 3 }[kind];
     return new Promise<T>((resolve, reject) => {
       this.navQueue.push({ priority: weight, seq: this.navSeq++, deadline: Date.now() + deadlineMs,
+        enqueuedTs: Date.now(), kind,
         fn, resolve: resolve as (v: unknown) => void, reject });
       this.navQueue.sort((a, b) => a.priority - b.priority || a.seq - b.seq);
       void this.drainNav();
@@ -343,13 +374,22 @@ class BrowserFomo implements FomoProvider {
     try {
       while (this.navQueue.length) {
         const task = this.navQueue.shift()!;
+        recordMetric('nav_queue_wait_ms', Date.now() - task.enqueuedTs, task.kind);
         if (Date.now() > task.deadline) {
+          recordMetric('nav_queue_timeout', 1, task.kind);
           task.reject(new Error('FOMO 导航排队超时'));
           continue;
         }
+        const t0 = Date.now();
         try { task.resolve(await task.fn()); } catch (err) { task.reject(err); }
+        finally { recordMetric('nav_run_ms', Date.now() - t0, task.kind); }
       }
     } finally { this.navRunning = false; }
+  }
+
+  /** 队列体感：排队长度与是否有任务在跑。上限检查和验收报告都要用。 */
+  navDepth(): { pending: number; running: boolean } {
+    return { pending: this.navQueue.length, running: this.navRunning };
   }
 
   /**
@@ -443,68 +483,190 @@ class BrowserFomo implements FomoProvider {
     };
   }
 
+  /** 缓存键必须带口径与目标窗口——只按 userId 缓存会把上一小时的值混进这一小时。 */
+  private cacheKey(userId: string, w: PnlWindow): string {
+    return `${userId}|${w.basis}|${w.startTs}-${w.endTs}`;
+  }
+
   /**
-   * 任意用户的全平台 24H 收益 = `aggregatedSnapshot` 序列的 `pnl[最新] − pnl[最新−24h]`。
+   * 从缓存里挑一个**这一批能共用**的锚点窗口。
+   *
+   * 只接受右端不晚于目标整点、且不早于目标整点一个小时的窗口（`MAX_ANCHOR_LAG_MS`）。
+   * 跨整点时上一小时的缓存因此自然失效，不会被复用去凑总和。
+   */
+  private pickCachedAnchor(ids: string[], preferredEndTs: number): PnlWindow | null {
+    const now = Date.now();
+    const scored = new Map<string, { window: PnlWindow; hits: number }>();
+    for (const id of ids) {
+      for (const [key, entry] of this.platformCache) {
+        if (!key.startsWith(`${id}|`)) continue;
+        if (now - entry.at > PLATFORM_CACHE_TTL_MS) continue;
+        const w: PnlWindow = { basis: entry.record.basis, startTs: entry.record.windowStartTs, endTs: entry.record.windowEndTs };
+        const k = `${w.basis}|${w.startTs}-${w.endTs}`;
+        const cur = scored.get(k) ?? { window: w, hits: 0 };
+        cur.hits++;
+        scored.set(k, cur);
+      }
+    }
+    // 可用性判定放在 pnl.ts 的 bestAnchor 里，跟窗口校验同一套规则，也能单测。
+    return bestAnchor([...scored.values()], preferredEndTs);
+  }
+
+  private rememberPnl(record: PnlRecord): void {
+    if (this.platformCache.size >= PLATFORM_CACHE_MAX) {
+      // 最老的先走。窗口是闭区间，丢了顶多重取一次，不会算错。
+      const oldest = [...this.platformCache].sort((a, b) => a[1].at - b[1].at).slice(0, PLATFORM_CACHE_MAX / 4);
+      for (const [k] of oldest) this.platformCache.delete(k);
+    }
+    this.platformCache.set(this.cacheKey(record.userId, {
+      basis: record.basis, startTs: record.windowStartTs, endTs: record.windowEndTs,
+    }), { at: Date.now(), record });
+  }
+
+  /** PnL 取数的单槽锁：同时最多一个批次，且与共享导航队列互不排队。 */
+  private withPnlLock<T>(fn: () => Promise<T>): Promise<T> {
+    const t0 = Date.now();
+    const run = this.pnlLock.then(() => {
+      recordMetric('pnl_lock_wait_ms', Date.now() - t0);
+      return fn();
+    }, () => {
+      recordMetric('pnl_lock_wait_ms', Date.now() - t0);
+      return fn();
+    });
+    this.pnlLock = run.then(() => {}, () => {});     // 锁链吞异常，一次失败不拖垮后续
+    return run;
+  }
+
+  /**
+   * 任意用户的全平台 24H 收益 = `aggregatedSnapshot` 序列在**同一目标窗口**两端的差。
    *
    * 取数办法是**重写页面自己发出的那个请求**的 userId：这样请求头和浏览器指纹
-   * 都是应用原样，不需要读取任何凭据。窗口对齐到整点，比榜单的实时口径滞后 ≤1 小时，
-   * 所以窗口标成 'snapshot'，不能和榜单的 'live' 混着求和。
+   * 都是应用原样，不需要读取任何凭据。
+   *
+   * 三条硬规则：
+   *  1. 目标窗口由调用方给（`preferredEndTs`，整点），这一批十个人共用一个窗口。
+   *     整点快照有发布延迟，允许**整批**往前退最多一个整点，退过之后不再变。
+   *  2. 起点必须精确命中「窗口右端 − 24h」那个整点，找不到就是缺失——
+   *     绝不退而求其次拿更早的点，那会把 25 小时标成 24H。
+   *  3. 等待按 userId 匹配有效响应，不再盲等固定秒数；超时算缺失，迟到的响应
+   *     只会落进它自己那个 userId 的桶，不会被算到下一个人头上。
    */
-  async platformPnl24h(userIds: string[]): Promise<Map<string, PlatformPnl>> {
-    const out = new Map<string, PlatformPnl>();
-    if (!PLATFORM_PNL_ENABLED || !this.ready || this.stopped) return out;
-    const now = Date.now();
-    const wanted: string[] = [];
-    for (const id of userIds) {
-      const hit = this.platformCache.get(id);
-      if (hit && now - hit.at <= 10 * 60_000) out.set(id, hit.value);
-      else wanted.push(id);
-    }
-    if (!wanted.length) return out;
+  async platformPnl24h(userIds: string[], preferredEndTs: number): Promise<PlatformPnlResult> {
+    const t0 = Date.now();
+    const ids = [...new Set(userIds.filter((x): x is string => Boolean(x)))];
+    const records = new Map<string, PnlRecord>();
+    const misses = new Map<string, PnlMiss>();
+    const done = (window: PnlWindow | null, cacheHits: number): PlatformPnlResult => {
+      for (const id of ids) if (!records.has(id) && !misses.has(id)) misses.set(id, 'no_series');
+      recordMetric('pnl_batch_ms', Date.now() - t0, `${records.size}/${ids.length}`);
+      return { window, records, misses, elapsedMs: Date.now() - t0, cacheHits };
+    };
+    if (!PLATFORM_PNL_ENABLED || !this.ready || this.stopped || !ids.length) return done(null, 0);
 
-    await this.nav('prewarm', 120_000, async () => {
+    // ① 先定窗口：缓存里若已有一个可共用的锚点，就用它，只补缺的人。
+    let window = this.pickCachedAnchor(ids, preferredEndTs);
+    let cacheHits = 0;
+    let wanted = ids;
+    if (window) {
+      wanted = [];
+      for (const id of ids) {
+        const hit = this.platformCache.get(this.cacheKey(id, window));
+        if (hit && Date.now() - hit.at <= PLATFORM_CACHE_TTL_MS) { records.set(id, hit.record); cacheHits++; }
+        else wanted.push(id);
+      }
+      if (!wanted.length) return done(window, cacheHits);
+    }
+
+    const deadline = t0 + PLATFORM_PNL_BUDGET_MS;
+    await this.withPnlLock(async () => {
       const page = await this.ctx.newPage();
       let sub: string | null = null;
-      const series = new Map<string, { snapshotId: number; pnl: number }[]>();
+      let cleanup = () => {};
+      const series = new Map<string, unknown[]>();
+      const waiters = new Map<string, () => void>();
+      const onSeries = async (r: import('playwright').Response) => {
+        try {
+          if (!isFomoApi(r.url())) return;
+          const u = new URL(r.url());
+          if (u.pathname !== '/v2/userTokens/aggregatedSnapshot' || !r.ok()) return;
+          const id = u.searchParams.get('userId');
+          if (!id) return;
+          const ro = (await r.json())?.responseObject;
+          if (!Array.isArray(ro)) return;
+          // 只保留最长的一份：同一个人可能被前端连打好几次，长的那份点位最全。
+          if (ro.length <= (series.get(id)?.length ?? 0)) return;
+          series.set(id, ro);
+          // 按 userId 唤醒——迟到的响应只会落进它自己的桶，不会放行下一位用户。
+          waiters.get(id)?.();
+        } catch { /* 诊断路径，失败无所谓 */ }
+      };
       try {
         await page.route('**/v2/userTokens/aggregatedSnapshot*', async route => {
           const u = new URL(route.request().url());
           if (sub) u.searchParams.set('userId', sub);
           await route.continue({ url: u.toString() });
         });
-        page.on('response', async r => {
-          try {
-            if (!isFomoApi(r.url())) return;
-            const u = new URL(r.url());
-            if (u.pathname !== '/v2/userTokens/aggregatedSnapshot' || !r.ok()) return;
-            const ro = (await r.json())?.responseObject;
-            const id = u.searchParams.get('userId');
-            if (id && Array.isArray(ro) && ro.length > (series.get(id)?.length ?? 0)) series.set(id, ro);
-          } catch { /* 诊断路径，失败无所谓 */ }
-        });
+        const listener = (r: import('playwright').Response) => void onSeries(r);
+        page.on('response', listener);
+        cleanup = () => page.removeListener('response', listener);
+
         for (const id of wanted) {
-          if (this.stopped) break;
+          if (this.stopped || Date.now() > deadline) { misses.set(id, 'no_series'); continue; }
+          const userT0 = Date.now();
           sub = id;
+          const budget = Math.min(PLATFORM_PNL_WAIT_MS, Math.max(1_000, deadline - Date.now()));
+          const seen = new Promise<boolean>(resolve => {
+            const timer = setTimeout(() => { waiters.delete(id); resolve(false); }, budget);
+            waiters.set(id, () => { clearTimeout(timer); waiters.delete(id); resolve(true); });
+          });
           await page.goto('about:blank').catch(() => {});
           await page.goto(`${FOMO_ORIGIN}/profile/${PLATFORM_PNL_SEED_HANDLE}`,
             { waitUntil: 'domcontentloaded', timeout: 20_000 }).catch(() => {});
-          await page.waitForTimeout(5_000);
-        }
-      } finally { await page.close().catch(() => {}); }
+          const got = await seen;
+          recordMetric('pnl_user_ms', Date.now() - userT0, got ? 'ok' : 'timeout');
+          if (!got) { misses.set(id, 'no_series'); continue; }
 
-      for (const [id, rows] of series) {
-        const latest = rows[rows.length - 1];
-        if (!latest) continue;
-        const target = latest.snapshotId - DAY_SEC;
-        const prev = [...rows].reverse().find(r => r.snapshotId <= target);
-        // 序列不够长就没有 24 小时窗口。宁可缺这一项，也不能拿更短的窗口冒充。
-        if (!prev) continue;
-        const value = { value: latest.pnl - prev.pnl, window: 'snapshot' as const, asOfTs: latest.snapshotId * 1000 };
-        this.platformCache.set(id, { at: Date.now(), value });
-        out.set(id, value);
+          const raw = series.get(id)!;
+          // ② 窗口只在**第一次**成功取到序列时定下来，之后所有人必须落在同一个窗口上。
+          if (!window) {
+            const anchored = anchorWindow(raw, preferredEndTs);
+            if (!anchored) { misses.set(id, 'no_end_point'); continue; }
+            window = anchored;
+          }
+          const derived = deriveRecord(id, raw, window, Date.now());
+          if (derived.ok) { records.set(id, derived.record); this.rememberPnl(derived.record); }
+          else misses.set(id, derived.reason);
+        }
+        /**
+         * 迟到的响应会落进它自己那个 userId 的桶（路由重写保证了归属），
+         * 所以收尾时再捞一遍：超时判缺的人，若序列后来到了，就按**同一个窗口**补推。
+         * 绝不会被算到下一位用户头上——那正是固定盲等年代出过的问题。
+         */
+        for (const [id, why] of [...misses]) {
+          if (why !== 'no_series' || !window) continue;
+          const late = series.get(id);
+          if (!late) continue;
+          const derived = deriveRecord(id, late, window, Date.now());
+          if (derived.ok) { records.set(id, derived.record); this.rememberPnl(derived.record); misses.delete(id); }
+          else misses.set(id, derived.reason);
+        }
+      } finally {
+        // 先清等待器与监听器，免得迟到响应去碰已经解决的 Promise 或已关闭的页。
+        for (const [, fn] of waiters) fn();
+        waiters.clear();
+        cleanup();
+        await page.close().catch(() => {});
       }
     }).catch(err => log.debug({ err: String(err).slice(0, 120) }, '取全平台 24H 收益失败'));
-    return out;
+
+    // 复用缓存挑出来的窗口和现场定下来的窗口必须是同一个，否则整批作废。
+    for (const [id, r] of records) {
+      if (window && !sameWindow({ basis: r.basis, startTs: r.windowStartTs, endTs: r.windowEndTs }, window)) {
+        records.delete(id);
+        misses.set(id, 'no_end_point');
+      }
+    }
+    return done(window, cacheHits);
   }
 
   isStopped(): boolean { return this.stopped; }

@@ -8,12 +8,18 @@
  * 所有响应统一包在 { success, message, responseObject, statusCode } 里。
  */
 
+import { strictNum } from '../engine/pnl.js';
+
 export const ROBINHOOD_NETWORK_ID = 4663;
 
-const num = (v: unknown): number | null => {
-  const n = typeof v === 'string' ? Number(v) : typeof v === 'number' ? v : NaN;
-  return Number.isFinite(n) ? n : null;
-};
+/**
+ * 数值解析统一走 `strictNum`：**空值不当成 0**。
+ *
+ * 旧实现是 `typeof v === 'string' ? Number(v) : …`，而 `Number('')` 和
+ * `Number('  ')` 都是 **0**——一个 `pnl: ""` 的持有人会被当成「收益 0 的人」
+ * 参与「该币累计收益」求和与盈利人数统计。现在这类值一律是 null（缺失）。
+ */
+const num = strictNum;
 
 /**
  * 剥掉响应外壳，拿到承载数据的那个数组。

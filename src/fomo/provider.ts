@@ -1,4 +1,20 @@
-import type { PlatformPnl } from '../engine/enrich.js';
+import type { PnlMiss, PnlRecord, PnlWindow } from '../engine/pnl.js';
+
+/**
+ * 一次 Top10 全平台 24H 取数的结果。
+ *
+ * `window` 是这一批**共同**的目标窗口——十个人用同一组起止时间，不是各自挑最新点。
+ * 拿不到的人进 `misses` 并带原因，绝不用别的量顶替，也绝不悄悄少算一个人。
+ */
+export interface PlatformPnlResult {
+  window: PnlWindow | null;
+  records: Map<string, PnlRecord>;
+  misses: Map<string, PnlMiss>;
+  /** 本次取数耗时（含排队），用于分阶段指标 */
+  elapsedMs: number;
+  /** 命中缓存的人数 */
+  cacheHits: number;
+}
 
 export interface FomoLeader {
   rank: number; userId: string | null; handle: string | null;
@@ -42,8 +58,11 @@ export interface FomoProvider {
    * 任意用户的**全平台 24H 收益**（`aggregatedSnapshot` 序列的 24 小时差）。
    * 这跟 `/hodlers/top.pnl`（该币累计收益）是两个量，见 docs/FIELDS.md §2。
    * 可选：取不到就不实现，卡片对应字段显示 n/a，绝不用该币收益顶替。
+   *
+   * `preferredEndTs` 是调用方**统一确定**的目标窗口右端（整点）。实现可以因为
+   * 整点快照发布延迟往前退最多一个整点，但退过之后这一批十个人必须共用同一个窗口。
    */
-  platformPnl24h?(userIds: string[]): Promise<Map<string, PlatformPnl>>;
+  platformPnl24h?(userIds: string[], preferredEndTs: number): Promise<PlatformPnlResult>;
   /** 「浏览器→入库」延迟，直接进健康行 */
   ingestLatencyMs(): number;
   /** 退出时关掉浏览器，避免 profile 里留下 SingletonLock 让下次启动打不开 */

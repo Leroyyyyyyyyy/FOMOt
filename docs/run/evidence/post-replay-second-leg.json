@@ -1,0 +1,109 @@
+{
+  "fixture": "docs/run/fixtures/second-leg-synthetic.json",
+  "fixtureKind": "synthetic",
+  "runId": "replay-1789222223784",
+  "configHash": "97829798",
+  "notifyMode": "off",
+  "dbPath": "/private/tmp/claude-501/-Users-dld-FOMOt/3f8cd164-f7b2-4fce-a992-4ccfbfeacf05/scratchpad/replay-out/replay.db",
+  "bars": 207,
+  "timeframeSec": 900,
+  "finalPhase": {
+    "secondLeg": "READY",
+    "newPullback": null,
+    "million": null
+  },
+  "firstSeen": {
+    "SECOND_LEG_READY": "2026-09-12T03:45:00.000Z"
+  },
+  "events": [
+    {
+      "type": "SECOND_LEG_READY",
+      "at": "2026-09-12T03:45:00.000Z",
+      "reason": "48–96h 窗口内形态成立，已横 48h"
+    }
+  ],
+  "skipped": [
+    "new_pullback: 还没有可用的 1m 闭合 K"
+  ],
+  "evaluations": [
+    {
+      "rule": "second_leg.first_leg",
+      "result": "pass",
+      "reason": "第一波 3×，回撤 33.3% 成立，箱体时钟起算"
+    },
+    {
+      "rule": "second_leg.seed_box",
+      "result": "pass",
+      "reason": "箱体已冻结 $0.001875–$0.002325"
+    },
+    {
+      "rule": "second_leg.data",
+      "result": "pass",
+      "reason": "箱体期间扫描连续无缺口"
+    },
+    {
+      "rule": "second_leg.inside_ratio",
+      "result": "pass",
+      "reason": "箱内收盘 100.0%（门槛 80.0%）"
+    },
+    {
+      "rule": "second_leg.drift",
+      "result": "pass",
+      "reason": "整段日漂移 0.0022（上限 ±0.1）"
+    },
+    {
+      "rule": "second_leg.rolling_activity",
+      "result": "pass",
+      "reason": "最差 6h 窗口真实成交桶 100.0%"
+    },
+    {
+      "rule": "second_leg.zone_visits",
+      "result": "pass",
+      "reason": "区域往返 25 次（门槛 3）"
+    },
+    {
+      "rule": "second_leg.reclaim",
+      "result": "pass",
+      "reason": "未处于破位待收回状态"
+    },
+    {
+      "rule": "second_leg.range_age",
+      "result": "pass",
+      "reason": "已横盘 48h"
+    },
+    {
+      "rule": "size_band",
+      "result": "pass",
+      "reason": "箱体中位 FDV $4.20M 落在 [$3M, $5M]；这是对图文的推断口径，不是作者确认的原意"
+    },
+    {
+      "rule": "narrative.ca_binding",
+      "result": "pass",
+      "reason": "CA 与所分析项目有公开绑定证据"
+    },
+    {
+      "rule": "narrative.category",
+      "result": "pass",
+      "reason": "题材类别 science"
+    },
+    {
+      "rule": "narrative.novelty",
+      "result": "pass",
+      "reason": "本地覆盖范围内未见重复（措辞只能到这个程度，不能说「全网首创」）"
+    },
+    {
+      "rule": "narrative.resonance",
+      "result": "pass",
+      "reason": "2 条独立来源讨论该具体概念（含人工复核）"
+    }
+  ],
+  "lookaheadViolations": [],
+  "outbox": {
+    "pending": 0,
+    "sending": 0,
+    "sent": 0,
+    "unknown": 0,
+    "failed": 0,
+    "expired": 0
+  }
+}

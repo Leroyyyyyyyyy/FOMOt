@@ -6,6 +6,27 @@ export interface LeaderHolder {
   /** 该持仓是链上余额确认的，还是仅由 FOMO 自报的持仓表得来 */
   identityConfirmed: boolean;
 }
+/**
+ * 一张卡片上出现的**各来源时间**。它们互不替代——
+ * 「刚抓到」不等于「数据最新」，「卡片改写了」也不等于「持币重新采过」。
+ */
+export interface CardSources {
+  /** 链上快照区块号与区块时间 */
+  chainBlock: string | null;
+  chainBlockTs: number | null;
+  /** 链上快照采集完成时间 */
+  chainTakenTs: number | null;
+  /** FOMO /hodlers/top 的响应时间 */
+  fomoRespTs: number | null;
+  boardTakenTs: number | null;
+  /** 市值 / 成交量的取值时间 */
+  marketTakenTs: number | null;
+  /** 链上与 FOMO 两侧的时间差（毫秒），超限要降级 */
+  sourceSkewMs: number | null;
+  /** 超出允许数据年龄或时间差的说明。非空就在卡片上如实标出。 */
+  degraded: string[];
+}
+
 export interface AlertData {
   ca: string;
   symbol: string;
@@ -30,12 +51,24 @@ export interface AlertData {
     tokenProfitable: number | null;
     /** 全平台 24H 收益合计。取不到就是 null，绝不用该币收益顶替。 */
     platformPnl24h: number | null;
+    /** 全平台 24H 口径的**盈利人数**。独立字段，绝不用该币盈利人数补位。 */
+    platformProfitable: number | null;
     platformCovered: number;
-    platformWindow: 'live' | 'snapshot' | 'mixed' | null;
+    /** 这批全平台收益共同的窗口。口径与起止时间都要能追溯。 */
+    platformWindow: { basis: 'live' | 'snapshot'; startTs: number; endTs: number } | null;
+    /** 全平台收益的获取完成时间，与窗口结束时间分开 */
+    platformFetchedTs: number | null;
+    /** ready = 有值或已确定缺失；collecting = 还在取，稍后原地补 */
+    platformState: 'ready' | 'collecting';
+    /** n/a 的原因。有 n/a 就一定有原因。 */
+    platformReason: string | null;
     identified: number;
     count: number;
+    /** Top10 **持仓集合**的采集时间相对触发的偏移（= 持币采集阶段完成偏移） */
     offsetMs: number;
   };
+  /** 各来源时间。任务四要求它们分别可追溯。 */
+  sources: CardSources;
   health: {
     sourceOk: boolean;
     holderCoverage: [number, number] | null;   // 已识别身份 / 持币人总数
@@ -76,6 +109,34 @@ function fmtOffset(ms: number): string {
   return `${Math.floor(total / 60)}m${total % 60}s`;   // 先取整再拆，避免 119999ms 渲染成 1m60s
 }
 
+/** 只到分钟的短时间，用来标窗口两端。卡片上时间要能追溯，但不必刷屏。 */
+export function fmtShort(ts: number): string {
+  const tz = rules.render.timezone;
+  const p = new Intl.DateTimeFormat('en-CA', {
+    timeZone: tz, month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false,
+  }).formatToParts(ts).reduce<Record<string, string>>((a, x) => (a[x.type] = x.value, a), {});
+  return `${p.month}/${p.day} ${p.hour}:${p.minute}`;
+}
+
+/**
+ * 全平台 24H 那一行。三种状态各有各的写法，缺失一定带覆盖率和原因：
+ *  - 有值：合计 · **本口径的**盈利人数 · 口径与窗口截止时间；
+ *  - 还在取：`采集中…`，并给出覆盖率——不是 0，也不是「没有」；
+ *  - 确定缺失：`n/a（N/M）· 原因`。
+ */
+function platformLine(t: AlertData['top10']): string {
+  if (t.platformPnl24h === null) {
+    const why = t.platformState === 'collecting' ? '<i>采集中…</i>' : '<i>n/a</i>';
+    const reason = t.platformReason ? `· ${esc(t.platformReason)}` : '';
+    return `${why}（${t.platformCovered}/${t.count}）${reason}`;
+  }
+  const w = t.platformWindow;
+  const basis = w?.basis === 'live' ? '实时口径' : w?.basis === 'snapshot' ? '整点对齐口径' : null;
+  const win = w && basis ? ` · ${basis}（截至 ${fmtShort(w.endTs)}）` : '';
+  const profit = t.platformProfitable === null ? '' : ` · 盈利 ${t.platformProfitable} 人`;
+  return `${signed(t.platformPnl24h)}${profit}${win}`;
+}
+
 function holderLine(label: string, snap: { total: number; fomo: number | null; offsetMs: number } | null): string {
   if (!snap) return `${label}（<i>采集中…</i>）`;
   const fomo = snap.fomo === null ? '· Fomo <i>n/a</i>' : `· Fomo ${snap.fomo}${pct(snap.fomo, snap.total)}`;
@@ -109,17 +170,18 @@ export function renderCard(d: AlertData): string {
 
   const t = d.top10;
   L.push(`Top10持币账户（+${fmtOffset(t.offsetMs)}）· 账户识别 ${t.identified}/${t.count}`);
-  // 该币收益与全平台 24H 收益是两个量，必须分行分标签（docs/FIELDS.md §2.1）
+  // 该币收益与全平台 24H 收益是两个量，必须分行分标签，**盈利人数也各算各的**
+  // （docs/FIELDS.md §2.1：同一用户同一时刻两者可以反号）。
   const tokenPnl = t.tokenPnlTotal === null
     ? `<i>n/a</i>（${t.tokenPnlCovered}/${t.count}）`
     : `${signed(t.tokenPnlTotal)}${t.tokenProfitable === null ? '' : ` · 盈利 ${t.tokenProfitable} 人`}`;
   L.push(`  该币累计收益（已实现+未实现）: ${tokenPnl}`);
-  const win = t.platformWindow === 'live' ? '实时' : t.platformWindow === 'snapshot' ? '整点对齐' : null;
-  const platPnl = t.platformPnl24h === null
-    ? `<i>n/a</i>（${t.platformCovered}/${t.count}）`
-    : `${signed(t.platformPnl24h)}${win ? ` · ${win}口径` : ''}`;
-  L.push(`  全平台24H PnL: ${platPnl}`);
+  L.push(`  全平台24H PnL: ${platformLine(t)}`);
   L.push('');
+
+  // 各来源的时间差与降级：数据不同时点就说不同时点，不无条件当成同一时刻。
+  const s = d.sources;
+  if (s.degraded.length) L.push(`⚠️ 数据时点: ${s.degraded.map(esc).join(' · ')}`);
 
   const h = d.health;
   const cov = h.holderCoverage ? ` · 持币覆盖 ${h.holderCoverage[0]}/${h.holderCoverage[1]}` : '';

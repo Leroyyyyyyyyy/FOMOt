@@ -1,11 +1,19 @@
 import '../tests/helpers/tmpdb.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { enrichSocial, type PlatformPnl } from '../src/engine/enrich.js';
+import { enrichSocial, withPlatformPnl } from '../src/engine/enrich.js';
+import { DAY_MS, HOUR_MS, type PnlRecord } from '../src/engine/pnl.js';
 import { addr, mutableSnapshot, snapshot, statsFromPnls, stats, holder, leader } from './helpers/fixtures.js';
 
-const plat = (v: number, window: 'live' | 'snapshot' = 'snapshot'): PlatformPnl =>
-  ({ value: v, window, asOfTs: Date.now() });
+/** 聚合校验都在同一个「现在」上做，避免测试跨整点时抖动。 */
+const NOW = Math.floor(1_760_000_000_000 / HOUR_MS) * HOUR_MS + 5 * 60_000;
+const END = NOW - 5 * 60_000;
+
+const plat = (v: number, basis: 'live' | 'snapshot' = 'snapshot', over: Partial<PnlRecord> = {}): PnlRecord => ({
+  userId: 'x', value: v, source: basis === 'live' ? 'leaderboard_24h' : 'aggregated_snapshot',
+  basis, windowStartTs: END - DAY_MS, windowEndTs: END, fetchedTs: NOW, ...over,
+});
+const withIds = (m: Map<string, PnlRecord>) => new Map([...m].map(([k, v]) => [k, { ...v, userId: k }]));
 
 // ── 收益口径 ─────────────────────────────────────────────────────────
 // 证据见 docs/FIELDS.md §2.1：/hodlers/top.pnl 是「该币累计收益」，
@@ -37,29 +45,31 @@ test('缺失收益不得包装成完整总和', () => {
 test('全平台 24H 收益：十人齐全才给合计，缺一个就是 n/a', () => {
   const s = statsFromPnls(Array(10).fill(1));
   const nine = new Map(s.top.slice(0, 9).map(h => [h.userId!, plat(10)]));
-  const partial = enrichSocial(18, snapshot(), s, [], true, new Map(), nine);
+  const partial = enrichSocial(18, snapshot(), s, [], true, new Map(), withIds(nine), NOW);
   assert.equal(partial.top10PlatformPnl24h, null);
   assert.equal(partial.top10PlatformCovered, 9);
 
   const all = new Map(s.top.map(h => [h.userId!, plat(10)]));
-  const full = enrichSocial(18, snapshot(), s, [], true, new Map(), all);
+  const full = enrichSocial(18, snapshot(), s, [], true, new Map(), withIds(all), NOW);
   assert.equal(full.top10PlatformPnl24h, 100);
-  assert.equal(full.top10PlatformWindow, 'snapshot');
+  assert.equal(full.top10PlatformWindow?.basis, 'snapshot');
+  assert.equal(full.top10PlatformProfitable24h, 10);
 });
 
 test('收益窗口不一致时不得求和', () => {
   const s = statsFromPnls(Array(10).fill(1));
   const mixed = new Map(s.top.map((h, i) => [h.userId!, plat(10, i === 0 ? 'live' : 'snapshot')]));
-  const out = enrichSocial(18, snapshot(), s, [], true, new Map(), mixed);
+  const out = enrichSocial(18, snapshot(), s, [], true, new Map(), withIds(mixed), NOW);
   assert.equal(out.top10PlatformPnl24h, null, '混窗口不能相加');
-  assert.equal(out.top10PlatformWindow, 'mixed');
+  assert.match(out.top10PlatformReason!, /口径不一致/);
 });
 
 test('全平台 24H 收益为负也要正确合计', () => {
   const s = statsFromPnls(Array(10).fill(1));
   const all = new Map(s.top.map((h, i) => [h.userId!, plat(i === 0 ? -500 : 10)]));
-  const out = enrichSocial(18, snapshot(), s, [], true, new Map(), all);
+  const out = enrichSocial(18, snapshot(), s, [], true, new Map(), withIds(all), NOW);
   assert.equal(out.top10PlatformPnl24h, -410);
+  assert.equal(out.top10PlatformProfitable24h, 9, '负收益那个人不算盈利');
 });
 
 test('未上盈利榜的用户同样能有全平台 24H 收益', () => {
@@ -67,7 +77,7 @@ test('未上盈利榜的用户同样能有全平台 24H 收益', () => {
   const s = statsFromPnls(Array(10).fill(1));
   const board = [leader({ userId: 'someone-else' })];
   const all = new Map(s.top.map((h, i) => [h.userId!, plat(i === 0 ? -1_000 : 100)]));
-  const out = enrichSocial(18, snapshot(), s, board, true, new Map(), all);
+  const out = enrichSocial(18, snapshot(), s, board, true, new Map(), withIds(all), NOW);
   assert.equal(out.top10PlatformCovered, 10);
   assert.equal(out.top10PlatformPnl24h, -100, '含负收益的未上榜用户也要正确合计');
   assert.equal(out.leaders.length, 0, '榜单上那个人并不持有该币');
@@ -76,8 +86,8 @@ test('未上盈利榜的用户同样能有全平台 24H 收益', () => {
 test('榜单用户的实时口径收益与未上榜用户的整点口径不能混着求和', () => {
   const s = statsFromPnls(Array(10).fill(1));
   const mixed = new Map(s.top.map((h, i) => [h.userId!, plat(10, i < 3 ? 'live' : 'snapshot')]));
-  const out = enrichSocial(18, snapshot(), s, [], true, new Map(), mixed);
-  assert.equal(out.top10PlatformWindow, 'mixed');
+  const out = enrichSocial(18, snapshot(), s, [], true, new Map(), withIds(mixed), NOW);
+  assert.equal(out.top10PlatformWindow, null, '窗口不一致时不给出统一窗口');
   assert.equal(out.top10PlatformPnl24h, null);
 });
 
@@ -92,21 +102,38 @@ test('Top10 里同一个用户不能占两格', () => {
   assert.equal(out.top10TokenPnl, 10, '重复的那个人只计一次');
 });
 
-test('不足十人时按实际集合计算，而不是补齐到十', () => {
-  const out = enrichSocial(18, snapshot(), statsFromPnls([1, 2, 3]), []);
+test('真实不足十人：按实际集合统计，分母就是实际人数', () => {
+  // 该币 FOMO 侧一共就 3 个持币人 → Top10 只有 3 行是**构造上必然**的，集合完整
+  const out = enrichSocial(18, snapshot(), statsFromPnls([1, 2, 3], { fomoHolders: 3 }), []);
   assert.equal(out.top10Count, 3);
   assert.equal(out.identified, 3);
+  assert.equal(out.top10SetStatus, 'ok');
   assert.equal(out.top10TokenPnl, 6, '三个人齐全就算齐全');
   assert.equal(out.top10TokenProfitable, 3);
 });
 
-test('真实的零人不会被另一个集合的人数替换', () => {
-  // fomoHolders 说有 20 个 FOMO 持币人，但 Top 列表是空的——这两件事不一样
-  const out = enrichSocial(18, snapshot(), stats([], { fomoHolders: 20 }), []);
-  assert.equal(out.top10Count, 0, '实际集合就是 0，不能回填成 10 或 20');
-  assert.equal(out.identified, 0);
-  assert.equal(out.top10TokenPnl, null, '零人时没有合计可言');
-  assert.equal(out.fomoHolders, 20);
+test('少返回几行不等于「真的只有这些人」——声称 20 人却只给 3 行是采集不完整', () => {
+  const out = enrichSocial(18, snapshot(), statsFromPnls([1, 2, 3], { fomoHolders: 20 }), []);
+  assert.equal(out.top10Count, 3, '实际集合就是 3，不回填成 10 或 20');
+  assert.equal(out.top10SetStatus, 'incomplete');
+  assert.equal(out.top10TokenPnl, null, '成员集合不可信时不给合计');
+  assert.equal(out.top10PlatformPnl24h, null);
+  assert.match(out.top10PlatformReason!, /成员列表不完整/);
+});
+
+test('空集合与采集失败的缺失原因不同', () => {
+  // 真实零人：FOMO 侧就是 0 个持币人
+  const empty = enrichSocial(18, snapshot(), stats([], { fomoHolders: 0 }), []);
+  assert.equal(empty.top10Count, 0);
+  assert.equal(empty.top10SetStatus, 'empty');
+  assert.match(empty.top10PlatformReason!, /无持币人/);
+
+  // 声称 20 人却一行都没有：采集不完整，跟「真的没人」不是一回事
+  const broken = enrichSocial(18, snapshot(), stats([], { fomoHolders: 20 }), []);
+  assert.equal(broken.top10SetStatus, 'incomplete');
+  assert.match(broken.top10PlatformReason!, /成员列表不完整/);
+  assert.notEqual(broken.top10PlatformReason, empty.top10PlatformReason);
+  assert.equal(broken.fomoHolders, 20);
 });
 
 test('身份完整但收益不完整时，两个覆盖率分别统计', () => {

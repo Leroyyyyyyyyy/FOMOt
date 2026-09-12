@@ -1,2634 +1,910 @@
 {
-  "capturedAt": 1788622796111,
-  "windowMinutes": 62,
+  "capturedAt": 1788675070875,
+  "windowMinutes": 70,
   "samples": [
     {
       "alert": {
-        "ca": "0xd2fad9f7ea69d173fff41d44cacbd1d5e6549459",
-        "trigger_ts": 1788622627712,
-        "status": "pending_recheck",
-        "collection_state": "pending",
+        "ca": "0xe9e55377d7f32d4c0aa55f993248313b58960165",
+        "trigger_ts": 1788674537073,
+        "status": "completed",
+        "collection_state": "complete",
         "attempts": 0,
-        "message_id": 62262983416,
+        "message_id": 67453871804,
         "notify_mode": "off",
-        "last_error": null
+        "last_error": null,
+        "original_due_ts": 1788674838073,
+        "pnl_state": "timeout",
+        "pnl_deadline_ts": 1788675438073
+      },
+      "timing": {
+        "triggerTs": 1788674537073,
+        "originalDueTs": 1788674838073,
+        "initial": {
+          "holdersDoneTs": 1788674538718,
+          "offsetMs": 1645,
+          "total": 274,
+          "times": {
+            "chainBlock": "55747867",
+            "chainBlockTs": 1788674537000,
+            "chainTakenTs": 1788674538709,
+            "fomoRespTs": 1788674530195,
+            "boardTakenTs": 1788674530193,
+            "marketTakenTs": 1788674538718,
+            "aggregatedTs": 1788674538718
+          }
+        },
+        "recheck": {
+          "holdersDoneTs": 1788674842655,
+          "offsetMs": 305582,
+          "total": 116,
+          "times": {
+            "chainBlock": "55750827",
+            "chainBlockTs": 1788674837000,
+            "chainTakenTs": 1788674841199,
+            "fomoRespTs": 1788674842635,
+            "boardTakenTs": 1788674842523,
+            "marketTakenTs": 1788674842655,
+            "aggregatedTs": 1788674842655
+          }
+        },
+        "platformPnlWindow": null,
+        "platformPnlFetchedTs": null
       },
       "token": {
-        "symbol": "WARN",
-        "name": "/WARN",
+        "symbol": "ROBIN",
+        "name": "The Robin",
         "decimals": 18,
         "total_supply": "1000000000000000000000000000"
       },
       "stages": [
         {
           "stage": "initial",
-          "taken_ts": 1788622629833,
-          "total_holders": 179,
-          "fomo_holders": 18,
+          "taken_ts": 1788674538718,
+          "total_holders": 274,
+          "fomo_holders": 56,
           "payload": {
-            "chainBlock": "55233223",
-            "chainBlockTs": 1788622627000,
-            "chainTakenTs": 1788622629827,
-            "fomoTakenTs": 1788622629196,
-            "boardTakenTs": 1788622619079,
-            "aggregatedTs": 1788622629833
+            "chainBlock": "55747867",
+            "chainBlockTs": 1788674537000,
+            "chainTakenTs": 1788674538709,
+            "fomoRespTs": 1788674530195,
+            "boardTakenTs": 1788674530193,
+            "marketTakenTs": 1788674538718,
+            "aggregatedTs": 1788674538718
+          }
+        },
+        {
+          "stage": "recheck",
+          "taken_ts": 1788674842655,
+          "total_holders": 116,
+          "fomo_holders": 5,
+          "payload": {
+            "chainBlock": "55750827",
+            "chainBlockTs": 1788674837000,
+            "chainTakenTs": 1788674841199,
+            "fomoRespTs": 1788674842635,
+            "boardTakenTs": 1788674842523,
+            "marketTakenTs": 1788674842655,
+            "aggregatedTs": 1788674842655
           }
         }
       ],
       "fomoSource": {
-        "fomo_holders": 18,
-        "updated_ts": 1788622629201,
-        "resp_ts": 1788622629196,
-        "ingest_ms": 5
+        "fomo_holders": 5,
+        "updated_ts": 1788674842640,
+        "resp_ts": 1788674842635,
+        "ingest_ms": 6
       },
       "top10": [
         {
           "rank": 1,
-          "user_id": "8c7092f2-3118-5291-9682-342b92a78d66",
-          "handle": "yes yes yes",
-          "evm_address": "0xf689503949802052b4cd3027b063fb06bec990b5",
-          "followers": 172,
-          "amount": 6976620.27,
-          "pnl": -20.0476,
-          "is_dev": 0,
-          "updated_ts": 1788622629201
-        },
-        {
-          "rank": 2,
-          "user_id": "b2734727-4276-5068-af91-ac7eacda53a8",
-          "handle": "comXon",
-          "evm_address": "0x430d96b18221b359c382acf085e55b279f25bc57",
-          "followers": 181,
-          "amount": 4465295.13,
-          "pnl": -86.8901,
-          "is_dev": 0,
-          "updated_ts": 1788622629201
-        },
-        {
-          "rank": 3,
-          "user_id": "c0304903-945e-5f06-95cc-6b823cf82602",
-          "handle": "75kg",
-          "evm_address": "0x0615bb885a80df32106dc59b3e4a2e533795578a",
-          "followers": 133,
-          "amount": 4346935.49,
-          "pnl": 21.6711,
-          "is_dev": 0,
-          "updated_ts": 1788622629201
-        },
-        {
-          "rank": 4,
-          "user_id": "f1e8edea-4773-5008-894d-daa3a9b3a701",
-          "handle": "ethereumm",
-          "evm_address": "0x321111fb949c38fe613f05922c4dac33c5352b57",
+          "user_id": "a59998b7-2410-58df-b907-b776789d3676",
+          "handle": "mati1212",
+          "evm_address": "0x589145a8525e67d9c4597316885aeffe234c68a1",
           "followers": 3,
-          "amount": 2468196.33,
-          "pnl": -3.31897,
+          "amount": 12441458.64,
+          "pnl": -76.3368,
           "is_dev": 0,
-          "updated_ts": 1788622629201
-        },
-        {
-          "rank": 5,
-          "user_id": "32cec1ae-e5ef-5dca-b805-66be3cb519c8",
-          "handle": "Rain",
-          "evm_address": "0x954a07c69bef8670dedecc65cba97d28874b40b9",
-          "followers": 53,
-          "amount": 1864576.47,
-          "pnl": -75.8742,
-          "is_dev": 0,
-          "updated_ts": 1788622629201
-        },
-        {
-          "rank": 6,
-          "user_id": "dd49baa4-2b4d-5e0e-a568-fd26c2d23e0b",
-          "handle": "RigidSolarParrot",
-          "evm_address": "0x07130f6367d398f89ab15a43a032f70094ccce13",
-          "followers": 7,
-          "amount": 1213766.81,
-          "pnl": -26.2953,
-          "is_dev": 0,
-          "updated_ts": 1788622629201
-        },
-        {
-          "rank": 7,
-          "user_id": "ac87264e-1d2c-5cc3-a39e-cbbe40338041",
-          "handle": "m4xx",
-          "evm_address": "0x62080eb9ddd83e2fcb45641d9445143a1e84286e",
-          "followers": 2,
-          "amount": 970792.14,
-          "pnl": -1.0818,
-          "is_dev": 0,
-          "updated_ts": 1788622629201
-        },
-        {
-          "rank": 8,
-          "user_id": "7ac51102-af31-528a-b5ce-13683df7014f",
-          "handle": "julesdz",
-          "evm_address": "0xd7ddce2cd0d06a05b1a5c7713ea97405ebf047d7",
-          "followers": 1,
-          "amount": 918082.63,
-          "pnl": -2.99021,
-          "is_dev": 0,
-          "updated_ts": 1788622629201
-        },
-        {
-          "rank": 9,
-          "user_id": "6f59167d-0df0-576c-9a43-b65835033f7b",
-          "handle": "aiyawocao",
-          "evm_address": "0x4670f18f90059cd4ee95ebdc08d3d3e741acf7aa",
-          "followers": 0,
-          "amount": 811792.29,
-          "pnl": -15.138,
-          "is_dev": 0,
-          "updated_ts": 1788622629201
-        },
-        {
-          "rank": 10,
-          "user_id": "80bbc880-c70e-51cd-99c3-bf9c72571e1a",
-          "handle": "PokerFaceP",
-          "evm_address": "0x529e35d991ca609e8568b0cc2e10acd78bb7e920",
-          "followers": 4,
-          "amount": 646613.54,
-          "pnl": -8.45264,
-          "is_dev": 0,
-          "updated_ts": 1788622629201
-        }
-      ],
-      "notifications": [
-        {
-          "ts": 1788622629834,
-          "mode": "off",
-          "op": "send",
-          "message_id": 62262983416,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\n/WARN (WARN) · 🟢 Robinhood Chain · MC: 🟢 <b>$39.20K</b>\nCA: <code>0xd2fad9f7ea69d173fff41d44cacbd1d5e6549459</code>\n首次触发: 2026/09/05 23:37:07.712 HKT\n成交量: 5m $87.58K · 1h $87.58K\n持币初值（+2.1s）: 全链 179 · Fomo 18 (10.1%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+2.1s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: -$218.42 · 盈利 1 人\n  全平台24H PnL: <i>n/a</i>（0/10）\n\n健康: 🟢 实时源正常 · 持币覆盖 18/18 · Top10 10/10 · 浏览器→入库 5ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": -218.41772,
-        "top10Profitable": 1,
-        "top10Count": 10,
-        "identified": 10,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0xaa310cd9a22663aca63a3ac52c64b9968afbb33c",
-        "trigger_ts": 1788622350425,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 62235252315,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "LYMBIC",
-        "name": "Lymbic",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788622352522,
-          "total_holders": 328,
-          "fomo_holders": 114,
-          "payload": {
-            "chainBlock": "55230503",
-            "chainBlockTs": 1788622349000,
-            "chainTakenTs": 1788622352516,
-            "fomoTakenTs": 1788622341908,
-            "boardTakenTs": 1788622350799,
-            "aggregatedTs": 1788622352522
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788622715835,
-          "total_holders": 472,
-          "fomo_holders": 184,
-          "payload": {
-            "chainBlock": "55233449",
-            "chainBlockTs": 1788622650000,
-            "chainTakenTs": 1788622653132,
-            "fomoTakenTs": 1788622654682,
-            "boardTakenTs": 1788622654952,
-            "aggregatedTs": 1788622715835
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 184,
-        "updated_ts": 1788622655030,
-        "resp_ts": 1788622654682,
-        "ingest_ms": 349
-      },
-      "top10": [
-        {
-          "rank": 1,
-          "user_id": "54729618-107c-526f-bf5c-b25ae9d56300",
-          "handle": "GreenFn42",
-          "evm_address": "0xf3808e77706626499df51dd6d5b15a1637e355e4",
-          "followers": 47,
-          "amount": 15973863.33,
-          "pnl": 1167.21,
-          "is_dev": 0,
-          "updated_ts": 1788622655030
+          "updated_ts": 1788674842640
         },
         {
           "rank": 2,
-          "user_id": "e6ec6486-6c26-5069-bae4-8758d3d546f6",
-          "handle": "Dr. Ateri",
-          "evm_address": "0x5a3e44a0d73b1ae2bbcd9617e53468a1b58bb252",
-          "followers": 5,
-          "amount": 6430703.06,
-          "pnl": 373.538,
+          "user_id": "f081690c-ee8c-59be-adc1-185bafeb269b",
+          "handle": "Ks_III",
+          "evm_address": "0x16f7fec506a7b5e34b31583505faa9e3e102d8bf",
+          "followers": 2,
+          "amount": 7273778.62,
+          "pnl": -83.4466,
           "is_dev": 0,
-          "updated_ts": 1788622655030
+          "updated_ts": 1788674842640
         },
         {
           "rank": 3,
-          "user_id": "b1c0e2b2-4aa9-5a0a-9e2a-14a06e9ce6bf",
-          "handle": "HotCheapTahr",
-          "evm_address": "0x9aa170c545147b0a13593fc84196026868041519",
-          "followers": 1,
-          "amount": 6059413.04,
-          "pnl": 366.092,
+          "user_id": "be18b182-43b8-543f-8562-0b0e81240741",
+          "handle": "Pit Crew Bull",
+          "evm_address": "0xc54436ac58ed0d901391bc8f0ae2a2ba24f32ff0",
+          "followers": 94,
+          "amount": 2685353.5,
+          "pnl": -18.1226,
           "is_dev": 0,
-          "updated_ts": 1788622655030
+          "updated_ts": 1788674842640
         },
         {
           "rank": 4,
-          "user_id": "3e20ac8e-d81b-551f-92ac-384a122cd1fc",
-          "handle": "Teshu",
-          "evm_address": "0x454b4125b5e8ad7e4efed6bf047682904a4e0a6e",
-          "followers": 153,
-          "amount": 3890771.66,
-          "pnl": 427.767,
+          "user_id": "af523a3a-8931-5697-aad5-022d49dca055",
+          "handle": "Bhumandhana",
+          "evm_address": "0xe2870a22b2141582e5c5da4c7e1c69e37bca3c60",
+          "followers": 141,
+          "amount": 1393562.92,
+          "pnl": -7.72456,
           "is_dev": 0,
-          "updated_ts": 1788622655030
+          "updated_ts": 1788674842640
         },
         {
           "rank": 5,
-          "user_id": "9177a22f-3cf1-5fc4-ab53-14ae44e879f1",
-          "handle": "timewilltellem",
-          "evm_address": "0x5298cd2203c316bfec998fe5e99cc9363d733882",
-          "followers": 70,
-          "amount": 3739883.9,
-          "pnl": 9.68072,
-          "is_dev": 0,
-          "updated_ts": 1788622655030
-        },
-        {
-          "rank": 6,
-          "user_id": "782acdd0-dbfe-53d8-9a8a-f9eab3b42d48",
-          "handle": "YB",
-          "evm_address": "0x5ab5ae5270de500766a49f5d06ad8d16d66991e8",
-          "followers": 48,
-          "amount": 3479166.76,
-          "pnl": 273.004,
-          "is_dev": 0,
-          "updated_ts": 1788622655030
-        },
-        {
-          "rank": 7,
-          "user_id": "5e96c6f2-e218-588d-b81d-0c919d0c3052",
-          "handle": "ian28",
-          "evm_address": "0x326e615087a07cfb51db812e25be8b83eabc31b4",
-          "followers": 13,
-          "amount": 3478688.76,
-          "pnl": 191.905,
-          "is_dev": 0,
-          "updated_ts": 1788622655030
-        },
-        {
-          "rank": 8,
-          "user_id": "14a4cefc-5835-597b-84ca-6cf1e9f65e4c",
-          "handle": "kingofthehell",
-          "evm_address": "0xea831253189b6877d34d27f16726b3a405ee9766",
-          "followers": 77,
-          "amount": 3307956.03,
-          "pnl": 249.696,
-          "is_dev": 0,
-          "updated_ts": 1788622655030
-        },
-        {
-          "rank": 9,
-          "user_id": "e6bc72e9-3b99-54a8-8a08-7c4aa02bd3a0",
-          "handle": "mrdon209",
-          "evm_address": "0xd5408541a08387cff6c0510876d42aa406fc3847",
-          "followers": 5,
-          "amount": 3046943.77,
-          "pnl": 79.6148,
-          "is_dev": 0,
-          "updated_ts": 1788622655030
-        },
-        {
-          "rank": 10,
-          "user_id": "57bedd36-f614-5fbe-ab0f-f33e4392a66a",
-          "handle": "InternalSheerMongoose",
-          "evm_address": "0x54955175fcbfd874339f2de0d82cfd5522cf00d0",
-          "followers": 2,
-          "amount": 2649428.53,
-          "pnl": 204.202,
-          "is_dev": 0,
-          "updated_ts": 1788622655030
-        }
-      ],
-      "notifications": [
-        {
-          "ts": 1788622352523,
-          "mode": "off",
-          "op": "send",
-          "message_id": 62235252315,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nLymbic (LYMBIC) · 🟢 Robinhood Chain · MC: 🟢 <b>$83.33K</b>\nCA: <code>0xaa310cd9a22663aca63a3ac52c64b9968afbb33c</code>\n首次触发: 2026/09/05 23:32:30.425 HKT\n成交量: 5m $45.49K · 1h $52.25K\n持币初值（+2.1s）: 全链 328 · Fomo 114 (34.8%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+2.1s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$2.04K · 盈利 10 人\n  全平台24H PnL: <i>n/a</i>（0/10）\n\n健康: 🟢 实时源正常 · 持币覆盖 47/114 · Top10 10/10 · 浏览器→入库 64ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788622715849,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 62235252315,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nLymbic (LYMBIC) · 🟢 Robinhood Chain · MC: 🟡 <b>$130.42K</b>\nCA: <code>0xaa310cd9a22663aca63a3ac52c64b9968afbb33c</code>\n首次触发: 2026/09/05 23:32:30.425 HKT\n成交量: 5m $52.26K · 1h $109.05K\n持币初值（+2.1s）: 全链 328 · Fomo 114 (34.8%)\n持币复核（+6m5s）: 全链 472 · Fomo 184 (39.0%)\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+6m5s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$3.34K · 盈利 10 人\n  全平台24H PnL: <i>n/a</i>（9/10）\n\n健康: 🟢 实时源正常 · 持币覆盖 45/184 · Top10 10/10 · 浏览器→入库 349ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": 3342.7095199999994,
-        "top10Profitable": 10,
-        "top10Count": 10,
-        "identified": 10,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0xeb47b1e29148b738f41ed25f5724d30e4b83b8de",
-        "trigger_ts": 1788622347422,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 62234952914,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "BILLY",
-        "name": "Billy",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788622349527,
-          "total_holders": 177,
-          "fomo_holders": 52,
-          "payload": {
-            "chainBlock": "55230465",
-            "chainBlockTs": 1788622345000,
-            "chainTakenTs": 1788622349521,
-            "fomoTakenTs": 1788622338622,
-            "boardTakenTs": 1788622346066,
-            "aggregatedTs": 1788622349527
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788622656378,
-          "total_holders": 98,
-          "fomo_holders": 53,
-          "payload": {
-            "chainBlock": "55233423",
-            "chainBlockTs": 1788622647000,
-            "chainTakenTs": 1788622649471,
-            "fomoTakenTs": 1788622651227,
-            "boardTakenTs": 1788622651135,
-            "aggregatedTs": 1788622656378
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 53,
-        "updated_ts": 1788622651232,
-        "resp_ts": 1788622651227,
-        "ingest_ms": 5
-      },
-      "top10": [
-        {
-          "rank": 1,
-          "user_id": "5fb28d52-da2d-54f8-bc16-9bdefca12177",
-          "handle": "DarkTradez",
-          "evm_address": "0xcbbaad417334abe44b46f943d61bee501cab6fbd",
+          "user_id": "6ce695a2-315f-5ef6-8d4b-e584a3c060cc",
+          "handle": "halal.Kosher.pig",
+          "evm_address": "0xfc3765ca81db318cd8fca790f939f70c37e129b9",
           "followers": 1,
-          "amount": 6596958.71,
-          "pnl": 1.56024,
+          "amount": 911660.86,
+          "pnl": -36.0813,
           "is_dev": 0,
-          "updated_ts": 1788622651232
-        },
-        {
-          "rank": 2,
-          "user_id": "e6d707e6-971f-5164-897c-b783c613a91d",
-          "handle": "Chris Daniel",
-          "evm_address": "0x137215d28b0a4b7cfd6fffea77039f1b788a3648",
-          "followers": 4,
-          "amount": 1691592.85,
-          "pnl": 0.421716,
-          "is_dev": 0,
-          "updated_ts": 1788622651232
+          "updated_ts": 1788674842640
         }
       ],
       "notifications": [
         {
-          "ts": 1788622349529,
+          "ts": 1788674538718,
           "mode": "off",
           "op": "send",
-          "message_id": 62234952914,
+          "message_id": 67453871804,
           "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nBilly (BILLY) · 🟢 Robinhood Chain · MC: 🟡 <b>$235.17K</b>\nCA: <code>0xeb47b1e29148b738f41ed25f5724d30e4b83b8de</code>\n首次触发: 2026/09/05 23:32:27.422 HKT\n成交量: 5m $50.04K · 1h $68.75K\n持币初值（+2.1s）: 全链 177 · Fomo 52 (29.4%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+2.1s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$875.04 · 盈利 10 人\n  全平台24H PnL: <i>n/a</i>（0/10）\n\n健康: 🟢 实时源正常 · 持币覆盖 47/52 · Top10 10/10 · 浏览器→入库 80ms · <i>禁发送演练</i>"
+          "detail": "<b>FOMO NOW</b>\nThe Robin (ROBIN) · 🟢 Robinhood Chain · MC: 🟢 <b>$48.57K</b>\nCA: <code>0xe9e55377d7f32d4c0aa55f993248313b58960165</code>\n首次触发: 2026/09/06 14:02:17.073 HKT\n成交量: 5m $50.40K · 1h $50.40K\n持币初值（+1.6s）: 全链 274 · Fomo 56 (20.4%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+1.6s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$620.10 · 盈利 9 人\n  全平台24H PnL: <i>采集中…</i>（0/10）· 缺 10 人的收益记录\n\n健康: 🟢 实时源正常 · 持币覆盖 47/56 · Top10 10/10 · 浏览器→入库 8ms · <i>禁发送演练</i>"
         },
         {
-          "ts": 1788622656381,
+          "ts": 1788674842656,
           "mode": "off",
           "op": "edit",
-          "message_id": 62234952914,
+          "message_id": 67453871804,
           "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nBilly (BILLY) · 🟢 Robinhood Chain · MC: 🟢 <b>$3.11K</b>\nCA: <code>0xeb47b1e29148b738f41ed25f5724d30e4b83b8de</code>\n首次触发: 2026/09/05 23:32:27.422 HKT\n成交量: 5m $54.30K · 1h $128.49K\n持币初值（+2.1s）: 全链 177 · Fomo 52 (29.4%)\n持币复核（+5m9s）: 全链 98 · Fomo 53 (54.1%)\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+5m9s）· 账户识别 2/2\n  该币累计收益（已实现+未实现）: +$1.98 · 盈利 2 人\n  全平台24H PnL: -$52.36 · 整点对齐口径\n\n健康: 🟢 实时源正常 · 持币覆盖 2/53 · Top10 2/2 · 浏览器→入库 5ms · <i>禁发送演练</i>"
+          "detail": "<b>FOMO NOW</b>\nThe Robin (ROBIN) · 🟢 Robinhood Chain · MC: 🟢 <b>$48.57K</b>\nCA: <code>0xe9e55377d7f32d4c0aa55f993248313b58960165</code>\n首次触发: 2026/09/06 14:02:17.073 HKT\n成交量: 5m $50.40K · 1h $50.40K\n持币初值（+1.6s）: 全链 274 · Fomo 56 (20.4%)\n持币复核（+5m6s）: 全链 116 · Fomo 5 (4.3%)\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+5m6s）· 账户识别 5/5\n  该币累计收益（已实现+未实现）: -$221.71 · 盈利 0 人\n  全平台24H PnL: <i>采集中…</i>（0/5）· 缺 5 人的收益记录\n\n健康: 🟢 实时源正常 · 持币覆盖 5/5 · Top10 5/5 · 浏览器→入库 6ms · <i>禁发送演练</i>"
         }
       ],
       "recompute": {
-        "top10TokenPnlSum": 1.981956,
-        "top10Profitable": 2,
-        "top10Count": 2,
-        "identified": 2,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0x72a9c6371efc2749e075791249cc37faa63ca9bb",
-        "trigger_ts": 1788621775412,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 62177706313,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "LATENT",
-        "name": "LATENT",
-        "decimals": 18,
-        "total_supply": "100000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788621777059,
-          "total_holders": 250,
-          "fomo_holders": 0,
-          "payload": {
-            "chainBlock": "55224797",
-            "chainBlockTs": 1788621775000,
-            "chainTakenTs": 1788621777057,
-            "fomoTakenTs": 1788621735208,
-            "boardTakenTs": 1788621754728,
-            "aggregatedTs": 1788621777059
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788622157463,
-          "total_holders": 1131,
-          "fomo_holders": 35,
-          "payload": {
-            "chainBlock": "55227779",
-            "chainBlockTs": 1788622075000,
-            "chainTakenTs": 1788622078268,
-            "fomoTakenTs": 1788622079652,
-            "boardTakenTs": 1788622073825,
-            "aggregatedTs": 1788622157463
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 35,
-        "updated_ts": 1788622079986,
-        "resp_ts": 1788622079652,
-        "ingest_ms": 336
-      },
-      "top10": [
-        {
-          "rank": 1,
-          "user_id": "8ce8422b-2a9a-5d7a-b7a0-cd4c055741ab",
-          "handle": "AboveVitalTiger",
-          "evm_address": "0x15c42aecb661eae660b08cb36c4d4a4b986a42fb",
-          "followers": 5,
-          "amount": 117950.97,
-          "pnl": -1064.75,
-          "is_dev": 0,
-          "updated_ts": 1788622079986
-        },
-        {
-          "rank": 2,
-          "user_id": "1b9514b1-2c45-5522-a2d2-cdf88005bdf5",
-          "handle": "The Night Owl",
-          "evm_address": "0x6e4b4924cd83368d5f58249001e7e2fc15a92dc9",
-          "followers": 9719,
-          "amount": 43902.33,
-          "pnl": -1015.79,
-          "is_dev": 0,
-          "updated_ts": 1788622079986
-        },
-        {
-          "rank": 3,
-          "user_id": "37d7f7be-a3fb-52a1-80b6-181d668aadfb",
-          "handle": "bystevenr",
-          "evm_address": "0xa393b9ff89f4b9fbaddc2d0acaf0f578a567a151",
-          "followers": 1972,
-          "amount": 10165.92,
-          "pnl": -155.837,
-          "is_dev": 0,
-          "updated_ts": 1788622079986
-        },
-        {
-          "rank": 4,
-          "user_id": "cf0f4058-b72d-5816-81bb-09012ff4fafc",
-          "handle": "TopSunnyKoi",
-          "evm_address": "0xfce70ffbfbe3ac40e293343aee630bd4844e9cf2",
-          "followers": 2,
-          "amount": 7414.1,
-          "pnl": -147.539,
-          "is_dev": 0,
-          "updated_ts": 1788622079986
-        },
-        {
-          "rank": 5,
-          "user_id": "9c6c2e6a-da18-5ead-be0a-ca7e16495736",
-          "handle": "Casper 🦇🔊",
-          "evm_address": "0x049d64cb1a0cd1e7a2c3498e40b7d217eccad775",
-          "followers": 523,
-          "amount": 6533.9,
-          "pnl": -153.369,
-          "is_dev": 0,
-          "updated_ts": 1788622079986
-        },
-        {
-          "rank": 6,
-          "user_id": "adeec729-2cf4-593f-a22d-2aca9b3bb046",
-          "handle": "Aniu238",
-          "evm_address": "0xa9ae25e125bcad356f867c0d0242625eaf390ac0",
-          "followers": 32,
-          "amount": 6264.45,
-          "pnl": -117.706,
-          "is_dev": 0,
-          "updated_ts": 1788622079986
-        },
-        {
-          "rank": 7,
-          "user_id": "bb88a8b7-64ec-5ea4-9de8-c1614d3acf4e",
-          "handle": "ChickenFish",
-          "evm_address": "0xf77d776d2547c815690e24712d0e72a848266e36",
-          "followers": 101,
-          "amount": 5515.04,
-          "pnl": -113.692,
-          "is_dev": 0,
-          "updated_ts": 1788622079986
-        },
-        {
-          "rank": 8,
-          "user_id": "56651f18-fc3f-5fb0-aecb-f1551913f56c",
-          "handle": "LegalGrandRaven",
-          "evm_address": "0x091add9c41cc291360b75b1216ea72f8b7f1a486",
-          "followers": 9,
-          "amount": 4938.03,
-          "pnl": -82.6409,
-          "is_dev": 0,
-          "updated_ts": 1788622079986
-        },
-        {
-          "rank": 9,
-          "user_id": "995cdd2d-2f6d-5107-a0a7-c5c19d5d7462",
-          "handle": "YC66",
-          "evm_address": "0x61f2e39e2caf140318c014170c8b255a7a4be367",
-          "followers": 0,
-          "amount": 4331.23,
-          "pnl": -38.3831,
-          "is_dev": 0,
-          "updated_ts": 1788622079986
-        },
-        {
-          "rank": 10,
-          "user_id": "616285db-4183-598e-baa5-279f74a3066e",
-          "handle": "TightStillGecko",
-          "evm_address": "0x0b7b8d4659c13d95a1400194f7d75276d1883729",
-          "followers": 8,
-          "amount": 3728.95,
-          "pnl": -122.855,
-          "is_dev": 0,
-          "updated_ts": 1788622079986
-        }
-      ],
-      "notifications": [
-        {
-          "ts": 1788621777063,
-          "mode": "off",
-          "op": "send",
-          "message_id": 62177706313,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nLATENT (LATENT) · 🟢 Robinhood Chain · MC: 🟡 <b>$2.57M</b>\nCA: <code>0x72a9c6371efc2749e075791249cc37faa63ca9bb</code>\n首次触发: 2026/09/05 23:22:55.412 HKT\n成交量: 5m $602.23K · 1h $602.23K\n持币初值（+1.6s）: 全链 250 · Fomo 0 (0.0%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+1.6s）· 账户识别 0/0\n  该币累计收益（已实现+未实现）: <i>n/a</i>（0/0）\n  全平台24H PnL: <i>n/a</i>（0/0）\n\n健康: 🟢 实时源正常 · 持币覆盖 0/0 · Top10 0/0 · 浏览器→入库 1ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788622157475,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 62177706313,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nLATENT (LATENT) · 🟢 Robinhood Chain · MC: 🟡 <b>$3.38M</b>\nCA: <code>0x72a9c6371efc2749e075791249cc37faa63ca9bb</code>\n首次触发: 2026/09/05 23:22:55.412 HKT\n成交量: 5m $5.60M · 1h $6.26M\n持币初值（+1.6s）: 全链 250 · Fomo 0 (0.0%)\n持币复核（+6m22s）: 全链 1131 · Fomo 35 (3.1%)\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+6m22s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: -$3.01K · 盈利 0 人\n  全平台24H PnL: +$115.55K · 整点对齐口径\n\n健康: 🟢 实时源正常 · 持币覆盖 35/35 · Top10 10/10 · 浏览器→入库 336ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": -3012.5620000000004,
+        "top10TokenPnlSum": -221.71186,
         "top10Profitable": 0,
-        "top10Count": 10,
-        "identified": 10,
+        "top10Count": 5,
+        "identified": 5,
         "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
+        "platformProfitable": null,
+        "platformCovered": 0,
+        "platformReason": "缺 5 人的收益记录",
+        "platformNote": "全平台 24H 收益默认开启，在复核之外单独取；逐人序列的可追溯样例见 scripts/trace-pnl.ts"
       }
     },
     {
       "alert": {
-        "ca": "0x1583e7cf07a77a148f0396791c11a3d578413c75",
-        "trigger_ts": 1788621746387,
+        "ca": "0x5422663e07d6fc217b0af4532fb1a6c9c7de5555",
+        "trigger_ts": 1788674509049,
         "status": "completed",
         "collection_state": "complete",
         "attempts": 0,
-        "message_id": 62174813112,
+        "message_id": 67451136703,
         "notify_mode": "off",
-        "last_error": null
+        "last_error": null,
+        "original_due_ts": 1788674810049,
+        "pnl_state": "timeout",
+        "pnl_deadline_ts": 1788675410049
+      },
+      "timing": {
+        "triggerTs": 1788674509049,
+        "originalDueTs": 1788674810049,
+        "initial": {
+          "holdersDoneTs": 1788674511366,
+          "offsetMs": 2317,
+          "total": 197,
+          "times": {
+            "chainBlock": "55747565",
+            "chainBlockTs": 1788674509000,
+            "chainTakenTs": 1788674511364,
+            "fomoRespTs": 1788674503374,
+            "boardTakenTs": 1788674503242,
+            "marketTakenTs": 1788674511366,
+            "aggregatedTs": 1788674511365
+          }
+        },
+        "recheck": {
+          "holdersDoneTs": 1788674812939,
+          "offsetMs": 303890,
+          "total": 417,
+          "times": {
+            "chainBlock": "55750554",
+            "chainBlockTs": 1788674809000,
+            "chainTakenTs": 1788674811715,
+            "fomoRespTs": 1788674812860,
+            "boardTakenTs": 1788674778492,
+            "marketTakenTs": 1788674812939,
+            "aggregatedTs": 1788674812938
+          }
+        },
+        "platformPnlWindow": null,
+        "platformPnlFetchedTs": null
       },
       "token": {
-        "symbol": "SHITCOIN",
-        "name": "Universal Shitcoin",
+        "symbol": "asd",
+        "name": "asd",
         "decimals": 18,
         "total_supply": "1000000000000000000000000000"
       },
       "stages": [
         {
           "stage": "initial",
-          "taken_ts": 1788621748125,
-          "total_holders": 137,
-          "fomo_holders": 0,
+          "taken_ts": 1788674511366,
+          "total_holders": 197,
+          "fomo_holders": 2,
           "payload": {
-            "chainBlock": "55224512",
-            "chainBlockTs": 1788621746000,
-            "chainTakenTs": 1788621748124,
-            "fomoTakenTs": 1788621738664,
-            "boardTakenTs": 1788621738763,
-            "aggregatedTs": 1788621748125
+            "chainBlock": "55747565",
+            "chainBlockTs": 1788674509000,
+            "chainTakenTs": 1788674511364,
+            "fomoRespTs": 1788674503374,
+            "boardTakenTs": 1788674503242,
+            "marketTakenTs": 1788674511366,
+            "aggregatedTs": 1788674511365
           }
         },
         {
           "stage": "recheck",
-          "taken_ts": 1788622103210,
-          "total_holders": 137,
-          "fomo_holders": 62,
+          "taken_ts": 1788674812939,
+          "total_holders": 417,
+          "fomo_holders": 10,
           "payload": {
-            "chainBlock": "55227493",
-            "chainBlockTs": 1788622046000,
-            "chainTakenTs": 1788622050193,
-            "fomoTakenTs": 1788622051792,
-            "boardTakenTs": 1788622051850,
-            "aggregatedTs": 1788622103210
+            "chainBlock": "55750554",
+            "chainBlockTs": 1788674809000,
+            "chainTakenTs": 1788674811715,
+            "fomoRespTs": 1788674812860,
+            "boardTakenTs": 1788674778492,
+            "marketTakenTs": 1788674812939,
+            "aggregatedTs": 1788674812938
           }
         }
       ],
       "fomoSource": {
-        "fomo_holders": 62,
-        "updated_ts": 1788622051854,
-        "resp_ts": 1788622051792,
-        "ingest_ms": 63
+        "fomo_holders": 10,
+        "updated_ts": 1788674812882,
+        "resp_ts": 1788674812860,
+        "ingest_ms": 22
       },
       "top10": [
         {
           "rank": 1,
-          "user_id": "4195b7e8-a5ae-558d-a9fa-fddf5a1729eb",
-          "handle": "$MAIV",
-          "evm_address": "0x71cc08a308c8039ac563db732b81d9860a365b58",
-          "followers": 356,
-          "amount": 14976003.82,
-          "pnl": -6.95227,
+          "user_id": "4b204093-58be-5e0d-880e-919ddd15ca8d",
+          "handle": "MrDok",
+          "evm_address": "0xd8dc5c445d31861e6d047f3369b1080cc62451e4",
+          "followers": 20,
+          "amount": 3126959.68,
+          "pnl": 2691.52,
           "is_dev": 0,
-          "updated_ts": 1788622051854
+          "updated_ts": 1788674812882
         },
         {
           "rank": 2,
-          "user_id": "e418905f-6a40-5987-8f0c-a3f10efbe473",
-          "handle": "money",
-          "evm_address": "0x84a7ec599730157087b89905821bd6d62f6fd33b",
-          "followers": 2465,
-          "amount": 13168984.5,
-          "pnl": -14.9666,
+          "user_id": "32a89abb-3934-5a55-a3f2-e496d6db0d47",
+          "handle": "TestySlowSwan",
+          "evm_address": "0x0b4c7ba6d341e089ddbcb25be73f566dedef5b4c",
+          "followers": 2,
+          "amount": 1278468.3,
+          "pnl": -15.2749,
           "is_dev": 0,
-          "updated_ts": 1788622051854
+          "updated_ts": 1788674812882
         },
         {
           "rank": 3,
-          "user_id": "dde648d6-670b-5df8-b63b-a2c4785fc6eb",
-          "handle": "duckking",
-          "evm_address": "0x48ff265a34bbf4299970d25e6f6602bbb35d53e8",
-          "followers": 2,
-          "amount": 5599740.24,
-          "pnl": -0.290767,
-          "is_dev": 0,
-          "updated_ts": 1788622051854
-        },
-        {
-          "rank": 4,
-          "user_id": "dcdee4f0-ba67-5689-8a64-bf1ac28e3f31",
-          "handle": "BRKO",
-          "evm_address": "0x7cbf0553fb8bca562ff7d34c54f77e822975bd63",
-          "followers": 25,
-          "amount": 5239503.36,
-          "pnl": -1.58335,
-          "is_dev": 0,
-          "updated_ts": 1788622051854
-        },
-        {
-          "rank": 5,
-          "user_id": "b9277e9f-0dd3-591f-a868-a88b1e8a3ef9",
-          "handle": "PaleBusyMoth",
-          "evm_address": "0x52cdc77e97c2495762d825ec69374f162d8f2352",
-          "followers": 0,
-          "amount": 4630139.29,
-          "pnl": -0.712997,
-          "is_dev": 0,
-          "updated_ts": 1788622051854
-        },
-        {
-          "rank": 6,
-          "user_id": "036a53d3-16fe-5a84-97a7-9453598d5bba",
-          "handle": "Myth",
-          "evm_address": "0xb3ce7e80b746b6b272df3db7915d0d087a61cf59",
-          "followers": 18,
-          "amount": 4318402.85,
-          "pnl": -1.35336,
-          "is_dev": 0,
-          "updated_ts": 1788622051854
-        },
-        {
-          "rank": 7,
-          "user_id": "f8509818-73b3-574d-b203-5a8c84c0c7fc",
-          "handle": "wings",
-          "evm_address": "0xd8f1bc03b1aaaa11278990ab62a08992d62c7292",
-          "followers": 144,
-          "amount": 4025762.77,
-          "pnl": -1.82988,
-          "is_dev": 0,
-          "updated_ts": 1788622051854
-        },
-        {
-          "rank": 8,
-          "user_id": "6cd312cc-d42b-5ebd-a58d-464cd40879e0",
-          "handle": "888_ Sahur",
-          "evm_address": "0xc545173e19a12bef27091a3c2afeed7ab64ff24d",
-          "followers": 6,
-          "amount": 4022105.84,
-          "pnl": -1.84114,
-          "is_dev": 0,
-          "updated_ts": 1788622051854
-        },
-        {
-          "rank": 9,
-          "user_id": "dff43130-63c8-5f15-aa57-f63e93f0cb9e",
-          "handle": "bndf",
-          "evm_address": "0x8e3044b84129acd5a34d7ba546710dfe2286b805",
-          "followers": 3,
-          "amount": 3434942.97,
-          "pnl": -4.45044,
-          "is_dev": 0,
-          "updated_ts": 1788622051854
-        },
-        {
-          "rank": 10,
-          "user_id": "5fb28d52-da2d-54f8-bc16-9bdefca12177",
-          "handle": "DarkTradez",
-          "evm_address": "0xcbbaad417334abe44b46f943d61bee501cab6fbd",
-          "followers": 1,
-          "amount": 2988489.76,
-          "pnl": -6.88864,
-          "is_dev": 0,
-          "updated_ts": 1788622051854
-        }
-      ],
-      "notifications": [
-        {
-          "ts": 1788621748131,
-          "mode": "off",
-          "op": "send",
-          "message_id": 62174813112,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nUniversal Shitcoin (SHITCOIN) · 🟢 Robinhood Chain · MC: 🟢 <b>$30.34K</b>\nCA: <code>0x1583e7cf07a77a148f0396791c11a3d578413c75</code>\n首次触发: 2026/09/05 23:22:26.387 HKT\n成交量: 5m $62.42K · 1h $62.42K\n持币初值（+1.7s）: 全链 137 · Fomo 0 (0.0%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+1.7s）· 账户识别 0/0\n  该币累计收益（已实现+未实现）: <i>n/a</i>（0/0）\n  全平台24H PnL: <i>n/a</i>（0/0）\n\n健康: 🟢 实时源正常 · 持币覆盖 0/0 · Top10 0/0 · 浏览器→入库 57ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788622103217,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 62174813112,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nUniversal Shitcoin (SHITCOIN) · 🟢 Robinhood Chain · MC: 🟢 <b>$4.18K</b>\nCA: <code>0x1583e7cf07a77a148f0396791c11a3d578413c75</code>\n首次触发: 2026/09/05 23:22:26.387 HKT\n成交量: 5m $28.55K · 1h $131.90K\n持币初值（+1.7s）: 全链 137 · Fomo 0 (0.0%)\n持币复核（+5m57s）: 全链 137 · Fomo 62 (45.3%)\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+5m57s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: -$40.87 · 盈利 0 人\n  全平台24H PnL: -$26.43K · 整点对齐口径\n\n健康: 🟢 实时源正常 · 持币覆盖 41/62 · Top10 10/10 · 浏览器→入库 63ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": -40.869443999999994,
-        "top10Profitable": 0,
-        "top10Count": 10,
-        "identified": 10,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0x89e9d0edc0a2b5b3fcf6144d8aa3ad22a13a96dd",
-        "trigger_ts": 1788621651325,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 62165381811,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "COFF",
-        "name": "Crypto Orangutan Fire Fund",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788621653817,
-          "total_holders": 360,
-          "fomo_holders": 6,
-          "payload": {
-            "chainBlock": "55223570",
-            "chainBlockTs": 1788621651000,
-            "chainTakenTs": 1788621653815,
-            "fomoTakenTs": 1788621650510,
-            "boardTakenTs": 1788621652446,
-            "aggregatedTs": 1788621653817
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788622001668,
-          "total_holders": 374,
-          "fomo_holders": 86,
-          "payload": {
-            "chainBlock": "55226499",
-            "chainBlockTs": 1788621945000,
-            "chainTakenTs": 1788621953820,
-            "fomoTakenTs": 1788621955387,
-            "boardTakenTs": 1788621955628,
-            "aggregatedTs": 1788622001668
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 86,
-        "updated_ts": 1788621955519,
-        "resp_ts": 1788621955387,
-        "ingest_ms": 134
-      },
-      "top10": [
-        {
-          "rank": 1,
-          "user_id": "195e80b5-0ce1-575e-8b3a-fb71c92dd212",
-          "handle": "ssxldierrtopchart",
-          "evm_address": "0x6d353646f4ed50620dfd773b6484ca408e684dc6",
-          "followers": 5,
-          "amount": 4975971.32,
-          "pnl": 17.778,
-          "is_dev": 0,
-          "updated_ts": 1788621955519
-        },
-        {
-          "rank": 2,
-          "user_id": "921acc47-3a5e-5147-a76f-73d3ec0edfd7",
-          "handle": "haocut",
-          "evm_address": "0xe275ec9da21001450d8b020bcbf08098602da262",
-          "followers": 14,
-          "amount": 4353293.5,
-          "pnl": -248.194,
-          "is_dev": 0,
-          "updated_ts": 1788621955519
-        },
-        {
-          "rank": 3,
-          "user_id": "bdbd5ab0-26cf-5d77-9459-908ae1f7a0c9",
-          "handle": "MoralUpperAsp",
-          "evm_address": "0x69e6437ab56404b43d64a15f6306abc02c08c1ad",
-          "followers": 11,
-          "amount": 3356665.38,
-          "pnl": -124.67,
-          "is_dev": 0,
-          "updated_ts": 1788621955519
-        },
-        {
-          "rank": 4,
-          "user_id": "05d651e0-9eec-5442-8369-edcf1b9b4690",
-          "handle": "sinvn",
-          "evm_address": "0x4ec2fbc4bf488c2e2d58165d01596205255c4be5",
-          "followers": 22,
-          "amount": 3132297.13,
-          "pnl": -41.5593,
-          "is_dev": 0,
-          "updated_ts": 1788621955519
-        },
-        {
-          "rank": 5,
-          "user_id": "c593a214-fc64-5015-9059-ff9fb122517c",
-          "handle": "abikhadka",
-          "evm_address": "0x1b2efe69aa600e9642867ae4727f48de5482a3eb",
-          "followers": 9,
-          "amount": 2388979.15,
-          "pnl": 6.52568,
-          "is_dev": 0,
-          "updated_ts": 1788621955519
-        },
-        {
-          "rank": 6,
-          "user_id": "e28a119f-5812-57b4-9366-6239f4dc0705",
-          "handle": "Godislove",
-          "evm_address": "0x6ff849919d964c690665ed8d2fa9d62e40c74693",
-          "followers": 2,
-          "amount": 1676588.21,
-          "pnl": 7.79197,
-          "is_dev": 0,
-          "updated_ts": 1788621955519
-        },
-        {
-          "rank": 7,
-          "user_id": "c4e92e94-a3bb-5696-b4dc-2f33241c9b60",
-          "handle": "HipHopPingPongKingKong",
-          "evm_address": "0x19c1c95049e76c476a84427ae9684bd815a1fb0b",
-          "followers": 0,
-          "amount": 1217558.96,
-          "pnl": -57.5274,
-          "is_dev": 0,
-          "updated_ts": 1788621955519
-        },
-        {
-          "rank": 8,
-          "user_id": "db3d3b88-27da-5b76-a53f-681b865e17b7",
-          "handle": "ineedarari",
-          "evm_address": "0xf4ddeb62d2d91d3c4efe37c1f685430b82c26819",
-          "followers": 64,
-          "amount": 1176112.52,
-          "pnl": -58.7505,
-          "is_dev": 0,
-          "updated_ts": 1788621955519
-        },
-        {
-          "rank": 9,
-          "user_id": "e5608bd3-ad12-574d-8b72-f335a1b50eef",
-          "handle": "poterqoji",
-          "evm_address": "0xd71443408d3cfa62c411c86bbdaf65fffc716273",
-          "followers": 70,
-          "amount": 1167672.44,
-          "pnl": -59.0398,
-          "is_dev": 0,
-          "updated_ts": 1788621955519
-        },
-        {
-          "rank": 10,
-          "user_id": "65e80a7e-6887-5079-910a-bb5679bb8776",
-          "handle": "Antiobama",
-          "evm_address": "0x3cd1ee836ba3b9cf0005deb788b8750f774ceef9",
-          "followers": 0,
-          "amount": 1162220.4,
-          "pnl": -58.6886,
-          "is_dev": 0,
-          "updated_ts": 1788621955519
-        }
-      ],
-      "notifications": [
-        {
-          "ts": 1788621653818,
-          "mode": "off",
-          "op": "send",
-          "message_id": 62165381811,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nCrypto Orangutan Fire Fund (COFF) · 🟢 Robinhood Chain · MC: 🟡 <b>$112.95K</b>\nCA: <code>0x89e9d0edc0a2b5b3fcf6144d8aa3ad22a13a96dd</code>\n首次触发: 2026/09/05 23:20:51.325 HKT\n成交量: 5m $153.34K · 1h $153.34K\n持币初值（+2.5s）: 全链 360 · Fomo 6 (1.7%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+2.5s）· 账户识别 6/6\n  该币累计收益（已实现+未实现）: +$228.24 · 盈利 6 人\n  全平台24H PnL: <i>n/a</i>（0/6）\n\n健康: 🟢 实时源正常 · 持币覆盖 6/6 · Top10 6/6 · 浏览器→入库 65ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788622001676,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 62165381811,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nCrypto Orangutan Fire Fund (COFF) · 🟢 Robinhood Chain · MC: 🟢 <b>$32.29K</b>\nCA: <code>0x89e9d0edc0a2b5b3fcf6144d8aa3ad22a13a96dd</code>\n首次触发: 2026/09/05 23:20:51.325 HKT\n成交量: 5m $83.99K · 1h $282.44K\n持币初值（+2.5s）: 全链 360 · Fomo 6 (1.7%)\n持币复核（+5m50s）: 全链 374 · Fomo 86 (23.0%)\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+5m50s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: -$616.33 · 盈利 3 人\n  全平台24H PnL: -$6.67K · 整点对齐口径\n\n健康: 🟢 实时源正常 · 持币覆盖 44/86 · Top10 10/10 · 浏览器→入库 134ms · <i>禁发送演练"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": -616.33395,
-        "top10Profitable": 3,
-        "top10Count": 10,
-        "identified": 10,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0x74994ae80888f00832836a2c325fad2aae0a65c6",
-        "trigger_ts": 1788621320001,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 62132219110,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "BODKIN",
-        "name": "BODKIN",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788621322191,
-          "total_holders": 131,
-          "fomo_holders": 0,
-          "payload": {
-            "chainBlock": "55220274",
-            "chainBlockTs": 1788621319000,
-            "chainTakenTs": 1788621322187,
-            "fomoTakenTs": 1788621285128,
-            "boardTakenTs": 1788621314465,
-            "aggregatedTs": 1788621322191
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788621625390,
-          "total_holders": 176,
-          "fomo_holders": 0,
-          "payload": {
-            "chainBlock": "55223272",
-            "chainBlockTs": 1788621620000,
-            "chainTakenTs": 1788621623459,
-            "fomoTakenTs": 1788621625112,
-            "boardTakenTs": 1788621625253,
-            "aggregatedTs": 1788621625390
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 0,
-        "updated_ts": 1788621625209,
-        "resp_ts": 1788621625112,
-        "ingest_ms": 97
-      },
-      "top10": [],
-      "notifications": [
-        {
-          "ts": 1788621322191,
-          "mode": "off",
-          "op": "send",
-          "message_id": 62132219110,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nBODKIN (BODKIN) · 🟢 Robinhood Chain · MC: 🟡 <b>$139.72K</b>\nCA: <code>0x74994ae80888f00832836a2c325fad2aae0a65c6</code>\n首次触发: 2026/09/05 23:15:20.001 HKT\n成交量: 5m $46.49K · 1h $110.42K\n持币初值（+2.2s）: 全链 131 · Fomo 0 (0.0%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+2.2s）· 账户识别 0/0\n  该币累计收益（已实现+未实现）: <i>n/a</i>（0/0）\n  全平台24H PnL: <i>n/a</i>（0/0）\n\n健康: 🟢 实时源正常 · 持币覆盖 0/0 · Top10 0/0 · 浏览器→入库 1ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788621625393,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 62132219110,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nBODKIN (BODKIN) · 🟢 Robinhood Chain · MC: 🟡 <b>$166.61K</b>\nCA: <code>0x74994ae80888f00832836a2c325fad2aae0a65c6</code>\n首次触发: 2026/09/05 23:15:20.001 HKT\n成交量: 5m $56.81K · 1h $176.44K\n持币初值（+2.2s）: 全链 131 · Fomo 0 (0.0%)\n持币复核（+5m5s）: 全链 176 · Fomo 0 (0.0%)\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+5m5s）· 账户识别 0/0\n  该币累计收益（已实现+未实现）: <i>n/a</i>（0/0）\n  全平台24H PnL: <i>n/a</i>（0/0）\n\n健康: 🟢 实时源正常 · 持币覆盖 0/0 · Top10 0/0 · 浏览器→入库 97ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": 0,
-        "top10Profitable": 0,
-        "top10Count": 0,
-        "identified": 0,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0x5912910a2b97b8282cb6853b4d01374a305b8f73",
-        "trigger_ts": 1788621317999,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 62131971309,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "VAULTS",
-        "name": "Perp Vaults",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788621319712,
-          "total_holders": 204,
-          "fomo_holders": 34,
-          "payload": {
-            "chainBlock": "55220243",
-            "chainBlockTs": 1788621316000,
-            "chainTakenTs": 1788621319703,
-            "fomoTakenTs": 1788621314358,
-            "boardTakenTs": 1788621314465,
-            "aggregatedTs": 1788621319712
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788621701741,
-          "total_holders": 199,
-          "fomo_holders": 37,
-          "payload": {
-            "chainBlock": "55223248",
-            "chainBlockTs": 1788621618000,
-            "chainTakenTs": 1788621621752,
-            "fomoTakenTs": 1788621623391,
-            "boardTakenTs": 1788621623505,
-            "aggregatedTs": 1788621701741
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 37,
-        "updated_ts": 1788621623466,
-        "resp_ts": 1788621623391,
-        "ingest_ms": 79
-      },
-      "top10": [
-        {
-          "rank": 1,
-          "user_id": "f598f1e9-80a9-50e6-bfdd-0edb8a5dac30",
-          "handle": "DuckSoldier",
-          "evm_address": "0x96c273c7df76d53b7d4c71e60ec507468a6f6c68",
-          "followers": 1324,
-          "amount": 22975051.48,
-          "pnl": -173.626,
-          "is_dev": 0,
-          "updated_ts": 1788621623466
-        },
-        {
-          "rank": 2,
-          "user_id": "f4746b7e-dccb-5ecd-b498-f4b2704f8a7c",
-          "handle": "tugi",
-          "evm_address": "0x620582fef7beaee46420feeaecd8e9de0135ca3f",
-          "followers": 31,
-          "amount": 8948790.87,
-          "pnl": -84.5042,
-          "is_dev": 0,
-          "updated_ts": 1788621623466
-        },
-        {
-          "rank": 3,
-          "user_id": "33078c86-ad22-5395-b9ad-b557d96b26b4",
-          "handle": "FondPureSlug",
-          "evm_address": "0x6fd179e9ae9a67c247d0de79d88aaa15032444c9",
-          "followers": 17,
-          "amount": 2098783.55,
-          "pnl": -26.3757,
-          "is_dev": 0,
-          "updated_ts": 1788621623466
-        },
-        {
-          "rank": 4,
-          "user_id": "40371b9c-703e-5bee-a469-028dca2ae4ff",
-          "handle": "DirtyLateBass",
-          "evm_address": "0x57d22cc96c52efd97067e3d2eaaf2a64d0cecf38",
-          "followers": 4,
-          "amount": 1667986.9,
-          "pnl": -102.402,
-          "is_dev": 0,
-          "updated_ts": 1788621623466
-        },
-        {
-          "rank": 5,
-          "user_id": "5feeba07-d51d-5713-8d2b-7fe12601e21e",
-          "handle": "wow",
-          "evm_address": "0x85339232a757bac2ee92d460c09c0929eaee0406",
-          "followers": 2,
-          "amount": 1664733.61,
-          "pnl": -3.17757,
-          "is_dev": 0,
-          "updated_ts": 1788621623466
-        },
-        {
-          "rank": 6,
-          "user_id": "f3b01deb-4593-5a3d-9151-802eaeb55bc1",
-          "handle": "deeplee",
-          "evm_address": "0xe6a9fd2d93317570c6f2255bfa2ccc7b5c9f4872",
-          "followers": 3,
-          "amount": 1360818.01,
-          "pnl": -80.3146,
-          "is_dev": 0,
-          "updated_ts": 1788621623466
-        },
-        {
-          "rank": 7,
-          "user_id": "3c2338b3-0370-58b3-902e-9f0e567bfd81",
-          "handle": "antieater",
-          "evm_address": "0x0e9cd074e9e933c8e549bb5ff62001d7d82a91a8",
-          "followers": 2,
-          "amount": 1163777.58,
-          "pnl": -38.0434,
-          "is_dev": 0,
-          "updated_ts": 1788621623466
-        },
-        {
-          "rank": 8,
-          "user_id": "06bf35c2-b3a3-5b80-b7ad-538946eba5ac",
-          "handle": "crl",
-          "evm_address": "0xbd9c208756f2c653d259374a3c8f8681ab68d839",
-          "followers": 2,
-          "amount": 1150041.95,
-          "pnl": -12.8612,
-          "is_dev": 0,
-          "updated_ts": 1788621623466
-        },
-        {
-          "rank": 9,
-          "user_id": "e57b6428-8b12-56b4-ad81-9f2e3b2413a0",
-          "handle": "99",
-          "evm_address": "0xa229ccd8c2bd971259f3d0717a24d614b9599c72",
-          "followers": 32,
-          "amount": 938520.16,
-          "pnl": 4.89697,
-          "is_dev": 0,
-          "updated_ts": 1788621623466
-        },
-        {
-          "rank": 10,
-          "user_id": "33c67f28-fcb8-54f9-8e9b-f9f6a3eea3b2",
-          "handle": "stake",
-          "evm_address": "0xcf5f106f55b9a3ab40c29dc14246ef2981e5e433",
-          "followers": 1,
-          "amount": 694440.28,
-          "pnl": 2.70958,
-          "is_dev": 0,
-          "updated_ts": 1788621623466
-        }
-      ],
-      "notifications": [
-        {
-          "ts": 1788621319713,
-          "mode": "off",
-          "op": "send",
-          "message_id": 62131971309,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nPerp Vaults (VAULTS) · 🟢 Robinhood Chain · MC: 🟢 <b>$54.33K</b>\nCA: <code>0x5912910a2b97b8282cb6853b4d01374a305b8f73</code>\n首次触发: 2026/09/05 23:15:17.999 HKT\n成交量: 5m $64.81K · 1h $182.88K\n持币初值（+1.7s）: 全链 204 · Fomo 34 (16.7%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+1.7s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: -$488.03 · 盈利 3 人\n  全平台24H PnL: <i>n/a</i>（0/10）\n\n健康: 🟢 实时源正常 · 持币覆盖 34/34 · Top10 10/10 · 浏览器→入库 97ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788621701744,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 62131971309,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nPerp Vaults (VAULTS) · 🟢 Robinhood Chain · MC: 🟢 <b>$71.29K</b>\nCA: <code>0x5912910a2b97b8282cb6853b4d01374a305b8f73</code>\n首次触发: 2026/09/05 23:15:17.999 HKT\n成交量: 5m $6.22K · 1h $197.62K\n持币初值（+1.7s）: 全链 204 · Fomo 34 (16.7%)\n持币复核（+6m24s）: 全链 199 · Fomo 37 (18.6%)\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+6m24s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: -$513.70 · 盈利 2 人\n  全平台24H PnL: +$95.29K · 整点对齐口径\n\n健康: 🟢 实时源正常 · 持币覆盖 37/37 · Top10 10/10 · 浏览器→入库 79ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": -513.69812,
-        "top10Profitable": 2,
-        "top10Count": 10,
-        "identified": 10,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0x7b7fb33ad9d3cd58d30252c8588ac1ad0a87e443",
-        "trigger_ts": 1788621290985,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 62129265108,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "ASTRA",
-        "name": "ASTRA",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788621292648,
-          "total_holders": 357,
-          "fomo_holders": 86,
-          "payload": {
-            "chainBlock": "55220009",
-            "chainBlockTs": 1788621291000,
-            "chainTakenTs": 1788621292640,
-            "fomoTakenTs": 1788621287426,
-            "boardTakenTs": 1788621288864,
-            "aggregatedTs": 1788621292648
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788621649070,
-          "total_holders": 466,
-          "fomo_holders": 130,
-          "payload": {
-            "chainBlock": "55222994",
-            "chainBlockTs": 1788621592000,
-            "chainTakenTs": 1788621596050,
-            "fomoTakenTs": 1788621597687,
-            "boardTakenTs": 1788621597727,
-            "aggregatedTs": 1788621649070
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 130,
-        "updated_ts": 1788621597740,
-        "resp_ts": 1788621597687,
-        "ingest_ms": 54
-      },
-      "top10": [
-        {
-          "rank": 1,
-          "user_id": "272704d5-2340-50e0-9410-363f75d195ea",
-          "handle": "seekingknowledge",
-          "evm_address": "0xac65673ed5ed369a01f152fc074bbeb5aed4fbad",
-          "followers": 2973,
-          "amount": 12970231.14,
-          "pnl": 67.0856,
-          "is_dev": 0,
-          "updated_ts": 1788621597740
-        },
-        {
-          "rank": 2,
-          "user_id": "234deebc-355d-5ee0-8f0e-f3c8bb79690e",
-          "handle": "BS",
-          "evm_address": "0x8515927f3a9d7182b672318c82be5d540ee98e07",
-          "followers": 3181,
-          "amount": 10944679.82,
-          "pnl": 413.396,
-          "is_dev": 0,
-          "updated_ts": 1788621597740
-        },
-        {
-          "rank": 3,
-          "user_id": "722d0183-1382-51b4-ad40-7f8c8009eb8c",
-          "handle": "JointDualLeopon",
-          "evm_address": "0x5771875ae24ffeef0d4a97a0f6ef182a59974fab",
-          "followers": 4,
-          "amount": 10323552.68,
-          "pnl": 222.896,
-          "is_dev": 0,
-          "updated_ts": 1788621597740
-        },
-        {
-          "rank": 4,
-          "user_id": "a09f9964-c574-5de8-bbc4-bf0d240143de",
-          "handle": "Valmora",
-          "evm_address": "0x42778af2d437e1beb3da2249b2f5001173bba2c8",
-          "followers": 0,
-          "amount": 3672915.08,
-          "pnl": 6.5913,
-          "is_dev": 0,
-          "updated_ts": 1788621597740
-        },
-        {
-          "rank": 5,
-          "user_id": "90b2393d-9959-550b-9d2c-456efcd77e04",
-          "handle": "SeekForMoney",
-          "evm_address": "0x7904a4880e18c8a04c1c978378a9f1e1d135e936",
-          "followers": 0,
-          "amount": 3477801.1,
-          "pnl": 117.279,
-          "is_dev": 0,
-          "updated_ts": 1788621597740
-        },
-        {
-          "rank": 6,
-          "user_id": "c2016084-c403-52ef-84e3-6aaaa2da047c",
-          "handle": "tha1lanky",
-          "evm_address": "0xf42fea50e55a58699bb95c409aa7ab8b7024da8f",
-          "followers": 7,
-          "amount": 2596535.5,
-          "pnl": 115.77,
-          "is_dev": 0,
-          "updated_ts": 1788621597740
-        },
-        {
-          "rank": 7,
-          "user_id": "757586fc-1ecd-53a6-bfe6-1f11e18c4aa8",
-          "handle": "MC",
-          "evm_address": "0x0c3ed98bfea5354aeaa791dfb3ca41a652418166",
-          "followers": 287,
-          "amount": 2310953.42,
-          "pnl": 126.612,
-          "is_dev": 0,
-          "updated_ts": 1788621597740
-        },
-        {
-          "rank": 8,
-          "user_id": "f2919ccd-a3a0-557c-a144-f9c3d7079299",
-          "handle": "apache251",
-          "evm_address": "0xe1dcf3d42e6e4e8a9c2f76ca7d78c092a3a370c9",
-          "followers": 3,
-          "amount": 2212356.62,
-          "pnl": 26.4884,
-          "is_dev": 0,
-          "updated_ts": 1788621597740
-        },
-        {
-          "rank": 9,
-          "user_id": "71279695-dd6b-5c4d-8b84-3193b44305c4",
-          "handle": "ndjdhhdhd",
-          "evm_address": "0x13933dca4fce683c1a6f9755e9563415b1de37c8",
-          "followers": 10,
-          "amount": 2198180.49,
-          "pnl": 62.9057,
-          "is_dev": 0,
-          "updated_ts": 1788621597740
-        },
-        {
-          "rank": 10,
-          "user_id": "e28a119f-5812-57b4-9366-6239f4dc0705",
-          "handle": "Godislove",
-          "evm_address": "0x6ff849919d964c690665ed8d2fa9d62e40c74693",
-          "followers": 2,
-          "amount": 1900797.93,
-          "pnl": 103.928,
-          "is_dev": 0,
-          "updated_ts": 1788621597740
-        }
-      ],
-      "notifications": [
-        {
-          "ts": 1788621292651,
-          "mode": "off",
-          "op": "send",
-          "message_id": 62129265108,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nASTRA (ASTRA) · 🟢 Robinhood Chain · MC: 🟢 <b>$71.17K</b>\nCA: <code>0x7b7fb33ad9d3cd58d30252c8588ac1ad0a87e443</code>\n首次触发: 2026/09/05 23:14:50.985 HKT\n成交量: 5m $174.38K · 1h $185.78K\n持币初值（+1.7s）: 全链 357 · Fomo 86 (24.1%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+1.7s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: -$221.36 · 盈利 2 人\n  全平台24H PnL: <i>n/a</i>（0/10）\n\n健康: 🟢 实时源正常 · 持币覆盖 47/86 · Top10 10/10 · 浏览器→入库 63ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788621649073,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 62129265108,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nASTRA (ASTRA) · 🟢 Robinhood Chain · MC: 🟡 <b>$135.59K</b>\nCA: <code>0x7b7fb33ad9d3cd58d30252c8588ac1ad0a87e443</code>\n首次触发: 2026/09/05 23:14:50.985 HKT\n成交量: 5m $73.89K · 1h $268.24K\n持币初值（+1.7s）: 全链 357 · Fomo 86 (24.1%)\n持币复核（+5m58s）: 全链 466 · Fomo 130 (27.9%)\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+5m58s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$1.26K · 盈利 10 人\n  全平台24H PnL: +$20.03K · 整点对齐口径\n\n健康: 🟢 实时源正常 · 持币覆盖 44/130 · Top10 10/10 · 浏览器→入库 54ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": 1262.9520000000002,
-        "top10Profitable": 10,
-        "top10Count": 10,
-        "identified": 10,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0xb06b1e58f5ba2a3df1ab74c01cb2a44c5395b3be",
-        "trigger_ts": 1788620681368,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 62068367707,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "BODKIN",
-        "name": "BODKIN",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788620683676,
-          "total_holders": 589,
-          "fomo_holders": 121,
-          "payload": {
-            "chainBlock": "55213953",
-            "chainBlockTs": 1788620681000,
-            "chainTakenTs": 1788620683668,
-            "fomoTakenTs": 1788620681993,
-            "boardTakenTs": 1788620672070,
-            "aggregatedTs": 1788620683676
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788621039236,
-          "total_holders": 1015,
-          "fomo_holders": 326,
-          "payload": {
-            "chainBlock": "55216923",
-            "chainBlockTs": 1788620981000,
-            "chainTakenTs": 1788620985977,
-            "fomoTakenTs": 1788620987549,
-            "boardTakenTs": 1788620987591,
-            "aggregatedTs": 1788621039236
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 326,
-        "updated_ts": 1788620987660,
-        "resp_ts": 1788620987549,
-        "ingest_ms": 114
-      },
-      "top10": [
-        {
-          "rank": 1,
-          "user_id": "4b5d8c3d-419c-5734-8a9b-830f2c1b4d9d",
-          "handle": "Miyamoto",
-          "evm_address": "0x862022f7ddc5d7b6944b28b9cf705951fa950f31",
-          "followers": 16217,
-          "amount": 13520384.5,
-          "pnl": 399.518,
-          "is_dev": 0,
-          "updated_ts": 1788620987660
-        },
-        {
-          "rank": 2,
-          "user_id": "faa7f6d7-8bde-5fe2-97d5-3e0efc5cfcf0",
-          "handle": "mannymanmo",
-          "evm_address": "0x87250b47028fb43c63465ec8dbe2c3faabe8bfbf",
-          "followers": 22,
-          "amount": 7575282.58,
-          "pnl": 951.498,
-          "is_dev": 0,
-          "updated_ts": 1788620987660
-        },
-        {
-          "rank": 3,
-          "user_id": "736da53a-25c7-5fb5-8f94-1765c7228085",
-          "handle": "NosyThickBat",
-          "evm_address": "0x992f75c17bde34f89cc505e019473bb1b643c051",
-          "followers": 18,
-          "amount": 7558092.77,
-          "pnl": 935.929,
-          "is_dev": 0,
-          "updated_ts": 1788620987660
-        },
-        {
-          "rank": 4,
-          "user_id": "9177a22f-3cf1-5fc4-ab53-14ae44e879f1",
-          "handle": "timewilltellem",
-          "evm_address": "0x5298cd2203c316bfec998fe5e99cc9363d733882",
-          "followers": 55,
-          "amount": 7356636.12,
-          "pnl": 659.998,
-          "is_dev": 0,
-          "updated_ts": 1788620987660
-        },
-        {
-          "rank": 5,
-          "user_id": "9ce972ed-40b2-5fcc-bd71-51ddea45528d",
-          "handle": "drgrey",
-          "evm_address": "0x89917f6a26c69fa69666a1567e99140282fd4bf3",
-          "followers": 10,
-          "amount": 6132254.69,
-          "pnl": 792.546,
-          "is_dev": 0,
-          "updated_ts": 1788620987660
-        },
-        {
-          "rank": 6,
-          "user_id": "763ee0f8-d4d9-55c5-bc48-27c5ead25076",
-          "handle": "negredegods",
-          "evm_address": "0x0d0fa80112d215f9673dfd73ac46e392845c1118",
-          "followers": 82,
-          "amount": 5376790.89,
-          "pnl": 1074.15,
-          "is_dev": 0,
-          "updated_ts": 1788620987660
-        },
-        {
-          "rank": 7,
           "user_id": "0f32dae6-b876-55db-b5f0-ae1510d79347",
           "handle": "IcyWetSole",
           "evm_address": "0x71d612eea956657c397bf8b910c33f72ffc76bd9",
-          "followers": 52,
-          "amount": 5057441.97,
-          "pnl": 863.426,
+          "followers": 92,
+          "amount": 347100.5,
+          "pnl": -0.587178,
           "is_dev": 0,
-          "updated_ts": 1788620987660
+          "updated_ts": 1788674812882
         },
         {
-          "rank": 8,
-          "user_id": "1724d071-f2a7-52c9-ab35-1ba671af2987",
-          "handle": "DearUpperSlug",
-          "evm_address": "0xe2d1ec3cbbf2bef8abbbe0fd8853da0d671ccb5c",
-          "followers": 1,
-          "amount": 4648242.87,
-          "pnl": 763.001,
+          "rank": 4,
+          "user_id": "a789bf27-ab73-5dde-b3f3-65a264435249",
+          "handle": "Toddtheprez",
+          "evm_address": "0x524597b12feda096838f86ab5932c21792253223",
+          "followers": 63,
+          "amount": 292171.11,
+          "pnl": 9.43827,
           "is_dev": 0,
-          "updated_ts": 1788620987660
+          "updated_ts": 1788674812882
         },
         {
-          "rank": 9,
-          "user_id": "d8e386e5-2e76-5a4c-90a9-56dd4f3fc045",
-          "handle": "snoopgorilla",
-          "evm_address": "0x8782df8c675ca21232d35014da25baf70ee28375",
-          "followers": 1,
-          "amount": 4328593.56,
-          "pnl": 336.008,
+          "rank": 5,
+          "user_id": "c0e921dc-b735-5291-a609-f76adc7f421b",
+          "handle": "yencreb",
+          "evm_address": "0xf172fb649b7f13773f282cb334c48731e0da2604",
+          "followers": 9,
+          "amount": 226964.09,
+          "pnl": -7.35417,
           "is_dev": 0,
-          "updated_ts": 1788620987660
+          "updated_ts": 1788674812882
         },
         {
-          "rank": 10,
-          "user_id": "69d88138-6270-5e3d-817f-7428b5f72817",
-          "handle": "King Atlas",
-          "evm_address": "0xe67f10cd843cf381f57c91b697624badd08136e9",
-          "followers": 17,
-          "amount": 4320178.26,
-          "pnl": 568.205,
+          "rank": 6,
+          "user_id": "5c8e8106-2dd8-5674-9a1d-d9c636340e87",
+          "handle": "wealth fumbler",
+          "evm_address": "0x3d5fbd433ff707b0ec1dea51dc3a47cbbb46e535",
+          "followers": 79,
+          "amount": 164526.27,
+          "pnl": 12.0043,
           "is_dev": 0,
-          "updated_ts": 1788620987660
-        }
-      ],
-      "notifications": [
-        {
-          "ts": 1788620683677,
-          "mode": "off",
-          "op": "send",
-          "message_id": 62068367707,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nBODKIN (BODKIN) · 🟢 Robinhood Chain · MC: 🟡 <b>$118.78K</b>\nCA: <code>0xb06b1e58f5ba2a3df1ab74c01cb2a44c5395b3be</code>\n首次触发: 2026/09/05 23:04:41.368 HKT\n成交量: 5m $111.15K · 1h $116.35K\n持币初值（+2.3s）: 全链 589 · Fomo 121 (20.5%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+2.3s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$987.02 · 盈利 10 人\n  全平台24H PnL: <i>n/a</i>（0/10）\n\n健康: 🟢 实时源正常 · 持币覆盖 44/121 · Top10 10/10 · 浏览器→入库 8ms · <i>禁发送演练</i>"
+          "updated_ts": 1788674812882
         },
         {
-          "ts": 1788621039242,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 62068367707,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nBODKIN (BODKIN) · 🟢 Robinhood Chain · MC: 🟡 <b>$301.02K</b>\nCA: <code>0xb06b1e58f5ba2a3df1ab74c01cb2a44c5395b3be</code>\n首次触发: 2026/09/05 23:04:41.368 HKT\n成交量: 5m $219.83K · 1h $374.44K\n持币初值（+2.3s）: 全链 589 · Fomo 121 (20.5%)\n持币复核（+5m58s）: 全链 1015 · Fomo 326 (32.1%)\n\nFomo 24H盈利榜持有人: 已确认至少 2 人\n• #49 <b>Miyamoto</b> · 13.52M BODKIN · 粉丝 16.22K · 全平台24h +$317.73K <i>(持仓据 Fomo 自报)</i>\n• #72 <b>yl</b> · 1.41M BODKIN · 粉丝 237 · 全平台24h +$220.89K <i>(持仓据 Fomo 自报)</i>\nTop10持币账户（+5m58s）· 账"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": 7344.279000000001,
-        "top10Profitable": 10,
-        "top10Count": 10,
-        "identified": 10,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0x6c09a2a9585839b34a7ab31b07bf8cb169e7d71a",
-        "trigger_ts": 1788620643322,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 62064543406,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "NOTHING",
-        "name": "how can I lose, I started with nothing",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788620645431,
-          "total_holders": 102,
-          "fomo_holders": 0,
-          "payload": {
-            "chainBlock": "55213580",
-            "chainBlockTs": 1788620643000,
-            "chainTakenTs": 1788620645430,
-            "fomoTakenTs": 1788620642650,
-            "boardTakenTs": 1788620642700,
-            "aggregatedTs": 1788620645431
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788620947465,
-          "total_holders": 121,
-          "fomo_holders": 0,
-          "payload": {
-            "chainBlock": "55216544",
-            "chainBlockTs": 1788620943000,
-            "chainTakenTs": 1788620945911,
-            "fomoTakenTs": 1788620947322,
-            "boardTakenTs": 1788620902391,
-            "aggregatedTs": 1788620947465
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 0,
-        "updated_ts": 1788620947360,
-        "resp_ts": 1788620947322,
-        "ingest_ms": 38
-      },
-      "top10": [],
-      "notifications": [
-        {
-          "ts": 1788620645434,
-          "mode": "off",
-          "op": "send",
-          "message_id": 62064543406,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nhow can I lose, I started with nothing (NOTHING) · 🟢 Robinhood Chain · MC: 🟢 <b>$90.57K</b>\nCA: <code>0x6c09a2a9585839b34a7ab31b07bf8cb169e7d71a</code>\n首次触发: 2026/09/05 23:04:03.322 HKT\n成交量: 5m $27.60K · 1h $124.64K\n持币初值（+2.1s）: 全链 102 · Fomo 0 (0.0%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+2.1s）· 账户识别 0/0\n  该币累计收益（已实现+未实现）: <i>n/a</i>（0/0）\n  全平台24H PnL: <i>n/a</i>（0/0）\n\n健康: 🟢 实时源正常 · 持币覆盖 0/0 · Top10 0/0 · 浏览器→入库 30ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788620947469,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 62064543406,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nhow can I lose, I started with nothing (NOTHING) · 🟢 Robinhood Chain · MC: 🟡 <b>$141.19K</b>\nCA: <code>0x6c09a2a9585839b34a7ab31b07bf8cb169e7d71a</code>\n首次触发: 2026/09/05 23:04:03.322 HKT\n成交量: 5m $41.63K · 1h $166.45K\n持币初值（+2.1s）: 全链 102 · Fomo 0 (0.0%)\n持币复核（+5m4s）: 全链 121 · Fomo 0 (0.0%)\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+5m4s）· 账户识别 0/0\n  该币累计收益（已实现+未实现）: <i>n/a</i>（0/0）\n  全平台24H PnL: <i>n/a</i>（0/0）\n\n健康: 🟢 实时源正常 · 持币覆盖 0/0 · Top10 0/0 · 浏览器→入库 38ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": 0,
-        "top10Profitable": 0,
-        "top10Count": 0,
-        "identified": 0,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0x1f49d48125e651a140f3d33aca35bd8c4660a53f",
-        "trigger_ts": 1788619874575,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 61987714005,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "FRANKLIN",
-        "name": "Franklin",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788619877139,
-          "total_holders": 221,
-          "fomo_holders": 56,
-          "payload": {
-            "chainBlock": "55205944",
-            "chainBlockTs": 1788619874000,
-            "chainTakenTs": 1788619877135,
-            "fomoTakenTs": 1788619874387,
-            "boardTakenTs": 1788619874405,
-            "aggregatedTs": 1788619877139
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788620232181,
-          "total_holders": 219,
-          "fomo_holders": 55,
-          "payload": {
-            "chainBlock": "55208942",
-            "chainBlockTs": 1788620176000,
-            "chainTakenTs": 1788620179125,
-            "fomoTakenTs": 1788620180716,
-            "boardTakenTs": 1788620180792,
-            "aggregatedTs": 1788620232181
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 55,
-        "updated_ts": 1788620180796,
-        "resp_ts": 1788620180716,
-        "ingest_ms": 81
-      },
-      "top10": [
-        {
-          "rank": 1,
-          "user_id": "54d497a2-958d-5f88-8957-7b166da2a3bc",
-          "handle": "BoredRichEgret",
-          "evm_address": "0x87c6d90b65c287c8f5237d1a756cd6533bbffd6b",
-          "followers": 285,
-          "amount": 25250685.86,
-          "pnl": -335.982,
-          "is_dev": 0,
-          "updated_ts": 1788620180796
-        },
-        {
-          "rank": 2,
-          "user_id": "7c1ef615-693b-5752-b0f1-155a9f0c2fe5",
-          "handle": "cryptofan 81",
-          "evm_address": "0xaf1eb9ee3dd87ba3536fdf6d45a0d630ea883e7a",
-          "followers": 39,
-          "amount": 10246444.53,
-          "pnl": 120.57,
-          "is_dev": 0,
-          "updated_ts": 1788620180796
-        },
-        {
-          "rank": 3,
-          "user_id": "d37f21bb-e39d-5c8a-a6d1-368d10801e0e",
-          "handle": "lotfimafia",
-          "evm_address": "0x283432bf556868dda57d23dda25c86b652855e0e",
+          "rank": 7,
+          "user_id": "278aa4f9-8602-5a5f-88d8-e0446fdbc96a",
+          "handle": "Cyclone(✸,✸)",
+          "evm_address": "0x8386ee3175ca264d9e183d28a59ca138b870ca77",
           "followers": 0,
-          "amount": 8856378.69,
-          "pnl": -60.7122,
+          "amount": 149203.93,
+          "pnl": -11.6786,
           "is_dev": 0,
-          "updated_ts": 1788620180796
-        },
-        {
-          "rank": 4,
-          "user_id": "e229785e-eae4-5278-8cb4-a4a9491d3158",
-          "handle": "GREEKGOD",
-          "evm_address": "0xa2ae73d7cdafb15394a031d3353161c07688c065",
-          "followers": 17,
-          "amount": 4087477.19,
-          "pnl": -41.9226,
-          "is_dev": 0,
-          "updated_ts": 1788620180796
-        },
-        {
-          "rank": 5,
-          "user_id": "fafa733c-100b-551c-bb94-11d845ca470c",
-          "handle": "Anticipate",
-          "evm_address": "0x37d92b1443267b2d0d61f7364867db614538f4fe",
-          "followers": 6,
-          "amount": 3525458.43,
-          "pnl": -6.76874,
-          "is_dev": 0,
-          "updated_ts": 1788620180796
-        },
-        {
-          "rank": 6,
-          "user_id": "beffbcd6-0e8b-5df7-8528-85baaa22c171",
-          "handle": "Uğur",
-          "evm_address": "0xc4012012292eac71d64cca78e940be16c3ed7a0a",
-          "followers": 65,
-          "amount": 3376395.5,
-          "pnl": -10.7829,
-          "is_dev": 0,
-          "updated_ts": 1788620180796
-        },
-        {
-          "rank": 7,
-          "user_id": "aacc0299-c8a0-5752-8f99-3fbdd7785db9",
-          "handle": "blok",
-          "evm_address": "0x5c4817128ce02e405b0a45efdc24c827f1c2e51e",
-          "followers": 8,
-          "amount": 3047349.6,
-          "pnl": -19.4161,
-          "is_dev": 0,
-          "updated_ts": 1788620180796
+          "updated_ts": 1788674812882
         },
         {
           "rank": 8,
-          "user_id": "053713a9-63a5-5a1c-a7aa-fd681d58dbf5",
-          "handle": "vmsv",
-          "evm_address": "0xea565d2195b7fe51d7e57d38ecf8462936cf7a41",
-          "followers": 22,
-          "amount": 2413957.84,
-          "pnl": -34.7043,
+          "user_id": "04e83f24-30c3-5ee6-9a4e-adf4aecbec11",
+          "handle": "hennessenn",
+          "evm_address": "0xd2e33f2c593fbefa023a61c80781b9b23755cf19",
+          "followers": 222,
+          "amount": 84179.83,
+          "pnl": 5.65527,
           "is_dev": 0,
-          "updated_ts": 1788620180796
+          "updated_ts": 1788674812882
         },
         {
           "rank": 9,
-          "user_id": "7c1e40ff-6789-55a5-88ad-19d914963258",
-          "handle": "Neraldo Catalina",
-          "evm_address": "0x647426b57a635016ec0f56c06418dffc90b71f53",
-          "followers": 20,
-          "amount": 2164770.41,
-          "pnl": -0.646333,
-          "is_dev": 0,
-          "updated_ts": 1788620180796
-        },
-        {
-          "rank": 10,
-          "user_id": "ac56b496-4579-5e38-a22f-865d8b086985",
-          "handle": "TOPELITES",
-          "evm_address": "0x4b68f823ba93fa2dbfa989848aa901b4531d9f52",
-          "followers": 34,
-          "amount": 2111621.7,
-          "pnl": -5.31735,
-          "is_dev": 0,
-          "updated_ts": 1788620180796
-        }
-      ],
-      "notifications": [
-        {
-          "ts": 1788619877140,
-          "mode": "off",
-          "op": "send",
-          "message_id": 61987714005,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nFranklin (FRANKLIN) · 🟢 Robinhood Chain · MC: 🟢 <b>$38.13K</b>\nCA: <code>0x1f49d48125e651a140f3d33aca35bd8c4660a53f</code>\n首次触发: 2026/09/05 22:51:14.575 HKT\n成交量: 5m $30.19K · 1h $52.38K\n持币初值（+2.6s）: 全链 221 · Fomo 56 (25.3%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+2.6s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$100.25 · 盈利 6 人\n  全平台24H PnL: <i>n/a</i>（0/10）\n\n健康: 🟢 实时源正常 · 持币覆盖 50/56 · Top10 10/10 · 浏览器→入库 66ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788620232185,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 61987714005,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nFranklin (FRANKLIN) · 🟢 Robinhood Chain · MC: 🟢 <b>$24.49K</b>\nCA: <code>0x1f49d48125e651a140f3d33aca35bd8c4660a53f</code>\n首次触发: 2026/09/05 22:51:14.575 HKT\n成交量: 5m $6.50K · 1h $63.83K\n持币初值（+2.6s）: 全链 221 · Fomo 56 (25.3%)\n持币复核（+5m58s）: 全链 219 · Fomo 55 (25.1%)\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+5m58s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: -$395.68 · 盈利 1 人\n  全平台24H PnL: +$13.32K · 整点对齐口径\n\n健康: 🟢 实时源正常 · 持币覆盖 48/55 · Top10 10/10 · 浏览器→入库 81ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": -395.682523,
-        "top10Profitable": 1,
-        "top10Count": 10,
-        "identified": 10,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0x363b0991194cece2742aa63ce576971208fe6629",
-        "trigger_ts": 1788619656414,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 61965886704,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "PILL",
-        "name": "Pill",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788619658864,
-          "total_holders": 105,
-          "fomo_holders": 0,
-          "payload": {
-            "chainBlock": "55203797",
-            "chainBlockTs": 1788619656000,
-            "chainTakenTs": 1788619658863,
-            "fomoTakenTs": 1788619655955,
-            "boardTakenTs": 1788619657237,
-            "aggregatedTs": 1788619658864
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788619960065,
-          "total_holders": 3,
-          "fomo_holders": 0,
-          "payload": {
-            "chainBlock": "55206758",
-            "chainBlockTs": 1788619956000,
-            "chainTakenTs": 1788619958490,
-            "fomoTakenTs": 1788619959948,
-            "boardTakenTs": 1788619939291,
-            "aggregatedTs": 1788619960065
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 0,
-        "updated_ts": 1788619959956,
-        "resp_ts": 1788619959948,
-        "ingest_ms": 8
-      },
-      "top10": [],
-      "notifications": [
-        {
-          "ts": 1788619658867,
-          "mode": "off",
-          "op": "send",
-          "message_id": 61965886704,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nPill (PILL) · 🟢 Robinhood Chain · MC: 🟢 <b>$75.14K</b>\nCA: <code>0x363b0991194cece2742aa63ce576971208fe6629</code>\n首次触发: 2026/09/05 22:47:36.414 HKT\n成交量: 5m $35.34K · 1h $74.53K\n持币初值（+2.5s）: 全链 105 · Fomo 0 (0.0%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+2.5s）· 账户识别 0/0\n  该币累计收益（已实现+未实现）: <i>n/a</i>（0/0）\n  全平台24H PnL: <i>n/a</i>（0/0）\n\n健康: 🟢 实时源正常 · 持币覆盖 0/0 · Top10 0/0 · 浏览器→入库 2ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788619960068,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 61965886704,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nPill (PILL) · 🟢 Robinhood Chain · MC: 🟢 <b>$7.02K</b>\nCA: <code>0x363b0991194cece2742aa63ce576971208fe6629</code>\n首次触发: 2026/09/05 22:47:36.414 HKT\n成交量: 5m $17.64K · 1h $92.86K\n持币初值（+2.5s）: 全链 105 · Fomo 0 (0.0%)\n持币复核（+5m4s）: 全链 3 · Fomo 0 (0.0%)\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+5m4s）· 账户识别 0/0\n  该币累计收益（已实现+未实现）: <i>n/a</i>（0/0）\n  全平台24H PnL: <i>n/a</i>（0/0）\n\n健康: 🟢 实时源正常 · 持币覆盖 0/0 · Top10 0/0 · 浏览器→入库 8ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": 0,
-        "top10Profitable": 0,
-        "top10Count": 0,
-        "identified": 0,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0x8014e87fb9d62f698ec85ba08d6b702d9ec977c5",
-        "trigger_ts": 1788619516213,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 61951811603,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "USDC",
-        "name": "USDC",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788619518115,
-          "total_holders": 206,
-          "fomo_holders": 2,
-          "payload": {
-            "chainBlock": "55202379",
-            "chainBlockTs": 1788619516000,
-            "chainTakenTs": 1788619518111,
-            "fomoTakenTs": 1788619508517,
-            "boardTakenTs": 1788619508599,
-            "aggregatedTs": 1788619518115
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788619872893,
-          "total_holders": 204,
-          "fomo_holders": 14,
-          "payload": {
-            "chainBlock": "55205370",
-            "chainBlockTs": 1788619816000,
-            "chainTakenTs": 1788619818845,
-            "fomoTakenTs": 1788619820337,
-            "boardTakenTs": 1788619820423,
-            "aggregatedTs": 1788619872893
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 14,
-        "updated_ts": 1788619820403,
-        "resp_ts": 1788619820337,
-        "ingest_ms": 66
-      },
-      "top10": [
-        {
-          "rank": 1,
-          "user_id": "272704d5-2340-50e0-9410-363f75d195ea",
-          "handle": "seekingknowledge",
-          "evm_address": "0xac65673ed5ed369a01f152fc074bbeb5aed4fbad",
-          "followers": 2947,
-          "amount": 9604474.22,
-          "pnl": -639.328,
-          "is_dev": 0,
-          "updated_ts": 1788619820403
-        },
-        {
-          "rank": 2,
-          "user_id": "f2919ccd-a3a0-557c-a144-f9c3d7079299",
-          "handle": "apache251",
-          "evm_address": "0xe1dcf3d42e6e4e8a9c2f76ca7d78c092a3a370c9",
-          "followers": 3,
-          "amount": 2989607.95,
-          "pnl": -130.2,
-          "is_dev": 0,
-          "updated_ts": 1788619820403
-        },
-        {
-          "rank": 3,
-          "user_id": "882ade40-e128-5451-aa79-a2f23391c746",
-          "handle": "Hamza Chaudry",
-          "evm_address": "0xb217689b0f7d22a3194e94115d11243a77bb54ef",
-          "followers": 2,
-          "amount": 299756.41,
-          "pnl": -22.1683,
-          "is_dev": 0,
-          "updated_ts": 1788619820403
-        },
-        {
-          "rank": 4,
-          "user_id": "7eedaac5-d43c-5891-a4a3-6fbfcbe2ecf8",
-          "handle": "MassRoundTiger",
-          "evm_address": "0x874d6134dd4fc5cfed6ef6ec3857950a8a4db649",
+          "user_id": "10afa5cf-0c85-5e2f-a8a9-b6e2d790d676",
+          "handle": "Ak6780",
+          "evm_address": "0x4550a25c6d18217696063539fe8ece0229f1ad3c",
           "followers": 0,
-          "amount": 299586.25,
-          "pnl": -22.1049,
+          "amount": 44110.81,
+          "pnl": -1.21585,
           "is_dev": 0,
-          "updated_ts": 1788619820403
-        },
-        {
-          "rank": 5,
-          "user_id": "475d6734-90c4-5d37-a3c5-0e950deddc90",
-          "handle": "chenjie888",
-          "evm_address": "0x35808d1f520c275c7cbc3910ec90ec00611bb989",
-          "followers": 4,
-          "amount": 273387.51,
-          "pnl": -25.3719,
-          "is_dev": 0,
-          "updated_ts": 1788619820403
-        },
-        {
-          "rank": 6,
-          "user_id": "678155e1-8bb7-57fe-ab73-ac50ca53a9be",
-          "handle": "FinalSilkyTakin",
-          "evm_address": "0x08a36b4a8d5607e31f527f7faef96e7e154767d7",
-          "followers": 1,
-          "amount": 201728.04,
-          "pnl": -18.8922,
-          "is_dev": 0,
-          "updated_ts": 1788619820403
-        },
-        {
-          "rank": 7,
-          "user_id": "86c4bad7-dfbb-5d8b-b127-f4fe6da49569",
-          "handle": "AlertPinkWren",
-          "evm_address": "0xd2216884bacf47591069edf22c8a0462716e8696",
-          "followers": 11,
-          "amount": 110924.13,
-          "pnl": -9.04501,
-          "is_dev": 0,
-          "updated_ts": 1788619820403
-        },
-        {
-          "rank": 8,
-          "user_id": "6bc445ef-32d7-57fc-a0d8-3ca43c183fc4",
-          "handle": "ok",
-          "evm_address": "0xe1bc0ee492b5a2c5c62554bf5179f8fb047c5a4f",
-          "followers": 5,
-          "amount": 110862.2,
-          "pnl": -14.1304,
-          "is_dev": 0,
-          "updated_ts": 1788619820403
-        },
-        {
-          "rank": 9,
-          "user_id": "3923adad-1ff9-557a-bd55-0c0cfaff6f05",
-          "handle": "DueMajorUrial",
-          "evm_address": "0x5f165082df0f51a9a56357a095ad9f36d5a9e85e",
-          "followers": 1,
-          "amount": 98331.45,
-          "pnl": -15.2673,
-          "is_dev": 0,
-          "updated_ts": 1788619820403
+          "updated_ts": 1788674812882
         },
         {
           "rank": 10,
-          "user_id": "e8c789b8-4eb9-506b-bfea-8cc22a919960",
-          "handle": "ChrisLS",
-          "evm_address": "0xb060359e11c0d5ef9ade633779d55aa16a9063f0",
-          "followers": 1,
-          "amount": 76807.42,
-          "pnl": -2.26141,
+          "user_id": "ea8e3bdc-2b99-5ad5-966c-a7b4d97c40be",
+          "handle": "RipeAddedTakin",
+          "evm_address": "0xab0987507b96730f9b68b5a7d5126f8e3832d0b6",
+          "followers": 0,
+          "amount": 39537.52,
+          "pnl": -1.62546,
           "is_dev": 0,
-          "updated_ts": 1788619820403
+          "updated_ts": 1788674812882
         }
       ],
       "notifications": [
         {
-          "ts": 1788619518116,
+          "ts": 1788674511367,
           "mode": "off",
           "op": "send",
-          "message_id": 61951811603,
+          "message_id": 67451136703,
           "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nUSDC (USDC) · 🟢 Robinhood Chain · MC: 🟡 <b>$162.75K</b>\nCA: <code>0x8014e87fb9d62f698ec85ba08d6b702d9ec977c5</code>\n首次触发: 2026/09/05 22:45:16.213 HKT\n成交量: 5m $87.36K · 1h $87.36K\n持币初值（+1.9s）: 全链 206 · Fomo 2 (1.0%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+1.9s）· 账户识别 2/2\n  该币累计收益（已实现+未实现）: +$90.65 · 盈利 1 人\n  全平台24H PnL: <i>n/a</i>（0/2）\n\n健康: 🟢 实时源正常 · 持币覆盖 2/2 · Top10 2/2 · 浏览器→入库 85ms · <i>禁发送演练</i>"
+          "detail": "<b>FOMO NOW</b>\nasd (asd) · 🟢 Robinhood Chain · MC: 🟢 <b>$58.27K</b>\nCA: <code>0x5422663e07d6fc217b0af4532fb1a6c9c7de5555</code>\n首次触发: 2026/09/06 14:01:49.049 HKT\n成交量: 5m $21.79K · 1h $58.31K\n持币初值（+2.3s）: 全链 197 · Fomo 2 (1.0%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+2.3s）· 账户识别 2/2\n  该币累计收益（已实现+未实现）: +$1.53K · 盈利 1 人\n  全平台24H PnL: <i>采集中…</i>（0/2）· 缺 2 人的收益记录\n\n健康: 🟢 实时源正常 · 持币覆盖 2/2 · Top10 2/2 · 浏览器→入库 5ms · <i>禁发送演练</i>"
         },
         {
-          "ts": 1788619872898,
+          "ts": 1788674812939,
           "mode": "off",
           "op": "edit",
-          "message_id": 61951811603,
+          "message_id": 67451136703,
           "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nUSDC (USDC) · 🟢 Robinhood Chain · MC: 🟡 <b>$108.40K</b>\nCA: <code>0x8014e87fb9d62f698ec85ba08d6b702d9ec977c5</code>\n首次触发: 2026/09/05 22:45:16.213 HKT\n成交量: 5m $102.29K · 1h $285.81K\n持币初值（+1.9s）: 全链 206 · Fomo 2 (1.0%)\n持币复核（+5m57s）: 全链 204 · Fomo 14 (6.9%)\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+5m57s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: -$898.77 · 盈利 0 人\n  全平台24H PnL: +$24.53K · 整点对齐口径\n\n健康: 🟢 实时源正常 · 持币覆盖 14/14 · Top10 10/10 · 浏览器→入库 66ms · <i>禁发送演练</i>"
+          "detail": "<b>FOMO NOW</b>\nasd (asd) · 🟢 Robinhood Chain · MC: 🟢 <b>$58.27K</b>\nCA: <code>0x5422663e07d6fc217b0af4532fb1a6c9c7de5555</code>\n首次触发: 2026/09/06 14:01:49.049 HKT\n成交量: 5m $21.79K · 1h $58.31K\n持币初值（+2.3s）: 全链 197 · Fomo 2 (1.0%)\n持币复核（+5m4s）: 全链 417 · Fomo 10 (2.4%)\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+5m4s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$2.68K · 盈利 4 人\n  全平台24H PnL: <i>采集中…</i>（0/10）· 缺 10 人的收益记录\n\n健康: 🟢 实时源正常 · 持币覆盖 10/10 · Top10 10/10 · 浏览器→入库 22ms · <i>禁发送演练</i>"
         }
       ],
       "recompute": {
-        "top10TokenPnlSum": -898.7694200000001,
-        "top10Profitable": 0,
-        "top10Count": 10,
-        "identified": 10,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
-      }
-    },
-    {
-      "alert": {
-        "ca": "0x4040afedc4a377808ae5defb76cba70823f993c5",
-        "trigger_ts": 1788619398092,
-        "status": "completed",
-        "collection_state": "complete",
-        "attempts": 0,
-        "message_id": 61940026502,
-        "notify_mode": "off",
-        "last_error": null
-      },
-      "token": {
-        "symbol": "STROLL",
-        "name": "STROLL",
-        "decimals": 18,
-        "total_supply": "1000000000000000000000000000"
-      },
-      "stages": [
-        {
-          "stage": "initial",
-          "taken_ts": 1788619400264,
-          "total_holders": 101,
-          "fomo_holders": 31,
-          "payload": {
-            "chainBlock": "55201227",
-            "chainBlockTs": 1788619398000,
-            "chainTakenTs": 1788619400260,
-            "fomoTakenTs": 1788619393193,
-            "boardTakenTs": 1788619321440,
-            "aggregatedTs": 1788619400264
-          }
-        },
-        {
-          "stage": "recheck",
-          "taken_ts": 1788619756326,
-          "total_holders": 124,
-          "fomo_holders": 46,
-          "payload": {
-            "chainBlock": "55204205",
-            "chainBlockTs": 1788619698000,
-            "chainTakenTs": 1788619701426,
-            "fomoTakenTs": 1788619703411,
-            "boardTakenTs": 1788619704305,
-            "aggregatedTs": 1788619756326
-          }
-        }
-      ],
-      "fomoSource": {
-        "fomo_holders": 46,
-        "updated_ts": 1788619704225,
-        "resp_ts": 1788619703411,
-        "ingest_ms": 824
-      },
-      "top10": [
-        {
-          "rank": 1,
-          "user_id": "de9521e8-bbea-5386-9839-851c2a4d4da9",
-          "handle": "BANKER",
-          "evm_address": "0x6693ba851efb3b087384fc0cba20ff50da3e1d3a",
-          "followers": 9273,
-          "amount": 30000000,
-          "pnl": -1905.84,
-          "is_dev": 0,
-          "updated_ts": 1788619704225
-        },
-        {
-          "rank": 2,
-          "user_id": "8e4f207f-5542-5ffe-9d68-4c12e51345f1",
-          "handle": "??",
-          "evm_address": "0x7f5f757846e697ad4031417ff670358eea5def65",
-          "followers": 554,
-          "amount": 17835396.04,
-          "pnl": 7423.36,
-          "is_dev": 0,
-          "updated_ts": 1788619704225
-        },
-        {
-          "rank": 3,
-          "user_id": "9d22c551-ff8b-5b34-bf6f-b142d768ce2d",
-          "handle": "whimsybrookie",
-          "evm_address": "0x294f702aac13d3ad53c2165059ae95d8761bf79f",
-          "followers": 163,
-          "amount": 12222223.15,
-          "pnl": 1497.82,
-          "is_dev": 0,
-          "updated_ts": 1788619704225
-        },
-        {
-          "rank": 4,
-          "user_id": "301ddb5f-7567-5171-b357-f9724839011d",
-          "handle": "IMCRAVINGXHOCOLATECAKE",
-          "evm_address": "0x266c51ad3d0961571f19c6de9bd0f94224573628",
-          "followers": 5,
-          "amount": 11439659.1,
-          "pnl": 1375.46,
-          "is_dev": 0,
-          "updated_ts": 1788619704225
-        },
-        {
-          "rank": 5,
-          "user_id": "7518f89a-e9ac-5ff7-b862-8ffc92443b0a",
-          "handle": "Levi",
-          "evm_address": "0x655bcb103bc0a735096583345e381cc8d247d165",
-          "followers": 28,
-          "amount": 7391412.68,
-          "pnl": -443.873,
-          "is_dev": 0,
-          "updated_ts": 1788619704225
-        },
-        {
-          "rank": 6,
-          "user_id": "e282845d-9b43-5b79-821a-2b121aad117d",
-          "handle": "FirmTotalKite",
-          "evm_address": "0xa90a7a50e694f88a0a46fea8b16149cd7b5426fe",
-          "followers": 7,
-          "amount": 5361140.69,
-          "pnl": -215.64,
-          "is_dev": 0,
-          "updated_ts": 1788619704225
-        },
-        {
-          "rank": 7,
-          "user_id": "81aba266-eb00-524d-8b69-5da7e1237526",
-          "handle": "MajorWholeFly",
-          "evm_address": "0x553c9ada6a27a1903018261ee245412b374d53da",
-          "followers": 2,
-          "amount": 5000000,
-          "pnl": 654.05,
-          "is_dev": 0,
-          "updated_ts": 1788619704225
-        },
-        {
-          "rank": 8,
-          "user_id": "0e4789fa-8dd8-5d8f-86b3-d26fc735fe70",
-          "handle": "illuminasol",
-          "evm_address": "0xea9fee1a85e7b7871b3c9250174e297ac2c14f0e",
-          "followers": 1,
-          "amount": 3804525.11,
-          "pnl": -119.133,
-          "is_dev": 0,
-          "updated_ts": 1788619704225
-        },
-        {
-          "rank": 9,
-          "user_id": "16ea4b99-c61f-5061-9019-221771ef106d",
-          "handle": "N.W.A",
-          "evm_address": "0x7ae4baf1f1fbd3ff12985408f9f8bf67b567b876",
-          "followers": 8,
-          "amount": 3715344.82,
-          "pnl": -574.835,
-          "is_dev": 0,
-          "updated_ts": 1788619704225
-        },
-        {
-          "rank": 10,
-          "user_id": "7df7ec6f-d3a9-52d0-9f40-931b5d4b045e",
-          "handle": "pistolbangxx",
-          "evm_address": "0xaf8d534e2b5117a1d145f6519274d3a291241394",
-          "followers": 256,
-          "amount": 3572386.38,
-          "pnl": -317.589,
-          "is_dev": 0,
-          "updated_ts": 1788619704225
-        }
-      ],
-      "notifications": [
-        {
-          "ts": 1788619400265,
-          "mode": "off",
-          "op": "send",
-          "message_id": 61940026502,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nSTROLL (STROLL) · 🟢 Robinhood Chain · MC: 🟡 <b>$210.03K</b>\nCA: <code>0x4040afedc4a377808ae5defb76cba70823f993c5</code>\n首次触发: 2026/09/05 22:43:18.092 HKT\n成交量: 5m $84.98K · 1h $84.98K\n持币初值（+2.2s）: 全链 101 · Fomo 31 (30.7%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+2.2s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$13.55K · 盈利 6 人\n  全平台24H PnL: <i>n/a</i>（0/10）\n\n健康: 🟢 实时源正常 · 持币覆盖 31/31 · Top10 10/10 · 浏览器→入库 4ms · <i>禁发送演练</i>"
-        },
-        {
-          "ts": 1788619756328,
-          "mode": "off",
-          "op": "edit",
-          "message_id": 61940026502,
-          "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nSTROLL (STROLL) · 🟢 Robinhood Chain · MC: 🟡 <b>$156.50K</b>\nCA: <code>0x4040afedc4a377808ae5defb76cba70823f993c5</code>\n首次触发: 2026/09/05 22:43:18.092 HKT\n成交量: 5m $14.06K · 1h $107.08K\n持币初值（+2.2s）: 全链 101 · Fomo 31 (30.7%)\n持币复核（+5m58s）: 全链 124 · Fomo 46 (37.1%)\n\nFomo 24H盈利榜持有人: 0 人\nTop10持币账户（+5m58s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$7.37K · 盈利 4 人\n  全平台24H PnL: +$14.41K · 整点对齐口径\n\n健康: 🟢 实时源正常 · 持币覆盖 46/46 · Top10 10/10 · 浏览器→入库 824ms · <i>禁发送演练</i>"
-        }
-      ],
-      "recompute": {
-        "top10TokenPnlSum": 7373.78,
+        "top10TokenPnlSum": 2680.8816819999997,
         "top10Profitable": 4,
         "top10Count": 10,
         "identified": 10,
         "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
+        "platformProfitable": null,
+        "platformCovered": 0,
+        "platformReason": "缺 10 人的收益记录",
+        "platformNote": "全平台 24H 收益默认开启，在复核之外单独取；逐人序列的可追溯样例见 scripts/trace-pnl.ts"
       }
     },
     {
       "alert": {
-        "ca": "0x4d3518f3aa6aee860f4866fd48f98855602604ee",
-        "trigger_ts": 1788619282921,
+        "ca": "0xac9a8dc5b9bf3f87bc0b7e05b1b5bd420a776e06",
+        "trigger_ts": 1788673438034,
         "status": "completed",
         "collection_state": "complete",
         "attempts": 0,
-        "message_id": 61928430101,
+        "message_id": 67343967802,
         "notify_mode": "off",
-        "last_error": null
+        "last_error": null,
+        "original_due_ts": 1788673739034,
+        "pnl_state": "ready",
+        "pnl_deadline_ts": 1788674339034
+      },
+      "timing": {
+        "triggerTs": 1788673438034,
+        "originalDueTs": 1788673739034,
+        "initial": {
+          "holdersDoneTs": 1788673439677,
+          "offsetMs": 1643,
+          "total": 900,
+          "times": {
+            "chainBlock": "55736937",
+            "chainBlockTs": 1788673435000,
+            "chainTakenTs": 1788673439672,
+            "fomoRespTs": 1788673436552,
+            "boardTakenTs": 1788673426347,
+            "marketTakenTs": 1788673439677,
+            "aggregatedTs": 1788673439676
+          }
+        },
+        "recheck": {
+          "holdersDoneTs": 1788673742567,
+          "offsetMs": 304533,
+          "total": 1049,
+          "times": {
+            "chainBlock": "55739916",
+            "chainBlockTs": 1788673738000,
+            "chainTakenTs": 1788673741209,
+            "fomoRespTs": 1788673742481,
+            "boardTakenTs": 1788673645326,
+            "marketTakenTs": 1788673742567,
+            "aggregatedTs": 1788673742567
+          }
+        },
+        "platformPnlWindow": {
+          "basis": "snapshot",
+          "startTs": 1788584400000,
+          "endTs": 1788670800000
+        },
+        "platformPnlFetchedTs": 1788673747377
       },
       "token": {
-        "symbol": "JamCat",
-        "name": "JamCat",
+        "symbol": "p402",
+        "name": "p402",
         "decimals": 18,
         "total_supply": "1000000000000000000000000000"
       },
       "stages": [
         {
           "stage": "initial",
-          "taken_ts": 1788619284299,
-          "total_holders": 253,
-          "fomo_holders": 60,
+          "taken_ts": 1788673439677,
+          "total_holders": 900,
+          "fomo_holders": 269,
           "payload": {
-            "chainBlock": "55200047",
-            "chainBlockTs": 1788619278000,
-            "chainTakenTs": 1788619284292,
-            "fomoTakenTs": 1788619280208,
-            "boardTakenTs": 1788619284208,
-            "aggregatedTs": 1788619284299
+            "chainBlock": "55736937",
+            "chainBlockTs": 1788673435000,
+            "chainTakenTs": 1788673439672,
+            "fomoRespTs": 1788673436552,
+            "boardTakenTs": 1788673426347,
+            "marketTakenTs": 1788673439677,
+            "aggregatedTs": 1788673439676
           }
         },
         {
           "stage": "recheck",
-          "taken_ts": 1788619652912,
-          "total_holders": 248,
-          "fomo_holders": 88,
+          "taken_ts": 1788673742567,
+          "total_holders": 1049,
+          "fomo_holders": 340,
           "payload": {
-            "chainBlock": "55203153",
-            "chainBlockTs": 1788619594000,
-            "chainTakenTs": 1788619599499,
-            "fomoTakenTs": 1788619600912,
-            "boardTakenTs": 1788619601165,
-            "aggregatedTs": 1788619652912
+            "chainBlock": "55739916",
+            "chainBlockTs": 1788673738000,
+            "chainTakenTs": 1788673741209,
+            "fomoRespTs": 1788673742481,
+            "boardTakenTs": 1788673645326,
+            "marketTakenTs": 1788673742567,
+            "aggregatedTs": 1788673742567
           }
         }
       ],
       "fomoSource": {
-        "fomo_holders": 88,
-        "updated_ts": 1788619601129,
-        "resp_ts": 1788619600912,
-        "ingest_ms": 226
+        "fomo_holders": 340,
+        "updated_ts": 1788673742537,
+        "resp_ts": 1788673742481,
+        "ingest_ms": 57
       },
       "top10": [
         {
           "rank": 1,
-          "user_id": "d3709f31-d3f5-5576-9c22-083244ed7dd8",
-          "handle": "iamxbt",
-          "evm_address": "0x7dce3678c3116948c61f2c3f2cd2d79c11233f43",
-          "followers": 33,
-          "amount": 13612490.92,
-          "pnl": 95.5051,
+          "user_id": "1d4438fe-f644-5385-8eb3-20f5f291ffe2",
+          "handle": "nikshep",
+          "evm_address": "0xf6e7cc4ab22d371885a185d43f8cc17012b2a373",
+          "followers": 67,
+          "amount": 17601986.03,
+          "pnl": 10527.76,
           "is_dev": 0,
-          "updated_ts": 1788619601129
+          "updated_ts": 1788673742537
         },
         {
           "rank": 2,
-          "user_id": "0def20d8-4175-5978-9222-1e6f953c419b",
-          "handle": "ugliestduck",
-          "evm_address": "0x2ba8ea0d8f09b6c1b8356eb031a7855f2cd78acf",
-          "followers": 176,
-          "amount": 12999878.5,
-          "pnl": 87.5936,
+          "user_id": "83a8db6e-19be-519a-bd6a-dfe78a196b55",
+          "handle": "Dysonfan",
+          "evm_address": "0x439e442534538478c16c458696f7e8bb645cfc4b",
+          "followers": 63,
+          "amount": 14456235.5,
+          "pnl": 5561.82,
           "is_dev": 0,
-          "updated_ts": 1788619601129
+          "updated_ts": 1788673742537
         },
         {
           "rank": 3,
-          "user_id": "37d7f7be-a3fb-52a1-80b6-181d668aadfb",
-          "handle": "bystevenr",
-          "evm_address": "0xa393b9ff89f4b9fbaddc2d0acaf0f578a567a151",
-          "followers": 1970,
-          "amount": 11858727.26,
-          "pnl": 124.952,
+          "user_id": "d269fa93-4cdf-57e3-8265-1763c85cacd1",
+          "handle": "onmycheck",
+          "evm_address": "0x81fc8fdbd742e5dfbf042bf1fbbaa30837f8cfc3",
+          "followers": 4746,
+          "amount": 12648197.42,
+          "pnl": 2120.51,
           "is_dev": 0,
-          "updated_ts": 1788619601129
+          "updated_ts": 1788673742537
         },
         {
           "rank": 4,
-          "user_id": "99282e9a-1e57-5940-99e9-389e17b4cb52",
-          "handle": "ZsCryptoo",
-          "evm_address": "0x5011aa61facbc982e10ff7f614167e8c4e3a4634",
-          "followers": 7,
-          "amount": 9802471.64,
-          "pnl": 46.6361,
+          "user_id": "234deebc-355d-5ee0-8f0e-f3c8bb79690e",
+          "handle": "BS",
+          "evm_address": "0x8515927f3a9d7182b672318c82be5d540ee98e07",
+          "followers": 3208,
+          "amount": 10023640.16,
+          "pnl": 3421.05,
           "is_dev": 0,
-          "updated_ts": 1788619601129
+          "updated_ts": 1788673742537
         },
         {
           "rank": 5,
-          "user_id": "55bf851c-2eb2-53e7-8c96-d4ea0d04ed32",
-          "handle": "Geezy",
-          "evm_address": "0x4c764ddbf673f32d613559c342332ae65820c9e2",
-          "followers": 547,
-          "amount": 8372945,
-          "pnl": -58.292,
+          "user_id": "54c22c38-7a2b-5b19-9339-7a4c6177bd62",
+          "handle": "MawNome",
+          "evm_address": "0x5979a06a15e54ab9bc3082b390c351bd211d4793",
+          "followers": 13,
+          "amount": 7210375.02,
+          "pnl": 2921.59,
           "is_dev": 0,
-          "updated_ts": 1788619601129
+          "updated_ts": 1788673742537
         },
         {
           "rank": 6,
-          "user_id": "8f7da87f-be9b-5bb8-8c57-2d83205840c3",
-          "handle": "Numbdigger",
-          "evm_address": "0xbf8c2c8d968667dee00b2f908c72d8c00ba95566",
-          "followers": 395,
-          "amount": 7361910.47,
-          "pnl": 38.8629,
+          "user_id": "110b6cee-adae-5153-87ca-4f033b6b13d3",
+          "handle": "Dr. Mickey",
+          "evm_address": "0x1185a1fca27dad0efba251e0f706f3e0874fc325",
+          "followers": 1208,
+          "amount": 6890081.52,
+          "pnl": 4364.53,
           "is_dev": 0,
-          "updated_ts": 1788619601129
+          "updated_ts": 1788673742537
         },
         {
           "rank": 7,
-          "user_id": "1165037d-7116-59c2-9080-1d52696c4420",
-          "handle": "valorquant",
-          "evm_address": "0xfbd771a251081ea02cb674ac89e343e37a38256b",
-          "followers": 191,
-          "amount": 6895659.73,
-          "pnl": 274.117,
+          "user_id": "90300f4a-931c-5ee9-b513-2b231e667807",
+          "handle": "millychase",
+          "evm_address": "0x94f4940ae019e0527b9ea189a8639bbe6ce9587e",
+          "followers": 6,
+          "amount": 5840891.55,
+          "pnl": 1961.97,
           "is_dev": 0,
-          "updated_ts": 1788619601129
+          "updated_ts": 1788673742537
         },
         {
           "rank": 8,
-          "user_id": "18c21141-2f2b-5935-a30b-6d85853834e7",
-          "handle": "solgoodman",
-          "evm_address": "0x648e8dd6e95be4b0fff293abda96a46613689ba2",
-          "followers": 618,
-          "amount": 5491568.63,
-          "pnl": -8.96111,
+          "user_id": "f6b948c3-1e74-54ad-a991-7dc51e00bf2c",
+          "handle": "how to cook?",
+          "evm_address": "0x9fdf297115aa2b5b064d42de51b8e610ea4da0ca",
+          "followers": 109,
+          "amount": 5429669.17,
+          "pnl": 1840.27,
           "is_dev": 0,
-          "updated_ts": 1788619601129
+          "updated_ts": 1788673742537
         },
         {
           "rank": 9,
-          "user_id": "38e0ae3f-b626-5c86-94f8-c7cb5a0d2849",
-          "handle": "3rdworldliving",
-          "evm_address": "0x64d9017bc754e250403758ee51338c5b53c17944",
-          "followers": 244,
-          "amount": 5490832.9,
-          "pnl": -9.57681,
+          "user_id": "68d688b6-de3a-5331-9c62-ee8256b135e0",
+          "handle": "Soko",
+          "evm_address": "0x6e01f3ecec1259e49b77820142af3da394187a6f",
+          "followers": 76,
+          "amount": 5124707.4,
+          "pnl": 2052.01,
           "is_dev": 0,
-          "updated_ts": 1788619601129
+          "updated_ts": 1788673742537
         },
         {
           "rank": 10,
-          "user_id": "42718a4b-cd27-5ceb-9bb0-8ec12b33617c",
-          "handle": "Sheep",
-          "evm_address": "0x8a40e42cb8a2bd79fd53d830fe8d4f03b6d45158",
-          "followers": 220,
-          "amount": 4829994.36,
-          "pnl": 55.8083,
+          "user_id": "84fa1987-83cd-5141-8acc-ebe3ad22a4ea",
+          "handle": "Flobby",
+          "evm_address": "0x380a3f7c134717890766e41d2ceac179fbf10ab1",
+          "followers": 98,
+          "amount": 5044616.61,
+          "pnl": 1018.1,
           "is_dev": 0,
-          "updated_ts": 1788619601129
+          "updated_ts": 1788673742537
         }
       ],
       "notifications": [
         {
-          "ts": 1788619284301,
+          "ts": 1788673439678,
           "mode": "off",
           "op": "send",
-          "message_id": 61928430101,
+          "message_id": 67343967802,
           "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nJamCat (JamCat) · 🟢 Robinhood Chain · MC: 🟢 <b>$54.62K</b>\nCA: <code>0x4d3518f3aa6aee860f4866fd48f98855602604ee</code>\n首次触发: 2026/09/05 22:41:22.921 HKT\n成交量: 5m $56.90K · 1h $56.90K\n持币初值（+1.4s）: 全链 253 · Fomo 60 (23.7%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+1.4s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$91.14 · 盈利 2 人\n  全平台24H PnL: <i>n/a</i>（0/10）\n\n健康: 🟢 实时源正常 · 持币覆盖 47/60 · Top10 10/10 · 浏览器→入库 78ms · <i>禁发送演练</i>"
+          "detail": "<b>FOMO NOW</b>\np402 (p402) · 🟢 Robinhood Chain · MC: 🟡 <b>$349.01K</b>\nCA: <code>0xac9a8dc5b9bf3f87bc0b7e05b1b5bd420a776e06</code>\n首次触发: 2026/09/06 13:43:58.034 HKT\n成交量: 5m $70.43K · 1h $405.79K\n持币初值（+1.6s）: 全链 900 · Fomo 269 (29.9%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+1.6s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$30.01K · 盈利 10 人\n  全平台24H PnL: <i>采集中…</i>（0/10）· 缺 10 人的收益记录\n\n健康: 🟢 实时源正常 · 持币覆盖 46/269 · Top10 10/10 · 浏览器→入库 19ms · <i>禁发送演练</i>"
         },
         {
-          "ts": 1788619652914,
+          "ts": 1788673742568,
           "mode": "off",
           "op": "edit",
-          "message_id": 61928430101,
+          "message_id": 67343967802,
           "ok": 1,
-          "detail": "<b>FOMO NOW</b>\nJamCat (JamCat) · 🟢 Robinhood Chain · MC: 🟢 <b>$78.34K</b>\nCA: <code>0x4d3518f3aa6aee860f4866fd48f98855602604ee</code>\n首次触发: 2026/09/05 22:41:22.921 HKT\n成交量: 5m $31.17K · 1h $94.89K\n持币初值（+1.4s）: 全链 253 · Fomo 60 (23.7%)\n持币复核（+6m10s）: 全链 248 · Fomo 88 (35.5%)\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+6m10s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$646.65 · 盈利 7 人\n  全平台24H PnL: +$91.84K · 整点对齐口径\n\n健康: 🟢 实时源正常 · 持币覆盖 49/88 · Top10 10/10 · 浏览器→入库 226ms · <i>禁发送演练</i>"
+          "detail": "<b>FOMO NOW</b>\np402 (p402) · 🟢 Robinhood Chain · MC: 🟡 <b>$349.01K</b>\nCA: <code>0xac9a8dc5b9bf3f87bc0b7e05b1b5bd420a776e06</code>\n首次触发: 2026/09/06 13:43:58.034 HKT\n成交量: 5m $70.43K · 1h $405.79K\n持币初值（+1.6s）: 全链 900 · Fomo 269 (29.9%)\n持币复核（+5m5s）: 全链 1049 · Fomo 340 (32.4%)\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+5m5s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$35.79K · 盈利 10 人\n  全平台24H PnL: <i>采集中…</i>（7/10）· 缺 3 人的收益记录\n\n健康: 🟢 实时源正常 · 持币覆盖 46/340 · Top10 10/10 · 浏览器→入库 57ms · <i>禁发送演练</i>"
+        },
+        {
+          "ts": 1788673747390,
+          "mode": "off",
+          "op": "edit",
+          "message_id": 67343967802,
+          "ok": 1,
+          "detail": "<b>FOMO NOW</b>\np402 (p402) · 🟢 Robinhood Chain · MC: 🟡 <b>$349.01K</b>\nCA: <code>0xac9a8dc5b9bf3f87bc0b7e05b1b5bd420a776e06</code>\n首次触发: 2026/09/06 13:43:58.034 HKT\n成交量: 5m $70.43K · 1h $405.79K\n持币初值（+1.6s）: 全链 900 · Fomo 269 (29.9%)\n持币复核（+5m5s）: 全链 1049 · Fomo 340 (32.4%)\n\nFomo 24H盈利榜持有人: <i>未发现（身份识别不全，不代表没有）</i>\nTop10持币账户（+5m5s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: +$35.79K · 盈利 10 人\n  全平台24H PnL: -$20.39K · 盈利 7 人 · 整点对齐口径（截至 09/06 13:00）\n\n健康: 🟢 实时源正常 · 持币覆盖 46/340 · Top10 10/10 · 浏览器→入库 57ms ·"
         }
       ],
       "recompute": {
-        "top10TokenPnlSum": 646.6450800000001,
-        "top10Profitable": 7,
+        "top10TokenPnlSum": 35789.61,
+        "top10Profitable": 10,
         "top10Count": 10,
         "identified": 10,
-        "platformPnl24h": null,
-        "platformNote": "全平台 24H 收益默认开启，只在复核阶段取；此处不重算，见卡片正文与 notification_log"
+        "platformPnl24h": -20387.14085199999,
+        "platformProfitable": 7,
+        "platformCovered": 10,
+        "platformReason": null,
+        "platformNote": "全平台 24H 收益默认开启，在复核之外单独取；逐人序列的可追溯样例见 scripts/trace-pnl.ts"
+      }
+    },
+    {
+      "alert": {
+        "ca": "0xe1e5f00a9b0255ca4df85b3130ee0f77d15acc2d",
+        "trigger_ts": 1788671594722,
+        "status": "completed",
+        "collection_state": "complete",
+        "attempts": 0,
+        "message_id": 67159782801,
+        "notify_mode": "off",
+        "last_error": null,
+        "original_due_ts": 1788671895722,
+        "pnl_state": "ready",
+        "pnl_deadline_ts": 1788672495722
+      },
+      "timing": {
+        "triggerTs": 1788671594722,
+        "originalDueTs": 1788671895722,
+        "initial": {
+          "holdersDoneTs": 1788671597826,
+          "offsetMs": 3104,
+          "total": 4509,
+          "times": {
+            "chainBlock": "55718652",
+            "chainBlockTs": 1788671595000,
+            "chainTakenTs": 1788671597820,
+            "fomoRespTs": 1788671594531,
+            "boardTakenTs": 1788671461633,
+            "marketTakenTs": 1788671597826,
+            "aggregatedTs": 1788671597825
+          }
+        },
+        "recheck": {
+          "holdersDoneTs": 1788671899702,
+          "offsetMs": 304980,
+          "total": 4512,
+          "times": {
+            "chainBlock": "55721594",
+            "chainBlockTs": 1788671890000,
+            "chainTakenTs": 1788671898455,
+            "fomoRespTs": 1788671899647,
+            "boardTakenTs": 1788671899644,
+            "marketTakenTs": 1788671899702,
+            "aggregatedTs": 1788671899702
+          }
+        },
+        "platformPnlWindow": {
+          "basis": "snapshot",
+          "startTs": 1788584400000,
+          "endTs": 1788670800000
+        },
+        "platformPnlFetchedTs": 1788671904326
+      },
+      "token": {
+        "symbol": "🅿️",
+        "name": "Pushin' 🅿️",
+        "decimals": 18,
+        "total_supply": "1000000000000000000000000000"
+      },
+      "stages": [
+        {
+          "stage": "initial",
+          "taken_ts": 1788671597826,
+          "total_holders": 4509,
+          "fomo_holders": 1882,
+          "payload": {
+            "chainBlock": "55718652",
+            "chainBlockTs": 1788671595000,
+            "chainTakenTs": 1788671597820,
+            "fomoRespTs": 1788671594531,
+            "boardTakenTs": 1788671461633,
+            "marketTakenTs": 1788671597826,
+            "aggregatedTs": 1788671597825
+          }
+        },
+        {
+          "stage": "recheck",
+          "taken_ts": 1788671899702,
+          "total_holders": 4512,
+          "fomo_holders": 1830,
+          "payload": {
+            "chainBlock": "55721594",
+            "chainBlockTs": 1788671890000,
+            "chainTakenTs": 1788671898455,
+            "fomoRespTs": 1788671899647,
+            "boardTakenTs": 1788671899644,
+            "marketTakenTs": 1788671899702,
+            "aggregatedTs": 1788671899702
+          }
+        }
+      ],
+      "fomoSource": {
+        "fomo_holders": 1830,
+        "updated_ts": 1788671899664,
+        "resp_ts": 1788671899647,
+        "ingest_ms": 17
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "user_id": "e16d41fc-b926-5d60-b961-dcc5935949c1",
+          "handle": "yaev",
+          "evm_address": "0x107b7b9b4e904db4b12c1e368b158cf4e94014ef",
+          "followers": 4197,
+          "amount": 10093265.51,
+          "pnl": 9231.8,
+          "is_dev": 0,
+          "updated_ts": 1788671899664
+        },
+        {
+          "rank": 2,
+          "user_id": "b3c5e365-1092-50be-ae94-c50d52b92870",
+          "handle": "riskit",
+          "evm_address": "0x3efeaaeebf1e1af9e9c982d363c376f0700fff4b",
+          "followers": 4463,
+          "amount": 9909035.09,
+          "pnl": -13973.25,
+          "is_dev": 0,
+          "updated_ts": 1788671899664
+        },
+        {
+          "rank": 3,
+          "user_id": "967c86a1-2b18-53ee-ba1d-e86c6000aad3",
+          "handle": "AK 🔶 BNB",
+          "evm_address": "0x97f690e51bfbdf04e333830ea6a77d825987065d",
+          "followers": 3203,
+          "amount": 8230436.28,
+          "pnl": -14694.35,
+          "is_dev": 0,
+          "updated_ts": 1788671899664
+        },
+        {
+          "rank": 4,
+          "user_id": "ada767cf-691f-5e09-9720-939efbf11bad",
+          "handle": "444",
+          "evm_address": "0xb649b2e2b14bb7b001ac0cc0ab6179de20734210",
+          "followers": 10725,
+          "amount": 5386166.11,
+          "pnl": 728.458,
+          "is_dev": 0,
+          "updated_ts": 1788671899664
+        },
+        {
+          "rank": 5,
+          "user_id": "4952ce4d-d8f3-5fb2-a8c1-4c8f8d54d62b",
+          "handle": "SkyGawd",
+          "evm_address": "0x2d2bc314a1712c3c1486409e77ab13ef2299a8dc",
+          "followers": 545,
+          "amount": 4252419.82,
+          "pnl": 8507.82,
+          "is_dev": 0,
+          "updated_ts": 1788671899664
+        },
+        {
+          "rank": 6,
+          "user_id": "80a2ec7b-d089-590c-a4df-2eaed3b575f9",
+          "handle": "bikram",
+          "evm_address": "0x03013cad536294cebad8561cad417da9ee643792",
+          "followers": 30,
+          "amount": 4231034.66,
+          "pnl": -7547.82,
+          "is_dev": 0,
+          "updated_ts": 1788671899664
+        },
+        {
+          "rank": 7,
+          "user_id": "10e339d3-af50-59cd-9f37-39a2e1940d80",
+          "handle": "looc",
+          "evm_address": "0x8fd6bbe36bb58d0535e3d1af642c64bfd5a8f08e",
+          "followers": 640,
+          "amount": 4151996.92,
+          "pnl": -12625.05,
+          "is_dev": 0,
+          "updated_ts": 1788671899664
+        },
+        {
+          "rank": 8,
+          "user_id": "dff30e3d-004b-5af4-bef8-1f42d4db92cc",
+          "handle": "dokjakim100",
+          "evm_address": "0xe4880e234d114dad069f7fdeb78caf24188186c0",
+          "followers": 99,
+          "amount": 3657849.18,
+          "pnl": 9590.25,
+          "is_dev": 0,
+          "updated_ts": 1788671899664
+        },
+        {
+          "rank": 9,
+          "user_id": "599a4b08-9efb-5b1c-9b9f-c9c00e209949",
+          "handle": "dingaling",
+          "evm_address": "0x9b52b6102de23b6d2c98a47704df8822178dd99e",
+          "followers": 2563,
+          "amount": 3652639.23,
+          "pnl": 3358.3,
+          "is_dev": 0,
+          "updated_ts": 1788671899664
+        },
+        {
+          "rank": 10,
+          "user_id": "1beda129-9a18-58f3-b0f6-f45afd9c2afa",
+          "handle": "Deathy",
+          "evm_address": "0x9e7a0846a70205e61c3ffbf48eb2234874055df3",
+          "followers": 718,
+          "amount": 3465274.4,
+          "pnl": -4873.61,
+          "is_dev": 0,
+          "updated_ts": 1788671899664
+        }
+      ],
+      "notifications": [
+        {
+          "ts": 1788671597828,
+          "mode": "off",
+          "op": "send",
+          "message_id": 67159782801,
+          "ok": 1,
+          "detail": "<b>FOMO NOW</b>\nPushin' 🅿️ (🅿️) · 🟢 Robinhood Chain · MC: 🟡 <b>$2.63M</b>\nCA: <code>0xe1e5f00a9b0255ca4df85b3130ee0f77d15acc2d</code>\n首次触发: 2026/09/06 13:13:14.722 HKT\n成交量: 5m $1.58M · 1h $13.29M\n持币初值（+3.1s）: 全链 4509 · Fomo 1882 (41.7%)\n持币复核（<i>采集中…</i>）\n\nFomo 24H盈利榜持有人: 已确认至少 1 人\n• #17 <b>lordarbiter</b> · 2.79M 🅿️ · 粉丝 19.23K · 全平台24h +$664.69K <i>(持仓据 Fomo 自报)</i>\nTop10持币账户（+3.1s）· 账户识别 10/10\n  该币累计收益（已实现+未实现）: -$38.30K · 盈利 4 人\n  全平台24H PnL: <i>采集中…</i>（0/10）· 缺 10 人的收益记录\n\n健康: 🟢 实时源正常 "
+        },
+        {
+          "ts": 1788671899704,
+          "mode": "off",
+          "op": "edit",
+          "message_id": 67159782801,
+          "ok": 1,
+          "detail": "<b>FOMO NOW</b>\nPushin' 🅿️ (🅿️) · 🟢 Robinhood Chain · MC: 🟡 <b>$2.63M</b>\nCA: <code>0xe1e5f00a9b0255ca4df85b3130ee0f77d15acc2d</code>\n首次触发: 2026/09/06 13:13:14.722 HKT\n成交量: 5m $1.58M · 1h $13.29M\n持币初值（+3.1s）: 全链 4509 · Fomo 1882 (41.7%)\n持币复核（+5m5s）: 全链 4512 · Fomo 1830 (40.6%)\n\nFomo 24H盈利榜持有人: 已确认至少 2 人\n• #20 <b>lordarbiter</b> · 2.79M 🅿️ · 粉丝 19.23K · 全平台24h +$625.84K <i>(持仓据 Fomo 自报)</i>\n• #60 <b>444</b> · 5.39M 🅿️ · 粉丝 10.72K · 全平台24h +$269.41K <i>(持仓据 Fomo 自报)</i>\nTop10持币账户（+5m5s）· 账户识"
+        },
+        {
+          "ts": 1788671904340,
+          "mode": "off",
+          "op": "edit",
+          "message_id": 67159782801,
+          "ok": 1,
+          "detail": "<b>FOMO NOW</b>\nPushin' 🅿️ (🅿️) · 🟢 Robinhood Chain · MC: 🟡 <b>$2.63M</b>\nCA: <code>0xe1e5f00a9b0255ca4df85b3130ee0f77d15acc2d</code>\n首次触发: 2026/09/06 13:13:14.722 HKT\n成交量: 5m $1.58M · 1h $13.29M\n持币初值（+3.1s）: 全链 4509 · Fomo 1882 (41.7%)\n持币复核（+5m5s）: 全链 4512 · Fomo 1830 (40.6%)\n\nFomo 24H盈利榜持有人: 已确认至少 2 人\n• #20 <b>lordarbiter</b> · 2.79M 🅿️ · 粉丝 19.23K · 全平台24h +$625.84K <i>(持仓据 Fomo 自报)</i>\n• #60 <b>444</b> · 5.39M 🅿️ · 粉丝 10.72K · 全平台24h +$269.41K <i>(持仓据 Fomo 自报)</i>\nTop10持币账户（+5m5s）· 账户识"
+        }
+      ],
+      "recompute": {
+        "top10TokenPnlSum": -22297.452000000005,
+        "top10Profitable": 5,
+        "top10Count": 10,
+        "identified": 10,
+        "platformPnl24h": 636415.8770890001,
+        "platformProfitable": 8,
+        "platformCovered": 10,
+        "platformReason": null,
+        "platformNote": "全平台 24H 收益默认开启，在复核之外单独取；逐人序列的可追溯样例见 scripts/trace-pnl.ts"
       }
     }
   ]

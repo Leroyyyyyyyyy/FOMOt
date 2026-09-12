@@ -2,7 +2,11 @@ import '../tests/helpers/tmpdb.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { renderCard, type AlertData } from '../src/notify/render.js';
+import { DAY_MS, HOUR_MS } from '../src/engine/pnl.js';
 import { addr } from './helpers/fixtures.js';
+
+const END = Math.floor(1_760_000_000_000 / HOUR_MS) * HOUR_MS;
+const win = (basis: 'live' | 'snapshot') => ({ basis, startTs: END - DAY_MS, endTs: END });
 
 function card(over: Partial<AlertData> = {}): AlertData {
   return {
@@ -13,8 +17,14 @@ function card(over: Partial<AlertData> = {}): AlertData {
     recheck: { total: 491, fomo: 336, offsetMs: 301_000 },
     leaderboardHolders: [], leaderboardAvailable: true, leaderboardPartial: false,
     top10: { tokenPnlTotal: 500, tokenPnlCovered: 10, tokenProfitable: 7,
-      platformPnl24h: null, platformCovered: 0, platformWindow: null,
+      platformPnl24h: null, platformProfitable: null, platformCovered: 0, platformWindow: null,
+      platformFetchedTs: null, platformState: 'ready', platformReason: '缺 10 人的收益记录',
       identified: 10, count: 10, offsetMs: 301_000 },
+    sources: {
+      chainBlock: '55121759', chainBlockTs: 1_760_000_000_000, chainTakenTs: 1_760_000_000_500,
+      fomoRespTs: 1_760_000_001_000, boardTakenTs: 1_760_000_000_800,
+      marketTakenTs: 1_760_000_001_200, sourceSkewMs: 500, degraded: [],
+    },
     health: { sourceOk: true, holderCoverage: [49, 336], ingestMs: 64, notifyMode: 'off' },
     ...over,
   };
@@ -36,11 +46,46 @@ test('没有全平台收益数据时显示 n/a 与覆盖率，不显示 0', () =
   assert.match(t, /全平台24H PnL: n\/a/);
 });
 
-test('全平台收益齐全时标出窗口口径', () => {
-  const live = plain(card({ top10: { ...card().top10, platformPnl24h: 500_310, platformCovered: 10, platformWindow: 'live' } }));
-  assert.match(live, /全平台24H PnL: \+\$500\.31K · 实时口径/);
-  const snap = plain(card({ top10: { ...card().top10, platformPnl24h: -8_880, platformCovered: 10, platformWindow: 'snapshot' } }));
-  assert.match(snap, /全平台24H PnL: -\$8\.88K · 整点对齐口径/);
+test('全平台收益齐全时标出**本口径的**盈利人数与窗口', () => {
+  const live = plain(card({ top10: { ...card().top10, platformPnl24h: 500_310, platformProfitable: 7,
+    platformCovered: 10, platformWindow: win('live'), platformReason: null } }));
+  assert.match(live, /全平台24H PnL: \+\$500\.31K · 盈利 7 人 · 实时口径（截至 /);
+  const snap = plain(card({ top10: { ...card().top10, platformPnl24h: -8_880, platformProfitable: 3,
+    platformCovered: 10, platformWindow: win('snapshot'), platformReason: null } }));
+  assert.match(snap, /全平台24H PnL: -\$8\.88K · 盈利 3 人 · 整点对齐口径（截至 /);
+});
+
+test('两行的盈利人数各算各的，不会互相顶替', () => {
+  // 该币累计收益为正、盈利 7 人；全平台 24H 为负、盈利只有 2 人
+  const t = plain(card({ top10: { ...card().top10, tokenPnlTotal: 1_880_000, tokenProfitable: 7,
+    platformPnl24h: -52_360, platformProfitable: 2, platformCovered: 10,
+    platformWindow: win('snapshot'), platformReason: null } }));
+  const tokenLine = t.split('\n').find(l => l.includes('该币累计收益'))!;
+  const platLine = t.split('\n').find(l => l.includes('全平台24H PnL'))!;
+  assert.match(tokenLine, /\+\$1\.88M · 盈利 7 人/);
+  assert.match(platLine, /-\$52\.36K · 盈利 2 人/);
+  assert.ok(!platLine.includes('7 人'), `全平台那行不能出现该币的盈利人数：${platLine}`);
+});
+
+test('全平台缺一人时不输出盈利人数，只给覆盖率和原因', () => {
+  const t = plain(card({ top10: { ...card().top10, platformPnl24h: null, platformProfitable: null,
+    platformCovered: 9, platformReason: '缺 1 人的收益记录' } }));
+  const platLine = t.split('\n').find(l => l.includes('全平台24H PnL'))!;
+  assert.match(platLine, /n\/a（9\/10）· 缺 1 人的收益记录/);
+  assert.ok(!/全平台24H PnL:.*盈利/.test(platLine), '不完整时不能报盈利人数');
+});
+
+test('PnL 还在取时显示「采集中」，不是 0 也不是「没有」', () => {
+  const t = plain(card({ top10: { ...card().top10, platformState: 'collecting', platformReason: null } }));
+  assert.match(t, /全平台24H PnL: 采集中…（0\/10）/);
+  assert.ok(!/全平台24H PnL: \+\$0/.test(t));
+});
+
+test('数据源时间差超限时卡片给出降级信息', () => {
+  const t = plain(card({ sources: { ...card().sources, sourceSkewMs: 300_000,
+    degraded: ['链上与 Fomo 采集相差 300s'] } }));
+  assert.match(t, /⚠️ 数据时点: 链上与 Fomo 采集相差 300s/);
+  assert.ok(!/⚠️ 数据时点/.test(plain(card())), '不超限时不该出现这一行');
 });
 
 test('该币收益缺失时显示 n/a 和覆盖率，不做部分求和', () => {

@@ -20,7 +20,53 @@ async function loadFomo(): Promise<FomoProvider> {
   }
 }
 
+/**
+ * 策略路由（设计文档 §4）。
+ *
+ * `STRATEGY_MODE=post_v1` 走全新的 PostEngine：**不加载旧 FOMO 浏览器、
+ * 不做 holder/PnL 调度、不跑旧 Engine.tick()**，也不读旧 pools/swaps 表。
+ * 缺省仍是 legacy，保持旧项目行为不变，便于回退。
+ *
+ * 首版不实现双引擎共发同一频道——游标、维护与消息会互相干扰。
+ */
+export type StrategyMode = 'legacy' | 'post_v1';
+function strategyMode(): StrategyMode {
+  const m = (process.env.STRATEGY_MODE ?? 'legacy').toLowerCase();
+  if (m === 'post_v1') return 'post_v1';
+  if (m !== 'legacy') throw new Error(`STRATEGY_MODE 只能是 legacy 或 post_v1，收到 ${m}`);
+  return 'legacy';
+}
+
+async function runPost(): Promise<void> {
+  const { PostEngine } = await import('./post/index.js');
+  const ac = new AbortController();
+  let shuttingDown = false;
+  for (const sig of ['SIGINT', 'SIGTERM'] as const) {
+    process.on(sig, () => {
+      if (shuttingDown) return;
+      shuttingDown = true;
+      log.info('收到退出信号，停止中…（未终结 episode 与 pending outbox 会在下次启动恢复）');
+      ac.abort();
+      setTimeout(() => process.exit(0), 1500).unref();
+    });
+  }
+  const engine = new PostEngine();
+  log.info({
+    模式: 'post_v1',
+    通知模式: notifier.mode === 'off' ? 'off（禁发送，只进本地记录器）' : 'telegram（会真的发消息）',
+    configHash: engine.configHash,
+    起步方式: engine.cfg.history.startup_mode,
+  }, 'FOMOt 启动（post_v1 策略，不加载旧 FOMO/holder/PnL 路径）');
+  if (engine.cfg.history.startup_mode === 'accumulate') {
+    log.info('二段需要第一波 + 至少 48h 箱体；本地积累模式下前 2–4 天处于 history_warming，' +
+      '这期间没有二段信号是预期行为，不代表策略已验收。');
+  }
+  await engine.run(ac.signal);
+}
+
 async function main(): Promise<void> {
+  if (strategyMode() === 'post_v1') return runPost();
+
   const ac = new AbortController();
   let shuttingDown = false;
   const shutdown = async (fomo?: FomoProvider) => {
@@ -70,8 +116,9 @@ async function main(): Promise<void> {
   })();
   markStartupWindow(120_000);            // 前两分钟算「启动恢复」，指标分开统计
   const r = engine.resumePending();
-  if (r.resumed || r.orphanFiring || r.corrupt) {
-    log.info({ 待复核: r.resumed, 遗留firing: r.orphanFiring, 损坏payload: r.corrupt }, '启动恢复完成');
+  if (r.resumed || r.orphanFiring || r.corrupt || r.pnlResumed || r.modeSwitched) {
+    log.info({ 待复核: r.resumed, 遗留firing: r.orphanFiring, 损坏payload: r.corrupt,
+      待补收益: r.pnlResumed, 因切换通知模式终结: r.modeSwitched }, '启动恢复完成');
   }
 
   let lastBeat = 0, lastMaint = Date.now();
@@ -101,6 +148,11 @@ async function main(): Promise<void> {
         const unfinished = (db.prepare(
           "SELECT COUNT(*) n FROM alerts WHERE status IN ('firing','pending_recheck')").get() as any).n;
         recordMetric('unfinished_alerts', unfinished);
+        // 排队深度也要有数：长尾到底是排队还是采集慢，验收报告要能分开说。
+        const q = engine.queueDepth();
+        recordMetric('holder_queue_pending', q.holders.pending);
+        recordMetric('holder_active', q.holders.active);
+        recordMetric('pnl_tasks_active', q.pnlTasks);
         const n = (t: string) => (db.prepare(`SELECT COUNT(*) n FROM ${t}`).get() as any).n;
         log.info({
           候选: getHealth('universe_size')?.value,

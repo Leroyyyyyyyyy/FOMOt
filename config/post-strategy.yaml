@@ -1,0 +1,144 @@
+# post_v1 策略配置（设计文档 §12）。
+#
+# 这份文件**不覆盖** config/rules.yaml：旧 legacy 模式仍读 rules.yaml，
+# post 模式只读本文件。百分比一律是 0–1 小数；倍率是 ≥1 的数值；时间 key 自带单位。
+#
+# 除 48–96h 与 3–5M 之外，其余阈值都是**待回放校准的工程初值**，
+# 不是帖子作者给出的精确公式。改动要同时更新 §6/§7 的说明并重跑回放。
+version: post_v1
+chains: [4663]
+
+scan:
+  realtime_interval_ms: 1000
+  closed_bar_grace_seconds: 5      # 工程初值，不代表链的正式最终性
+  historical_concurrency: 2
+  hot_limit: 200
+  warm_limit: 1000
+
+history:
+  startup_mode: accumulate         # accumulate | backfill
+  lookback_days: 7
+  candidate_max_age_days: 14       # 候选总体生命周期预算，不是箱体可以横 14 天
+  raw_retention_days: 7
+  candle_1m_retention_days: 14
+  candle_higher_retention_days: 90
+  evidence_retention_days: 180
+
+market:
+  series_policy: frozen_pool
+  price_conflict_max: 0.10
+  stable_peg_deviation_max: 0.02
+  require_complete_coverage: true
+  real_bar_ratio_min: 0.70
+
+size_band:
+  mode: fdv_proxy                  # fdv_proxy | volume_usd | off
+  min_usd: 3000000
+  max_usd: 5000000
+  volume_window_hours: null        # mode=volume_usd 时必须为正数，例如实验 24
+  volume_in_band_ratio_min: 0.70
+
+second_leg:
+  enabled: true
+  timeframe_seconds: 900
+  pivot_reversal: 0.20
+  first_leg_multiple_min: 2.0
+  first_leg_max_hours: 24
+  first_pullback_min: 0.25
+  collapse_drawdown: 0.80
+  seed_box_hours: 24
+  ready_min_hours: 48
+  ready_max_hours: 96
+  box_quantiles: [0.10, 0.90]
+  box_width_min: 0.15
+  box_width_max: 0.60
+  daily_drift_abs_max: 0.10
+  inside_padding: 0.05
+  inside_ratio_min: 0.80
+  activity_window_hours: 6
+  zone_fraction: 0.25
+  zone_visits_min: 3
+  zone_gap_bars_min: 4
+  soft_break_max: 0.08
+  soft_break_max_bars: 2
+  reclaim_deadline_bars: 2
+  breakout_buffer: 0.03
+  breakout_confirm_bars: 2
+  breakout_failed_bars: 2
+
+new_pullback:
+  enabled: true
+  timeframe_seconds: 60
+  max_age_hours: 24
+  launch_baseline_real_bars: 5
+  impulse_multiple_min: 2.0
+  impulse_max_minutes: 60
+  dip_min: 0.12
+  dip_max: 0.45
+  rebound_min: 0.10
+  recovery_fraction_min: 0.60
+  cycle_min_minutes: 2
+  cycle_max_minutes: 30
+  second_cycle_gap_real_bars: 2
+  second_low_ratio_min: 0.90
+  total_max_minutes: 90
+  max_distance_from_second_low: 0.25
+  invalid_below_second_low: 0.05
+  post_confirm_risk_minutes: 30
+
+million_reclaim:
+  enabled: true
+  gate_min_usd: 1000000
+  gate_max_usd: 2000000
+  gate_to_dip_max_minutes: 60
+  dip_min: 0.15
+  dip_max: 0.40
+  recovery_max_minutes: 30
+  new_high_buffer: 0.02
+  confirm_bars: 2
+
+rsi:
+  enabled: true
+  length: 9
+  smoothing_type: SMA              # 仅辅助显示，不是第二次计算 RSI
+  smoothing_length: 9
+  reference_upper: 80
+  reference_lower: 20
+  overheat: 90
+  rearm_below_or_equal: 80
+  rearm_bars: 2
+  cooldown_minutes: 30
+  recommended_warmup_bars: 90
+  real_activity_window_bars: 20
+
+narrative:
+  provider: manual                 # manual | configured_auto
+  required_for_standard_signal: true
+  allowed_categories: [technology, science, stock_related]
+  history_coverage_days_min: 30
+  independent_sources_min: 2
+  cache_ttl_hours: 6
+  timeout_ms: 15000
+  concurrency: 2
+  min_refresh_minutes: 30
+  max_requests_per_day: 100
+  max_tokens_per_day: 200000
+  pending_tg_digest: false
+
+external_candidates:
+  debot_enabled: false             # 阶段 0 未核验到可复用接口，保持关闭
+  manual_import_enabled: true
+
+notifications:
+  min_gap_ms: 3200
+  new_signal_ttl_minutes: 5
+  range_ready_ttl_minutes: 30
+  breakout_ttl_minutes: 10
+  risk_ttl_minutes: 5
+  ambiguous_send_policy: manual_reconcile
+  followup_hours: 24
+  reference_exit_fraction: 0.25
+
+render:
+  timezone: Asia/Hong_Kong
+  locale: zh
