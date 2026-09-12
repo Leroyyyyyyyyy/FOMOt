@@ -461,3 +461,10 @@ export function prunePost(now: number, budget: RetentionBudget): RetentionResult
   // 题材首次出现摘要长期保留（§5.4），这里不清 post_topics。
   return out;
 }
+
+/**
+ * 模块加载即建表。下游模块（quotes/events/candles…）在顶层就 `db.prepare(...)`，
+ * 表必须先存在；ESM 深度优先求值依赖，所以它们 import 本模块即可保证顺序。
+ * legacy 模式不会 import post 模块，也就不会建这些表。
+ */
+migratePostSchema();
